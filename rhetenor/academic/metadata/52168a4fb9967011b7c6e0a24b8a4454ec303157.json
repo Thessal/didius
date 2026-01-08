@@ -1,0 +1,10 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-08",
+    "path": "./data/summary/52168a4fb9967011b7c6e0a24b8a4454ec303157.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "additional_info": {
+        "duration": 26.593692302703857
+    }
+}

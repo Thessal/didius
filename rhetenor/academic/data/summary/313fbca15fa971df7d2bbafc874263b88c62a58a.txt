@@ -1,0 +1,6 @@
+Calculating the VIX retrospectively for 1929 did not predict the higher volatility experienced during the Great Depression, suggesting that the VIX cannot reliably forecast severe future events under anomalous conditions.  
+An academic study by the University of Texas at Austin and Ohio State University examined potential methods of VIX manipulation.  
+On February 12, 2018, a whistleblower‑related letter was sent to the CFTC and SEC alleging manipulation of the VIX.  
+The implied volatility skew for VIX options is not always symmetric; it can display a “half‑frown” shape with higher implied volatilities on one side of the strike distribution, reflecting market asymmetries in demand for upside or downside protection.  
+In 2012, the CBOE introduced the VVIX index, a measure of the VIX’s expected volatility.  
+The VVIX is calculated using the same methodology as the VIX, but its inputs are market prices of VIX options.

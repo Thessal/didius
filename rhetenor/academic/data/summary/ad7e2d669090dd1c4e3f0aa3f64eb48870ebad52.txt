@@ -1,0 +1,10 @@
+It is possible to create a hedging position equivalent to a variance swap using only vanilla puts and calls (static replication).  
+The VIX can be seen as the square root of the implied volatility of a variance swap, not that of a volatility swap.  
+The VIX is the square root of the risk‑neutral expectation of the S&P 500 variance over the next 30 calendar days and is quoted as an annualized standard deviation.  
+The VIX is calculated and disseminated in real‑time by the Chicago Board Options Exchange.  
+On March 26 2004, trading in futures on the VIX began on the CBOE Futures Exchange.  
+On February 24 2006, it became possible to trade options on the VIX.  
+Several exchange‑traded funds hold mixtures of VIX futures that attempt to enable stock‑like trading in those futures.  
+The correlation between these ETFs and the actual VIX index is very poor, especially when the VIX is moving.  
+The VIX is the 30‑day expected volatility of the S&P 500 index, more precisely the square root of a 30‑day expected realized variance of the index.  
+The VIX is calculated as a weighted average of out‑of‑the‑money call and put options on the S&P 500, using the formula VIX = √[ (2 e^{rτ}/τ) (∫₀^{F} P(K)/K² dK + ∫_{F}^{∞} C(K)/K² dK) ].

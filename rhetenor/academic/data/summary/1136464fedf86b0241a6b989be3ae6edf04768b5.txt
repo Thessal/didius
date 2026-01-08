@@ -1,0 +1,4 @@
+Michael Harris has argued that the VIX just tracks the inverse of price and has no predictive power.  
+Some claim that the VIX should have predictive power as long as the prices computed by the Black‑Scholes equation are valid assumptions about future volatility.  
+Robert J. Shiller has argued that it would be circular reasoning to consider the VIX as proof of Black‑Scholes because both express the same implied volatility.  
+Robert J. Shiller has found that calculating the VIX retrospectively in 1929 did not predict the higher volatility of the Great Depression, suggesting the VIX lacked predictive power at that time.

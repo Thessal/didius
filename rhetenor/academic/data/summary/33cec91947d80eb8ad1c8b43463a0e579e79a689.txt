@@ -1,0 +1,16 @@
+The Donchian channel is an indicator used in market trading developed by Richard Donchian.  
+It is formed by taking the highest high and the lowest low of the last n periods.  
+The area between the high and the low is the channel for the period chosen.  
+Donchian Channels are a technical indicator that seeks to identify bullish and bearish extremes that favor reversals, breakouts, breakdowns, and emerging trends.  
+The upper channel equals the highest high over N periods, the lower channel equals the lowest low over N periods, and the middle line equals (Upper + Lower) ÷ 2, where N is usually 20.  
+The Donchian channel is commonly available on most trading platforms.  
+The Donchian channel is a useful indicator for seeing the volatility of a market price.  
+If a price is stable, the Donchian channel will be relatively narrow; if the price fluctuates a lot, the Donchian channel will be wider.  
+Its primary use is for providing signals for long and short positions.  
+If a security trades above its highest n periods high, a long position is established.  
+If a security trades below its lowest n periods low, a short position is established.  
+Originally the n periods were based on daily values, but today the period can be set to any desired interval such as day, hour, minute, or ticks.  
+Extensive backtesting using 360 years of exchange data and 4,887 test trades with the default setting of 20 indicates that the Donchian channel indicator was ineffective.  
+The indicator yielded a win rate of 35 percent of trades.  
+Combined with a reward‑to‑risk ratio of 2.0 to 1, it yields an expected profit of 5 cents per dollar invested.  
+When combined with slippage, the Donchian channel indicator might be unprofitable.

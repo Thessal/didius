@@ -1,0 +1,15 @@
+Bollinger Bands are a type of statistical chart characterizing the prices and volatility over time of a financial instrument or commodity, introduced by John Bollinger in the 1980s.  
+Financial traders use Bollinger Bands as a methodical tool to inform trading decisions, control automated trading systems, or as a component of technical analysis.  
+Bollinger Bands display a graphical envelope of moving averages and volatility (expressed by the width of the envelope) in a two‑dimensional chart.  
+Two user‑chosen input parameters govern how a Bollinger Band chart summarizes historical price data, allowing the response of the chart to vary with the magnitude and frequency of price changes.  
+Bollinger Bands consist of an N‑period moving average, an upper band at K times the N‑period standard deviation above the moving average, and a lower band at K times the N‑period standard deviation below the moving average.  
+Typical values for the parameters are N = 20 days and K = 2.  
+The default average is a simple moving average, but other averages such as exponential moving averages can also be used.  
+Usually the same period is used for both the middle band and the calculation of standard deviation.  
+Bollinger registered the term “Bollinger Bands” as a U.S. trademark in 2011.  
+The purpose of Bollinger Bands is to provide a relative definition of high and low market prices, with prices considered high at the upper band and low at the lower band.  
+This definition can aid rigorous pattern recognition and is useful for comparing price action to indicator action to make systematic trading decisions.  
+BBImpulse measures price change as a function of the bands; percent bandwidth (%b) normalizes the width of the bands over time; and bandwidth delta quantifies the changing width of the bands.  
+Percent b (%b) equals 1 at the upper band and 0 at the lower band, calculated as (last − lowerBB) / (upperBB − lowerBB).  
+Bandwidth is calculated as (upperBB − lowerBB) / middleBB.  
+With the default parameters of a 20‑period look‑back and ±2 standard deviations, bandwidth equals four times the 20‑period coefficient of variation.

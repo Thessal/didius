@@ -1,0 +1,7 @@
+The 7‑day average is calculated as (bp₁+bp₂+…+bp₇) ÷ (tr₁+tr₂+…+tr₇).  
+The same average calculation is performed for the past 14 days and past 28 days, and the three ratios are combined in proportions 4:2:1 and scaled to a percentage from 0 to 100.  
+The Ultimate Oscillator is computed as 100 × (4 × avg₇ + 2 × avg₁₄ + avg₂₈) ÷ (4 + 2 + 1).  
+The 7‑, 14‑, and 28‑day periods are used to combine short, intermediate, and longer time frames in the Ultimate Oscillator.  
+A bullish divergence buy signal occurs when prices make new lows but the oscillator does not, the oscillator falls below 30 during the divergence, and then rises above its high during the divergence, with the buy trigger being the rise through that high.  
+A long position signaled by the Ultimate Oscillator is closed when the oscillator rises above 70 (overbought) or rises above 50 and then falls back through 45.  
+A bearish divergence sell signal is generated when the oscillator makes a high while price makes new highs above level 70, and the position is closed when the oscillator falls below 30 (oversold).

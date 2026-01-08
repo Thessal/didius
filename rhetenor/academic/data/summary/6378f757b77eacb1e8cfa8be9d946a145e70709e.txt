@@ -1,0 +1,13 @@
+Ratio-Adjusted Summation Index (RASI) is calculated as a running total of all previous Ratio-Adjusted Oscillator values, using zero as the neutral value.  
+RASI provides intermediate-term (several months) overbought and oversold values.  
+When RASI moves from an oversold reading to above +500, it signals higher highs and strength in major averages.  
+If RASI fails to get above +500, it signals further weakness on the ensuing downtrend.  
+The A‑D line has been studied since at least the 1960s, with early citations by Granville (1963), Russell (2004), and Harlow (1968).  
+Many NYSE issues such as preferred stocks, rights, warrants, and closed‑end funds dilute the A‑D line signal because they are interest‑sensitive and drown out votes of operating companies.  
+Historically, NYSE provided “common‑only” data (issues with symbols of three letters or fewer), excluding preferred stocks, warrants, rights, bond funds, closed‑end stock funds, and country funds.  
+Constructing a “pure common” A‑D line by removing contributions from closed‑end funds results in a line virtually identical to the Composite and Common‑Only A‑D lines, indicating CEFs have minimal impact on overall numbers.  
+Before 1997 most stocks traded in 1/8‑point increments; NYSE changed to 1/16‑point increments in 1997 and fully converted to decimal increments on Jan 29 2001 (April 9 2001 for Nasdaq).  
+After decimalization, a single‑penny move suffices to be counted as advancing or declining, whereas previously an issue had to move at least 1/8 of a point.  
+Some analysts claim that decimalization increased voting bias, making the A‑D line unusable because floor specialists may manipulate closing prices to create tiny gains.  
+A study of NYSE closing data from Nov 1 2001 to Mar 5 2004 examined three categories: Composite (all stocks), issues changing more than 1/16 of a point, and issues changing less than 1/16 of a point.  
+The 1/16‑point (6.25 cents) threshold assumes that a 7‑cent move should be rounded up to the old 1/8‑point increment (12.5 cents) and counted as advancing or declining, while moves of 6 cents or less are rounded to unchanged.

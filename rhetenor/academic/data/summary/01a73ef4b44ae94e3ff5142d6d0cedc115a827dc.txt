@@ -1,0 +1,8 @@
+The Commodity Channel Index (CCI) is an oscillator indicator used by traders and investors to help identify price reversals, price extremes, and trend strength in financial markets.  
+The CCI was originally introduced by Donald Lambert in 1980.  
+The CCI has become a common tool for traders to identify cyclical trends in commodities, equities, and currencies.  
+The CCI can be adjusted to the timeframe of the market traded by changing the averaging period.  
+The CCI measures a security's variation from the statistical mean.  
+The CCI is calculated as the difference between the typical price and its simple moving average, divided by the mean absolute deviation of the typical price, and then multiplied by 1/0.015.  
+Lambert set the scaling constant at 0.015 so that approximately 70 to 80 percent of CCI values fall between –100 and +100.  
+A shorter CCI period results in more volatile values with a smaller percentage of values between +100 and –100.

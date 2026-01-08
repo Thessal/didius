@@ -1,0 +1,13 @@
+The Parabolic Time/Price System is named because the charted pattern of its stops resembles a parabola or French curve.  
+The system allows the market to react for the first few days after a trade is initiated before the stop begins to move more rapidly.  
+In the Parabolic Time/Price System, the stop is a function of both price and time.  
+The stop never backs up; it moves an incremental amount each day only in the direction of the trade.  
+For a long position, the stop moves up every day regardless of the price direction, representing the time function.  
+The stop’s price component moves proportionally to the most favorable price reached since the trade was initiated.  
+If the price move does not materialize or reverses, the stop reverses the position and a new time period begins.  
+By the 10th day, the stop stops accelerating and becomes a function of price only.  
+The stop for the first day of a trade is the SIP, defined as the extreme price point reached in the previous trade.  
+The system is a true reversal system where every stop point is also a reverse point, called a SAR (Stop and Reverse).  
+The SAR for a given day is calculated as SAR_today = SAR_previous + AF × (High_previous – SAR_previous).  
+The acceleration factor (AF) starts at 0.02, increases by 0.02 each day a new high is made, and is capped at 0.20.  
+In the example where a new high occurs each day, the AF increases by 0.02 each day.

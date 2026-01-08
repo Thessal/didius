@@ -1,0 +1,10 @@
+Directional movement can be rated on a scale of zero to one hundred for any commodity or stock.  
+Using a trend‑following method, traders would trade only those commodities that are in the upper end of the directional movement scale.  
+Using a system that capitalizes on choppy or non‑trending markets, traders would trade only those commodities at the lower end of the directional movement scale.  
+The upward directional movement (+DM) for a day is defined as the high today minus the high yesterday.  
+The downward directional movement (‑DM) for a day is defined as the low today minus the low yesterday.  
+For an outside day, directional movement is determined by the larger of +DM and ‑DM, and the smaller is disregarded.  
+Directional movement must be either up or down; it cannot be a combination of both.  
+For an inside day, directional movement is zero.  
+On a limit‑up day, +DM equals the high today minus the high yesterday.  
+On a limit‑down day, ‑DM equals the low today minus the low yesterday.

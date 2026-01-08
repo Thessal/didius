@@ -1,0 +1,2 @@
+Elliott frequently used the term “circle” to refer to a cycle on stock charts.  
+A convenient substitute tool has been developed to determine whether the ratio of amplitude or time is 61.8% without using mathematics.

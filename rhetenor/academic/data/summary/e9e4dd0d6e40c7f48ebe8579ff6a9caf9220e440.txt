@@ -1,0 +1,12 @@
+CSI is calculated as ADXR multiplied by ATR14 multiplied by a constant K for each commodity.  
+K is a constant that depends on the margin requirement and commission rate and only needs to be recalculated when those change.  
+For Soybeans, K equals 0.4641 and the resulting CSI equals 348 using ADXR 50 and ATR14 15.  
+For Bellies, K equals 4.464 and the resulting CSI equals 280 using ADXR 37 and ATR44 1.70.  
+ADXR is defined as the average of the latest ADX and the ADX from 14 days ago.  
+ATR44 is defined as the value in the ATR column divided by 14.  
+In an example, Coffee with ADXR 70, ATR14 3.75, margin $9,000 and commission $85 yields a CSI of 318.  
+Soybeans have a CSI of 348 in the same comparison, making Soybeans the better overall deal than Coffee.  
+The average dollar movement per day for Soybeans is $750 (ATR 15 cents × $50 per cent).  
+The average dollar movement per day for Coffee is $1,406.25 (ATR 3.75 cents × $375 per cent).  
+Assuming a 10‑day trade and capturing 70% of Coffee’s move and 50% of Soybeans’ move, profit after commission is $9,758.75 for Coffee and $3,705.00 for Soybeans per contract.  
+Because Soybeans require less margin, three Soybean contracts can be traded for each Coffee contract, yielding a total profit of $11,115 for Soybeans versus $9,758.75 for Coffee.

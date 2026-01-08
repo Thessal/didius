@@ -1,0 +1,7 @@
+The KST can give false or misleading signals, as seen from the April 2005 buy signal.  
+By and large, the KST is more accurate than the MACD, even though the MACD often turns faster than the KST.  
+When the indicator crosses above and below the overbought/oversold zones, momentum buy and sell signals are triggered.  
+You must wait for a trend reversal signal in the price, such as a price pattern completion or trendline violation, before acting on overbought/oversold signals.  
+The KST often diverges positively and negatively with the price.  
+It is possible to construct a trendline on the KST and see when it has been violated, though this occurs not very often.  
+When a KST trendline violation occurs, it usually results in a powerful signal.

@@ -1,0 +1,14 @@
+The basic increment of directional movement is the largest part of today’s range that is outside yesterday’s range.  
+If the largest part of today’s range is above yesterday’s range, the directional movement (DM) is plus; if it is below yesterday’s range, DM is minus.  
+Directional movement must be expressed relative to range, i.e., as a function of true range.  
+True range is defined as the largest of: today’s high minus today’s low, today’s high minus yesterday’s close, or today’s low minus yesterday’s close.  
+True range is always considered a positive number.  
+The Directional Indicator (DI) is calculated by dividing directional movement by true range.  
++DI = (+DM) / TR and –DI = (–DM) / TR.  
++DI represents the percent of the true range that is up for the day; –DI represents the percent that is down.  
+To make DI a usable tool, the DI values are summed over a period, commonly 14 days.  
++DI14 = +DM14 / TR14 and –DI14 = –DM14 / TR14.  
+The term “minus DM” describes downward movement and is not treated as a negative number in the equation.  
+An accumulation technique allows calculation of new +DM14 and –DM14 without retaining 14 days of raw data.  
+Today’s +DM14 = Previous +DM14 – (Previous +DM14 / 14) + Today’s +DM.  
+Today’s –DM14 = Previous –DM14 – (Previous –DM14 / 14) + Today’s –DM.

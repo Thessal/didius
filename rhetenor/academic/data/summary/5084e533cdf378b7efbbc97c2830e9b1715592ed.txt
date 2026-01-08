@@ -1,0 +1,15 @@
+The relative strength index (RSI) is a technical indicator used in the analysis of financial markets.  
+The RSI is intended to chart the current and historical strength or weakness of a stock or market based on the closing prices of a recent trading period.  
+The RSI is classified as a momentum oscillator, measuring the velocity and magnitude of price movements.  
+Momentum is the rate of the rise or fall in price.  
+The relative strength (RS) is given as the ratio of higher closes to lower closes.  
+The RSI computes momentum as the ratio of higher closes to overall closes, so stocks with more or stronger positive changes have a higher RSI than stocks with more or stronger negative changes.  
+The RSI is most typically used on a 14‑day timeframe, measured on a scale from 0 to 100, with high and low levels marked at 70 and 30, respectively.  
+Shorter or longer timeframes are used for alternately shorter or longer outlooks.  
+Higher and lower levels such as 80/20 or 90/10 occur less frequently but indicate stronger momentum.  
+The relative strength index was developed by J. Welles Wilder and published in a 1978 book, New Concepts in Technical Trading Systems, and in Commodities magazine in June 1978.  
+The RSI has become one of the most popular oscillator indices.  
+The RSI provides signals that tell investors to buy when the security or currency is oversold and to sell when it is overbought.  
+RSI with recommended parameters and its day‑to‑day optimization was tested and compared with other strategies in Marek and Šedivá (2017).  
+The testing, which was randomised across time and companies such as Apple, Exxon Mobil, IBM, and Microsoft, showed that RSI can still produce good results; however, over longer periods it is usually outperformed by the simple buy‑and‑hold strategy.  
+For each trading period an upward change U or downward change D is calculated: for up periods U = close_now − close_previous and D = 0; for down periods U = 0 and D = close_previous − close_now.

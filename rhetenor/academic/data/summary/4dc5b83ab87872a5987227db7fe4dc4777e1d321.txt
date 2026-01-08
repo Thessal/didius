@@ -1,0 +1,11 @@
+The average up close for a 14‑day period is calculated by summing the up closes and dividing by 14.  
+The average down close for a 14‑day period is calculated by summing the down closes and dividing by 14.  
+The Relative Strength Index (RSI) is computed by dividing the average up close by the average down close, adding 1, dividing 100 by that sum, and subtracting the result from 100.  
+After the initial 14‑day calculation, RSI is updated using only the previous day's average up and down closes.  
+The Wilder smoothing method updates the average up close by multiplying the prior average by 13, adding the current day's up close, and dividing by 14.  
+When the price closes up, the average down close decreases relative to the 14‑day average.  
+RSI is highly responsive to price movements because an increase in average up close automatically reduces the average down close, and vice versa.  
+RSI values always range between 0 and 100, providing a fixed scale for measuring momentum.  
+The same RSI scale allows comparison of daily momentum across different commodities and across time for the same commodity.  
+Commodities with the greatest vertical RSI movement are considered the most active.  
+Once the initial RSI is calculated, only the previous day's data is needed for subsequent RSI calculations.

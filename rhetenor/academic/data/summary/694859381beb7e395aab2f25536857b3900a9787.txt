@@ -1,0 +1,18 @@
+If prices stay up when the volume subsides for a number of days, such a move is considered “good”.  
+If the market holds its own on negative volume days after advancing on positive volume, the market is in a strong position.  
+PVI is called the “majority” curve.  
+The majority tends to emulate the minority, but its timing is not as sharp as that of the minority.  
+When the majority shows an appetite for stocks, the PVI is usually “into new high ground,” as in 1961.  
+The two indicators assume that “smart” money trades on quiet (low‑volume) days and the crowd trades on very active days.  
+The Negative Volume Index (NVI) picks out days when volume is lower than the previous day, and the Positive Volume Index (PVI) picks out days with higher volume.  
+Whenever the NVI rises above a prior high while the DJIA is trending up, it gives a “Bull Market Signal.”  
+When the NVI falls below a prior low while the DJIA is trending down, it gives a “Bear Market Signal.”  
+The PVI is interpreted in reverse of the NVI.  
+Signals are most authentic when the NVI has moved sideways for a number of months in a relatively narrow range.  
+There is no mathematical system devoid of judgment that will continuously work without error in the stock market.  
+Between 1946 and 1967, the NVI rendered 17 significant signals, of which 14 proved right (average gain of 4.32% from the final high or low) and 3 proved wrong (average loss of 6.33%).  
+The NVI seriously erred in 1963‑1964 and in 1968.  
+In 1969 Dysart reduced the weight given to the NVI because it was no longer a decisive indicator of the primary trend, though it retained an excellent ability to give leading indications of short‑term trend reversals.  
+A probable reason for the NVI losing efficacy during the mid‑1960s may have been steadily higher NYSE daily volume due to a dramatic increase in the number of issues traded, causing prices to rise on declining volume.  
+The NVI topped out in 1955 and trended down until at least 1968, although the DJIA moved higher during that period.  
+Norman G. Fosback attributed the long‑term increase in the number of issues traded as a reason for a downward bias in a cumulative advance‑decline line.

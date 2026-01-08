@@ -1,0 +1,11 @@
+The Ratio-Adjusted McClellan Oscillator is calculated by dividing the daily breadth number (advances minus declines) by the total advances plus declines and multiplying the result by 1000, effectively assuming exactly 1000 stocks traded.  
+After computing the Ratio-Adjusted A‑D value, the subsequent EMA calculations for the Ratio-Adjusted McClellan Oscillator are performed in the same way as for the standard oscillator.  
+The Summation Index is created by adding each day’s McClellan Oscillator value to a cumulative total of all previous oscillator values.  
+The Summation Index changes each day by the amount of the oscillator value, so prolonged positive or negative oscillator values produce an extended Summation Index.  
+When the Dow Jones Industrial Average is trending upward, the McClellan Oscillator typically shows positive values and the Summation Index tends to rise.  
+When the Summation Index reaches a high level, it usually falls back as the market consolidates, setting up the next leg of the move.  
+In the original manual calculations, the Summation Index had a total amplitude of about 2000 points and was artificially shifted upward by 1000 points so that its neutral level was +1000, causing it to oscillate between 0 and +2000 under normal conditions.  
+The artificial neutral level of +1000 for the McClellan Summation Index remains the standard today.  
+The increase in the number of issues traded on the NYSE since 1970 has led to larger amplitudes in both the McClellan Oscillator and the Summation Index.  
+To compensate for the larger number of traded issues, the values of the Summation Index can be adjusted mentally, subjectively, or computationally using Ratio-Adjusted oscillator values.  
+The Ratio-Adjusted Summation Index (RASI) is calculated as a running total of Ratio-Adjusted Oscillator values, and uses zero as the neutral level instead of the historical +1000 level.

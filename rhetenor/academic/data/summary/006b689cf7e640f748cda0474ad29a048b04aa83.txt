@@ -1,0 +1,17 @@
+Triangles are made up of five waves (or five legs).  
+In large patterns each segment consists of three waves.  
+On medium-sized specimens the fourth and fifth legs may be one wave each.  
+On small specimens the legs often consist of only one wave.  
+The main reference point in the formation of a triangle is the generators—straight lines drawn through its vertices.  
+You cannot be sure a triangle is forming until the fifth wave begins.  
+The fifth segment can end within or outside the triangle generators.  
+The fifth wave of the triangle may end outside the generators, but not beyond the top of the third wave.  
+An extension can form in any one of the three impulses (waves 1, 3 or 5), but never in more than one.  
+In each example the total number of waves is nine if the extension is counted as five waves instead of one.  
+In rare cases an extended move can consist of nine waves of equal size.  
+Extensions are formed only in the new price territory of the current cycle; they are not formed as corrections.  
+The extensions “pass twice” along the price segment: the correction traverses the same segment twice—down and up.  
+This feature is relevant only when the extension develops in the fifth wave.  
+If an extension is formed at lower wave levels, the rollback occurs immediately.  
+At intermediate or primary (major) levels the double pass may not start until the entire up‑move is complete.  
+When the move is at high speed the same price area rolls back in the opposite direction at almost the same speed.

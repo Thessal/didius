@@ -1,0 +1,18 @@
+Subset breadth statistics tend to behave homogeneously, with all stocks in a narrow sector moving together up or down.  
+In narrow sectors such as gold mining or semiconductor stocks, it is typical for all stocks to rise one day and fall the next.  
+Other industry groups and sectors exhibit the same homogeneous behavior to varying degrees.  
+Focusing on small groups of stocks causes loss of key indications provided by breadth statistics.  
+Examining a diverse collection of stocks can reveal indications not evident from price data alone.  
+Breadth statistics provide strong indications about the health of market liquidity.  
+A small amount of capital can move a handful of stocks enough to influence major market indices if the right stocks are selected.  
+Influencing breadth numbers, which measure all exchange stocks, requires major changes in overall market liquidity.  
+To produce positive breadth for several days, available capital must be sufficiently plentiful to be spread across many stocks.  
+Measuring acceleration in breadth statistics, as done by the McClellan Oscillator, can give insights into impending price trend direction changes.  
+The daily breadth is calculated as advances minus declines (A‑D).  
+The McClellan Oscillator uses two exponential moving averages: a 10% Trend EMA and a 5% Trend EMA.  
+The 10% Trend EMA is updated as 0.10 × (A‑D) + 0.90 × previous 10% Trend.  
+The 5% Trend EMA is updated as 0.05 × (A‑D) + 0.95 × previous 5% Trend.  
+The McClellan Oscillator equals the 10% Trend EMA minus the 5% Trend EMA.  
+Many technical‑analysis software packages include built‑in modules for calculating the McClellan Oscillator.  
+The number of NYSE‑listed stocks changes over time, affecting the amplitude of indicators tied to issue count such as the McClellan Oscillator.  
+To remove the effect of changing issue count on the McClellan Oscillator, the daily breadth (A‑D) is divided by the total advances plus declines (A + D) to obtain a ratio.

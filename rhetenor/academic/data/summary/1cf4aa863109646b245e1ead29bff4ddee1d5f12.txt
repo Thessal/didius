@@ -1,0 +1,17 @@
+The interaction between price movement and oscillator movement can be illustrated by taking a straight‑line price relationship and plotting oscillator points based on that relationship.  
+Using a ten‑day oscillator, the oscillator value for a given day is calculated as today’s closing price minus the closing price ten days earlier.  
+An oscillator value of –2.25 is plotted below the zero line.  
+By calculating the oscillator value each day, an oscillator curve is developed.  
+When the price moves down by the same increment each day, the oscillator curve becomes a horizontal line.  
+If the price turns up by 25 points while the oscillator turns up by 50 points, the oscillator is increasing twice as fast as the price.  
+The oscillator can continue to increase at a constant rate even while the price continues to move up at the same rate, eventually reaching a constant oscillator value.  
+When the price levels out, the oscillator can begin to decline even though the price remains horizontal.  
+If the price remains horizontal, the oscillator will continue to descend until both the oscillator and the price are moving horizontally after ten days.  
+The oscillator appears to be one step ahead of the price because it measures the rate of change of price movement.  
+Between days when the price direction changes from down to up, the oscillator shows a very fast price rate of change.  
+Once the price ten days ago has bottomed out and started to rise, the rate of change slows because subsequent increments are measured in only one direction.  
+The oscillator can be an excellent technical tool for traders who understand its characteristics, but three problems are encountered in developing a meaningful oscillator.  
+The first problem is erratic movement within the oscillator configuration, which can produce erroneously high oscillator values when recent price changes are small compared to price ten days earlier.  
+To overcome the first problem, the extreme points used to calculate the oscillator must be dampened or smoothed.  
+The second problem is determining an appropriate Y‑axis scale for the oscillator, which varies across different commodities.  
+To overcome the second problem, a common denominator should be applied to all commodities so that the oscillator’s amplitude is relative and meaningful.

@@ -1,0 +1,17 @@
+The first resistance level (R1) on the upside of the market is calculated as the lower width of prior trading added to the pivot point price, expressed as R1 = P + (P − L) = 2×P − L.  
+The first support level (S1) on the downside of the market is calculated as the width of the upper part of the prior trading range subtracted from the pivot point, expressed as S1 = P − (H − P) = 2×P − H.  
+These first support and resistance levels can be obtained by subtracting the previous low (L) and high (H) prices, respectively, from twice the pivot point value.  
+The second resistance level (R2) and second support level (S2) are determined by adding to and subtracting from the pivot point the full width of the prior trading range (H − L), respectively: R2 = P + (H − L); S2 = P − (H − L).  
+A third resistance level (R3) and third support level (S3) are calculated by doubling the range added to and subtracted from the pivot point: R3 = H + 2×(P − L) = R1 + (H − L); S3 = L − 2×(H − P) = S1 − (H − L).  
+A fourth set of levels can be calculated by using three times the trading range in the same manner, though this is rarely done.  
+The second and higher support and resistance levels are always located symmetrically around the pivot point, unlike the first levels unless the pivot point exactly bisects the prior trading range.  
+The pivot point itself represents the highest level of resistance or support, depending on overall market conditions.  
+If the market is directionless, prices may fluctuate widely around the pivot point until a breakout occurs.  
+Trading above or below the pivot point indicates overall market sentiment.  
+The pivot point is a leading indicator that provides advanced signaling of potential new market highs or lows within a given time frame.  
+Support and resistance levels derived from the pivot point and prior market width are commonly used as exit points for trades, but are rarely used as entry signals.  
+When an up‑trending market breaks through the pivot point, the first resistance level often serves as a good target to close a position because the probability of resistance and reversal increases significantly.  
+Many traders consider the halfway points between any of these levels as additional, weaker resistance or support areas.  
+Mid‑point levels between pivot points have no standard label format, but are often denoted with the letter “M” followed by symbols or numbers.  
+Using “+” and “–” symbols, the midpoint between the pivot point and R1 is labeled M+, between R1 and R2 is M++, below the pivot point the midpoints are labeled M− and M−−.  
+Using a numeric format from 0 to 5, the midpoints are labeled M0 between S3 and S2 up to M5 between R2 and R3.

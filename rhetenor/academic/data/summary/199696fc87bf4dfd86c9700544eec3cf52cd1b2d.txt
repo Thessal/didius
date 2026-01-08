@@ -1,0 +1,17 @@
+The PLUS DIRECTIONAL INDICATOR (+DI) is calculated as (+DM14 / TR14) × 100, representing the percentage of the true range that was up over the previous 14 days.  
+The MINUS DIRECTIONAL INDICATOR (‑DI) is calculated as (‑DM14 / TR14) × 100, representing the percentage of the true range that was down over the previous 14 days.  
+Adding +DI and ‑DI gives the proportion of the true range that was directional; the remainder represents non‑directional movement.  
+TRUE DIRECTIONAL MOVEMENT is defined as the difference between +DI14 and ‑DI14.  
+A larger difference between +DI and ‑DI indicates more directional movement of a commodity or stock.  
+If the price moves up for 14 or more consecutive days, +DI14 becomes large and ‑DI14 approaches zero, producing a large DI difference.  
+If the price moves down for 14 or more consecutive days, ‑DI14 becomes large and +DI14 approaches zero, producing a large DI difference.  
+Sideways price movement results in a small difference between +DI14 and ‑DI14, indicating non‑directional movement.  
+Directional movement values can be high in a slow‑moving market because they are a function of daily range.  
+Directional movement values can be low in a very volatile market.  
+In the example, the DI DIFFERENCE (the difference between +DI14 and ‑DI14) equals 16.  
+The sum of +DI14 and ‑DI14 represents the total amount of directional movement.  
+In the example, TR14 equals 43.32.  
+In the example, +DM14 equals 8.82.  
+In the example, ‑DM14 equals 15.75.  
+In the example, +DI equals 20, indicating that 20 % of the true range was up.  
+In the example, ‑DI equals 36, indicating that 36 % of the true range was down.

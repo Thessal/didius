@@ -1,0 +1,10 @@
+The VIX index provides a measure of market volatility and reflects expectations of future stock market volatility.  
+The current VIX index value quotes the expected annualized change in the S&P 500 index over the next 30 days, based on options theory and market data.  
+VIX is a volatility index derived from S&P 500 options for the 30 days following the measurement date.  
+Each option price used in the VIX calculation represents the market’s expectation of 30‑day forward‑looking volatility.  
+The VIX calculation employs rules for selecting component options and a formula to calculate index values.  
+VIX cannot be bought or sold directly.  
+VIX is traded via derivative contracts, ETFs, and ETNs that most commonly track VIX futures indexes.  
+CBOE uses the same methodology to compute volatility indexes for other markets, such as the Nasdaq‑100 Volatility Index (VXNSM), DJIA Volatility Index (VXDSM), and Russell 2000 Volatility Index (RVXSM).  
+The VVIX measures the expected volatility of the 30‑day forward price of the VIX, i.e., volatility of volatility.  
+The concept of computing implied volatility or an implied volatility index dates to the 1973 Black‑Scholes paper.

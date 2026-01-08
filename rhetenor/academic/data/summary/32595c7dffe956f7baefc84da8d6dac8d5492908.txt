@@ -1,0 +1,12 @@
+The shift to decimal pricing began in 1997 with 1/16-point increments and was fully implemented by the NYSE on January 29, 2001 and by Nasdaq on April 9, 2001.  
+Previously a stock needed a price change of at least 1/8 of a point to be counted as advancing or declining; after decimalization a single penny change suffices.  
+Critics argue that the increased number of votes from small-price-change stocks biases the advance‑decline line upward.  
+A study of NYSE closing data from November 1, 2001 to March 5, 2004 found that the sub‑tick group (price changes ≤ 1/16 point) has a weaker bias than the market overall and actually holds back the composite cumulative advance‑decline ratio.  
+In 1872 the NYSE implemented a continuous trading system that replaced scheduled stock calls and gave rise to the specialist system.  
+Under the specialist system a single independent trader or company manages the auction market for specific securities from a designated post on the trading floor.  
+Specialists are tasked with making a market in their assigned issues and use their own capital to bridge temporary supply‑demand gaps, reducing price volatility.  
+Because specialists have large influence over a stock’s price and may hold positions in the same issue, many market participants are concerned that specialists could rig the market for their own benefit.  
+Data indicate that sub‑tick price changes have restrained the composite cumulative advance‑decline ratio, refuting the notion that decimalization made the advance‑decline line artificially bullish.  
+The advance‑decline line remains a useful indicator, provided analysts interpret its signals rather than dismiss it for not matching expectations.  
+Very strong advance‑decline statistics observed in 2003‑2004 suggest that substantial upside for stock prices is likely.  
+Although ordinary declines may occur, the strong market breadth implies that a more meaningful decline is unlikely for many months.

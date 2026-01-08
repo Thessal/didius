@@ -1,0 +1,4 @@
+The Money Flow Index (MFI) accumulates volume (or dollar‑volume approximation) rather than price‑change amounts, unlike the Relative Strength Index (RSI).  
+Marek and Čadková (2020) found that, across randomized tests on multiple companies such as Apple, ExxonMobil, IBM, and Microsoft, the MFI can outperform a simple buy‑and‑hold strategy, indicating it can be useful for trading.  
+Marek and Čadková (2020) reported that the commonly recommended MFI settings in the literature provide no trading advantage and that optimal settings must be calibrated for each individual stock.  
+On‑balance volume, price and volume trend, and accumulation/distribution index are additional price‑volume indicators used in stock trading.

@@ -1,0 +1,11 @@
+The ulcer index is a stock market risk measure or technical analysis indicator devised by Peter Martin in 1987 and published by him and Byron McCann in their 1989 book *The Investors Guide to Fidelity Funds*.  
+It measures downwards volatility, specifically the amount of drawdown or retracement over a period.  
+Standard deviation treats up‑ and down‑movements equally, but most market traders are long and therefore welcome upward price movement.  
+The downside causes stress and the “ulcer” name reflects the ulcer‑causing potential of drawdowns.  
+Steve Shellans later used the term ulcer index for a different calculation also based on the ulcer‑causing potential of drawdowns.  
+The ulcer index is calculated over a past period of N days by maintaining the highest closing price seen so far and expressing any lower close as a percentage retracement Rᵢ = 100 × (priceᵢ − max price)/max price.  
+If the high so far is $5.00, a price of $4.50 represents a retracement of –10%.  
+The first R value is always 0 because there is no drawdown from a single price.  
+The quadratic mean (root‑mean‑square) of the R values is taken, similar to a standard deviation calculation.  
+The ulcer index equals the square root of the sum of the squared R values divided by N: Ulcer = √[(R₁² + R₂² + … + R_N²)/N].  
+Because the R values are squared, it does not matter whether they are expressed as positive or negative; both yield a positive ulcer index.

@@ -1,0 +1,8 @@
+The ADX for Day 28 (7/11/77) is 1.86.  
+Today's ADX is calculated as (Previous ADX × 13 + DX today) / 14, which yields 17 (rounded from 17.14) for Day 29.  
+Once you obtain your first ADX you no longer have to look at data beyond yesterday.  
+It takes only a minute or two a day to write down the information and run through the calculations on a small electronic calculator.  
+The ADXR is the final number used to rate all commodities, currencies, stocks, etc., on a scale indicative of directional movement.  
+ADXR is calculated as (ADX today + ADX 14 days ago) / 2.  
+The ADXR is used only as a rating of directional movement.  
+The worksheet includes ADXR, ATR14, and CSI to calculate the Commodity Selection Index.

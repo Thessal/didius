@@ -1,0 +1,4 @@
+When the McClellan Summation Index (MSI) is above zero it is considered bullish (positive growth).  
+When the McClellan Summation Index (MSI) is below zero it is considered bearish (negative growth).  
+The Summation Index is oversold at values between –1000 and –1250.  
+The Summation Index is overbought at values between 1000 and 1250.

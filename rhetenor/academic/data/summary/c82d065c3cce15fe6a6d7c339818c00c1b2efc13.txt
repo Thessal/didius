@@ -1,0 +1,13 @@
+Parabolic SAR is a method devised by J. Welles Wilder Jr. to find potential reversals in the market price direction of traded goods such as securities or currency exchanges.  
+It is a trend‑following (lagging) indicator that may be used to set a trailing stop loss or determine entry or exit points during strong trends.  
+The indicator generally works only in trending markets and creates “whipsaws” during ranging or sideways phases.  
+Wilder recommends first establishing the direction or change in direction of the trend with parabolic SAR, then using another indicator such as the Average Directional Index to determine trend strength.  
+A parabola below the price is generally bullish, while a parabola above the price is generally bearish.  
+A parabola below the price may be used as support, whereas a parabola above the price may represent resistance.  
+When the price is in an uptrend, the SAR appears below the price and converges upward toward it.  
+When the price is in a downtrend, the SAR appears above the price and converges downward.  
+At each step within a trend, the SAR is calculated one period in advance, using only data available today to compute tomorrow’s SAR value.  
+The general formula for SAR is SARₙ₊₁ = SARₙ + α (EP − SARₙ).  
+EP (extreme point) records the highest price reached during an uptrend or the lowest price during a downtrend and is updated whenever a new maximum or minimum is observed.  
+The acceleration factor α is usually set initially to 0.02 but can be chosen by the trader.  
+The acceleration factor is increased by 0.02 each time a new extreme point is recorded.

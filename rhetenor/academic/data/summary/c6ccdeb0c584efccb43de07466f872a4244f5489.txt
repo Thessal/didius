@@ -1,0 +1,10 @@
+The TRIN, or Arms index, developed by Richard Arms in the 1970s, is a short-term technical analysis stock market trading indicator based on the Advance‑Decline data.  
+TRIN is calculated as (advancing issues / declining issues) divided by (advancing volume / declining volume).  
+A TRIN value below 1 usually indicates bullish sentiment, while a value above 1 indicates bearish sentiment.  
+A TRIN reading of 1.5 is considered very bearish.  
+The Arms index was introduced by Richard Arms and is continuously displayed during trading hours on the New York Stock Exchange’s central wall display for the stocks traded on that exchange.  
+The denominator of the TRIN is calculated based on the number of shares traded, not their dollar value.  
+Therefore, a highly traded stock with a low share price will affect the TRIN more than the same dollar volume traded in a higher‑priced stock.  
+The Arms Index, also known as the TRIN, is one of many technical indicators used to measure and predict movements of the stock market.  
+The TRIN reflects the market as a whole and is used to predict when overall sentiment of market participants is becoming bullish or bearish.  
+As with other technical indicators, the TRIN is most effective when combined with other analytical tools.

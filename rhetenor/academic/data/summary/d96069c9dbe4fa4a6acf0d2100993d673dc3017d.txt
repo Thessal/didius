@@ -1,0 +1,15 @@
+The MACD parameters (12, 26, 9) correspond to approximately two weeks, one month, and one and a half weeks of trading data.  
+Because trading weeks consist of five days, the period settings may need to be adjusted.  
+It is generally better to use the period settings that most traders use, since buying and selling decisions based on standard settings can reinforce price movements.  
+Although MACD and average series are discrete values, they are typically displayed as continuous lines over time, while the divergence is shown as a histogram bar chart.  
+A fast exponential moving average (EMA) reacts more quickly to recent price changes than a slow EMA.  
+Comparing EMAs of different periods allows the MACD to indicate changes in a stock’s trend.  
+The divergence series is claimed to reveal subtle shifts in a stock’s trend.  
+The MACD is a lagging indicator because it is based on moving averages.  
+The MACD is less useful for stocks that are not trending, are range‑bound, or exhibit unpredictable price action.  
+By the time the MACD signals a trend, the trend may already be largely completed.  
+In MACD terminology, “divergence” refers to the two underlying moving averages moving apart, while “convergence” refers to them moving together.  
+Gerald Appel defined divergence as a situation where the MACD line does not conform to price movement, such as a price low not accompanied by a MACD low.  
+Thomas Asprey called the difference between the MACD line and its signal line the “divergence” series.  
+In a MACD histogram, the height of each bar corresponds to the MACD value at that point in time.  
+The difference between the MACD line and its signal line is often plotted as a bar chart and called a histogram.

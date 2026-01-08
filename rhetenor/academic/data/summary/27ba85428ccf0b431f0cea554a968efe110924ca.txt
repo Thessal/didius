@@ -1,0 +1,10 @@
+The McClellan Oscillator and its companion Summation Index are among the earliest purely technical indicators used by market technicians to interpret the Advance‑Decline Line.  
+The McClellan Oscillator and Summation Index were first created in 1969 by Sherman and Marian McClellan.  
+The McClellan Oscillator measures the acceleration in daily Advance‑Decline statistics by smoothing the numbers with two exponential moving averages and taking their difference.  
+Advance‑Decline data analysis was first performed in 1926 by Colonel Leonard Ayres, who sought an alternative to examining individual stock prices or broad indices such as the Dow Jones Industrial Average.  
+The weekly financial newspaper Barron's began publishing Advance‑Decline numbers in 1931.  
+Historically, the most common use of Advance‑Decline data was to construct a cumulative Advance‑Decline Line by adding each day’s breadth (advancing issues minus declining issues) to a running total.  
+A weakness of the cumulative Advance‑Decline Line is that changes in the number of issues traded can affect the amplitude of its movements, especially over long periods.  
+Using a ratio of daily Advance‑Decline difference to the total number of advances plus declines eliminates the effect of a changing number of issues.  
+Advance‑Decline data became widely used in the early 1960s after being publicized in the writings of Richard Russell and Joseph Granville.  
+The Advance‑Decline Line successfully indicated a divergent market top before the 27% decline of the Dow Jones Industrial Average in 1961.

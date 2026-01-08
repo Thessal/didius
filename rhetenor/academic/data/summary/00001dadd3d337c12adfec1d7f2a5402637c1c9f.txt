@@ -1,0 +1,9 @@
+The VXO is a measure of implied volatility calculated using 30‑day S&P 100 index at‑the‑money options.  
+Professors Brenner and Galai developed a 1989 proposal for a series of volatility indexes, published in 1993.  
+In 2003 the CBOE introduced a new methodology for the VIX, changing the underlying index from the CBOE S&P 100 Index (OEX) to the CBOE S&P 500 Index (SPX); the old methodology was renamed the VXO.  
+On March 26 2004 the first-ever trading in futures on the VIX Index began on the CBOE Futures Exchange (CFE).  
+VIX options were launched in February 2006.  
+On October 24 2008 the VIX reached an intraday high of 89.53.  
+On November 21 2008 the VIX closed at a record 80.74.  
+On February 5 2018 the VIX closed at 37.32, up 103.99 % from the previous close.  
+On March 9 2020 the VIX hit 62.12, the highest level since the 2008 financial crisis.

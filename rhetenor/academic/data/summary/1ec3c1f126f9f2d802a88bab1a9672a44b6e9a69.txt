@@ -1,0 +1,3 @@
+In a complete cycle of the stock market, the number of minor waves is 144.  
+The wave counts in a complete stock market cycle are: primary level 5 bullish waves and 3 bearish waves (total 8), intermediate level 21 bullish waves and 13 bearish waves (total 34), and secondary level 89 bullish waves and 55 bearish waves (total 144).  
+All wave count numbers used in the stock market cycle belong to the Fibonacci series and the entire sequence is used.

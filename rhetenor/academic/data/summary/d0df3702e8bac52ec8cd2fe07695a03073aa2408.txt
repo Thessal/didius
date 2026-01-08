@@ -1,0 +1,11 @@
+High_5 and Low_5 are the lowest and highest prices in the last 5 days respectively.  
+%D is the N‑day moving average of %K, typically a simple moving average but it can be an exponential moving average to weight recent values more heavily.  
+The only valid signal when using %D alone is a divergence between %D and the price of the analyzed security.  
+The stochastic oscillator calculation finds the range between an asset’s high and low price over a given period.  
+The current security’s price is expressed as a percentage of that range, where 0 % indicates the bottom of the range and 100 % indicates the top of the range.  
+Prices tend to close near the extremes of the recent range before turning points, according to the stochastic oscillator’s underlying idea.  
+%K is calculated as ((Price − Low_N) / (High_N − Low_N)) × 100.  
+%D is calculated as the average of the last three %K values: (%K₁ + %K₂ + %K₃) / 3.  
+Price refers to the last closing price of the security.  
+Low_N is the lowest price over the last N periods.  
+High_N is the highest price over the last N periods.

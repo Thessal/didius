@@ -1,0 +1,15 @@
+The Relative Strength Index (RSI) adds a new dimension to chart interpretation when plotted alongside a daily bar chart.  
+Tops and bottoms are indicated when the RSI rises above 70 or falls below 30.  
+Chart formations that appear on the RSI may not be apparent on the bar chart.  
+Failure swings above 70 or below 30 on the RSI are strong indications of market reversals.  
+Support and resistance levels often become visible on the RSI before they appear on the bar chart.  
+Divergence between the RSI and price action is a very strong indication that a market turning point is imminent.  
+The momentum oscillator measures the velocity of directional price movement.  
+When price moves up very rapidly, the momentum oscillator indicates an overbought condition; when price moves down very rapidly, it indicates an oversold condition.  
+An overbought or oversold condition suggests that a reaction or reversal is imminent.  
+The slope of the momentum oscillator is directly proportional to the velocity of the price move.  
+The distance traveled by the momentum oscillator is proportional to the magnitude of the price move.  
+The momentum oscillator is typically displayed as a line chart with magnitude on the vertical axis and time on the horizontal axis.  
+The momentum oscillator moves rapidly at market turning points and tends to slow down as the market continues in a directional move.  
+A simple oscillator can be expressed as today’s price minus the price X days ago (e.g., ten days ago).  
+The oscillator value is positive when today’s price is higher than the price X days ago and negative when it is lower.

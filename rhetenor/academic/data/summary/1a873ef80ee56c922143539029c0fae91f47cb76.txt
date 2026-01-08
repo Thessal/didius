@@ -1,0 +1,17 @@
+The Commodity Channel Index (CCI) can be used to identify overbought and oversold levels in securities.  
+A security is considered oversold when the CCI falls below –100 and overbought when it exceeds +100.  
+A buy signal may be generated when the CCI moves back above –100 from oversold levels.  
+A sell signal may be generated when the CCI moves back below +100 from overbought levels.  
+Divergences can be applied to the CCI to increase the robustness of its signals.  
+A positive divergence below –100 strengthens a signal based on the CCI moving back above –100.  
+A negative divergence above +100 strengthens a signal based on the CCI moving back below +100.  
+Trend line breaks can be used to generate trading signals with the CCI.  
+Trend lines can be drawn by connecting peaks and troughs of the CCI.  
+From oversold levels, an advance above –100 combined with a trend line breakout may be considered bullish.  
+From overbought levels, a decline below +100 combined with a trend line break may be considered bearish.  
+A study of 43,297 backtested trades found the CCI indicator effective with specific settings on particular timeframes.  
+Testing the CCI over a 20‑year period (01/02/2003‑01/31/2023) showed it outperformed a buy‑and‑hold strategy on the S&P 500.  
+The most reliable CCI setting was identified as CCI(50) crossing up through the –100 level on a daily chart.  
+The study reported a 1,108 % return over 20 years using the CCI, versus a 555 % return for S&P 500 buy‑and‑hold.  
+The CCI indicator can be unreliable on individual stocks, shorter timeframes, or with suboptimal settings.  
+Using the CCI on 5‑minute charts is not recommended due to poor performance.

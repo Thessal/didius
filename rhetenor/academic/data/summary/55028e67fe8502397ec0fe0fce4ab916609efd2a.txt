@@ -1,0 +1,8 @@
+If the last closing price equals the previous closing price, both upward move U and downward move D are zero, and U and D are always nonnegative.  
+Upward and downward moves U and D are averaged using an n‑period smoothed or modified moving average (SMMA or MMA), which is an exponentially smoothed moving average with smoothing factor α = 1/n.  
+Wilder’s original moving‑average formula is newval = (prevval × (n − 1) + newdata) / n, which is equivalent to exponential smoothing with α = 1/n.  
+In Wilder’s formulation, new data is multiplied by α and the previous average is multiplied by (n − 1)/n (i.e., 1 − α).  
+Some commercial software packages, such as AIQ, use a standard exponential moving average (EMA) instead of Wilder’s SMMA for smoothing U and D.  
+Smoothed moving averages should be initialized with a simple moving average calculated over the first n price values.  
+The relative strength factor (RS) is defined as the ratio of the SMMA of U to the SMMA of D: RS = SMMA(U,n) / SMMA(D,n).  
+The relative strength index (RSI) is computed from the relative strength factor as RSI = 100 × (1 − SMMA(D,n) / (SMMA(U,n)+SMMA(D,n))) = 100 − 100 × SMMA(D,n) / (SMMA(U,n)+SMMA(D,n)).

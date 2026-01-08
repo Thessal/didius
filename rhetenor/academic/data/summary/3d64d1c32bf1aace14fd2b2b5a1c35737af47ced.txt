@@ -1,0 +1,12 @@
+Over a 10‑day period a 50 % return generated $3,750 profit before a $45 commission, resulting in $3,705 net profit.  
+Because soybeans require less margin, three soybean contracts could be traded for each coffee contract, yielding $11,115 profit on soybeans and $9,758.75 profit on coffee.  
+The Commodity Selection Index (CSI) value was 348 for soybeans and 318 for coffee.  
+The ADXR indicated soybeans were a 9 % better deal than coffee, but the actual difference was 13.9 %.  
+Margin requirements cannot be set to maintain a constant relationship with volatility or directional movement.  
+There is a direct, though not constant, relationship between margin requirement, volatility, and directional movement.  
+The CSI equation continuously analyzes margin, volatility, and directional movement to identify the most advantageous trading situations.  
+Margin requirements lag market action; they adjust slowly upward and downward.  
+The Commodity Selection Index enables traders to exploit the lag in margin requirements to achieve the best return on invested capital.  
+Most technical trading systems are trend‑following, yet most commodities are in a strong trending mode only about 30 % of the time.  
+If a trader follows the same commodities or stocks continuously, the system must generate more profit in the 30 % of trending periods than it loses in the 70 % of non‑trending periods.  
+Trading only the top five or six commodities on the CSI scale is presented as a more effective approach than trading all commodities or stocks.

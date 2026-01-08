@@ -1,0 +1,10 @@
+ATR_t = (ATR_{t-1} × (n − 1) + TR_t) / n.  
+The first ATR value is calculated as the arithmetic mean of the first n true range values: ATR = (1/n) ∑_{i=1}^{n} TR_i.  
+The first ATR value is the first in the time series and occurs n periods from the beginning of the chart.  
+Large or increasing ranges suggest traders are prepared to continue to bid up or sell down a stock during the day, while decreasing ranges suggest waning interest.  
+Since true range and ATR are calculated by subtracting prices, their volatility measure does not change when historical prices are back‑adjusted by adding or subtracting a constant.  
+The standard deviation of logarithmic price ratios is not invariant to addition of a constant, unlike ATR.  
+Futures traders and analysts typically use ATR to calculate volatility, whereas stock traders and analysts typically use the standard deviation of log price ratios.  
+ATR can be used as an element of position sizing in financial trading.  
+The current ATR value (or a multiple of it) can be used as the size of the potential adverse movement (stop‑loss distance) when calculating trade volume based on a trader’s risk tolerance.  
+ATR provides a self‑adjusting risk limit dependent on market volatility for strategies without a fixed stop‑loss placement.

@@ -1,0 +1,2 @@
+Cutler's RSI generally comes out slightly different from the normal Wilder RSI, but the two are similar because SMA and SMMA are also similar.  
+The relative strength (RS) is calculated as the SMA of up moves divided by the SMA of down moves: RS = SMA(U, n) / SMA(D, n).

@@ -1,0 +1,1 @@
+In share trading, volume weighting assigns each time period a weight proportional to its trading volume.

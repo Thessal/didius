@@ -1,0 +1,18 @@
+A trend line in finance is a bounding line for the price movement of a security.  
+A trend line is formed when a diagonal line can be drawn between at least three price pivot points.  
+A line drawn between only two points does not qualify as a trend line until it is tested with a third point.  
+Trend lines are commonly used to decide entry and exit timing when trading securities.  
+Trend lines are also called Dutch lines because the concept originated in Holland.  
+A support trend line is formed when a security’s price decreases and then rebounds at a pivot point that aligns with at least two previous support pivot points.  
+A resistance trend line is formed when a security’s price increases and then rebounds at a pivot point that aligns with at least two previous resistance pivot points.  
+Stocks often begin or end trending because of a catalyst such as a product launch or a change in management.  
+Trend lines are a simple and widely used technical analysis approach for judging entry and exit investment timing.  
+Establishing a trend line requires historical price data typically presented in chart form.  
+Historically, trend lines were drawn by hand on paper charts, but today they are more commonly drawn using charting software.  
+Some charting software can automatically generate trend lines, though most traders prefer to draw their own.  
+When establishing trend lines, it is important to choose a chart interval that aligns with the trader’s strategy.  
+Short‑term traders typically use charts with intervals such as 1 minute, while longer‑term traders use hourly, daily, weekly, or monthly intervals.  
+Long‑term price data are often displayed on a logarithmic scale to approximate percentage changes rather than absolute values.  
+Trend lines are typically used with price charts but can also be applied to technical indicators such as MACD and RSI.  
+Trend lines can identify positive or negative trending charts: an upsloping line indicates a positive trend when support and resistance pivots align, and a downsloping line indicates a negative trend when they align.  
+A common trading strategy is to buy a stock at support and sell at resistance when the price moves between support and resistance trend lines.

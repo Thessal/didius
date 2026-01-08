@@ -1,0 +1,8 @@
+The Dow Jones average chart displayed a five‑wave triangle pattern from November 1928 to April 1942.  
+Starting with the second wave, the amplitude of each triangle wave was approximately 61.8 % of the preceding wave.  
+The existence of the triangle pattern was confirmed by its generating lines, time relationships, wave structure, and a single coefficient relating each wave to the previous one.  
+A high‑speed market breakthrough occurred from 1921 to 1929 and was followed by a wave‑like pattern.  
+Wars in 1937‑1939 and the September 1 1939 declaration of war disrupted the market pattern and caused a sharp market rise.  
+Figure 83 compares the London Industrials, Dow‑Jones Industrials, and U.S. manufacturing indices for the period 1928 to January 1943.  
+Movements shown on a stock chart in a single sector are rarely a reliable guide to movements in other sectors.  
+Prices in the historical data were quoted in fractions of 1/8 and 1/4 rather than decimal notation.
