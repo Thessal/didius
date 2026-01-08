@@ -1,0 +1,107 @@
+Author: J. Welles Wilder
+Title: New Concepts in Technical Trading Systems
+Year: 1978
+DIRECTIONAL MOVEMENT
+Directional movement is the most fascinating concept I have studied. Defining it is a little like chasing the end of a rainbow... you can see it, you know it's there, but the closer you get to it the more elusive it becomes. I have probably spent more time studying directional movement than any other concept. Certainly one of my most satisfying achievements was the day I was actually able to reduce this concept to an absolute mathematical equation.
+Think of the implications of being able to rate the directional movement of any or all commodities or stocks on a scale of zero to one hundred. If you use a trend-following method, you would trade only those commodities that are in the upper end of the scale. If you are using a system that capitalizes on choppy or non-trending markets, then you would trade only those commodities at the lower end of the scale.
+Consider also being able to define an equilibrium point where directional movement up is in equilibrium with directional movement down.
+Much work has been done in defining technical trading systems, but very little work has been done in the area of defining markets relative to technical trading systems. Now let's look at how this can be done.
+We will start with the smallest increment of directional movement. In Fig. 4.1, movement is obviously in the up direction. The magnitude of this up movement is the difference between points C and A. In effect, this is the high today minus the high yesterday. We will call this distance PLUS DM (+DM). Because the movement is up we consider only the highs.
+We disregard the distance between the lows; that is, points B and D.
+In Fig. 4.2, the directional movement is obviously down. The directional distance is the difference between points B and D. This distance is considered to be a minus distance and is the difference between the low today and the low yesterday. Since the direction is obviously down, we are concerned only with the lows. We disregard the distance between the highs. We will call the difference between the lows MINUS DM (-DM).
+Now, how do we handle an outside day? Look at Fig. 4.3. In this case, the directional movement is up because +DM is greater than -DM. Directional movement must be either up or down-it cannot be a combination of both. We therefore consider the larger DM for an outside day and disregard the smaller DM. Here, the DM is the distance between C and A and is plus.
+In Fig. 4.4, only -DM is considered because it is larger than +DM.
+How about an inside day? In this case, directional movement is zero. The directional movement is also zero in the next figure.
+On a limit-up day, the +DM is C minus A. On a limit-down day, the -DM is D minus B. These illustrations take into consideration every possible configuration that could occur between two days relative to directional movement. To sum the preceding in one sentence, we could say that the basic increment of directional movement is:
+THE LARGEST PART OF TODAY'S RANGE THAT IS OUTSIDE YESTERDAY'S RANGE.
+If the largest part of today's range is above yesterday's range, the DM is PLUS. If the largest part of today's range is below yesterday's range, the DM is MINUS.
+To be meaningful, DM must be expressed as a function of range; that is, it must be relative to range. The range increment is today's TRUE RANGE (TR). This is the same true range we have used in previous chapters. It is the largest of the following:
+1. The distance between today's high and today's low.
+2. The distance between today's high and yesterday's close.
+3. The distance between today's low and yesterday's close.
+True range is always considered to be a positive number.
+To make directional movement relative to range, we simply divide directional movement by the true range. This will give us what we will call the DIRECTIONAL INDICATOR (DI). The +DI and -DI equations each express the DIRECTIONAL INDICATOR for one day (subscript 4):
++DI = (+DM) / TR
+-DI = (-DM) / TR
+If the day were an up day, the +DI equation is applicable; if the day were a down day, the -DI equation is applicable. We cannot have both directional movement up and directional movement down on the same day. Today is either UP or DOWN. In effect, the +DI is the percent of the true range that is UP for the day; the -DI is the percent that is DOWN.
+To make the DIRECTIONAL INDICATOR (DI) a usable tool, we must obtain the sum of the DI for a period of time. We use 14 days because that is an average half-cycle period. This can be done by reviewing the preceding 14 days and determining the Directional Movement (DM) for each day and the True Range for each day. First, we add together all of the True Ranges for the 14 days (TR14). Next, add together all of the Plus DM's (+DM) for the 14 days (+DM14). Then add all of the Minus DM's (-DM) for the 14 days (-DM14).
+The equations for +DI14 and -DI14 are:
++DI14 = +DM14 / TR14
+-DI14 = -DM14 / TR14
+(The term "minus DM" describes downward movement and is not treated as a negative number in the equation.)
+Once we have the first +DM14 and -DM14, we no longer need to keep 14-day back data to calculate the next values. We use the previous day's data with an accumulation technique. Advantages:
+1. Eliminates the need to keep 14-day previous data.
+2. Incorporates a smoothing effect on the DM.
+To obtain the new +DM14, take yesterday's +DM14, divide it by 14 and subtract this amount from yesterday's +DM14, then add today's +DM (if any):
+Today's +DM14 = Previous +DM14 - (Previous +DM14 / 14) + Today's +DM
+We do the same for -DM14:
+Today's -DM14 = Previous -DM14 - (Previous -DM14 / 14) + Today's -DM
+Each day we remove 1/14th of the +DM and 1/14th of the -DM. If today's DM is minus, we add its value back to the -DM14; if today's DM is plus, we add it back to the +DM14.
+The same procedure is used on the TRUE RANGE:
+Today's TR14 = Previous TR14 - (Previous TR14 / 14) + TR(today)
+The +DI14 indicates the percent of the total true range of the last 14 days that was up; the -DI14 indicates the percent that was down. Both values are positive.
+If you are a little confused at this point, don't worry. We will stop here and go through an example step by step, then show how to use the +DI and -DI to derive the DIRECTIONAL MOVEMENT INDEX (DX), the difference between +DI and -DI expressed as a value between 0 and 100.
+Example worksheet: March '78 Chicago Wheat. Columns #1-#5 are self-explanatory. Column #6 is the TRUE RANGE for the day. Column #7 is the PLUS DM (+DM) for today. Column #8 is the MINUS DM (-DM) for today.
+Note on 6/7/77 that both +DM and -DM are zero (inside day). This is an inside day. Also, 6/16/77 is an inside day. For the first 14 days, we only fill in Columns #6, #7, and #8. At the end of 14 days, we obtain the total of Columns #6, #7 and #8.
+At the end of 14 days, the total True Range, TR 14 obtained from adding together each of the 14 day's true ranges (TR) is 41.00. The total +DM14 obtained from adding together all of the numbers in Column #7 is 9.50. The total -DM14 obtaining by summing the numbers in Column #8 is 14.00.
+We are now, at Day 15, (6/21/77) ready to determine TR q4for today, +DM14 for today and -DM14 for today. The mathematics for obtaining TR14 for today are as follows:
+TR14(today) = Previous TR14 - [Previous TR14 / 14] + TR1 = 41.0 - [41.00 / 14] + 5.25 = 41.00 - 2.93 + 5.25 = 43.32
+The mathematics for obtaining +DM14 are as follows (in these equations, +DM is written "plus" and -DM is written "minus" so as not to be confused with + and - as mathematical operators).
+Plus DM14(today) = Previous Plus DM14 - [Previous Plus DM14 / 14] + Plus DM1
+Plus DM14(today) = 9.50 - [9.50 / 14] + 0
+Plus DM14(today) = 9.50 - .68 + 0 = 8.82
+The mathematics for determining -DM14 are as follows:
+Minus DM14(today) = Previous Minus DM14 - [Previous Minus DM14 / 14] + Minus DM1
+Minus DM14(today) = 14.00 - [14.00 / 14] + 2.75
+Minus DM14(today) = 14.00 - 1.00 + 2.75 = 15.75
+Note that in each case above we decrease the previous total by 1/14 and then add back the applicable DM for the day. For the TRUE RANGE column we always have a number to add back for the day; however, for the +DM there was nothing to add back because +DM on the 15th day was zero. For the -DM on the 15th day we have 2.75 to add back.
+In Column #9 insert TR14, which is 43.32.
+In Column #10 insert the +DM14, which is 8.82.
+In Column #11 insert the -DM14, which is 15.75.
+Now divide +DM (Column #10) by TR14 (Column #9) as follows:
++DM14 / TR14 = 8.82 / 43.32 = 0.20 * 100 = 20
+We multiply the answer by 100 (or simply drop the decimal point) and put this number in Column #12. This number, 20, is the PLUS DIRECTIONAL INDICATOR (+DI). In effect it implies that 20% of the true range for the previous 14 days was up.
+-DM14 / TR14 = 15.75 / 43.32 = 0.36 * 100 = 36
+Now we take our -DM14 in Column #11 and divide it by the same TR14 in Column #9 and obtain .36. This is the MINUS DIRECTIONAL INDICATOR (-DI). Again, we either multiply by 100 or simply drop the decimal point and insert 36 in Column
+#13. In effect it tells us that 36% of the true range for the past 14 days was down.
+Now let's analyze what we have here. If 20 % of the True Range for the past 14 days was up and 36 % of the True Range for the past 14 days was down, then we add these two figures together and determine that 56 % of the True Range was directional - either up or down; therefore, 44 % of the True Range was non-directional.
+Here is the real breakthrough - TRUE DIRECTIONAL MOVEMENT is the DIFFERENCE BETWEEN +DI14 and -DI14. This is the important concept. The more directional the movement of a commodity or stock, the greater will be the difference between +DI and -DI. Each day that we have a plus-directional movement, we add to +DI14. At the same time, we subtract from -DI14. If the direction were up for 14 or more consecutive days, +DI14 would have a large value and -DI14 would approach zero. Therefore, the difference between the two would be very large.
+Conversely, if the price were to go down for 14 or more consecutive days, giving us a -DI for every day, we add to -DI14 and subtract from +DI14, thereby increasing the difference between +DI14 and -DI14. If the price were meandering in a sideways direction, then the difference between +DI14 and -DI14 would be very small. This tells us the price is moving non-directionally. Notice also that we can have a high directional movement value in a very slow-moving market because directional movement is a function of daily range. Conversely we can have a low directional movement value in a very volatile market.
+Now let's go back to our worksheet. We take the difference between +DI14 and -DI14 (i.e., the difference of the numbers in Column #12 and Column #13) and put this value in Column #14. Column #14 is the DI DIFFERENCE. In this case, the DI DIFFERENCE is 16.
+We stated previously that the sum of the plus directional movement and the minus directional movement (+DI14 added to -DI14) represents the total amount of the past 14 days' ranges that moved directionally - either plus or minus. We put this number in Column #15. Column #15 is the sum of Columns #12 and #13. In this case, 20 + 36 = 56.
+We are now ready to fill in Column #16, which is our DIRECTIONAL MOVEMENT INDEX (DX). This is obtained by dividing the difference (16) by the sum (56) and either multiplying by 100 or dropping the decimal point; we obtain 29, the DX for today. This equation results in a DX that must always be between 0 and 100. The higher the DX, the more directional the movement; the lower the DX, the less directional the movement. Notice that whether the price movement is up or down makes no difference to the value of the DX.
+Suppose the price goes straight up for 14 days or more and then turns around and goes straight down for 14 days or more. The DX will decrease as the price tops out and starts down, and it will increase again as the price continues down. Both the up move and the down move represent strong directional movement. As the price tops out and starts down, the difference between +DI14 and -DI14 will decrease, go to zero, and then increase. That is, when the price is going up, +DI14 will be a large number and -DI14 will be a small number. When the price tops out and goes down, the equilibrium point will be reached, then -DI14 will increase and +DI14 will decrease, causing the difference to increase again.
+In order to smooth out this action relative to DX and make DX indicative of both extreme up and down price movement, the period for determining DX must be twice the period for determining +DI14 and -DI14. This can be accomplished simply by using a 14-day average of DX. We compute the DX for 14 days and then, at that time, begin determining the AVERAGE DIRECTIONAL MOVEMENT INDEX (ADX) from the previous day's ADX.
+At this point you have probably already figured out that you go long when +DI14 crosses over -DI14 and you go short when -DI14 crosses over +DI14, and that you only trade the top five or six commodities that are highest on the ADX scale. If so, you have a good understanding of the text so far, but there is a little more to it than that. Before we take up the last part of this concept, let's review the above discussion by picking up at Day 16 (6/22/77) on the worksheet.
+Day 16: We put in the high, low and close and then determine the True Range to be 2.75. The +DM is 0 and the -DM is 1.75. To determine TR for Column #9, we make the following calculation: [ERROR]
+TR14 = 43.32 - (43.42/14) + 2.75 = 43.32 - 3.09 + 2.75 = 42.98
+To determine the +DM14 for Column #10, we make the following calculation:
++DM14 = 8.82 - (8.82/14) + 0 = 8.82 - 0.63 + 0 = 8.19
+To determine the -DM14 for Column #11, we make the following calculation: 
+-DM14 = 15.75 - (15.75/14) + 1.75 = 15.75 - 1.13 + 1.75 = 16.37
+Now divide Column #10 by Column #9, drop the decimal point and obtain 19 for +DI14, which goes in Column #12:
+Column #12: (8.19 / 42.98) = 0.19 * 100 = 19  
+Now divide Column #11 by Column #9, drop the decimal point and obtain 38 for -DI14, which goes in Column #13:
+Column #13: (16.37 / 42.98) = 0.38 * 100 = 38  
+Now take the difference between Column #12 and Column #13 and put the DI difference in Column #14:
+Column #14: 38 - 19 = 19  
+Now take the sum of Column #12 and Column #13 and put the result in Column #15:
+Column #15: 38 + 19 = 57  
+Now divide Column #14 by Column #15, drop the decimal and put the result in Column #16:
+Column #16: 19 / 57 = 33 
+This is the DX
+Follow this procedure for the next 14 days and you will have the routine firmly in mind. On the 28th day (7/11/77) we have enough previous information to calculate the first Average Directional Movement Index (ADX). We obtain the ADX on Day 28 by adding together the 14 previous numbers in Column #16 and dividing this total by 14. The result, 1.86, is the ADX for Day 28 (7/11/77).
+To obtain the ADX for the 29th day (7/12/77) we use the moving-average equation because we are now dealing with averages instead of totals. We multiply yesterday's ADX by 13, add today's DX and divide the total by 14:
+Today's ADX = (Previous ADX times 13 Plus DX today) / 14 = (1.6 * 13 + 0.33) / 14 = 17.14 (Which rounds off to 17)
+We put the result of this calculation, 17, in Column #17. The calculations are relatively simple and become second nature quickly for those who follow this method. Once you obtain your first ADX you no longer have to look at data beyond yesterday. It takes only a minute or two a day to write down the information and run through the calculations on a small electronic calculator. You'll be surprised at how easy it is to follow once you have done it for a week or so.
+This is all the information needed to follow the Directional Movement Index. However, three columns remain on the worksheet:
+ADXR : Average Directional Movement Index Rating  
+ATR14 : Average 14-day True Range  
+CSI : Commodity Selection Index
+These three entities pertain to the Commodity Selection Index (CSI) explained in Section IX. They have been added because the worksheet now contains most of the information used to calculate the CSI.
+The ADXR is the final number used to rate all commodities, currencies, stocks, etc., on a scale indicative of directional movement. The ADXR is simply the ADX today plus the ADX 14 days ago, divided by 2:
+ADXR = (ADX_today + ADX_14_days_ago) / 2  
+Since the ADXR is used only as a rating of directional movement, it must be indicative of that movement while exhibiting minimal fluctuation when the direction changes.
+The ADX, when plotted, tends to form a sine-like curve. The amplitude of the curve is measured from the zero line; peaks and valleys indicate changes of direction. If the major trend is down, peaks are low price points and valleys are high price points; if the trend is up, peaks are high and valleys are low. Higher amplitude reflects stronger directional movement in one direction, indicating a strong trend. Larger distances between peaks and valleys produce stronger reactions to the trend, which can be profitable in both directions.
+The ADXR must reflect good directional movement but should not fluctuate excessively at equilibrium points. This is achieved by averaging a 14-day differential of the ADX. Good directional movement is not simply straight-up or straight-down movement; it includes movement that exceeds the equilibrium point. The equilibrium point is reached when +DI14 equals -DI14.
+In Figure 4.11 the ADX has a low value; the swings represent price swings around equilibrium points. Figure 4.12 shows a higher ADX because the distance between equilibrium points is larger. Figure 4.13 shows an even higher ADX because the equilibrium point was reached only once (the turn down). Figure 4.14 illustrates the opposite extreme: the distance between equilibrium points B and C is zero, so buying at B and selling at C would break even; buying at F and selling at E would result in a loss. Some directional movement exists because there is distance between E and F. This is typical when the ADXR is less than 20. When the ADXR is above 25, equilibrium points widen. When directional movement is high relative to a 14-day period, equilibrium points occur immediately after a turn rather than halfway up the next swing (as seen at points B, D and F).

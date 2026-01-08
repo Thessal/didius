@@ -1,0 +1,57 @@
+Author: J. Welles Wilder
+Title: New Concepts in Technical Trading Systems
+Year: 1978
+From Section III, we learned how to rate the commodities or stocks being followed as to which are the most VOLATILE. In Section IV, we learned how to rate the same entities relative to their DIRECTIONAL MOVEMENT. Volatility is also an indicator of movement. The paradox is that volatility is always accompanied by movement, but movement is not always accompanied by volatility. A commodity can move up very slowly and be high on the Average Directional Movement Index Rating (ADXR) but still be low on the Volatility Index.  
+For this reason, the most important index to use for a trend-following system is the ADXR; however, generally the most money is made in the shortest period of time when the stock or commodity is volatile. For those who do not like the risk associated with volatile markets, they should stay with the ADXR and trade the commodities on the higher end of the scale which suit their inclinations and pocketbooks. For those who have the capital and are looking for the best overall situation, then the Commodity Selection Index (CSI) equation takes in all of the following factors:  
+(1) Directional Movement  
+(2) Volatility  
+(3) Margin Requirement  
+(4) Commission costs
+The factors are individually weighted in the order listed above. Here is the COMMODITY SELECTION INDEX EQUATION.  
+CSI = ADXR * ATR14 * [ V/sqrt(M) * 1/(150+C) ] * 100
+Where
+ADXR = Average Directional Movement Index Rating
+ATR14 = 14-Day Average True Range
+V = Value of a 1c move (or the basic increment of the ATR14 in dollars)
+M = Margin Requirement in dollars
+sqrt(M) = Square root of M
+C = Commission in dollars  
+NOTE: the result of the term (1 /(150+C)) must be carried to four decimal places.  
+Now let's look at an example. Suppose the factors for two commodities are as follows:  
+Soybeans: ADXR 50, ATR14 15c, M $3000, C $45, vM $50
+Pork Bellies: ADXR 37, ATR14 1.7c, M $1500, C $60  
+Substituting in the equation for Soybeans:
+CSI = 50 * 15.00 * [(50/sqrt(3000))*(1/(150+45))] * 100 = 50 * 15.00 * [(50/54.77)*(1/195)] * 100 = 50 * 15.00 * 0.91 * 0.0051 * 100 = 348 (for Soybeans)
+Substituting in the equation for Pork Bellies:
+CSI = 37 * 1.70 * [(360/sqrt(1500))*(1/(150+60))] * 100 = 37 * 1.70 * [(360/38.73)*(1/210)] * 100 = 37 * 1.70 * 9.30 * 0.0048 * 100 = 280 (for Pork Bellies)
+Therefore, Soybeans has the higher rating fo the two.
+Now let's look again at the CSI equation and point out a shortcut that can be used: all the values inside the brackets are constant as long as the margin requirement and the commission cost do not change. The 100 is also a constant. The equation can be rewritten so that K represents all of the constants:  
+CSI = ADXR * ATR14 * K  
+We can therefore calculate K once for each commodity being followed and use that value every day multiplied by the ADXR and the ATR14 to obtain the CSI for that day. We only have to recalculate K when and if either the margin requirement changes or the commission rate changes.  
+In the previous SCI equation for Soybeans:
+CSI = 50 * 15.00 * (50 / sqrt(3000)) * (1 / (150 + 45)) * 100 
+K = 50 * 15.00 * (50 / sqrt(3000)) * (1 / (150 + 45)) * 100 = 0.4641
+Therefore, CSI = ADXR * ATR14 * K = 50 * 15 * 0.4641 = 348
+For Bellies:
+K = (360/sqrt(1500) * 1/(150 + 60)) * 100 = 4.464
+Therefore, CSI = ADXR * ATR14 * K = 37 * 1.70 * 4.464 = 280
+The last three columns on the Directional Movement index worksheet are titled ADXR, ATR44 and CSI. Just above the three columns is a space for K. The CSI can be calculated daily by using K and the values already obtained for the Directional Movement Index worksheet. The ADXR is the latest ADX plus the ADX from 14 days ago, divided by 2, as explained in the section on DIRECTIONAL MOVEMENT. The ATR44 is the value in the ATR column divided by 14. To obtain the CSI for each day, simply multiply ADXR * ATR44 * K and insert the value in the CSI column.
+Now let's look at an extreme example. Suppose Coffee is highest on the ADXR at 70 and the Volatility Index shows that its Average True Range (ATR44) is 3.75c. At $375.00 for a 1c move, the average dollar movement per day is 3.75 * 375 = $1,406.25. Sounds good so far, but if the margin requirement is $9,000 per contract and the commission is $85.00, then how does Coffee compare with trading Soybeans in the previous example? The factors are as follows:
+Soybeans: ADXR 50, ATR14 15c, M $3000, C $45, vM $50
+Coffee: ADXR 70, ATR14 3.75c, M $9000, C $85, vM $375
+For Coffee:
+CSI = 70 * 3.75 * (375 / sqrt(9000)) * (1 / (150 + 85)) * 100 = 318 (for Coffee)
+The CSI for Soybeans was 348; therefore, Soybeans is the better overall deal. Now let's analyze the Soybean situation: The Average True Range (ATR) is 15c * 50.00 = $750 average dollar movement per day. This is only about half that of Coffee, and in addition, Soybeans has less directional movement than Coffee.
+To give you an idea of what the CSI equation does, let's make two general suppositions; let's say that we traded both Coffee and Soybeans:
+(1) Suppose we got 70% of the move in Coffee since ADXR for Coffee was 70; the same reasoning would give us 50% of the Soybean move.  
+(2) Suppose we are in each trade for ten days, so that our money is tied up for the same period of time.
+For Coffee: $1,406.25 per day * 10 days * 70% = $9,843.75. Less commission $85.00 -> Profit $9,758.75.
+For Soybeans: $750 per day * 10 days * 50% = $3,750.00. Less commission $45.00 -> Profit $3,705.00.  
+Because Soybeans require less margin, we could have traded three contracts of Soybeans for each contract of Coffee; therefore, 3 * $3,705 = $11,115. The profit on Soybeans was $11,115.00; the profit on Coffee was $9,758.75. The COMMODITY SELECTION INDEX for Soybeans was 348; for Coffee it was 318.
+30 / 318 = 9%
+The ADXR indicated that Soybeans was a 9% better deal than Coffee. Actually, in the example Soybeans was a 13.9% better deal than Coffee. 
+$11115.00 - $9758.75 = $1,356.25
+1356.25 / 9758.75 = 13.9%
+I realize that what we are dealing with here is not an exact science. The margin requirements will not be set, nor could they be set to maintain a constant relationship with volatility or directional movement, nor any other variable, for that matter. There is, however, a direct-though not constant-relationship between margin requirement, volatility and directional movement. The CSI equation constantly analyzes all of these factors and points out the most advantageous situations.
+As a rule, margin requirements lag market action. They are slow to go up and slow to go down. The COMMODITY SELECTION INDEX also enables the trader to take advantage of this lag to obtain the best return on invested capital.
+Most technical systems are trend-following systems; however, most commodities are in a good trending mode (high directional movement) only about 30% of the time. If the trader follows the same commodities or stocks all of the time, then his system has to be good enough to make more money 30% of the time than it will give back 70% of the time. Compare that approach to trading only the top five or six commodities on the CSI scale. This is the underlying concept... the reason this book was written.

@@ -5,10 +5,6 @@ Historical technical indicator research
 
 |Category|Indicator|Author|Paper/Book|Year|
 |--:|--:|--:|--:|--:|
-| ? |RSI|J. Welles Wilder|New Concepts in Technical Trading Systems|1978|
-| ? |CSI|J. Welles Wilder|New Concepts in Technical Trading Systems|1978|
-| ? |DMI|J. Welles Wilder|New Concepts in Technical Trading Systems|1978|
-| ? |PSAR|J. Welles Wilder|New Concepts in Technical Trading Systems|1978|
 | ? |Swing Index|J. Welles Wilder|New Concepts in Technical Trading Systems|| ? 1978|
 | ? |Volatility Index|J. Welles Wilder|New Concepts in Technical Trading | ? Systems|1978|
 | ? |Fibonacci|Burton Malkiel|A Random Walk Down Wall Street|1973|

@@ -1,0 +1,2 @@
+Remove unnecessary new lines and whitespaces in the following text. Fix typos. Mark garbled text as [ERROR]. Replace non-ASCII characters like “—”, “–”, “’”, “ﬁ”, “ﬂ”, etc. with ASCII equivalents, and use only ascii text (\x00-\x7F).
+
