@@ -1,4 +1,9 @@
-Historical technical indicator research 
+## Disclaimer
+Technical indicators are systematic, yet they are often not driven by logic.
+
+They are **meaningful because they can be criticized or disproven**. Their inherent significance is not always great in the modern market.
+
+## Historical technical indicator research 
 * I looked up the [wikipedia](https://en.wikipedia.org/wiki/Template:Technical_analysis)
 * Wikipedia parsing is non consistent. Check the data consistency for a serious research.
 * The folowing table was mostly generated using a LLM. Verify it first before a serious research.
@@ -8,7 +13,7 @@ Historical technical indicator research
 | ? |Swing Index|J. Welles Wilder|New Concepts in Technical Trading Systems|| ? 1978|
 | ? |Volatility Index|J. Welles Wilder|New Concepts in Technical Trading | ? Systems|1978|
 | ? |Fibonacci|Burton Malkiel|A Random Walk Down Wall Street|1973|
-| Support and resistance | Fibonacci Retracement            | Burton Malkiel (attributed concept origin) | A Random Walk Down Wall Street                                              | 1973                     |
+| Support and resistance | Fibonacci Retracement            | Ralph Nelson Elliott | Nature’s Law: The Secret of the Universe                                   | 1946                     |
 | Support and resistance | Pivot Point                      | (Not specified in sources)                 | (Not specified in sources)                                                  | (Not specified)          |
 | Market trend           | ADX                              | J. Welles Wilder                           | New Concepts in Technical Trading Systems (implied)                         | 1978                     |
 | Market trend           | Detrended Price Oscillator (DPO) | William Blau                               | (Not specified in sources)                                                  | 1991                     |
@@ -43,7 +48,7 @@ Historical technical indicator research
 | Volatility             | VIX                              | R. Whaley / M. Brenner & D. Galai          | New Financial Instruments for Hedging Changes in Volatility (Brenner/Galai) | 1993 / 1989,             |
 | Volatility             | Standard Deviation               | Karl Pearson                               | On the dissection of asymmetrical frequency curves                          | 1894                     |
 | Breadth of market      | Advance–Decline Line             | (Not specified in sources)                 | (Not specified in sources)                                                  | (Not specified)          |
-| Breadth of market      | McClellan Oscillator             | (Not specified in sources)                 | (Not specified in sources)                                                  | (Not specified)          |
+| Breadth of market      | McClellan Oscillator             | Sherman McClellan                 | Patterns for Profit | 1970          |
 | Breadth of market      | TRIN (Arms Index)                | Richard Arms                               | (Not specified in sources)                                                  | 1970s                    |
 | Other                  | Ulcer Index                      | Peter Martin                               | The Investors Guide to Fidelity Funds                                       | 1987 (devised) / 1989 (pub) ||
 | Other                  | Coppock Curve                    | E.S.C. Coppock                             | Barron's Magazine                                                           | 1962                     |   |
