@@ -199,6 +199,7 @@ def main():
         summary_path = check_save(args.output_dir, hashed, content)
         info = generate_summary_metadata(
             path=summary_path, model=args.model, prompt_path=args.prompt_file,
+            original_path=args.input_file,
             additional_info={"duration": duration}
         )
         __metadata_path = check_save(args.metadata_dir, hashed, info)
