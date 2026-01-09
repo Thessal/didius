@@ -1,22 +1,22 @@
 The Commodity Channel Index (CCI) fluctuates above and below zero.  
 The percentage of CCI values that fall between +100 and −100 depends on the number of periods used in its calculation.  
-A shorter CCI period produces more volatility and a smaller percentage of values between +100 and −100.  
-Using more periods to calculate the CCI results in a higher percentage of values between +100 and −100.  
-Traders and investors use the CCI to identify price reversals, price extremes, and trend strength.  
+A shorter CCI period results in greater volatility and a smaller percentage of values between +100 and −100.  
+Using more periods to calculate the CCI yields a higher percentage of values between +100 and −100.  
+Traders and investors use the CCI to help identify price reversals, price extremes, and trend strength.  
 The CCI should be used in conjunction with other aspects of technical analysis.  
 The CCI belongs to the momentum category of oscillators.  
-The CCI is often used to detect divergences from price trends as an overbought/oversold indicator and to trade pattern-based signals.  
+The CCI is often used to detect divergences from price trends as an overbought/oversold indicator and to trade patterns drawn on it.  
 The CCI typically oscillates above and below a zero line.  
-Normal CCI oscillations occur within the range of +100 to −100.  
+Normal CCI oscillations occur within the range of +100 and −100.  
 Readings above +100 imply an overbought condition.  
 Readings below −100 imply an oversold condition.  
-Overbought or oversold CCI readings suggest a high probability that price will correct toward more representative levels.  
-The CCI has become popular among technical investors for determining cyclical trends in commodities, equities, and currencies.  
-When combined with other oscillators, the CCI can help identify potential price peaks and valleys, providing evidence to estimate direction changes.  
-Lambert’s CCI trading guidelines generate buy signals when the CCI moves above +100 and sell signals when it moves below −100.  
-Approximately 70–80 % of CCI values lie between +100 and −100, so buy or sell signals occur only about 20–30 % of the time.  
-A CCI reading above +100 indicates a strong uptrend and triggers a buy signal, which should be closed when the CCI falls back below +100.  
-A CCI reading below −100 indicates a strong downtrend and triggers a sell signal, which should be closed when the CCI rises back above −100.  
+Overbought or oversold CCI readings suggest a large probability that the price will correct to more representative levels.  
+The CCI has become popular among technical investors, who use it to determine cyclical trends in commodities, equities, and currencies.  
+When combined with other oscillators, the CCI can help identify potential peaks and valleys in an asset’s price, providing evidence to estimate direction changes.  
+Lambert’s trading guidelines for the CCI focus on movements above +100 and below −100 to generate buy and sell signals.  
+Approximately 70 % to 80 % of CCI values lie between +100 and −100, so buy or sell signals occur only about 20 % to 30 % of the time.  
+When the CCI moves above +100, a security is considered to be entering a strong uptrend and a buy signal is given; the position should be closed when the CCI moves back below +100.  
+When the CCI moves below −100, a security is considered to be in a strong downtrend and a sell signal is given; the position should be closed when the CCI moves back above −100.  
 Since Lambert’s guidelines, traders have found the CCI valuable for identifying reversals.  
 The CCI is a versatile indicator capable of producing a wide array of buy and sell signals.  
 A security is deemed oversold when the CCI dips below −100 and overbought when it exceeds +100.

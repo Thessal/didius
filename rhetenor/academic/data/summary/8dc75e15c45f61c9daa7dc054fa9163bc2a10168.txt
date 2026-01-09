@@ -1,8 +1,8 @@
 In financial applications a simple moving average (SMA) is the unweighted arithmetic mean of the previous k data points.  
-The SMA over the last k entries of a data set containing n entries equals the sum of the last k data points divided by k.  
-The next SMA can be updated efficiently as SMAₖ,next = SMAₖ,prev + (1/k) × (pₙ₊₁ − pₙ₋ₖ₊₁).  
+The SMA over the last k entries of a data set with n points is calculated as SMAₖ = (1/k) ∑_{i=n‑k+1}^{n} p_i.  
+The next SMA can be updated efficiently as SMA_{k,next} = SMA_{k,prev} + (1/k) (p_{n+1} − p_{n‑k+1}).  
 This means the moving‑average filter can be computed cheaply on real‑time data with a FIFO/circular buffer using only three arithmetic steps.  
-During the initial filling of the FIFO/circular buffer the sampling window equals the data‑set size (k = n), and the average is calculated as a cumulative moving average.  
+During the initial filling of the FIFO/circular buffer the sampling window equals the data‑set size (k = n), and the average is computed as a cumulative moving average.  
 The period selected (k) depends on the type of movement of interest, such as short, intermediate, or long‑term.  
 If the data are not centered around the mean, a simple moving average lags behind the latest datum by half the sample width.  
 An SMA can be disproportionately influenced by old data dropping out or new data coming in.  

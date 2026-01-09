@@ -1,17 +1,15 @@
-While an APO shows greater levels for higher priced securities and smaller levels for lower priced securities, a PPO calculates changes relative to price.  
-A PPO is preferred when comparing oscillator values between different securities with substantially different prices, or when comparing oscillator values for the same security at significantly different times with large price changes.  
-The detrended price oscillator (DPO) ignores long-term trends while emphasizing short-term patterns.  
+The PPO calculates changes relative to price and is preferred when comparing oscillator values between different securities with substantially different prices or for the same security at significantly different times with large price changes.  
+The detrended price oscillator (DPO) ignores long‑term trends while emphasizing short‑term patterns.  
 Exponential moving averages highlight recent changes in a stock’s price.  
 By comparing EMAs of different lengths, the MACD series gauges changes in the trend of a stock.  
 The difference between the MACD series and its average is claimed to reveal subtle shifts in the strength and direction of a stock’s trend.  
-It may be necessary to correlate MACD signals with indicators like RSI power.  
-Some traders attribute special significance to the MACD line crossing the signal line or crossing the zero axis.  
-Traders also attribute significance to disagreements between the MACD line or the difference line and the stock price, such as higher highs or lower lows on the price not matched in the indicator.  
-A signal-line crossover occurs when the MACD line and its average line cross, causing the divergence bar graph to change sign.  
-The standard interpretation of a bullish signal-line crossover is a recommendation to buy, while a bearish crossover is a recommendation to sell.  
-Signal-line crossover events are taken as indications that the stock’s trend is about to accelerate in the direction of the crossover.  
-A zero crossover event occurs when the MACD line crosses the horizontal zero axis, changing sign.  
+Some traders attribute special significance to the MACD line crossing the signal line, or the MACD line crossing the zero axis.  
+Significance is also attributed to disagreements between the MACD line or the difference line and the stock price, specifically higher highs or lower lows on the price series that are not matched in the indicator series.  
+A signal‑line crossover occurs when the MACD and its average line cross, i.e., when the divergence (the bar graph) changes sign.  
+The standard interpretation of a bullish signal‑line crossover is a recommendation to buy, and a bearish crossover is a recommendation to sell.  
+These events are taken as indications that the trend in the stock is about to accelerate in the direction of the crossover.  
+A zero crossover event occurs when the MACD series changes sign, i.e., the MACD line crosses the horizontal zero axis.  
 A change from positive to negative MACD is interpreted as bearish, and a change from negative to positive MACD is interpreted as bullish.  
-Zero crossovers provide evidence of a change in the direction of a trend but offer less confirmation of momentum than signal-line crossovers.  
-A positive (bullish) divergence occurs when the price makes a new low but the MACD does not confirm with a new low.  
-A negative (bearish) divergence occurs when the price makes a new high but the MACD does not confirm with a new high.
+Zero crossovers provide evidence of a change in the direction of a trend but less confirmation of its momentum than a signal‑line crossover.  
+A positive (bullish) divergence occurs when the price makes a new low but the MACD does not confirm with a new low of its own.  
+A negative (bearish) divergence occurs when the price makes a new high but the MACD does not confirm with a new high of its own.

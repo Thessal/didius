@@ -4,7 +4,8 @@
     "path": "./data/summary/b4ebc71388508ff077053b6ac902e1f737e8cb5b.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/ease-of-movement.txt",
     "additional_info": {
-        "duration": 9.503188610076904
+        "duration": 9.365579605102539
     }
 }

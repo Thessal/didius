@@ -1,6 +1,6 @@
-The EMA of m₀ with period n is calculated as EMA(m₀,n) = (2/(n+1))[m₀ − EMA(m₁,n)] + EMA(m₁,n).  
+EMA(m₀, n) = (2/(n+1)) [m₀ − EMA(m₁, n)] + EMA(m₁, n).  
 The EMA smoothing period for momentum (r) is typically 25.  
 The EMA smoothing period for smoothed momentum (s) is typically 13.  
-The TSI output is bounded between +100 and −100, but most values fall between +25 and −25.  
-Blau suggests interpreting TSI values near +25 and −25 as overbought and oversold levels, respectively, where a trader may anticipate a market turn.  
-The slope of the TSI indicates trend direction: a rising TSI suggests an up‑trend, and a falling TSI suggests a down‑trend.
+The TSI output is bounded between +100 and –100, but most values fall between +25 and –25.  
+Blau suggests interpreting TSI values of +25 and –25 as overbought and oversold levels, respectively, where a trader may anticipate a market turn.  
+Trend direction is indicated by the slope of the TSI; a rising TSI suggests an up‑trend, and a falling TSI suggests a down‑trend.

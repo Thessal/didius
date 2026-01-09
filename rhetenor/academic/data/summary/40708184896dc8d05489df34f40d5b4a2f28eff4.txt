@@ -1,15 +1,14 @@
-The center line for the Relative Strength Index (RSI) is 50, which is often seen as both the support and resistance line for the indicator.  
+The center line for the Relative Strength Index (RSI) is 50, which is often seen as both the support and resistance level for the indicator.  
 Uptrends generally trade between RSI 40 and 80, while downtrends usually trade between RSI 60 and 20.  
-When securities change from uptrend to downtrend and vice versa, the RSI will undergo a “range shift.”  
-Bearish divergence only occurs in uptrends and mostly leads to a brief correction instead of a reversal, thus confirming an uptrend.  
+When securities change from an uptrend to a downtrend or vice versa, the RSI undergoes a “range shift.”  
+Bearish divergence occurs only in uptrends and typically leads to a brief correction rather than a reversal, thereby confirming the uptrend.  
 Bullish divergence is a sign confirming a downtrend.  
-A positive reversal occurs when an uptrend price correction results in a higher low compared to the last price correction, while the RSI results in a lower low compared to the prior correction.  
-A negative reversal occurs when a downtrend rally results in a lower high compared to the last downtrend rally, but the RSI makes a higher high compared to the prior rally.  
-Positive reversals only happen in uptrends and confirm the uptrend.  
-Negative reversals only occur in downtrends and confirm the downtrend.  
-Cardwell discovered the existence of positive and negative reversals in the RSI.  
-Cutler’s RSI is based on a simple moving average of U and D instead of the exponential average used by Wilder.  
-Wilder’s RSI value depends on where in the data file his calculations started due to the smoothed moving average.  
+A positive reversal occurs when an uptrend price correction produces a higher low than the previous correction, while the RSI produces a lower low than the prior correction.  
+A negative reversal occurs when a downtrend rally produces a lower high than the previous rally, while the RSI produces a higher high than the prior rally.  
+Positive reversals happen only in uptrends and confirm the uptrend.  
+Negative reversals happen only in downtrends and confirm the downtrend.  
+Cutler’s RSI is based on a simple moving average of upward (U) and downward (D) price changes instead of the exponential average used by Wilder.  
+Wilder’s RSI value depends on where in the data file the calculations start because it uses a smoothed moving average.  
 Cutler termed this issue “Data Length Dependency.”  
-Cutler’s RSI is not data length dependent and returns consistent results regardless of the length of, or the starting point within, a data file.  
-The formula for RS in Cutler’s RSI is RS = SMA(U, n) / SMA(D, n).
+Cutler’s RSI is not data‑length dependent and returns consistent results regardless of the length of, or the starting point within, a data file.  
+Cutler’s RSI calculates the relative strength (RS) as RS = SMA(U, n) / SMA(D, n).

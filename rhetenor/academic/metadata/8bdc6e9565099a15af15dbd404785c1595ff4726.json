@@ -4,7 +4,8 @@
     "path": "./data/summary/8bdc6e9565099a15af15dbd404785c1595ff4726.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/force-index.txt",
     "additional_info": {
-        "duration": 7.610612630844116
+        "duration": 7.744632005691528
     }
 }

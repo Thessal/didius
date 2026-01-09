@@ -2,16 +2,17 @@ Low_N is the lowest price over the last N periods.
 High_N is the highest price over the last N periods.  
 % D is a 3‑period simple moving average of % K.  
 % D‑Slow is a 3‑period simple moving average of % D.  
-A 3‑line Stochastics indicator provides an anticipatory signal in % K, a signal in the turnaround of % D at or before a bottom, and a confirmation of the turnaround in % D‑Slow.  
+A 3‑line Stochastics provides an anticipatory signal in % K, a signal in the turnaround of % D at or before a bottom, and a confirmation of the turnaround in % D‑Slow.  
 Typical values for N in the Stochastics indicator are 5, 9, or 14 periods.  
 Smoothing the Stochastics indicator over 3 periods is standard practice.  
-According to George Lane, the Stochastics indicator is used with cycles, Elliott Wave Theory, and Fibonacci retracement for timing.  
-In low‑margin calendar futures spreads, Wilders’ parabolic may be used as a trailing stop after a Stochastics entry.  
-A central teaching of George Lane is that divergence and convergence of trendlines drawn on Stochastics should be compared to trendlines drawn on price cycles.  
+George Lane recommends using the Stochastics indicator together with cycles, Elliott Wave Theory, and Fibonacci retracement for timing.  
+In low‑margin calendar futures spreads, traders may use Wilder’s parabolic SAR as a trailing stop after a Stochastics entry.  
+Lane’s teaching emphasizes the divergence and convergence of trendlines drawn on Stochastics relative to trendlines drawn on price cycles.  
 Stochastics predicts market tops and bottoms.  
-The signal to act is when there is a divergence‑convergence in an extreme area with a crossover on the right‑hand side of a cycle bottom.  
-Because plain crossovers can occur frequently, traders typically wait for crossovers that occur together with an extreme pullback after a peak or trough in the % D line.  
-If price volatility is high, an exponential moving average of the % D indicator may be taken to smooth rapid fluctuations.  
-Stochastics attempts to predict turning points by comparing the closing price of a security to its price range, with prices tending to close near the extremes of the recent range just before turning points.  
-In an uptrend, prices tend to make higher highs and the settlement price usually lies in the upper end of the period’s trading range.  
-When momentum slows, settlement prices retreat from the upper boundaries of the range, causing the stochastic indicator to turn down.
+The trading signal occurs when a divergence‑convergence pattern appears in an extreme area with a crossover on the right side of a cycle bottom.  
+Because plain crossovers occur frequently, traders typically wait for crossovers that coincide with an extreme pullback after a peak or trough in the % D line.  
+When price volatility is high, applying an exponential moving average to the % D indicator can smooth rapid price fluctuations.  
+Stochastics attempts to predict turning points by comparing a security’s closing price to its recent price range.  
+Prices tend to close near the extremes of the recent range just before turning points.  
+In an uptrend, prices usually make higher highs and the settlement price tends to be in the upper end of the period’s trading range.  
+When momentum slows, settlement prices retreat from the upper range boundaries, causing the Stochastics indicator to turn down.

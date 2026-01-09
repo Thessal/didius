@@ -1,17 +1,18 @@
 The Vortex Indicator is a technical indicator invented by Etienne Botes and Douglas Siepman to identify the start of a new trend or the continuation of an existing trend within financial markets.  
-It was published in the January 2010 edition of Technical Analysis of Stocks & Commodities.  
-The Vortex Indicator was inspired by the work of Viktor Schauberger and also partly inspired by J. Welles Wilder’s concept of directional movement.  
-A vortex pattern may be observed in any market by connecting the lows of price bars with consecutive bars’ highs and the highs with consecutive lows.  
+The Vortex Indicator was published in the January 2010 edition of Technical Analysis of Stocks & Commodities.  
+The Vortex Indicator was inspired by Viktor Schauberger’s study of water flow and by J. Welles Wilder’s concept of directional movement.  
+A vortex pattern may be observed in any market by connecting the lows of price bars with the consecutive bars’ highs and the highs with consecutive lows.  
 The greater the distance between the low of a price bar and the subsequent bar’s high, the greater the upward Vortex movement (VM+).  
 The greater the distance between a price bar’s high and the subsequent bar’s low, the greater the downward Vortex movement (VM‑).  
 On a chart, VI+ and VI‑ intersect at a change of trend and diverge as trend strength increases.  
 When VI+ is larger and above VI‑, the market is trending up.  
 When VI‑ is larger and above VI+, the market is trending down.  
-When VI+ crosses above VI‑, a long (buy) position is indicated.  
-When VI‑ crosses above VI+, a short (sell) position is suggested.  
-The article suggested only entering a trade at the extreme high or low of the price bar that corresponds with a crossing of the Vortex Indicator.  
-Calculation of the Vortex Indicator requires high, low, and close values for any chosen stock, future, commodity, or currency at any time interval.  
-True range is defined as the maximum absolute value of (current high − current low), (current low − previous close), or (current high − previous close).  
-VM+ is calculated as the absolute value of current high minus previous low.  
-VM‑ is calculated as the absolute value of current low minus previous high.  
-A parameter length (e.g., 21 periods) is chosen, and the last 21 periods’ true range, VM+, and VM‑ are summed to compute the indicator.
+A crossing of VI+ above VI‑ indicates a long (buy) position.  
+A crossing of VI‑ above VI+ suggests a short (sell) position.  
+Effective trading strategy may require entering a trade at the extreme high or low of the price bar that corresponds with a Vortex Indicator crossing.  
+Calculation of the Vortex Indicator requires high, low, and close values for the chosen instrument at any time interval.  
+True range (TR) is calculated as the maximum of (current high – current low), (current low – previous close), or (current high – previous close).  
+Upward Vortex Movement (VM+) is the absolute value of current high minus previous low.  
+Downward Vortex Movement (VM‑) is the absolute value of current low minus previous high.  
+The indicator typically uses a parameter length of 21 periods, summing the last 21 periods’ True Range, VM+, and VM‑.  
+Vortex Indicator values are obtained by dividing the sum of VM+ by the sum of True Range (and similarly for VM‑).

@@ -4,7 +4,8 @@
     "path": "./data/summary/efc250c5a37d534c7684bdae9c6c59fded54fb72.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/accumulation-distribution-index.txt",
     "additional_info": {
-        "duration": 18.658186674118042
+        "duration": 16.810142755508423
     }
 }

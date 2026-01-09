@@ -4,7 +4,8 @@
     "path": "./data/summary/b8db54167b3907f857cbbe43bbe892053b2479f4.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Breadth of market/advancedecline-line.txt",
     "additional_info": {
-        "duration": 21.92387819290161
+        "duration": 21.786877393722534
     }
 }

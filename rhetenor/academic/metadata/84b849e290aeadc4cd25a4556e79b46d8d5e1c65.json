@@ -4,7 +4,8 @@
     "path": "./data/summary/84b849e290aeadc4cd25a4556e79b46d8d5e1c65.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Support and resistance/fibonacci-retracement.txt",
     "additional_info": {
-        "duration": 10.712285995483398
+        "duration": 9.510787010192871
     }
 }

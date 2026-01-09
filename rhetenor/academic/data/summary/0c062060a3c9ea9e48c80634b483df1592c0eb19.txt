@@ -1,14 +1,13 @@
-New financial instruments can be used to hedge changes in volatility.  
-Volatility in foreign currencies can be hedged.  
-Hedging equity market volatility improves hedge fund risk exposures.  
-The VIX can be used to time S&P trades.  
-The VIX can be used for style and size rotation market timing.  
+New financial instruments can hedge changes in volatility.  
+Hedging equity market volatility can improve hedge fund risk exposures.  
+Timing S&P trades using the VIX can improve trade timing.  
+Using the VIX for style and size rotation can aid market timing.  
 A portfolio that combines stocks and volatility can be constructed.  
 A new measure can predict stock market volatility.  
-The stock market's fear index is often misused.  
-Fixed income market volatility has a price.  
-Volatility products such as VIX futures and options can manage downside risk and improve efficiency in equity portfolios.  
-VIX futures and options helped diversify portfolios during the 2008 financial crisis.  
-Trading in financial stocks increased when the volatility index hit a record high.  
-Derivatives on market volatility are overdue hedging tools.  
-The VIX serves as an investor fear gauge.
+Volatility products can manage downside risk and improve efficiency in equity portfolios.  
+The VIX serves as an investor fear gauge.  
+Derivatives on market volatility are long overdue as hedging tools.  
+VIX futures and options can diversify portfolios during the 2008 financial crisis.  
+Trading volume in financial stocks increases when the volatility index hits a record.  
+The VIX index can be explained in basic terms.  
+The stock market's fear index is often misused.

@@ -1,13 +1,14 @@
-Conventional fundamental analysis techniques were found by Sherman to be inconsistent, leading him to adopt technical analysis for market insights.  
-In the 1960s most stock investors purchased stocks primarily for dividend yield rather than growth prospects.  
-Mutual fund trading was almost unheard of in the 1960s.  
-Sherman aimed to maximize dividend yield by buying stocks at price bottoms that occurred two or three times a year, though the timing lacked a consistent rhythm.  
-Sherman and Marian observed that sharp market declines caused both the 10% and 5% exponential moving averages (EMAs) of daily breadth numbers to move to deeply negative levels.  
-During most uptrends, the 10% and 5% EMAs of daily breadth remain positive.  
-Waiting for daily breadth EMAs to transition from deeply negative to positive caused traders to miss the early portion of upward moves.  
-A crossover where the 10% EMA moves above the 5% EMA, even while both are negative, provides an advance warning of a market reversal.  
-The McClellans calculated the difference between the 10% and 5% EMAs of daily breadth to monitor such crossovers.  
-Large differences between the 10% and 5% EMAs indicate extremely overbought or oversold market conditions.  
-The resulting indicator, known as the McClellan Oscillator, functions as an oscillator that oscillates between extreme values and is neutral at zero.  
-Marian performed EMA calculations manually on paper before the invention of hand‑held calculators.  
-Gene Morgan invited developers of market analysis tools to contact him; Sherman responded, and Morgan named the tool the "McClellan Oscillator," which became a daily feature on his TV show.
+Conventional fundamental analysis techniques did not work consistently for Sherman, leading him to adopt technical analysis.  
+In the 1960s most stock investors bought stocks primarily for dividend yield rather than growth prospects.  
+Trading in mutual funds was almost unheard of in the 1960s.  
+The goal of stock purchases at that time was to maximize dividend yield.  
+Sherman observed that price bottoms occurred about two or three times a year, but their timing varied without a clear rhythm.  
+When the stock market declined sharply, both the 10 % and 5 % exponential moving averages (EMAs) of daily breadth numbers moved to deeply negative levels.  
+During most uptrends, the 10 % and 5 % EMAs of daily breadth numbers show positive values.  
+Waiting for the daily breadth EMA to move from deeply negative to positive caused traders to miss the early part of an up move.  
+A crossover where the 10 % EMA moves above the 5 % EMA, even while both are negative, provides an advance warning of a market reversal.  
+The McClellans calculated the difference between the 10 % and 5 % daily breadth EMAs to monitor such crossovers.  
+A large difference between the 10 % and 5 % breadth EMAs indicates extremely overbought or oversold market conditions.  
+The resulting indicator, later named the McClellan Oscillator, functions as an oscillator that oscillates between extreme values and is neutral at zero.  
+Before calculators, Marian performed EMA calculations manually on paper.  
+Gene Morgan invited developers of market analysis tools, and Sherman responded; Morgan coined the name “McClellan Oscillator” and featured it daily on his TV show.

@@ -1,11 +1,12 @@
-Accurate observation of lower‑level waves requires data on the daily range of price changes.  
-The publication of high and low values per day (high‑low range) was introduced by Dow and Jones in 1928.  
-Chart sizes recommended for highlighting price fluctuations are a quarter inch vertically for one point of the Industrial Average, half an inch vertically for one point of the Rail Average, and half an inch vertically for one point of the Utility Average.  
-The quarter‑inch scale is divided into five parts, eliminating guesswork about the exact drawing of daily and hourly bars.  
-It is important to maintain the distance between daily bars and not leave extra space for weekends and holidays.  
-Exactly the same scale and forms are recommended for hourly charts—a quarter inch of the horizontal axis for a five‑hour session, or one minimum division per hour.  
-The daily bar should be plotted at the end of the last hour of each session.  
+Accurate observation of lower-level waves requires data on the daily range of price changes.  
+The publication of daily high and low values (high‑low range) was introduced by Dow and Jones in 1928.  
+Recommended chart sizes for highlighting price fluctuations are a quarter inch vertically per point of the Industrial Average, and half an inch vertically per point of the Rail and Utility Averages.  
+It is important to maintain consistent spacing between daily bars and not leave extra space for weekends and holidays.  
+The same scale and forms are recommended for hourly charts, using a quarter inch of horizontal axis for a five‑hour session or one minimum division per hour.  
+The daily bar should be plotted at the end of the last hour of each trading session.  
 Timing is the most important factor in investing.  
-What to buy is important, but when to buy is even more important.  
-Waves show the next market movement based on their models, whose beginning and end are sensitive to accurate and evidence‑based analysis.  
-An investment of $1,000 in the stock market in July 1932 would have increased to about $5,000 by March 1937, excluding dividends.
+When buying securities, the timing of the purchase is even more important than the selection of what to buy.  
+Wave models indicate the next market movement, and their accuracy depends on precise, evidence‑based analysis of wave beginnings and ends.  
+An investment of $1,000 in long‑term government bonds in January 1932 and sold in June 1939 would have yielded a total profit of $5,000 over the 89‑month period, including interest and bond appreciation.  
+In January 1932 the yield on government bonds was 4%, and in June 1939 it had fallen to 2%.  
+An investment of $1,000 in the stock market in July 1932 would have grown to about $5,000 by March 1937, excluding dividends.

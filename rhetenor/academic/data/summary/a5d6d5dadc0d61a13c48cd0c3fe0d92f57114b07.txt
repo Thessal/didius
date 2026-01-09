@@ -1,8 +1,9 @@
 Ichimoku is a technical analysis method that builds on candlestick charting to improve the accuracy of forecast price moves.  
-The chart plots five lines based on recent highs, lows, and closes, with two lines forming a cloud‑like image.  
-The method is applied across various asset classes and has been used by traders to predict price movements and regime shifts in global markets.  
-Ichimoku is a moving‑average‑based trend identification system that provides a clearer picture of potential price action because it contains more data points than standard candlestick charts.  
-Ichimoku’s lines are constructed using the 50 % point of the highs and lows rather than the candle’s closing price.  
-Ichimoku takes time into account as an additional element along with price action, similar to William Delbert Gann’s trading ideas.  
-Tenkan‑sen is calculated as (highest high + lowest low)/2 over the last 9 periods and serves as a signal line and minor support/resistance line.  
-Kijun‑sen is calculated as (highest high + lowest low)/2 over the past 26 periods and acts as a confirmation line, support/resistance line, and can be used as a trailing stop line.
+The Ichimoku chart plots five lines based on recent highs, lows, and closes.  
+Two of the Ichimoku lines create a cloud‑like image on the chart.  
+The Ichimoku method is applied across various asset classes and has been used by traders to predict price movements and regime shifts in global markets.  
+Ichimoku is a moving average‑based trend identification system that provides a clearer picture of potential price action because it contains more data points than standard candlestick charts.  
+In Ichimoku, the lines are constructed using the 50 % point of the highs and lows rather than the candle’s closing price.  
+Ichimoku incorporates time as an additional element along with price action, similar to William Delbert Gann’s trading ideas.  
+Tenkan‑sen is calculated as (highest high + lowest low) ÷ 2 over the last 9 periods and serves as a signal line and minor support/resistance line indicating market trend.  
+Kijun‑sen is calculated as (highest high + lowest low) ÷ 2 over the past 26 periods and serves as a confirmation line, support/resistance line, and can be used as a trailing stop line indicating future price movement.

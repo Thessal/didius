@@ -4,7 +4,8 @@
     "path": "./data/summary/df90117a0de80ebfef29395ee5e251bf08df8f02.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Other/ulcer-index.txt",
     "additional_info": {
-        "duration": 19.95283579826355
+        "duration": 19.91763710975647
     }
 }

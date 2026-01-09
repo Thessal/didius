@@ -1,0 +1,1 @@
+A price curve can be modeled as a real function on an ordered set.

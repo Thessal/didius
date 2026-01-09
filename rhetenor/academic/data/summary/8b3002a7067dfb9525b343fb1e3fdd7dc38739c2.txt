@@ -1,5 +1,5 @@
-f equals 1 minus 2 divided by (N plus 1), which simplifies to (N‑1)/(N+1).  
-Triple EMA at time 0 equals (1‑f) cubed times the series (p₀ + 3 f p₁ + 6 f² p₂ + 10 f³ p₃ + …).  
-The coefficients in the Triple EMA series are the triangular numbers given by n(n+1)/2.  
+f equals 1 minus 2 divided by (N plus 1), which simplifies to (N − 1) / (N + 1).  
+The triple exponential moving average at time 0 is (1 − f)³ times the series (p₀ + 3f p₁ + 6f² p₂ + 10f³ p₃ + …).  
+The coefficients in the triple EMA expansion are the triangular numbers given by n(n + 1)/2.  
 Because f is less than 1, the powers fⁿ decrease faster than the triangular coefficients increase.  
-Consequently, beyond a certain term the magnitude of the remaining Triple EMA terms becomes negligible.
+Beyond a certain term, the magnitude of all remaining terms in the triple EMA series becomes negligible.

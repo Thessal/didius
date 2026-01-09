@@ -4,7 +4,8 @@
     "path": "./data/summary/66ecf37f6dbf2d9617dd62ab8b858913ac6f330f.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/kst-oscillator.txt",
     "additional_info": {
-        "duration": 25.594749212265015
+        "duration": 25.205278635025024
     }
 }

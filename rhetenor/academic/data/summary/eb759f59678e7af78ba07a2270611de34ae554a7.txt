@@ -1,2 +1,2 @@
-The difference between today's close and the N‑day low minus the difference between today's close and the N‑day high equals the N‑day high minus the N‑day low.  
-The %R indicator is arithmetically exactly equivalent to the %K stochastic oscillator, mirrored at the 0% line, when using the same time interval.
+The difference between today’s close and the N‑day low minus the difference between today’s close and the N‑day high equals the N‑day high minus the N‑day low.  
+The %R indicator is mathematically exactly equivalent to the %K stochastic oscillator, mirrored at the 0 % line, when using the same time interval.

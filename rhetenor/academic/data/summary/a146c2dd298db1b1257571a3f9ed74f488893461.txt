@@ -1,12 +1,12 @@
-The Vortex Indicator is simple to use as the only required inputs are the high, low and close of a price bar.  
-Traders may use the Vortex Indicator on its own, in combination with other technical indicators to confirm a change of trend or as part of a larger trading system.  
-The Vortex Indicator may be used for any market such as stocks, futures or currencies.  
-The Vortex Indicator may be used for any time frame such as 15‑minute, hourly or weekly charts.  
-The Vortex Indicator may be used for any parameter such as 13, 21 or 34 periods.  
-The inventors of the Vortex Indicator recommend using longer time frames and parameters in order to filter out false signals.  
-If a trader uses a very short time frame such as 5 minutes, it should be combined with a long parameter of 34 or 55 periods.  
-Because of its universal applicability, the Vortex Indicator is suitable for both short‑term traders and longer‑term fund managers who wish to identify larger macro trends within a market.  
-The Vortex Indicator is available on most charting software.  
-Some charting software companies have suggested additional trading strategies to use with the Vortex Indicator, including the implementation of a trailing stop and the use of supporting indicators to reduce false signals.  
-In a comparative study testing the Vortex Indicator against Welles Wilder’s Directional Movement Indicator (DMI) using a portfolio of 38 actively traded futures contracts from 3 January 1978 to 6 November 2009 with a 14‑day parameter, the Vortex Indicator showed better performance than the DMI over the entire test period and during the last 10 years.  
-In a similar test based on 101 NASDAQ stocks from 2 January 1992 to 14 August 2009, the DMI showed better performance than the Vortex Indicator.
+The Vortex Indicator requires only the high, low, and close of a price bar as inputs.  
+Traders may use the Vortex Indicator on its own, in combination with other technical indicators, or as part of a larger trading system.  
+The Vortex Indicator can be applied to any market, including stocks, futures, and currencies.  
+The Vortex Indicator can be used on any time frame, such as 15‑minute, hourly, or weekly charts.  
+The Vortex Indicator can be calculated with any parameter length, for example 13, 21, or 34 periods.  
+The inventors of the Vortex Indicator recommend using longer time frames and longer parameters to filter out false signals.  
+If a trader uses a very short time frame, such as 5 minutes, it should be combined with a long parameter of 34 or 55 periods.  
+The Vortex Indicator is suitable for both short‑term traders and longer‑term fund managers seeking to identify macro trends.  
+The Vortex Indicator is available on most charting software platforms.  
+Some charting software providers suggest using the Vortex Indicator together with trailing stops and supporting indicators to reduce false signals.  
+In a study of 38 actively traded futures contracts from 3 January 1978 to 6 November 2009 using a 14‑day parameter, the Vortex Indicator outperformed Welles Wilder’s Directional Movement Indicator over the entire period and the last ten years.  
+In a study of 101 NASDAQ stocks from 2 January 1992 to 14 August 2009, the Directional Movement Indicator outperformed the Vortex Indicator.

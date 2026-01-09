@@ -1,7 +1,7 @@
-On March 9 2020 the VIX rose to 62.12, the highest level since the 2008 financial crisis, driven by the 2020 Russia–Saudi Arabia oil price war and the COVID‑19 pandemic.  
-On March 12 2020 the VIX hit and closed at 75.47, surpassing the previous Black Monday value, after a travel ban to the United States from Europe was announced by President Trump.  
-On March 16 2020 the VIX closed at 82.69, the highest level since its inception in 1990.  
-The U.S. Securities and Exchange Commission fined S&P Dow Jones Indices for halting data on February 5 2018.  
-VIX is sometimes criticized as a prediction of future volatility, but it is more accurately described as a measure of the current price of index options.  
-VIX has virtually the same predictive power as past volatility, as indicated by nearly identical correlation coefficients in linear regressions.  
-Volatility in the VIX chart is measured as the standard deviation of S&P 500 one‑day returns over a month‑long period.
+On March 9, 2020, the VIX hit 62.12, the highest level since the 2008 financial crisis.  
+On March 12, 2020, the VIX hit and closed at 75.47, exceeding the previous Black Monday value.  
+On March 16, 2020, the VIX closed at 82.69, the highest level since its inception in 1990.  
+VIX is sometimes criticized as a prediction of future volatility, but it is described as a measure of the current price of index options.  
+Volatility is measured as the standard deviation of S&P 500 one‑day returns over a month’s period.  
+The VIX has virtually the same predictive power as past volatility, as indicated by nearly identical correlation coefficients in linear regressions.  
+The U.S. Securities and Exchange Commission fined S&P Dow Jones Indices for halting data on February 5, 2018.

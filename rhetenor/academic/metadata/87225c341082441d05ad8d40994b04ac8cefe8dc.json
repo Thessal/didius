@@ -4,7 +4,8 @@
     "path": "./data/summary/87225c341082441d05ad8d40994b04ac8cefe8dc.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Other/coppock-curve.txt",
     "additional_info": {
-        "duration": 26.21227788925171
+        "duration": 26.000948190689087
     }
 }

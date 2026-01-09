@@ -4,7 +4,8 @@
     "path": "./data/summary/01a73ef4b44ae94e3ff5142d6d0cedc115a827dc.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/commodity-channel-index.txt",
     "additional_info": {
-        "duration": 19.08065414428711
+        "duration": 19.433501958847046
     }
 }

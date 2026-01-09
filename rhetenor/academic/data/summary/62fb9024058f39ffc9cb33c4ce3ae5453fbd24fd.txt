@@ -1,20 +1,8 @@
-The ADXR rates commodities, currencies, stocks, etc., on a scale indicative of directional movement.  
-ADXR is calculated as (ADX_today + ADX_14_days_ago) / 2.  
-ADXR is intended to indicate directional movement while exhibiting minimal fluctuation when direction changes.  
-The ADX plotted over time tends to form a sine‑like curve.  
-The amplitude of the ADX curve, measured from the zero line, has peaks and valleys that indicate changes of direction.  
-In a downtrend, ADX peaks correspond to low price points and valleys to high price points; in an uptrend, peaks correspond to high price points and valleys to low price points.  
-Higher ADX amplitude reflects stronger directional movement in one direction, indicating a strong trend.  
+The ADXR is the final number used to rate all commodities, currencies, stocks, etc., on a scale indicative of directional movement.  
+ADXR is calculated as the average of today’s ADX and the ADX from 14 days ago: ADXR = (ADX_today + ADX_14_days_ago) / 2.  
+The ADXR should reflect good directional movement while exhibiting minimal fluctuation at equilibrium points.  
+When plotted, the ADX tends to form a sine‑like curve whose amplitude is measured from the zero line, with peaks and valleys indicating changes of direction.  
+Higher amplitude of the ADX curve reflects stronger directional movement in one direction, indicating a strong trend.  
 Larger distances between ADX peaks and valleys produce stronger reactions to the trend, which can be profitable in both directions.  
-ADXR reflects good directional movement but should not fluctuate excessively at equilibrium points.  
-ADXR achieves stability by averaging a 14‑day differential of the ADX.  
-Good directional movement includes movement that exceeds the equilibrium point, not just straight‑up or straight‑down movement.  
-The equilibrium point is reached when +DI14 equals –DI14.  
-Low ADX values correspond to price swings around equilibrium points.  
-Higher ADX values correspond to larger distances between equilibrium points.  
-Very high ADX values can occur when an equilibrium point is reached only once.  
-When the distance between equilibrium points is zero, buying at the first point and selling at the second would break even, while other trades may result in a loss.  
-Directional movement can exist when there is a distance between equilibrium points.  
-ADXR values typically below 20 indicate limited directional movement.  
-ADXR values above 25 indicate widening equilibrium points.  
-High directional movement relative to a 14‑day period causes equilibrium points to occur immediately after a turn rather than halfway up the next swing.
+Good directional movement includes movement that exceeds the equilibrium point, which occurs when +DI14 equals –DI14.  
+When the ADXR is less than 20, directional movement is typical; when the ADXR is above 25, equilibrium points widen.

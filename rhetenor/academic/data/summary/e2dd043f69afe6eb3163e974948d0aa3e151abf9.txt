@@ -1,8 +1,8 @@
-The stochastic oscillator is a momentum indicator in technical analysis that uses support and resistance levels as an oscillator.  
-George Lane developed the stochastic oscillator indicator in the late 1950s.  
-In the stochastic oscillator, the term “stochastic” refers to the position of the current price relative to its price range over a period of time.  
-The stochastic oscillator method attempts to predict price turning points by comparing a security’s closing price to its price range.  
-The 5‑period stochastic %K is calculated as %K = 100 × (Price – Low_5) / (High_5 – Low_5).  
-The %D_N is the N‑day moving average of %K, computed as %D_N = (%K_1 + %K_2 + … + %K_N) / N.  
-High_5 and Low_5 are the highest and lowest prices in the last five days, respectively.  
-% D is typically calculated as a simple moving average of %K, but it can also be an exponential moving average.
+The stochastic oscillator is a momentum indicator in technical analysis that uses support and resistance levels as an oscillator.
+George Lane developed the stochastic oscillator indicator in the late 1950s.
+In the stochastic oscillator, the term “stochastic” refers to the position of the current price relative to its price range over a period of time.
+The stochastic oscillator method attempts to predict price turning points by comparing a security’s closing price to its price range.
+The 5‑period stochastic %K is calculated as %K = 100 × (Price – Low₅) / (High₅ – Low₅).
+The %D_N is the N‑day moving average of %K, computed as %D_N = (%K₁ + %K₂ + … + %K_N) / N.
+High₅ and Low₅ are the highest and lowest prices in the last five days, respectively.
+%D is typically calculated as a simple moving average of %K, but it can also be an exponential moving average.

@@ -2,24 +2,22 @@ The Kijun Sen acts as an indicator of future price movement.
 If the price is higher than the Kijun Sen (blue line), it could continue to climb higher.  
 If the price is below the Kijun Sen (blue line), it could keep dropping.  
 Senkou Span A is calculated as (Tenkan‑sen + Kijun‑sen) ÷ 2 and plotted 26 periods ahead.  
-Senkou Span A, also called leading span 1, forms one edge of the Kumo (cloud).  
+Senkou Span A forms one edge of the Kumo (cloud).  
 If the price is above the Senkou Span, the top line serves as the first support level while the bottom line serves as the second support level.  
 If the price is below the Senkou Span, the bottom line forms the first resistance level while the top line is the second resistance level.  
 Senkou Span B is calculated as (highest high + lowest low) ÷ 2 over the past 52 periods and plotted 26 periods ahead.  
-Senkou Span B, also called leading span 2, forms the other edge of the Kumo.  
-The Kumo (cloud) is the space between Senkou Span A and Senkou Span B.  
-The cloud edges identify current and potential future support and resistance points.  
-The Kumo cloud changes shape and height based on price changes.  
-The height of the cloud represents volatility, with larger price movements forming thicker clouds that create stronger support and resistance.  
+Senkou Span B forms the other edge of the Kumo.  
+The Kumo (cloud) is the space between Senkou Span A and B and identifies current and potential future support and resistance points.  
+The cloud’s height represents volatility; larger price movements create thicker clouds, which provide stronger support and resistance.  
 Thinner clouds offer only weak support and resistance, and prices can tend to break through such thin clouds.  
 Markets are bullish when Senkou Span A is above Senkou Span B and bearish when Senkou Span A is below Senkou Span B.  
-Traders often look for Kumo Twists, where Senkou Span A and B exchange positions, as a signal of potential trend reversals.  
-The angle of the cloud indicates strength: upward angle for bullishness and downward angle for bearishness.  
+Traders look for Kumo Twists, where Senkou Span A and B exchange positions, as a signal of potential trend reversals.  
+The angle of the cloud indicates strength; an upward‑sloping cloud is bullish and a downward‑sloping cloud is bearish.  
 Clouds that lie behind price are known as Kumo Shadows.  
-The Chikou Span is calculated by projecting today’s closing price back 26 days on the chart.  
-The Chikou Span, also called the lagging span, is used as a support/resistance aid.  
-If the Chikou Span crosses the price in a bottom‑up direction, it is a buy signal.  
-If the Chikou Span crosses the price in a top‑down direction, it is a sell signal.  
-A market price above the cloud indicates a more favorable outlook for the security’s price.  
+The Chikou Span is calculated by projecting today’s closing price back 26 days.  
+The Chikou Span is used as a support/resistance aid.  
+If the Chikou Span crosses the price upward, it is a buy signal.  
+If the Chikou Span crosses the price downward, it is a sell signal.  
+A market price above the cloud indicates a more favorable outlook for the security.  
 A market price inside the cloud signals a potential decline in value.  
-A cross of the Tenkan‑sen over the Kijun‑sen indicates an increase in the asset’s price.
+A cross of the Tenkan‑sen over the Kijun‑sen indicates an expected increase in the asset’s price.

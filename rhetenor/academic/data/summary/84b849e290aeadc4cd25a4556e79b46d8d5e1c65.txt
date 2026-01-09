@@ -1,2 +1,2 @@
-Human activity includes stock and bond pricing, as well as stock‑exchange membership costs, among other categories.  
+Human activity includes categories such as stock and bond pricing, patents, the price of gold, population size, population migration, commodity pricing, government spending, industrial production, life insurance, electricity generation, gasoline consumption, fire damage, stock‑exchange membership costs, epidemics, and real‑estate.  
 The main category of interest is the price of shares.

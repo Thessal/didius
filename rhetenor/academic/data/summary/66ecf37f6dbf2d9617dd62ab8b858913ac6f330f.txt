@@ -1,15 +1,15 @@
-KST = MOV(ROC1,AVG1)*W1 + MOV(ROC2,AVG2)*W2 + MOV(ROC3,AVG3)*W3 + MOV(ROC4,AVG4)*W4.  
+KST = MOV(ROC1,AVG1) × W1 + MOV(ROC2,AVG2) × W2 + MOV(ROC3,AVG3) × W3 + MOV(ROC4,AVG4) × W4.  
 MOV(ROC1,AVG1) refers to the AVG1‑day moving average for ROC1.  
-For short‑term trends, Martin J. Pring suggests the parameters X1=10, X2=15, X3=20, X4=30, AVG1=10, AVG2=10, AVG3=10, AVG4=15, W1=1, W2=2, W3=3, W4=4.  
+For short‑term trends, Martin J. Pring suggests the parameters X1 = 10, X2 = 15, X3 = 20, X4 = 30, AVG1 = 10, AVG2 = 10, AVG3 = 10, AVG4 = 15, W1 = 1, W2 = 2, W3 = 3, W4 = 4.  
 The KST formula is built into, or can be included in, technical analysis software packages such as MetaStock or OmniTrader.  
 Entry rule: when KST crosses below its 9‑day exponential average, short at the next day’s opening price.  
 Exit rule: when KST crosses above its 9‑day exponential average, close the short position at the next day’s opening price.  
 KST can be calculated on a daily or long‑term basis.  
-The dominant time frame in the KST’s construction is a 24‑month period, which is half of the 4‑year business cycle.  
+The dominant time frame in KST’s construction is a 24‑month period, which is half of the 4‑year business cycle.  
 KST works best when the security is experiencing a primary up‑ and downtrend based on the business cycle.  
-The average to use with KST is a simple 10‑day moving average.  
-It is possible to anticipate a moving‑average crossover if KST has already turned and price violates a trendline.  
-KST can start to reverse to the downside before an uptrend line is violated.  
-A trendline violation followed by a reversal or trading range indicates that upside momentum has temporarily dissipated, causing KST to cross below its moving average.  
-KST can give false or misleading signals, as seen in the April 2005 buy signal.  
-Overall, KST is more accurate than MACD, which produces more whipsaw signals.
+The moving average used with KST is a simple 10‑day moving average.  
+A moving‑average crossover can be anticipated if KST has already turned and price violates a trendline.  
+KST can reverse to the downside before an uptrend line is violated.  
+When a trendline violation occurs, upside momentum may temporarily dissipate, causing KST to cross below its moving average.  
+KST can give false or misleading signals, as illustrated by the April 2005 buy signal.  
+Overall, KST is considered more accurate than MACD, which produces more whipsaw signals.

@@ -1,18 +1,12 @@
-The Relative Strength Index (RSI) solves the problems of scale, data volume, and comparability across commodities by providing a common denominator oscillator.
-The RSI is calculated with the formula: RSI = 100 - 100 / (1 + RS).
-The first RSI calculation requires the previous 14 days' closing prices.
-Subsequent RSI calculations require only the previous day's data.
-The average UP close is computed by summing the UP closes over the previous 14 days and dividing by 14.
-The average DOWN close is computed by summing the DOWN closes over the previous 14 days and dividing by 14.
-Relative Strength (RS) is the ratio of the average UP close to the average DOWN close.
-To compute RSI, add 1.00 to RS, divide 100 by this sum, and subtract the result from 100.
-For later periods, the next average UP close is (previous average UP close * 13 + today's UP close) / 14.
-For later periods, the next average DOWN close is (previous average DOWN close * 13 + today's DOWN close) / 14.
-Steps of dividing RS, adding 1, and applying the RSI formula remain the same after the initial calculation.
-A ten‑column worksheet can be used to track daily RSI data.
-Column 1 of the worksheet records the date.
-Column 2 records the day's closing price.
-Column 3 records the amount the price closed up from the previous day, entered only if the price closed up.
-Column 4 records the amount the price closed down from the previous day, entered only if the price closed down.
-Column 5 records the average UP close value.
-Column 6 records the average DOWN close value.
+The Relative Strength Index (RSI) is an indicator designed to address scaling, data volume, and comparability problems across commodities.  
+The RSI formula is RSI = 100 - 100 / (1 + RS).  
+The initial RSI calculation requires the previous 14 days' closing prices.  
+Subsequent RSI calculations require only the previous day's data.  
+The average UP close is computed by summing the up closes over the previous 14 days and dividing by 14.  
+The average DOWN close is computed by summing the down closes over the previous 14 days and dividing by 14.  
+Relative Strength (RS) is the ratio of the average UP close to the average DOWN close.  
+The RSI is obtained by subtracting 100 divided by (1 plus RS) from 100.  
+For each new day, the next average UP close is calculated as (previous average UP close * 13 + today's UP close) / 14.  
+For each new day, the next average DOWN close is calculated as (previous average DOWN close * 13 + today's DOWN close) / 14.  
+A ten‑column worksheet can be used to track daily RSI calculations.  
+In the worksheet, column 1 records the date, column 2 the daily close price, column 3 the amount the price closed up from the previous day (recorded only if up), column 4 the amount the price closed down from the previous day (recorded only if down), column 5 the average UP close, and column 6 the average DOWN close.

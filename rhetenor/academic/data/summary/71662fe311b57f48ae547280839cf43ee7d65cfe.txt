@@ -1,18 +1,18 @@
 RSI is calculated as 100 × (1 − SMMA(D,n) / (SMMA(U,n)+SMMA(D,n))) = 100 − 100 / (1+RS).  
 If the average of U values is zero, both RS and RSI are zero.  
 If the average of U values equals the average of D values, RS equals 1 and RSI equals 50.  
-If the average of U values is maximal and the average of D values is zero, RS diverges to infinity and RSI equals 100.  
-Wilder recommended a smoothing period of 14 for the RSI (α = 1/14 or N = 14).  
-The RSI is typically displayed with upper and lower lines at 70 and 30 and a mid‑line at 50.  
-Wilder posited that rapid price increases create overbought conditions and rapid price decreases create oversold conditions, implying an imminent reversal.  
+If the average of U values is maximal (average of D values is zero), RS diverges to infinity and RSI equals 100.  
+Wilder recommended a smoothing period of 14 for RSI (α = 1/14 or N = 14).  
+The RSI is displayed on a chart above or below the price chart with typical upper and lower lines at 70 and 30 and a mid‑line at 50.  
+Wilder posited that rapid price moves create overbought (high RSI) or oversold (low RSI) conditions, indicating an imminent reversal.  
 The level of the RSI measures a stock’s recent trading strength.  
 The slope of the RSI is directly proportional to the velocity of a change in the trend.  
-The distance traveled by the RSI is proportional to the magnitude of the move.  
-Wilder believed that RSI readings above 70 indicate overbought territory and readings below 30 indicate oversold territory.  
-RSI readings between 30 and 70 are considered neutral, with 50 indicating no trend.  
+The distance traveled by the RSI is proportional to the magnitude of the price move.  
+Wilder believed that tops and bottoms are indicated when RSI goes above 70 or drops below 30.  
+RSI readings greater than 70 are considered overbought; readings lower than 30 are considered oversold; readings between 30 and 70 are neutral; a reading of 50 indicates no trend.  
 Divergence between RSI and price action is a strong indication that a market turning point is imminent.  
-Bearish divergence occurs when price makes a new high but the RSI makes a lower high.  
-Bullish divergence occurs when price makes a new low but the RSI makes a higher low.  
+Bearish divergence occurs when price makes a new high but RSI makes a lower high.  
+Bullish divergence occurs when price makes a new low but RSI makes a higher low.  
 Wilder thought that “failure swings” above 50 and below 50 on the RSI are strong indications of market reversals.  
-Chart formations and areas of support and resistance can sometimes be more easily seen on the RSI chart than on the price chart.  
+Chart formations and support/resistance areas can sometimes be more easily seen on the RSI chart than on the price chart.  
 The center line for the RSI is 50.

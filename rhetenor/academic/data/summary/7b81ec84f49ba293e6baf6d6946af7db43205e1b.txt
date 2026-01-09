@@ -2,14 +2,13 @@ The Oscillator value area where a congestion occurs is called a “congestion zo
 Congestion zones are seldom seen forming at extended negative values.  
 A congestion zone is a condition that the market tends to drop out of.  
 Congestion zones typically show several days of the Oscillator in a relatively small range, and once the Oscillator breaks out of that range the market begins to decline sharply.  
-Even when a congestion zone forms at or below zero, the market still tends to drop down out of the congestion zone.  
+Even when a congestion zone forms at or below zero, the market still tends to drop out of the congestion zone.  
 A single day’s Oscillator value does not convey congestion‑zone information; a chart and interpretation are needed to notice congestion zones and divergences.  
 When the Oscillator moves up and down over a period of days on one side of the zero line, it is called a “complex structure.”  
 Complexity of a structure implies strength for the side of zero on which it forms, whether positive or negative.  
 A “simple structure” occurs when the Oscillator crosses zero in one direction for one to a few days and then turns around and moves directly in the opposite direction without forming a complex structure.  
 Simple structures imply weakness for the side on which they form.  
 If the Oscillator moves straight up through zero and then turns around and moves straight back down through zero, it signals that bulls lack sustained strength and cede control back to bears.  
-Complex structures imply more strength to come for the market side corresponding to the side of the zero line where the structure formed.  
-Complexity above zero is bullish, and complexity below zero is bearish.  
-Trending price moves, upward or downward, are often composed of a succession of complex structures briefly interrupted by simple structures.  
+Where a complex structure forms, it implies more strength to come for that side of the market corresponding to the side of the zero line where the structure formed; complexity above zero is bullish and complexity below zero is bearish.  
+Trending price moves, upward or downward, are often composed of a succession of complex structures interrupted briefly by simple structures.  
 When a succession of complex structures gives way to a simple structure, it can indicate that the trending side of the market is ready to relinquish control temporarily.

@@ -1,15 +1,14 @@
-Today's +DM14 equals previous +DM14 minus one fourteenth of previous +DM14 plus today's +DM.  
-Today's -DM14 equals previous -DM14 minus one fourteenth of previous -DM14 plus today's -DM.  
-If today's directional movement (DM) is negative, its value is added back to the -DM14; if it is positive, its value is added back to the +DM14.  
-Today's TR14 equals previous TR14 minus one fourteenth of previous TR14 plus today's true range.  
-+DI14 represents the percentage of the total true range over the last 14 days that was upward; -DI14 represents the percentage that was downward, and both values are positive.  
+Today's +DM14 equals the previous +DM14 minus one‑fourteenth of the previous +DM14 plus today’s +DM.  
+Today's -DM14 equals the previous -DM14 minus one‑fourteenth of the previous -DM14 plus today’s -DM.  
+Each day one‑fourteenth of the +DM and one‑fourteenth of the -DM are removed from their respective 14‑day totals.  
+If today’s DM is negative, its value is added back to the -DM14; if today’s DM is positive, its value is added back to the +DM14.  
+The same procedure is used for the True Range: Today's TR14 equals the previous TR14 minus one‑fourteenth of the previous TR14 plus today’s True Range.  
+The +DI14 indicates the percentage of the total true range of the last 14 days that was up; the -DI14 indicates the percentage that was down, and both values are positive.  
 The Directional Movement Index (DX) is the difference between +DI and -DI expressed as a value between 0 and 100.  
-After 14 days, the total true range (TR14) calculated by summing each day's true range equals 41.00.  
-After 14 days, the total +DM14 calculated by summing the daily +DM values equals 9.50.  
-After 14 days, the total -DM14 calculated by summing the daily -DM values equals 14.00.  
-For day 15, TR14 is computed as 41.00 minus (41.00/14) plus 5.25, resulting in 43.32.  
-For day 15, +DM14 is computed as 9.50 minus (9.50/14) plus 0, resulting in 8.82.  
-For day 15, -DM14 is computed as 14.00 minus (14.00/14) plus 2.75, resulting in 15.75.  
-In each calculation, the previous total is decreased by one fourteenth and then the applicable daily DM is added back.  
-The true range column always has a value to add back each day, whereas on day 15 the +DM was zero, so nothing was added back to +DM14.  
-On day 15, the -DM value of 2.75 was added back to -DM14.
+After the first 14 days, the total True Range (TR14) is 41.00.  
+After the first 14 days, the total +DM14 is 9.50.  
+After the first 14 days, the total -DM14 is 14.00.  
+On day 15, TR14 is calculated as 41.00 minus (41.00 / 14) plus 5.25, resulting in 43.32.  
+On day 15, +DM14 is calculated as 9.50 minus (9.50 / 14) plus 0, resulting in 8.82.  
+On day 15, -DM14 is calculated as 14.00 minus (14.00 / 14) plus 2.75, resulting in 15.75.  
+In each case the previous total is decreased by one‑fourteenth and then the applicable DM for the day is added back.

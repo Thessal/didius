@@ -1,9 +1,9 @@
-Haurlan's pamphlet "Measuring Trend Values" describes techniques for calculating and interpreting exponential moving averages (EMAs).  
-The smoothing constant for an EMA is calculated as 2 divided by (n + 1), where n is the number of days.  
-A 19‑day EMA corresponds to a 10 % trend, giving a smoothing constant of 0.10.  
-In a simple moving average (SMA), only data within the specified look‑back period affect the average; data beyond that period have no influence.  
-In an exponential moving average (EMA), all past data remain in the calculation but their influence diminishes over time.  
-Haurlan founded the Trade Levels Report newsletter, which featured computer‑aided technical analysis of stocks.  
-Sherman and Marian McClellan enhanced EMA analysis by calculating the difference between a 10 % trend EMA and a 5 % trend EMA of daily breadth figures.  
-The difference‑of‑EMAs method used by the McClellans is mathematically similar to the Moving Average Convergence‑Divergence (MACD) technique developed by Gerald Appel, though MACD typically uses simple moving averages.  
-The McClellan Oscillator was created by Sherman and Marian McClellan as a stock‑market breadth indicator.
+The smoothing constant for an exponential moving average (EMA) is calculated as 2 divided by (n + 1), where n is the number of days.  
+A 19‑day EMA corresponds to a 10 % smoothing constant because 2 / (19 + 1) = 0.10.  
+In a simple moving average (SMA), only data within the specified lookback period influence the average’s value.  
+In an EMA, all past data remain in the calculation but their influence diminishes over time.  
+Haurlan’s Trade Levels Report newsletter featured computer‑aided technical analysis and sponsored the “Charting The Market” end‑of‑day chart program.  
+By 1969 Haurlan was using EMAs to analyze market breadth data.  
+Sherman and Marian McClellan calculated the difference between two EMAs of daily breadth figures—a 10 % trend EMA and a 5 % trend EMA—to obtain a distinct view.  
+The difference between two EMAs of breadth data is mathematically similar to the Moving Average Convergence‑Divergence (MACD) technique, though MACD typically uses simple moving averages.  
+The McClellan Oscillator was developed by Sherman and Marian McClellan.

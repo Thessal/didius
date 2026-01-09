@@ -4,7 +4,8 @@
     "path": "./data/summary/d0df3702e8bac52ec8cd2fe07695a03073aa2408.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/stochastic-oscillator.txt",
     "additional_info": {
-        "duration": 26.265663623809814
+        "duration": 26.075850009918213
     }
 }

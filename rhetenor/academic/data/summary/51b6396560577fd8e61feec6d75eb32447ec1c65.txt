@@ -1,11 +1,13 @@
-The McClellan oscillator is a market breadth indicator used in technical analysis by financial analysts of the New York Stock Exchange to evaluate the balance between advancing and declining stocks.  
-The McClellan oscillator is based on advance‑decline data and can be applied to stock market exchanges, indexes, portfolios of stocks or any basket of stocks.  
+The McClellan oscillator is a market breadth indicator used in technical analysis by financial analysts of the New York Stock Exchange to evaluate the balance between advancing and declining stocks.  
+The McClellan oscillator is based on advance‑decline data and can be applied to stock market exchanges, indexes, portfolios of stocks, or any basket of stocks.  
 Advances is the number of NYSE‑listed stocks traded above their previous‑day close, and declines is the number traded below their previous‑day close.  
-The difference between advances and declines shows whether there are more advancing or more declining stocks on the NYSE; dominance of advancing stocks is considered bullish breadth sentiment and a higher number of declining stocks is considered bearish breadth sentiment.  
-Applying 19‑day and 39‑day EMAs to the difference between advances and declines defines shorter‑term (19‑day) and longer‑term (39‑day) breadth sentiment.  
-Calculating the McClellan Oscillator as the difference between the 19‑day EMA and the 39‑day EMA of advances minus declines applies the MACD principle to breadth sentiment to see changes in shorter‑term breadth sentiment.  
-When the McClellan Oscillator crosses above the zero line it signals that the 19‑day EMA of advances minus declines has crossed above the 39‑day EMA, indicating a possible up‑move on the NYSE index.  
-When the McClellan Oscillator crosses below the zero line it signals that the 19‑day EMA of advances minus declines has crossed below the 39‑day EMA, indicating a possible down‑move on the NYSE index.  
-The McClellan Summation Index is calculated by adding each day’s McClellan Oscillator value to the previous day’s summation index.  
-When the McClellan Summation Index is above zero it is considered bullish (positive growth), and when it is below zero it is considered bearish (negative growth).  
-The McClellan Summation Index is oversold at –1000 to –1250 and overbought at 1000 to 1250.
+The difference between advances and declines shows whether there are more advancing or more declining stocks on the NYSE.  
+Dominance of advancing stocks is considered bullish breadth sentiment, while a higher number of declining stocks is considered bearish breadth sentiment.  
+Applying 19‑day and 39‑day exponential moving averages to the difference between advances and declines defines shorter‑term (19‑day) and longer‑term (39‑day) breadth sentiment.  
+The McClellan Oscillator is calculated as the difference between the 19‑day EMA and the 39‑day EMA of advances minus declines, applying the MACD principle to breadth sentiment.  
+When the McClellan Oscillator crosses above its zero line, it indicates that the 19‑day EMA of advances minus declines crossed above the 39‑day EMA, suggesting a possible up‑move in the NYSE index.  
+When the McClellan Oscillator crosses below its zero line, it indicates that the 19‑day EMA of advances minus declines crossed below the 39‑day EMA, suggesting a possible down‑move in the NYSE index.  
+The McClellan Summation Index (MSI) is calculated by adding each day’s McClellan oscillator value to the previous day’s summation index.  
+When the MSI is above zero it is considered bullish (positive growth).  
+When the MSI is below zero it is considered bearish (negative growth).  
+The Summation Index is considered oversold at –1000 to –1250 or overbought at 1000 to 1250.

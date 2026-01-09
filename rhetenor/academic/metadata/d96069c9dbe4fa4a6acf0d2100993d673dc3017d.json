@@ -4,7 +4,8 @@
     "path": "./data/summary/d96069c9dbe4fa4a6acf0d2100993d673dc3017d.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/macd.txt",
     "additional_info": {
-        "duration": 34.447335958480835
+        "duration": 35.993534088134766
     }
 }

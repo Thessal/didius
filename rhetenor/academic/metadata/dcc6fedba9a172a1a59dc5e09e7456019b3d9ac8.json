@@ -4,7 +4,8 @@
     "path": "./data/summary/dcc6fedba9a172a1a59dc5e09e7456019b3d9ac8.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/moving-average.txt",
     "additional_info": {
-        "duration": 3.385488510131836
+        "duration": 2.947984218597412
     }
 }

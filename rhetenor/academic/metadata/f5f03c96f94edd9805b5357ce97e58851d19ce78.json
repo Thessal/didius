@@ -4,7 +4,8 @@
     "path": "./data/summary/f5f03c96f94edd9805b5357ce97e58851d19ce78.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/vix.txt",
     "additional_info": {
-        "duration": 17.191086053848267
+        "duration": 13.106590509414673
     }
 }

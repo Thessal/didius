@@ -1,7 +1,5 @@
-The ultimate oscillator is a theoretical concept in finance developed by Larry Williams to address problems of most oscillators when applied over different time lengths.  
-The ultimate oscillator is a technical analysis indicator that measures buying or selling pressure based on where a day's closing price falls within the day's true range.  
-Buying pressure for a day is calculated as the closing price minus the minimum of the day's low and the previous close.  
-The true low for a day is the lesser of the day's trading low and the previous close.  
-True range for a day is the maximum of the day's high and the previous close minus the minimum of the day's low and the previous close.  
-The true high for a day is the greater of the day's trading high and the previous close.  
-The total buying pressure over the past 7 days is expressed as a fraction of the total true range over the same 7‑day period.
+The ultimate oscillator is a theoretical concept in finance developed by Larry Williams to address problems experienced in most oscillators when used over different lengths of time.  
+The oscillator is a technical analysis indicator based on buying or selling pressure represented by where a day's closing price falls within the day's true range.  
+Buying pressure is defined as the amount by which the close is above the true low on a given day, where true low is the lesser of the day's low and the previous close.  
+True range is the difference between the true high and the true low, where true high is the greater of the day's high and the previous close.  
+The total buying pressure over the past 7 days is expressed as a fraction of the total true range over the same period.

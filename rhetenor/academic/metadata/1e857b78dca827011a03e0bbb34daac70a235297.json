@@ -4,7 +4,8 @@
     "path": "./data/summary/1e857b78dca827011a03e0bbb34daac70a235297.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/put-call-ratio.txt",
     "additional_info": {
-        "duration": 12.841707706451416
+        "duration": 14.044873237609863
     }
 }

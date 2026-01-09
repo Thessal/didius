@@ -4,7 +4,8 @@
     "path": "./data/summary/25567a4c6b8c17c0d716d70dd71ed1e81a388633.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Breadth of market/mcclellan-oscillator.txt",
     "additional_info": {
-        "duration": 8.918588161468506
+        "duration": 8.808044195175171
     }
 }

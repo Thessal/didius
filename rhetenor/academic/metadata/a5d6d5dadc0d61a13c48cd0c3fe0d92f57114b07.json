@@ -4,7 +4,8 @@
     "path": "./data/summary/a5d6d5dadc0d61a13c48cd0c3fe0d92f57114b07.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/ichimoku-kinko-hyo.txt",
     "additional_info": {
-        "duration": 18.675509929656982
+        "duration": 25.095515251159668
     }
 }

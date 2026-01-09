@@ -1,4 +1,0 @@
-Wave 5 breaks the parallel line on the Dow Index chart when plotted on an arithmetic scale.  
-Converting the Dow Index chart from 1921 to a logarithmic scale shows that wave 5 touches but does not break the parallel line.  
-There are three methods to predict where a breakout will end: using a logarithmic scale, the wave ratio, and the time factor.  
-When the gold price chart from 1250 to 1939 is drawn on an arithmetic scale, the price movement is above the parallel line, requiring a semi‑logarithmic scale for proper representation.

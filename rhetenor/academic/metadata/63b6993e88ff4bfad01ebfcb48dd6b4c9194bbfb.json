@@ -4,7 +4,8 @@
     "path": "./data/summary/63b6993e88ff4bfad01ebfcb48dd6b4c9194bbfb.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/on-balance-volume.txt",
     "additional_info": {
-        "duration": 12.014008283615112
+        "duration": 11.889362096786499
     }
 }

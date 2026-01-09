@@ -1,14 +1,11 @@
-When a succession of complex market structures gives way to a simple structure, it can indicate that the trending side is ready to relinquish control temporarily, creating an opportunity for the opposite side to take over.  
-If neither side forms a complex structure, it suggests that both bulls and bears are equally hesitant to assume control.  
-The Oscillator forms trendlines similar to price charts, but its trendlines are usually broken before the corresponding price trendlines break.  
-A break in the Oscillator trendline typically signals a reversal of the prevailing short‑term trend.  
-Trendline breaks in the Oscillator precede the breaking of equivalent price trendlines.  
-Longer‑spanning trendlines become less meaningful, so it is better to use steeper trendlines that span 3–6 weeks.  
+When a succession of complex structures gives way to a simple structure, it can indicate that the trending side of the market is ready to relinquish control temporarily, creating an opportunity for the opposite side to take over.  
+Sometimes neither side forms a complex structure, meaning that both bulls and bears are equally hesitant to take charge.  
+Oscillator trendlines are usually broken before the corresponding price trendlines are broken.  
+A break in the Oscillator trendline signals a reversal of the prevailing short‑term trend.  
+Trendlines that span longer periods become less meaningful, and it is better practice to use steeper trendlines that span 3–6 weeks.  
 It is not unusual for the Oscillator to break above a downtrend line, then retest the top of that line before continuing higher.  
-The McClellan Oscillator provides valuable information for market analysis when its charted movements are examined rather than just its numeric value.  
-The Oscillator is calculated from daily closing values of NYSE advancing and declining issues, so it is not an intraday indicator.  
-A “what‑if” intraday Oscillator value can be computed by using intraday advancing‑declining data as if they were closing values.  
-McClellan Oscillators can also be calculated using other data sources besides NYSE breadth.  
-Breadth versions of the Oscillator can be derived from advancing‑declining data on the Nasdaq market, the Nasdaq‑100 Index, the Dow Jones Industrial Average, the corporate bond market, and a filtered NYSE “Common Only” dataset.  
-A McClellan Oscillator can be constructed from any breadth statistic, such as a portfolio of stocks or a sector‑specific subset of the market.  
-Subset breadth statistics tend to behave homogeneously, often moving together within narrow sectors.
+The McClellan Oscillator is based on daily closing values for the NYSE’s totals of advancing and declining issues, so it does not exist as an intraday indicator.  
+It is possible to use intraday advance‑decline values to calculate a “what‑if” McClellan Oscillator assuming those values are the closing ones.  
+Breadth versions of the McClellan Oscillator can be derived from advance‑decline data on the Nasdaq market, the Nasdaq‑100 Index, the Dow Jones Industrial Average, the corporate bond market, and a subset of NYSE breadth data for common‑only stocks.  
+A McClellan Oscillator can be created from any other breadth statistics, such as a portfolio of stocks or a sector‑specific subset of the market.  
+Subset breadth statistics tend to behave in a homogeneous way; in a narrow sector like gold mining or semiconductor stocks, it is typical to see all of them move together.

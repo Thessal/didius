@@ -4,7 +4,8 @@
     "path": "./data/summary/cbcad7268681adf486ee72b2abc6d6d80608bedb.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/standard-deviation.txt",
     "additional_info": {
-        "duration": 2.096406936645508
+        "duration": 2.0811424255371094
     }
 }

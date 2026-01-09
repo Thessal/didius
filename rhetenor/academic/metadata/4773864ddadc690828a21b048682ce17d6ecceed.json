@@ -4,7 +4,8 @@
     "path": "./data/summary/4773864ddadc690828a21b048682ce17d6ecceed.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/detrended-price-oscillator.txt",
     "additional_info": {
-        "duration": 31.43583106994629
+        "duration": 2.90234375
     }
 }

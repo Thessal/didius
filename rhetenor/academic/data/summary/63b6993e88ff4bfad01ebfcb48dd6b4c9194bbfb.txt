@@ -1,5 +1,5 @@
 On-balance volume (OBV) is a technical analysis indicator intended to relate price and volume in the stock market.  
 OBV is based on a cumulative total volume.  
-OBV is calculated as the previous OBV plus volume if the current close is higher than the previous close, plus zero if the close is unchanged, and minus volume if the current close is lower than the previous close.  
-Because OBV is cumulative, its value depends on the starting point of the calculation.  
+OBV is calculated as the previous OBV plus volume if the current close is higher than the previous close, zero if the close is unchanged, and minus volume if the current close is lower than the previous close.  
+The value of OBV depends on the starting point of the calculation because it is cumulative.  
 Each day's total volume is assigned a positive or negative value depending on whether the price closed higher or lower that day.

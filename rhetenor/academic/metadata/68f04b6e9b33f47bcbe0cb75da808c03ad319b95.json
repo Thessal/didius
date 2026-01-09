@@ -4,7 +4,8 @@
     "path": "./data/summary/68f04b6e9b33f47bcbe0cb75da808c03ad319b95.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/trix-technical-analysis.txt",
     "additional_info": {
-        "duration": 25.642871618270874
+        "duration": 25.174184799194336
     }
 }

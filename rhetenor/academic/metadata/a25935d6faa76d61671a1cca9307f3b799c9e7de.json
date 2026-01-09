@@ -4,7 +4,8 @@
     "path": "./data/summary/a25935d6faa76d61671a1cca9307f3b799c9e7de.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/williams-r.txt",
     "additional_info": {
-        "duration": 14.057348728179932
+        "duration": 13.874433279037476
     }
 }

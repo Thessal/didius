@@ -4,7 +4,8 @@
     "path": "./data/summary/dcd5fe5e1011a7f7470a09e1316bbffa0701a4cb.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/keltner-channel.txt",
     "additional_info": {
-        "duration": 20.2282075881958
+        "duration": 25.52828025817871
     }
 }

@@ -4,7 +4,8 @@
     "path": "./data/summary/880400c462ad8f60098a2b2c0156972ceccd1655.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/parabolic-sar.txt",
     "additional_info": {
-        "duration": 17.88003444671631
+        "duration": 17.872312307357788
     }
 }

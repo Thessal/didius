@@ -11,4 +11,4 @@ Williams %R is a bounded indicator.
 The oscillator is on a negative scale, from –100 (lowest) up to 0 (highest), opposite of the more common 0 to 100 scale.  
 A value of –100 means today’s close was the lowest low of the past N days, and 0 means today’s close was the highest high of the past N days.  
 Some implementations adjust %R by adding 100.  
-The original formula from Williams’s book multiplies the percentage by 100 instead of –100, but many software implementations use –100.
+The original formula from Williams’s book multiplies the percentage by 100 instead of –100, but many software packages implement it with –100.

@@ -4,7 +4,8 @@
     "path": "./data/summary/07b753113c5614a8228c069f1dc7f6291f4cbe66.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/true-strength-index.txt",
     "additional_info": {
-        "duration": 11.482482433319092
+        "duration": 11.690823554992676
     }
 }

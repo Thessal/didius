@@ -1,3 +1,3 @@
-An indicator can give various sell or buy signals, depending on the context and other indicators.  
+An indicator can give various sell or buy signals depending on the context and other indicators.  
 Money Flow, On-balance Volume, and Price and Volume Trend are price × volume indicators.  
-Dimensional analysis explains why volume and price are multiplied, not divided, in such indicators.
+Dimensional analysis explains why volume and price are multiplied rather than divided in such indicators.

@@ -1,17 +1,18 @@
 A pivot point is a price level used by traders as a possible indicator of market movement.  
 A pivot point is calculated as an average of significant prices (high, low, close) from the prior trading period.  
-If the market trades above the pivot point in the following period it is usually evaluated as bullish sentiment.  
-Trading below the pivot point is seen as bearish.  
+If the market trades above the pivot point in the following period, it is usually evaluated as bullish sentiment.  
+If the market trades below the pivot point, it is seen as bearish.  
 Pivot points and associated support and resistance levels are often turning points for price direction.  
 In an up‑trending market, pivot points and resistance levels may represent a ceiling above which the uptrend is unsustainable and a reversal may occur.  
 In a declining market, pivot points and support levels may represent a low price level of stability or resistance to further decline.  
 The most common method calculates the pivot point P as the arithmetic average of the high (H), low (L), and closing (C) prices of the prior trading period: P = (H + L + C) / 3.  
-Sometimes the average also includes the opening price O: P = (O + H + L + C) / 4.  
-Some traders emphasize the closing price, using P = (H + L + C + C) / 4.  
-Some traders emphasize the opening price, using P = (H + L + O + O) / 4.  
+An alternative method includes the opening price O: P = (O + H + L + C) / 4.  
+Another method emphasizes the closing price: P = (H + L + C + C) / 4.  
+Another method uses the opening price twice: P = (H + L + O + O) / 4.  
 Some technical analysts use additional levels above and below the pivot point to define a Central Pivot Range (CPR).  
 The lower boundary of the CPR, called Bottom Central (BC), is calculated as BC = (H + L) / 2.  
 The upper boundary of the CPR, called Top Central (TC), is calculated as TC = (P − BC) + P.  
 Price support and resistance levels are key trading tools in any market.  
-In pivot point analysis, several support and resistance levels, usually three, are recognized below and above the pivot point.  
-The first resistance level R1 is calculated as R1 = 2 × P − L.
+In pivot point analysis, several levels, usually three, are recognized below and above the pivot point, calculated from the prior trading range added to or subtracted from the pivot point.  
+The first resistance level is calculated as R1 = P + (P − L) = 2 × P − L.  
+The first support level is calculated as S1 = P − (H − P) = 2 × P − H.

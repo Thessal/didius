@@ -4,7 +4,8 @@
     "path": "./data/summary/4b84a974f7b934ae420d8950d2e21d11a9ccefc0.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Market trend/average-directional-movement-index.txt",
     "additional_info": {
-        "duration": 14.303566932678223
+        "duration": 15.815809488296509
     }
 }

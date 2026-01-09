@@ -4,7 +4,8 @@
     "path": "./data/summary/6e123831d24ed57e003b5cb73d3f0e5df5e70dc4.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/smart-money-index.txt",
     "additional_info": {
-        "duration": 16.192631244659424
+        "duration": 15.721856355667114
     }
 }

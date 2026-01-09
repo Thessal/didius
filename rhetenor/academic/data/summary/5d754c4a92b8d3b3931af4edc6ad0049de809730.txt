@@ -1,9 +1,9 @@
-The mass index is an indicator developed by Donald Dorsey used in technical analysis to predict trend reversals.  
-The mass index is based on the notion that there is a tendency for reversal when the price range widens, and therefore compares previous trading ranges (highs minus lows).  
-The mass index for a commodity is obtained by calculating its exponential moving average over a 9‑day period and the exponential moving average of this average (a double average), and summing the ratio of these two over a given number of days (usually 25).  
-Generally the EMA and the re‑smoothed EMA of EMA are fairly close, making their ratio roughly 1 and the sum around 25.  
-According to Dorsey, a “reversal bulge” is a probable signal of trend reversal regardless of the trend’s direction.  
-A reversal bulge takes place when a 25‑day mass index reaches 27.0 and then falls to below 26 (or 26.5).  
-A 9‑day prime moving average is usually used to determine whether the bulge is a buy or sell signal.  
-The formula uses intraday range values, not the true range which adjusts for full and partial gaps.  
-The bulge does not indicate direction.
+The mass index is an indicator developed by Donald Dorsey that is used in technical analysis to predict trend reversals.  
+The mass index is based on the notion that price range widening creates a tendency for reversal, so it compares previous trading ranges (highs minus lows).  
+The mass index for a commodity is calculated by taking the exponential moving average (EMA) of the high‑low range over a 9‑day period, then taking the EMA of that EMA, and summing the ratio of these two values over a given number of days, usually 25.  
+Generally the EMA and the re‑smoothed EMA are fairly close, making their ratio roughly 1 and the sum around 25.  
+According to Dorsey, a “reversal bulge” in the mass index is a probable signal of a trend reversal regardless of the trend’s direction.  
+A reversal bulge occurs when a 25‑day mass index reaches 27.0 and then falls below 26 (or 26.5).  
+A 9‑day prime moving average is usually used to determine whether the bulge signals a buy or a sell.  
+The mass index formula uses intraday range values, not the “true range,” which adjusts for full and partial gaps.  
+The bulge indicated by the mass index does not specify the direction of the subsequent price move.

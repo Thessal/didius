@@ -1,7 +1,7 @@
-When the SAR is calculated to be above the previous day’s low or today’s low, the lower low between today and the previous day should be used as the new SAR.  
-In a short position, the SAR for the next day should never be moved below the previous day’s high or today’s high.  
-When the SAR is calculated to be below the previous day’s high or today’s high, the higher high between today and the previous day should be used as the new SAR.  
-On the initial day of entry, the SAR can be given to the broker without calculations if the lowest point reached in the previous short trade is known.  
-For the first day in a trade, the SAR value is always the previous SAR.  
+When the SAR is calculated to be above the previous day's low or today's low, the lower low between today and the previous day should be used as the new SAR.  
+In a short position, the SAR for the next day should never be moved below the previous day's high or today's high.  
+When the SAR is calculated to be below the previous day's high or today's high, the higher high between today and the previous day should be used as the new SAR.  
+On the initial day of entry, the SAR can be given to the broker without calculations because the lowest point reached in the previous short trade is known.  
+For the first day in a trade, the SAR value is set to the previous SAR.  
 The extreme price for the first day in a trade is the high made during that day.  
-The worksheet for the SAR system may initially include only High and Low columns, but the full system also requires Open and Close columns.
+The next day's calculations are based upon the SAR determined by these rules.

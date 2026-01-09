@@ -4,7 +4,8 @@
     "path": "./data/summary/3d2383803902d06e573d6ae5e35e9cbea1589262.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/trend-line-technical-analysis.txt",
     "additional_info": {
-        "duration": 4.719781398773193
+        "duration": 8.647995471954346
     }
 }

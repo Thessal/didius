@@ -4,7 +4,8 @@
     "path": "./data/summary/bf7e2a0162cfb4b8b2d20ee77e1221fd29d8c057.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Support and resistance/pivot-point-technical-analysis.txt",
     "additional_info": {
-        "duration": 36.247918367385864
+        "duration": 55.65937852859497
     }
 }

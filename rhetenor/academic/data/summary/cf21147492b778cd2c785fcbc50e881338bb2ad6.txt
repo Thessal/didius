@@ -1,5 +1,2 @@
-An investor may want the average price of all of the stock transactions for a particular stock up until the current time.  
-The cumulative average for n data points is CAₙ = (x₁ + … + xₙ) / n.  
-The cumulative average can be updated incrementally as CAₙ₊₁ = (xₙ₊₁ + n · CAₙ) / (n + 1).  
-The incremental update can also be expressed as CAₙ₊₁ = CAₙ + (xₙ₊₁ − CAₙ) / (n + 1).  
-A weighted moving average is the convolution of the data with a fixed weighting function.
+An investor may want the average price of all stock transactions for a particular stock up until the current time.  
+The cumulative average can be updated incrementally using the formula CAₙ₊₁ = (xₙ₊₁ + n·CAₙ)/(n + 1).

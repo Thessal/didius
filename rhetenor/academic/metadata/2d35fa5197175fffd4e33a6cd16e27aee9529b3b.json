@@ -4,7 +4,8 @@
     "path": "./data/summary/2d35fa5197175fffd4e33a6cd16e27aee9529b3b.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/ultimate-oscillator.txt",
     "additional_info": {
-        "duration": 17.526068210601807
+        "duration": 10.485868692398071
     }
 }

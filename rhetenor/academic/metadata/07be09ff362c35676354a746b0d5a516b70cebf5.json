@@ -4,7 +4,8 @@
     "path": "./data/summary/07be09ff362c35676354a746b0d5a516b70cebf5.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/negative-volume-index.txt",
     "additional_info": {
-        "duration": 11.407569885253906
+        "duration": 14.82120132446289
     }
 }

@@ -4,7 +4,8 @@
     "path": "./data/summary/3b2e23a22135852b59a6b2454e8a5957ed38f19d.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/bollinger-bands.txt",
     "additional_info": {
-        "duration": 27.1815664768219
+        "duration": 29.162182092666626
     }
 }

@@ -1,18 +1,17 @@
 Volatility is always accompanied by movement, but movement is not always accompanied by volatility.  
 Volatility is also an indicator of movement.  
 The most important index to use for a trend‑following system is the Average Directional Movement Index Rating (ADXR).  
-Generally the most money is made in the shortest period of time when the stock or commodity is volatile.  
-The Commodity Selection Index (CSI) equation incorporates Directional Movement, Volatility, Margin Requirement, and Commission costs, weighted in that order.  
-CSI = ADXR × ATR14 × [ V / √M × 1 / (150 + C) ] × 100.  
-ADXR stands for Average Directional Movement Index Rating.  
-ATR14 is the 14‑day Average True Range.  
-V is the value of a 1‑cent move (or the basic increment of the ATR14) expressed in dollars.  
-M is the margin requirement in dollars.  
-C is the commission in dollars.  
-The term 1 / (150 + C) must be carried to four decimal places in the CSI calculation.  
-For Soybeans with ADXR = 50, ATR14 = 15 c, M = $3000, C = $45, and V = $50, the CSI calculates to 348.  
-For Pork Bellies with ADXR = 37, ATR14 = 1.7 c, M = $1500, C = $60, and V = $360, the CSI calculates to 280.  
-Soybeans has a higher CSI rating than Pork Bellies.  
-All values inside the brackets of the CSI equation are constant as long as the margin requirement and commission cost do not change.  
-A constant K can be defined as K = [ V / √M × 1 / (150 + C) ] × 100, allowing CSI to be calculated as CSI = ADXR × ATR14 × K.  
+Generally the most money is made in the shortest period of time when a stock or commodity is volatile.  
+The Commodity Selection Index (CSI) equation incorporates Directional Movement, Volatility, Margin Requirement, and Commission costs.  
+The CSI equation is: CSI = ADXR × ATR14 × [ V / √M × 1 / (150 + C) ] × 100.  
+In the CSI equation, ADXR stands for Average Directional Movement Index Rating.  
+In the CSI equation, ATR14 is the 14‑day Average True Range.  
+In the CSI equation, V is the value of a 1‑cent move (or the basic increment of the ATR14) expressed in dollars.  
+In the CSI equation, M is the margin requirement in dollars.  
+In the CSI equation, C is the commission in dollars.  
+The term 1 / (150 + C) in the CSI equation must be carried to four decimal places.  
+For Soybeans (ADXR = 50, ATR14 = 15 c, M = $3000, C = $45, V = $50), the CSI calculates to 348.  
+For Pork Bellies (ADXR = 37, ATR14 = 1.7 c, M = $1500, C = $60, V = $360), the CSI calculates to 280.  
+All values inside the brackets of the CSI equation remain constant as long as the margin requirement and commission cost do not change.  
+A constant K can be defined to represent the bracketed terms and the factor 100, allowing CSI to be expressed as CSI = ADXR × ATR14 × K.  
 K needs to be recalculated only when the margin requirement or commission changes.

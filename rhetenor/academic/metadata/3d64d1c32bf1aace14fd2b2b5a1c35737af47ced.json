@@ -4,7 +4,8 @@
     "path": "./data/summary/3d64d1c32bf1aace14fd2b2b5a1c35737af47ced.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Momentum/commodity-selection-index.txt",
     "additional_info": {
-        "duration": 26.047911882400513
+        "duration": 28.319879293441772
     }
 }

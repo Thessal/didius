@@ -4,7 +4,8 @@
     "path": "./data/summary/1cf4aa863109646b245e1ead29bff4ddee1d5f12.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Momentum/relative-strength-index.txt",
     "additional_info": {
-        "duration": 29.6398766040802
+        "duration": 38.298030376434326
     }
 }

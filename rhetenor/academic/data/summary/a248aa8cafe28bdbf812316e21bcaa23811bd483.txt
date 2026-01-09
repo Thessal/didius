@@ -1,11 +1,14 @@
-Norman G. Fosback attributed the long-term increase in the number of issues traded as a reason for a downward bias in a cumulative advance‑decline line.  
-Fosback studied the Negative Volume Index (NVI) and Positive Volume Index (PVI) and reported his findings in his 1976 book Stock Market Logic.  
-Fosback argued that a Negative Volume Index can be calculated with any market index, such as the Dow Jones Industrial Average, the S&P 500, or unweighted market measures, not only with advance‑decline data.  
-Dysart preferred using issues‑traded data (advances and declines) rather than price data of any average because it more comprehensively represents market activity.  
-Fosback’s first variation to NVI and PVI cumulated the daily percent change in the market index instead of the difference between advances and declines, adding the percent change to the previous NVI on lower‑volume days and to the previous PVI on higher‑volume days.  
-Fosback suggested starting the cumulative NVI and PVI counts at a base index level such as 100.  
+Norman G. Fosback attributed the long‑term increase in the number of issues traded as a reason for a downward bias in a cumulative advance‑decline line.  
+Fosback noted that historically Negative Volume Indexes have been constructed using advance‑decline data.  
+Fosback claimed there is no good reason to fixate on the advance‑decline line because a Negative Volume Index can be calculated with any market index such as the Dow Jones Industrial Average, the S&P 500, or unweighted market measures.  
+Dysart preferred to use issues‑traded data (advances and declines) rather than price data of any average because it more comprehensively represents market activity.  
+Fosback’s first variation to NVI and PVI cumulates the daily percent change in the market index instead of the difference between advances and declines.  
+In Fosback’s method, on negative‑volume days the NVI is updated by adding (Ct − Cy)/Cy to yesterday’s NVI; on positive‑volume days the PVI is updated similarly.  
+Fosback suggested starting the cumulative NVI/PVI count at a base index level such as 100.  
 Fosback derived buy or sell signals by comparing the NVI or PVI to its one‑year moving average.  
-Fosback reported that when the NVI is above its one‑year moving average there is a 96 % probability that a bull market is in progress, while the PVI shows a 79 % probability under the same condition.  
-Fosback reported that when the NVI is below its one‑year moving average there is a 53 % probability that a bear market is in place, while the PVI shows a 67 % probability under the same condition.  
-These probability results were derived from a test period covering 1941–1975 and may differ in modern tests.  
-It cannot be said that one version of the NVI/PVI indicator is better than the other.
+Fosback reported that when the NVI is above its one‑year moving average there is a 96 % probability that a bull market is in progress (based on a 1941‑1975 test period).  
+Fosback reported that when the PVI is above its one‑year moving average there is a 79 % probability that a bull market is in progress (based on a 1941‑1975 test period).  
+Fosback reported that when the NVI is below its one‑year moving average there is a 53 % probability that a bear market is in place (based on a 1941‑1975 test period).  
+Fosback reported that when the PVI is below its one‑year moving average there is a 67 % probability that a bear market is in place (based on a 1941‑1975 test period).  
+Modern tests might reveal different probabilities for the NVI and PVI signals.  
+Today NVI and PVI are commonly associated with Fosback’s versions, while Dysart, the inventor, is largely forgotten.

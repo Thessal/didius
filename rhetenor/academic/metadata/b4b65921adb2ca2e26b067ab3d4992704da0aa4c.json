@@ -4,7 +4,8 @@
     "path": "./data/summary/b4b65921adb2ca2e26b067ab3d4992704da0aa4c.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/money-flow-index.txt",
     "additional_info": {
-        "duration": 16.13937544822693
+        "duration": 10.038254737854004
     }
 }

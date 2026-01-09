@@ -4,7 +4,8 @@
     "path": "./data/summary/165d2f2b6681ddfabcaf606a9ba90b8da0698f57.txt",
     "model": "gpt-oss:120b",
     "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/vortex-indicator.txt",
     "additional_info": {
-        "duration": 24.425771713256836
+        "duration": 27.016737937927246
     }
 }

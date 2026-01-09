@@ -1,12 +1,12 @@
-The ADL is one of the oldest indicators based on the Advance‑Decline data and was the most popular of all internal indicators.  
-Divergence is when the stock market index moves in one direction while the ADL on that index moves in the opposite direction.  
-If the index moves up while the ADL moves down, the index may be misleading about the true direction of the overall market.  
-Negative divergence was observed toward the end of the US Dot‑com bubble in 1999–2000, when indices continued to rally while the ADL diverged downward starting at the beginning of 1999.  
-Negative divergence was also seen toward the end of the roaring twenties bull market, during 1972 at the height of the Nifty Fifty market, and starting in March 2008 during the 2008 financial crisis.  
-An index may report a gain at the end of the trading day caused by an increase in a certain number of stocks, but a significant lead by declining stocks may be observed relative to the advancing stocks.  
-These results should be interpreted as a decline in the market, regardless of the index increase.  
-Judgments regarding market performance should be based on advance/decline numbers, not on the performance of a particular index.  
-There have been many cases where a major increase in an index was not accompanied by an increase in the advance number, indicating that by the end of the trading day the index will decline.  
-If there is a significant movement in the advance/decline numbers, a movement in the different indexes can be expected.  
-A market that experiences a trend toward either a decline or an advance is highly unlikely to reverse its movement immediately on the next trading day.  
-Advance‑decline numbers can be used in daily observations of trades to determine whether a particular trend is false or a spot.
+The ADL is one of the oldest indicators based on Advance‑Decline data and was the most popular internal market indicator.  
+Divergence is when a stock market index moves in one direction while the ADL on that index moves in the opposite direction.  
+If an index moves up while the ADL moves down, the index may be misleading about the true direction of the overall market.  
+Negative divergence was observed toward the end of the US Dot‑com bubble in 1999–2000, when indices rallied while the ADL diverged downward starting in early 1999.  
+Negative divergence was also seen toward the end of the Roaring Twenties bull market, during 1972 at the height of the Nifty Fifty market, and starting in March 2008 during the 2008 financial crisis.  
+An index may report a gain at the end of the trading day caused by an increase in a certain number of stocks, yet a significant lead by declining stocks may be observed relative to advancing stocks.  
+Such results should be interpreted as a market decline, regardless of the index’s increase.  
+Market performance judgments should be based on advance/decline numbers rather than on the performance of any particular index.  
+Many cases have occurred where a major increase in an index was not accompanied by an increase in the advance number, indicating the index will likely decline by the end of the trading day.  
+If there is a significant movement in advance/decline numbers, a movement in various indexes can be expected.  
+A market that trends toward either a decline or an advance is highly unlikely to reverse its movement immediately on the next trading day.  
+Advance‑decline numbers can be used in daily trade observations to determine whether a particular trend is false or genuine.
