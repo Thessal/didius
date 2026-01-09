@@ -1,0 +1,17 @@
+"The McClellan oscillator is a market breadth indicator used in technical analysis by financial analysts of the New York Stock Exchange to evaluate the balance between the advancing and declining stocks.",31,5,5,5,1,1,5,5
+"The McClellan oscillator is based on the Advance-Decline Data and it could be applied to stock market exchanges, indexes, portfolio of stocks or any basket of stocks.",27,5,5,5,1,1,5,5
+"Advances is the number of the NYSE listed stocks which are traded above their previous day close.",17,5,5,5,1,1,5,5
+"Declines is the number of the NYSE listed stocks traded below their previous day close.",15,5,5,5,1,1,5,5
+"Difference between advances and declines shows whether we have more advancing or more declining stocks on the NYSE.",18,4,5,4,1,2,5,5
+"Dominance of the advancing stocks is considered as bullish Breadth sentiment.",11,4,5,4,1,1,5,5
+"Higher number of declining stocks is considered as bearish Breadth sentiment.",11,4,5,4,1,1,5,5
+"Applying 19-day and 39-day EMAs to the difference between advances and declines defines shorter-term (19-day) and longer-term (39-day) Breadth sentiment.",20,5,5,5,1,1,5,5
+"Calculating the McClellan Oscillator as the difference between the 19-day EMA and 39-day EMA of advances minus declines applies the MACD principle to Breadth sentiment to see changes in shorter-term Breadth sentiment.",32,5,5,5,1,1,5,5
+"Crossovers of the McClellan Oscillator and the zero center line around which it oscillates have specific meanings.",17,4,5,4,1,1,5,5
+"When the McClellan Oscillator crosses above the zero line, it indicates that the 19-day EMA of advances minus declines has crossed above the 39-day EMA of advances minus declines, suggesting a possible up-move in the NYSE index.",37,4,5,4,1,2,5,5
+"When the McClellan Oscillator crosses below the zero line, it indicates that the 19-day EMA of advances minus declines has crossed below the 39-day EMA of advances minus declines, suggesting a possible down-move in the NYSE index.",37,4,5,4,1,2,5,5
+"The McClellan Summation Index (MSI) is calculated by adding each day's McClellan oscillator to the previous day's summation index.",19,5,5,5,1,1,5,5
+"When the MSI is above zero it is considered bullish (positive growth).",12,4,5,4,1,1,5,5
+"When the MSI is below zero it is considered bearish (negative growth).",12,4,5,4,1,1,5,5
+"The summation index is oversold at –1000 to –1250 or overbought at 1000 to 1250.",15,5,5,5,1,1,5,5
+"The McClellan oscillator equals the 19-day EMA of advances minus declines minus the 39-day EMA of advances minus declines.",19,5,5,5,1,1,5,5

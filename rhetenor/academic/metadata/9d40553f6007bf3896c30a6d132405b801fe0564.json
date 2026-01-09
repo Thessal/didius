@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/9d40553f6007bf3896c30a6d132405b801fe0564.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/macd.txt",
+    "additional_info": {
+        "duration": 162.66826128959656
+    }
+}

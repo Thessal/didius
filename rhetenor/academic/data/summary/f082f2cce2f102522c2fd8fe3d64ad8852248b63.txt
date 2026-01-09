@@ -1,0 +1,12 @@
+"Stocks progress through juvenile, creative, and adult stages, becoming more reliable as they are tested.",74,4,5,3,1,1,5,3,2
+"Follow guidelines when a credible index wave pattern favors a move.",12,3,5,2,5,1,4,5,2
+"Select a group of stocks that move together with the index.",12,3,5,2,5,1,4,5,2
+"Pick stocks within that group that most closely follow its movements.",15,3,5,2,5,1,4,5,2
+"Choose consistently well‑trading, average‑priced, proven leader stocks.",15,3,5,2,5,1,4,5,2
+"Diversify by investing similar amounts in 5‑10 stocks, limiting to one per group.",22,3,5,2,5,1,4,5,2
+"A bull market is a rise comprising five waves; defining markets by duration or percentage is arbitrary.",34,5,4,5,1,2,5,1,3
+"Bear markets are usually shorter than bull markets and may reach 61.8% of a long bull market.",23,4,4,4,1,2,5,1,3
+"Many expect an immediate repeat crash in a four‑year cycle, though a less oversold bottom is possible.",40,2,3,2,1,1,4,4,2
+"The pyramid’s base circumference is 36524.22 in, exactly 100 × 365.2422 days of a solar year.",26,5,2,5,1,5,5,1,4
+"The pyramid’s design height is 5813.02 inches.",9,5,2,5,1,5,5,1,4
+"Mystics claim their measurement system, based on solar year geometry, is eternally accurate and unchanging.",79,1,2,1,1,1,4,2,1

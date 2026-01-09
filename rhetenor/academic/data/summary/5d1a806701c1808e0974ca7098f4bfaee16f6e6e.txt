@@ -1,0 +1,18 @@
+KST equals the weighted sum of MOV(ROC,AVG) terms for four periods.,11,5,1,5,1,5,5,5
+MOV(ROC1,AVG1) denotes the AVG1‑day moving average of ROC1.,8,5,1,5,1,5,5,5
+Martin J. Pring recommends specific parameter values for short‑term trends.,10,4,5,3,1,2,5,4
+Recommended parameter values: X1=10, X2=15, X3=20, X4=30, AVG1‑4=10,10,10,15, W1‑4=1,2,3,4.,14,4,5,3,1,2,5,4
+The KST formula is incorporated in technical analysis software like MetaStock and OmniTrader.,13,5,1,5,1,3,5,5
+If KST falls below its 9‑day EMA, initiate a short position at the next opening price.,16,5,3,4,2,2,5,5
+If KST rises above its 9‑day EMA, close the short position at the next opening.,15,5,3,4,2,2,5,5
+KST can be computed on daily or long‑term timeframes.,9,5,2,5,1,5,5,5
+KST is built on a 24‑month dominant timeframe, half of a 4‑year business cycle.,14,5,1,5,1,5,5,5
+KST performs best when the security follows a primary up‑ and downtrend aligned with the business cycle.,16,4,5,3,1,2,5,4
+A simple 10‑day moving average should be used.,8,5,3,4,2,2,5,5
+A moving‑average crossover can be anticipated when KST has turned and price breaks a trendline.,15,4,5,4,1,2,5,4
+KST reversed downward before the upward trendline was broken.,9,5,1,5,1,5,5,5
+A valid trendline breach indicates that upside momentum has faded, leading KST to cross below its moving average.,18,4,5,4,1,2,5,4
+MACD traditionally signals buys and sells when crossing its EMA signal line.,12,5,1,5,1,5,5,5
+The approach is imperfect; chart ellipses highlight all whipsaws.,9,4,3,3,1,2,5,4
+KST can produce false or misleading signals, exemplified by the April 2005 buy signal.,14,4,5,3,1,2,5,4
+Overall, KST is more accurate despite occasional whipsaws.,8,4,5,3,1,2,5,4

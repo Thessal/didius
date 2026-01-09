@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/9957b83200238c7387af2300d0bbb7a545e93cec.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/standard-deviation.txt",
+    "additional_info": {
+        "duration": 136.2711546421051
+    }
+}

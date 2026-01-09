@@ -1,0 +1,19 @@
+"A sustained period, not just one or two days of small changes, is required.",17,5,5,5,1,5,5,5
+"A congestion zone is the Oscillator area where congestion occurs, typically forming above the zero line.",21,5,5,5,1,5,5,5
+"Congestion zones rarely form at extended negative values.",9,5,5,5,1,5,5,5
+"A congestion zone should be exited, as a basic rule.",16,5,5,5,1,5,5,5
+"The chart shows several examples of congestion zones.",10,5,5,5,1,5,5,5
+"Congestion zones display several days of Oscillator values in a narrow range, and when it breaks out, the market sharply declines.",37,5,5,5,1,5,5,5
+"Some congestion zones form at or below zero, yet still result in a drop out of the zone.",28,5,5,5,1,5,5,5
+"A single day's Oscillator value is insufficient; a chart and interpretation are needed to detect congestion zones and divergences.",30,5,5,5,1,5,5,5
+"Oscillator fluctuations on one side of zero over days constitute a 'complex structure'.",25,5,5,5,1,5,5,5
+"A complex structure indicates strength on its side of zero, positive or negative.",19,5,5,5,1,5,5,5
+"A simple structure occurs when the Oscillator crosses zero and reverses direction within a few days, without forming a complex structure.",42,5,5,5,1,5,5,5
+"Simple structures suggest weakness on their side, even if not evident during their formation.",28,5,5,5,1,5,5,5
+"If the Oscillator chops below zero, it shows strong bears, then a brief pop above zero indicates bulls attempting to regain control.",33,5,5,5,1,5,5,5
+"When the Oscillator spikes up through zero then quickly reverses, it signals weak bulls who relinquish control to bears.",53,5,5,5,1,5,5,5
+"The chart displays examples of both complex and simple structures.",12,5,5,5,1,5,5,5
+"A complex structure predicts additional strength for its side of the market; above zero is bullish, below zero bearish.",40,5,5,5,1,5,5,5
+"Strength from a complex structure can be briefly halted by the opposite side, yet overall more strength is expected.",33,5,5,5,1,5,5,5
+"Trending price moves often consist of successive complex structures briefly interrupted by simple structures.",27,5,5,5,1,5,5,5
+"If complex structures transition to a simple one, it may indicate the market's trending side is about to relinquish control temporarily.",32,5,5,5,1,5,5,5

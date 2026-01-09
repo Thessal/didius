@@ -1,0 +1,20 @@
+"The 1/16-point threshold assumes a 7‑cent move is rounded up and moves of 6 cents or less are unchanged.",37,5,5,5,1,5,5,4
+"Cumulative A‑D ratios show the sub‑tick group has a weaker bias than the market and dampens the Composite ratio, reducing bullishness.",39,5,5,5,1,5,5,4
+"Decimalization has not artificially inflated breadth statistics.",8,5,5,5,1,5,5,4
+"Many NYSE issues are not real companies, such as preferred stocks, rights, warrants, and closed‑end funds.",18,5,5,5,1,5,5,4
+"Analysts try to purify the A‑D line by selecting only preferred stocks or excluding certain issues.",23,4,5,4,1,4,5,4
+"Determining which stocks to include is difficult, and large conglomerates resemble mutual‑fund holdings, making exclusion problematic.",22,4,5,4,1,4,5,4
+"A top‑down decomposition of A‑D numbers is another assessment method.",12,4,5,4,1,4,5,3
+"Composite A‑D statistics are calculated by data vendors from raw exchange feeds, not directly by the NYSE.",17,5,5,5,1,5,5,4
+"The NYSE’s common‑only data excludes symbols longer than three letters, removing certain securities but keeping bond and fund issues.",30,5,5,5,1,5,5,4
+"Consequently, the Common‑Only version usually appears slightly weaker than the Composite version.",13,5,5,5,1,5,5,4
+"Historical CEF data were gathered and an A‑D line computed to evaluate closed‑end fund impact.",21,5,5,5,1,5,5,4
+"Subtracting CEF contributions from Common‑Only numbers yields a Pure Common A‑D line.",13,5,5,5,1,5,5,4
+"The Pure Common line is virtually identical to the Common‑Only line, showing CEFs have negligible overall effect.",25,5,5,5,1,5,5,4
+"All A‑D line versions topped together in August 1989 and again later.",21,5,5,5,1,5,5,4
+"The Composite A‑D line peaked higher at point 2, giving a clearer market strength signal than the lower peaks of Common‑Only and Pure Common lines.",30,5,5,5,1,5,5,4
+"This suggests the Composite line, with greater input diversity, is a more reliable indicator.",16,4,5,4,1,4,5,4
+"Undesirable elements like non‑operating companies can still provide valuable information.",9,4,5,4,1,4,5,4
+"Subtracting Common‑Only advance‑decline numbers from Composite numbers creates Uncommon A‑D statistics that are highly sensitive to interest‑rate movements.",19,5,5,5,1,5,5,4
+"A healthy Uncommon line aligns with strong bond performance, while a weakening Uncommon line predicts weaker bond periods.",37,5,5,5,1,5,5,4
+"Figure 8 illustrates the Uncommon A‑D line with a 200‑day EMA alongside the Dow Jones Corporate Bond Index.",20,5,5,5,1,5,5,4

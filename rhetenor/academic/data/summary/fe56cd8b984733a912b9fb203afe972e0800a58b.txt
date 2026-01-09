@@ -1,0 +1,14 @@
+"Most men have heights within 3 inches of the mean and almost all within 6 inches.",35,5,5,4,1,5,5,3
+"If the standard deviation were zero, all men would be exactly 69 inches tall.",16,5,5,5,1,5,5,3
+"Three standard deviations cover 99.73% of the population assuming a normal distribution.",19,5,5,5,1,5,5,3
+"μ is the expected value (average) of random variable X.",21,5,5,5,1,2,5,3
+"σ is defined as the square root of the expected squared deviation from the mean.",17,5,5,5,1,2,5,3
+"σ equals the square root of E[X²] minus (E[X])².",11,5,5,5,1,2,5,3
+"Standard deviation is the square root of the variance of X.",13,5,5,5,1,2,5,3
+"The standard deviation of a probability distribution equals that of a random variable with that distribution.",18,5,5,5,1,2,5,3
+"Not all random variables possess a standard deviation.",7,5,5,5,1,2,5,3
+"If a distribution has fat tails to infinity, the standard deviation may not exist because the integral may diverge.",21,5,5,5,1,2,5,3
+"The normal distribution’s tails extend to infinity, yet its mean and standard deviation exist because the tails diminish quickly.",22,5,5,5,1,2,5,3
+"Pareto distribution with α in (1,2] has a mean but no finite standard deviation.",22,5,5,5,1,2,5,3
+"Cauchy distribution lacks both a mean and a standard deviation.",10,5,5,5,1,2,5,3
+"For a finite data set with equal probabilities, σ is the square root of the average squared deviation from the mean.",39,5,5,5,1,2,5,3

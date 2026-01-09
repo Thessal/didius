@@ -1,9 +1,0 @@
-The Money Flow Index (MFI) is an oscillator that ranges from 0 to 100.  
-The MFI is used to show the money flow (an approximation of the dollar value of a day's trading) over several days.  
-The typical price for each day is the average of the high price, the low price and the closing price.  
-Money flow for a certain day is typical price multiplied by volume on that day.  
-Positive money flow is calculated by adding the money flow of all the days where the typical price is higher than the previous day's typical price.  
-Negative money flow is calculated by adding the money flow of all the days where the typical price is lower than the previous day's typical price.  
-If the typical price is unchanged then that day is discarded from the calculation of positive or negative money flow.  
-The money ratio is the ratio of positive money flow to negative money flow.  
-The Money Flow Index is calculated from the money ratio.

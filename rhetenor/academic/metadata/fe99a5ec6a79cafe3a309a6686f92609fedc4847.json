@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/fe99a5ec6a79cafe3a309a6686f92609fedc4847.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/force-index.txt",
+    "additional_info": {
+        "duration": 43.48609924316406
+    }
+}

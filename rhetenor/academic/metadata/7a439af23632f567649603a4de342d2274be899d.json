@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/7a439af23632f567649603a4de342d2274be899d.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Momentum/commodity-selection-index.txt",
+    "additional_info": {
+        "duration": 153.10023546218872
+    }
+}

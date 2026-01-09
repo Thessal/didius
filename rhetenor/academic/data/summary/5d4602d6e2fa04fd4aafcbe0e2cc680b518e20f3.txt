@@ -1,0 +1,13 @@
+"TSI is a technical indicator that shows trend direction and overbought/oversold conditions.",26,5,5,4,1,2,5,5
+"TSI was first published by William Blau in 1991.",9,5,5,4,1,2,5,5
+"The indicator uses moving averages of underlying momentum.",13,5,5,4,1,2,5,5
+"Momentum is viewed as a leading indicator, while moving averages lag price.",17,5,5,4,1,2,5,5
+"TSI combines momentum and moving average traits to better sync with market turns.",25,5,5,4,1,2,5,5
+"TSI is included in standard indicator collections on trading platforms.",17,5,5,4,1,2,5,5
+"TSI is double-smoothed: a moving average of momentum is averaged again.",29,5,5,4,1,2,5,5
+"TSI calculation uses exponential moving averages.",8,5,5,4,1,2,5,5
+"TSI formula: 100 * EMA(EMA(m,r),s) / EMA(EMA(|m|,r),s).",10,5,5,4,1,2,5,5
+"c0 represents today's closing price.",5,5,5,4,1,2,5,5
+"m equals momentum, the difference between today's and yesterday's close.",13,5,5,4,1,2,5,5
+"EMA(m,n) defines exponential moving average with recursive formula.",19,5,5,4,1,2,5,5
+"r is the EMA smoothing period for momentum.",8,5,5,4,1,2,5,5

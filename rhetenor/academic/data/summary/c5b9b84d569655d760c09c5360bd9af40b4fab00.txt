@@ -1,0 +1,6 @@
+"An inequality on location and scale parameters",7,5,2,5,1,1,5,5
+"Distance standard deviation",3,5,1,5,1,1,5,5
+"Generalizing number of standard deviations to the mean",8,5,1,5,1,1,5,5
+"For calculating standard deviation of wind direction",7,5,1,5,1,1,5,5
+"Quadratic deviation",2,5,1,5,1,1,5,5
+"Standard Deviation Calculator",3,5,1,5,1,1,5,5

@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/4dbbd53fa9d557d88fe9315b4695bcad99bbcbd4.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Momentum/relative-strength-index.txt",
+    "additional_info": {
+        "duration": 201.70695042610168
+    }
+}

@@ -1,0 +1,21 @@
+"d-shaped cells combine to form curved line patterns resembling an old carving sunflower.",13,5,3,4,1,5,5,5
+"The arcuate line is a curve similar to a sea shell growth line, having regular shape and mathematical properties from a single growth form.",24,5,3,4,1,5,5,5
+"On a typical 5–6 inch sunflower, 89 arcuate lines are present: 55 twisting one way and 34 the other.",19,5,3,4,1,5,5,5
+"We record the numbers 34 + 55 for the intersecting lines.",9,5,3,4,1,5,5,5
+"Second-level flowers below the topmost have intersecting lines numbered 21 + 34.",10,5,3,4,1,5,5,5
+"Third-level flowers further down have intersecting curves 13 + 21.",8,5,3,4,1,5,5,5
+"In Oxford, cultivated sunflowers increased from 34 + 55 to 55 + 89, and a giant specimen had 89 + 144 intersecting curves.",18,5,3,4,1,5,5,5
+"Many plant flower heads show intersecting lines corresponding to 5 + 8.",10,5,3,4,1,5,5,5
+"Counting leaves from the stem base to the flower head reveals a constant number of leaves and stem rotations between vertically aligned leaves.",23,5,3,4,1,5,5,5
+"These leaf counts follow the Fibonacci sequence: 1,2,3,5,8,13,21,34,55,89,144, etc.",9,5,3,4,1,5,5,5
+"Each term in the sequence is the sum of the two preceding numbers.",13,5,3,4,1,5,5,5
+"Dividing adjacent Fibonacci numbers, e.g., 55/34, gives approximately 1.618; the reverse 34/55 gives 0.618.",14,5,3,4,1,5,5,5
+"The two ratios differ by one, and a slight error arises because the sequence is not perfectly integer accurate.",19,5,3,4,1,5,5,5
+"Through experience, the author finds 144 to be the largest practically useful Fibonacci number.",14,4,3,4,1,4,5,5
+"A complete stock market cycle contains 144 minor waves, as shown in the referenced table and figure.",17,4,3,4,1,4,5,5
+"All numbers in the table belong to the Fibonacci series and the entire sequence is used.",16,5,3,4,1,5,5,5
+"The wavelength may change, but the number of waves remains constant.",11,5,3,4,1,5,5,5
+"The human body reflects the numbers 3 and 5: five major branches (head, two arms, two legs), each limb divided into three parts, five fingers per hand, and five senses.",30,4,3,4,1,3,5,5
+"Monkeys share the same structure as humans, except the big toe resembles a hand digit; most animals have five branches from the torso (head and four paws).",27,4,3,4,1,3,5,5
+"Birds also have five branches from the body: head, two legs, and two wings.",14,4,3,4,1,3,5,5
+"In music, an octave consists of eight white keys and five black keys, totaling thirteen keys.",16,4,3,4,1,3,5,5

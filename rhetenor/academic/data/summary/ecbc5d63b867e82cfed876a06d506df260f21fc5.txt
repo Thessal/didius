@@ -1,0 +1,7 @@
+"EMV is a technical analysis indicator linking price change to volume.",20,5,2,4,1,1,5,4
+"EMV was created by Richard W. Arms Jr. and helps assess trend strength.",30,5,3,3,1,1,5,4
+"High positive EMV values show price rise on low volume; strong negatives show price drop on low volume.",22,5,2,4,1,2,5,4
+"A moving average of EMV can be used as a trigger line, similar to MACD.",24,4,3,3,1,1,5,3
+"EMV indicates price‑volume relationship and is often used to gauge underlying trend strength.",24,4,3,3,1,2,5,4
+"EMV calculates price movement ease based on momentum.",16,5,2,4,1,1,5,4
+"The EMV formula subtracts yesterday’s average price from today’s and divides by volume.",16,5,2,4,1,1,5,4

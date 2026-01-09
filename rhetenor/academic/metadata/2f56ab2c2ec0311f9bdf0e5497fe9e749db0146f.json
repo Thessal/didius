@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/2f56ab2c2ec0311f9bdf0e5497fe9e749db0146f.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/accumulation-distribution-index.txt",
+    "additional_info": {
+        "duration": 31.28133749961853
+    }
+}

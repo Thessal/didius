@@ -1,0 +1,15 @@
+"Initial acceleration factor is set to 0.02 but can be chosen by the trader.",16,5,4,3,1,2,5,4
+"The acceleration factor increases by 0.02 each time a new extreme point (EP) is recorded.",31,5,4,5,1,2,5,4
+"The rate quickens until the SAR converges toward the price.",15,4,4,4,1,2,5,4
+"A maximum acceleration factor of 0.20 is normally set to prevent it from becoming too large.",19,5,5,4,1,2,5,4
+"Traders may adjust these parameters based on their trading style and instruments.",16,5,5,3,2,2,5,4
+"For stock trading, a 0.01 acceleration factor is generally preferred to avoid excessive sensitivity.",24,4,5,4,3,2,5,5
+"Commodity and currency trading typically use an acceleration factor of 0.02.",10,4,5,3,1,3,5,4
+"SAR is computed using this method for every new period.",11,5,5,3,1,2,5,4
+"When the next SAR value falls within or beyond the current or previous period's price range, it must be set to the nearest price bound.",29,5,5,5,5,2,5,5
+"In an uptrend, if the new SAR exceeds today's or yesterday's low, it must be set to that lower boundary.",35,5,5,5,5,2,5,5
+"When the next SAR value falls within or beyond the next period's price range, it signals a new trend direction.",22,5,5,5,1,2,5,4
+"The SAR must switch sides after a trend change.",6,5,5,4,5,2,5,5
+"After a trend switch, the first SAR is set to the prior trend's last EP, EP resets to the period's maximum, and the acceleration factor resets to 0.02.",44,5,5,3,1,2,5,4
+"A recent study backtesting parabolic SAR on 30 DJIA stocks over 12 years reported a 19% win rate using standard OHLC charts.",40,5,4,3,1,5,5,5
+"PSAR applied to Heikin Ashi charts achieved a 63% success rate.",12,5,4,3,1,5,5,5

@@ -1,0 +1,8 @@
+"The put/call ratio is a technical indicator of investor sentiment in finance.",16,5,2,5,1,1,5,5
+"The ratio shows the proportion of put options to call options bought each day.",20,5,2,5,1,1,5,5
+"The put/call ratio can be calculated for individual stocks, indices, or in aggregate.",20,5,2,5,1,1,5,5
+"CBOE compiles volume and put/call ratio data for site visitors.",16,5,2,5,1,1,5,5
+"A lower ratio reading (~0.6) indicates bullish sentiment as investors buy calls expecting an uptrend.",22,4,5,4,1,1,5,5
+"A higher ratio reading (~1.02) signals bearish market sentiment.",15,4,5,4,1,1,5,5
+"The ratio is a contrarian indicator; extreme readings above 1.0 signal bullishness, and vice versa.",25,4,5,4,1,1,5,5
+"The index's lowest level was 0.39x in March 2000 during the dot‑com bubble peak.",19,5,2,5,1,2,5,5

@@ -1,0 +1,8 @@
+"The VIX is calculated using a square‑root formula involving risk‑free rate, 30‑day forward price, and weighted put and call prices across strikes.",48,5,5,5,1,3,5,3
+"The Sigma Index was first presented in a 1987 academic paper by Brenner and Galai, later published in the Financial Analysts Journal in July/August 1989.",21,5,5,4,1,3,5,3
+"Brenner and Galai proposed that the Sigma Index would be frequently updated and serve as the underlying asset for futures and options, playing the same role as a market index.",42,4,5,3,1,1,5,4
+"Brenner and Galai's paper was published in the Financial Analysts Journal in 1989.",11,5,5,4,1,3,5,3
+"Brenner and Galai expanded their research at graduate symposia at the Hebrew University of Jerusalem and NYU's Stern School of Business.",29,5,5,4,1,3,5,3
+"In 1992 the American Stock Exchange announced a feasibility study for a volatility index called the Sigma Index.",21,5,5,4,1,3,5,3
+"On January 19, 1993, the CBOE held a press conference announcing the launch of real‑time reporting for the VIX.",29,5,5,4,1,3,5,3
+"The VIX formula was customized for CBOE S&P 100 option prices and created by Professor Robert E. Whaley, originally of Duke University and later Vanderbilt, commissioned by the CBOE.",37,5,5,5,1,3,5,3

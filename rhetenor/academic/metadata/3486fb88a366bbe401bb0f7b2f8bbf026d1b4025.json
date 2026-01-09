@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/3486fb88a366bbe401bb0f7b2f8bbf026d1b4025.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/mass-index.txt",
+    "additional_info": {
+        "duration": 96.6457290649414
+    }
+}

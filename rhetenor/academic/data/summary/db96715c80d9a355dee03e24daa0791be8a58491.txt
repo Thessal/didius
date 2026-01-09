@@ -1,0 +1,7 @@
+"Sampled standard deviation is not absolutely accurate due to mathematical and measurement errors.",32,5,4,4,1,1,5,3
+"With N=2, the 95% CI for SD ranges from 0.45×SD to 31.9×SD.",35,5,4,4,1,1,5,3
+"With N=10, the 95% CI for SD ranges from 0.69×SD to 1.83×SD.",31,5,4,4,1,1,5,3
+"With N=100, the 95% CI for SD ranges from 0.88×SD to 1.16×SD.",20,5,4,4,1,1,5,3
+"To increase certainty, a large sample size is needed to approximate the true standard deviation.",25,4,4,3,5,1,5,5
+"The same formulas provide confidence intervals for variance of residuals in least‑squares fits under normal theory.",35,5,4,4,1,1,5,3
+"For N>4 data spanning range R, an upper bound on SD is s = 0.6 R.",29,5,4,4,1,1,5,3

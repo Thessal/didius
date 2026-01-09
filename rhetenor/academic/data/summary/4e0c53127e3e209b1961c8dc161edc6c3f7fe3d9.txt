@@ -1,0 +1,9 @@
+"Stochastic oscillator is a momentum indicator within technical analysis that uses support and resistance levels as an oscillator.",18,5,1,5,1,1,5,5
+"George Lane developed this indicator in the late 1950s.",9,5,1,5,1,1,5,5
+"The term stochastic refers to the point of a current price in relation to its price range over a period of time.",22,5,1,5,1,1,5,5
+"This method attempts to predict price turning points by comparing the closing price of a security to its price range.",20,4,5,4,1,1,5,5
+"The 5-period stochastic oscillator in a daily timeframe is defined as follows.",12,5,1,5,1,1,5,5
+"The %K is calculated as 100 times the price minus the 5-day low divided by the 5-day high minus the 5-day low.",22,5,1,5,1,1,5,5
+"The %D_N is the average of the last N %K values.",11,5,1,5,1,1,5,5
+"High_5 and Low_5 are the highest and lowest prices in the last 5 days respectively, while %D is the N-day moving average of %K (the last N values of %K).",30,5,1,5,1,1,5,5
+"Usually %D is a simple moving average, but it can be an exponential moving average for less standardized weighting.",19,5,4,5,1,1,5,5

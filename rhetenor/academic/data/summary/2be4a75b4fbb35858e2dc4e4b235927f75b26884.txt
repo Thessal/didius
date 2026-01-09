@@ -1,0 +1,19 @@
+"The Coppock indicator was created by E.S.C. Coppock and first published in Barron's on Oct 15, 1962.",29,5,2,5,1,5,5,4
+"It is intended for use on a monthly time scale.",11,5,2,5,1,5,5,4
+"It equals a 10‑period weighted moving average of the sum of 14‑month and 11‑month rates of change.",22,5,2,5,1,5,5,4
+"Coppock founded Trendex Research in San Antonio and was an economist.",13,5,2,5,1,5,5,4
+"He was asked by the Episcopal Church to find long‑term buying opportunities.",15,5,2,5,1,5,5,4
+"Coppock likened market downturns to bereavements requiring a mourning period.",13,5,2,5,1,5,5,4
+"Bishops said mourning typically lasts 11‑14 months, which he used in the indicator.",28,5,5,5,1,5,5,4
+"A buy signal occurs when the indicator is below zero and turns upward from a trough.",17,5,2,5,1,5,5,4
+"The indicator does not generate sell signals by design.",10,5,2,5,1,5,5,4
+"It is trend‑following and shows when a rally is established rather than pinpointing market bottoms.",27,5,3,5,1,5,5,4
+"Originally designed for the S&P 500, it has also been applied to the Dow Jones Industrial Average.",29,5,2,5,1,5,5,4
+"It is considered unsuitable for commodity markets because their bottoms are more rounded.",22,3,4,3,1,4,5,3
+"A daily version can be computed using 294‑day and 231‑day rates of change with a 210‑day WMA.",31,5,3,5,1,5,5,4
+"The Investors Chronicle uses a slightly different version of the indicator.",18,5,2,5,1,5,5,4
+"That version includes sell signals but advises treating them cautiously.",25,5,3,5,1,5,5,4
+"Such sell signals may only reflect a dip in an ongoing bull market.",15,3,4,3,1,4,5,3
+"Jerry Samet successfully applied the Coppock indicator with weekly close data.",15,4,3,4,1,4,5,4
+"The indicator helps define intermediate‑term market moves lasting 6 weeks to 12 months.",18,4,3,4,1,4,5,4
+"Mike Scott found weekly Coppock signals within ±2 weeks of an IBD Follow‑Through Day identify rallies 79% of the time in bull markets and 45% in bear markets.",55,4,3,4,1,4,5,4

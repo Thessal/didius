@@ -1,0 +1,9 @@
+"VPT is a technical analysis indicator linking price and volume in the stock market.",21,5,5,5,1,2,5,5
+"VPT is calculated by adding or subtracting volume multiplied by the percentage price change to a cumulative total.",33,5,5,5,1,2,5,5
+"The zero point of VPT is arbitrary.",9,5,5,5,1,2,5,5
+"Only the shape of VPT matters, not its absolute level.",16,5,5,5,1,2,5,5
+"VPT is similar to OBV but also accounts for the magnitude of price changes.",31,5,5,5,1,2,5,5
+"VPT is interpreted similarly to OBV.",8,5,5,5,1,2,5,5
+"Typically, higher volume occurs on days with price moves in the dominant direction.",32,4,4,4,1,2,5,4
+"When prices rise, VPT should rise; it should also rise when a new rally high is made.",23,4,4,4,1,2,5,4
+"If VPT does not exceed its previous rally high, it indicates negative divergence and a weak move.",20,4,4,4,1,2,5,4

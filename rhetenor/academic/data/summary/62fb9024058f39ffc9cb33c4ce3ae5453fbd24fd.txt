@@ -1,8 +1,0 @@
-The ADXR is the final number used to rate all commodities, currencies, stocks, etc., on a scale indicative of directional movement.  
-ADXR is calculated as the average of today’s ADX and the ADX from 14 days ago: ADXR = (ADX_today + ADX_14_days_ago) / 2.  
-The ADXR should reflect good directional movement while exhibiting minimal fluctuation at equilibrium points.  
-When plotted, the ADX tends to form a sine‑like curve whose amplitude is measured from the zero line, with peaks and valleys indicating changes of direction.  
-Higher amplitude of the ADX curve reflects stronger directional movement in one direction, indicating a strong trend.  
-Larger distances between ADX peaks and valleys produce stronger reactions to the trend, which can be profitable in both directions.  
-Good directional movement includes movement that exceeds the equilibrium point, which occurs when +DI14 equals –DI14.  
-When the ADXR is less than 20, directional movement is typical; when the ADXR is above 25, equilibrium points widen.

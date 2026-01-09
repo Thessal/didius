@@ -1,0 +1,4 @@
+"Bollinger bands are used on manufacturing data to detect fabric defects.",15,5,2,1,1,2,5,3
+"Upper and lower Bollinger bands detect subtle changes in sample data.",23,5,2,1,1,2,5,3
+"ICAO uses Bollinger bands to measure accident rates as a safety indicator.",25,5,2,1,1,2,5,3
+"Bollinger bands are applied to identify start and end of winter surge in pediatric ICU demand.",26,5,2,1,1,2,5,3

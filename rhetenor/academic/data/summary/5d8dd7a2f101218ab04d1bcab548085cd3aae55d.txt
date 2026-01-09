@@ -1,0 +1,5 @@
+"Emanuel Derman expressed disillusion with empirical models lacking theoretical support.",10,5,1,1,1,2,5,3
+"Derman argues that theories aim to uncover hidden principles, while models are metaphors describing one thing relative to another.",19,4,5,3,1,4,5,4
+"Michael Harris claims that VIX merely tracks the inverse of price and lacks predictive power.",15,4,4,3,1,3,5,4
+"Some argue that VIX can predict future volatility if Black‑Scholes‑derived prices are valid assumptions.",14,3,5,3,1,2,5,3
+"Robert J. Shiller says using VIX as proof of Black‑Scholes is circular reasoning and that VIX calculated for 1929 did not forecast the Great Depression’s volatility.",26,4,5,4,1,4,5,4

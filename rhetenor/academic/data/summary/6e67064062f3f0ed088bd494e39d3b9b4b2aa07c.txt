@@ -1,0 +1,28 @@
+"On a limit‑up day, +DM equals C minus A.",10,5,1,5,1,2,5,5
+"On a limit‑down day, –DM equals D minus B.",10,5,1,5,1,2,5,5
+"The illustrations consider every possible two‑day directional‑movement configuration.",18,5,1,5,1,2,5,5
+"Directional movement increment is the largest part of today’s range outside yesterday’s range.",18,5,1,5,1,2,5,5
+"If today’s range exceeds yesterday’s, DM is positive (PLUS).",15,5,1,5,1,2,5,5
+"If today’s range is below yesterday’s, DM is negative (MINUS).",15,5,1,5,1,2,5,5
+"DM must be expressed relative to range as a function.",17,5,1,5,1,2,5,5
+"The range increment is today’s true range (TR).",8,5,1,5,1,2,5,5
+"True range is the maximum of three distances: high‑low, high‑yesterday’s close, low‑yesterday’s close.",30,5,1,5,1,2,5,5
+"True range is always a positive number.",10,5,1,5,1,2,5,5
+"Directional Indicator (DI) is directional movement divided by true range.",20,5,1,5,1,2,5,5
+"+DI equals +DM divided by TR.",5,5,1,5,1,2,5,5
+"-DI equals -DM divided by TR.",5,5,1,5,1,2,5,5
+"+DI applies on up days; -DI applies on down days.",24,5,1,5,1,2,5,5
+"Both up and down directional movement cannot occur on the same day.",15,5,1,5,1,2,5,5
+"+DI shows the percent of true range that is up; -DI shows the percent that is down.",23,5,1,5,1,2,5,5
+"To use DI, sum DI values over a time period.",20,5,1,5,1,2,5,5
+"Fourteen days are used as the averaging period.",11,5,1,5,1,2,5,5
+"Add all true ranges of the past 14 days to get TR14.",14,5,1,5,1,2,5,5
+"Add all +DM values of the past 14 days to get +DM14.",14,5,1,5,1,2,5,5
+"Add all –DM values of the past 14 days to get –DM14.",13,5,1,5,1,2,5,5
+"+DI14 equals +DM14 divided by TR14; -DI14 equals -DM14 divided by TR14.",18,5,1,5,1,2,5,5
+"‘Minus DM’ denotes downward movement and is not a negative number in the formula.",18,5,1,5,1,2,5,5
+"After the first 14‑day values, earlier data are no longer needed.",22,5,1,5,1,2,5,5
+"An accumulation technique uses the previous day’s data.",10,5,1,5,1,2,5,5
+"Advantages: no need to store 14‑day data and smoothing of DM.",16,5,1,5,1,2,5,5
+"New +DM14 = previous +DM14 minus (previous +DM14 /14) plus today’s +DM.",38,5,1,5,1,2,5,5
+"New –DM14 is calculated similarly using previous –DM14 and today’s –DM.",18,5,1,5,1,2,5,5

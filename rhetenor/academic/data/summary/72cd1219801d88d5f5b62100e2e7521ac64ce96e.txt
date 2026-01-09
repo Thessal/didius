@@ -1,0 +1,18 @@
+"The universe is governed by law, a truth universally accepted.",15,5,5,5,1,4,5,5
+"Without law there would be chaos, and where there is chaos there is nothing.",18,5,5,5,1,5,5,5
+"All arts and sciences obey the law because nature acts the same way.",35,5,5,5,1,5,5,5
+"Because law provides order, everything that happens will repeat and can be predicted if we know the law.",32,5,5,5,1,4,5,5
+"Columbus predicted that a westward course would bring his ships to land, and his prediction came true.",36,4,4,4,1,2,5,5
+"Galei calculated his comet's orbit in 1682 and predicted its return, confirmed in 1759.",19,4,4,4,1,2,5,5
+"Marconi predicted wireless transmission of sound, enabling us to listen to music from across the ocean.",33,4,4,4,1,2,5,5
+"These people and many others studied the pattern.",13,5,4,4,1,4,5,5
+"After publication, the forecast became a matter of technology and turned mathematical.",14,5,4,4,1,4,5,5
+"Even without understanding causes, we can predict phenomena to recur based on observations.",24,5,5,5,1,5,5,5
+"For thousands of years people waited for sunrise before knowing the reason.",27,5,5,5,1,5,5,5
+"The Indians linked months to the new moon but cannot explain regular intervals.",28,5,5,5,1,4,5,5
+"Spring planting proves the cyclical nature of the world, expecting summer next.",37,5,5,5,1,5,5,5
+"In each example, the rhythm of a phenomenon was used.",12,5,4,4,1,4,5,5
+"Man, like the Sun and Moon, is a natural object whose activity can be analyzed numerically.",28,5,5,5,1,4,5,5
+"Human activity viewed rhythmically provides answers to complex problems.",30,5,5,5,1,4,5,5
+"Since a person participates in rhythmic processes, predictions about his activities can extend far into the future.",31,5,5,5,1,4,5,5
+"A study shows that socio‑economic development follows a law causing results to repeat themselves.",43,5,5,5,1,5,5,5

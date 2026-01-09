@@ -1,0 +1,15 @@
+"A moving average is a calculation that creates a series of averages from different selections of a full data set.",37,5,2,4,1,1,5,4
+"Moving averages have simple, cumulative, and weighted variations.",7,5,2,4,1,1,5,4
+"A moving average is mathematically a type of convolution.",9,5,2,4,1,1,5,4
+"In signal processing, a moving average is viewed as a low‑pass finite impulse response filter.",14,5,2,4,1,1,5,4
+"Because its filter coefficients follow a boxcar function, a moving average is called a boxcar filter.",14,5,2,4,1,1,5,4
+"A moving average is sometimes followed by downsampling.",6,5,2,4,1,1,5,4
+"The first element of a moving average is the average of the initial fixed subset of the series.",32,5,2,4,1,1,5,4
+"Subsequent elements are obtained by shifting the subset forward, dropping the first number and adding the next.",25,5,2,4,1,1,5,4
+"Moving averages smooth short‑term fluctuations and highlight longer‑term trends in time‑series data, sometimes called a time average.",33,5,2,4,1,1,5,4
+"The short‑term versus long‑term threshold depends on the application, and parameters are set accordingly.",21,4,3,3,1,1,5,4
+"Moving averages are used in economics to examine GDP, employment, and other macroeconomic time series.",17,5,2,4,1,1,5,4
+"When applied to non‑time‑series data, a moving average filters higher‑frequency components without a specific time connection, assuming an implied ordering.",27,5,2,4,1,1,5,4
+"Viewed simplistically, a moving average can be regarded as data smoothing.",10,4,3,3,1,1,5,4
+"The Bank of England invented moving averages in 1833 to conceal its bullion reserves.",22,5,2,4,1,2,5,4
+"In finance, a simple moving average (SMA) is the unweighted mean of the previous k data points.",17,5,2,4,1,1,5,4

@@ -1,0 +1,20 @@
+"ADXR rates commodities, currencies, stocks, etc., on a directional movement scale.",21,5,4,5,1,5,5,5
+"ADXR equals the average of today's ADX and the ADX from 14 days ago.",23,5,4,5,1,5,5,5
+"ADXR must indicate directional movement while showing minimal fluctuation during direction changes.",27,5,4,4,4,4,5,5
+"When plotted, the ADX typically forms a sine‑like curve.",10,4,4,4,1,4,5,5
+"The curve’s amplitude is measured from the zero line, with peaks and valleys marking direction changes.",18,4,4,4,1,4,5,5
+"If the trend is down, peaks are low and valleys high; if up, peaks are high and valleys low.",29,4,4,4,1,4,5,5
+"Higher amplitude signifies stronger directional movement in one direction, indicating a strong trend.",13,4,4,4,1,4,5,5
+"Larger peak‑valley distances generate stronger trend reactions, potentially profitable in both directions.",19,4,4,4,1,4,5,5
+"ADXR should reflect good directional movement without excessive fluctuation at equilibrium points.",15,5,4,4,4,4,5,5
+"This is achieved by averaging a 14‑day differential of the ADX.",11,4,4,4,1,4,5,5
+"Good directional movement includes movements that exceed the equilibrium point, not just straight up or down.",18,4,4,4,1,4,5,5
+"The equilibrium point occurs when +DI14 equals -DI14.",9,5,4,5,1,5,5,5
+"Figure 4.11 shows a low ADX value with swings around equilibrium points.",16,4,4,4,1,5,5,5
+"Figure 4.12 shows a higher ADX because the distance between equilibrium points is larger.",14,4,4,4,1,5,5,5
+"Figure 4.13 shows an even higher ADX as the equilibrium point was reached only once.",18,4,4,4,1,5,5,5
+"Figure 4.14 illustrates an extreme where distance between points B and C is zero, making trades break even or cause loss.",39,4,4,4,1,5,5,5
+"Some directional movement exists due to distance between points E and F.",12,4,4,4,1,4,5,5
+"This pattern is typical when ADXR is less than 20.",10,4,4,4,1,4,5,5
+"When ADXR exceeds 25, equilibrium points become wider.",9,4,4,4,1,4,5,5
+"High directional movement relative to a 14‑day period causes equilibrium points to occur immediately after a turn.",32,4,4,4,1,4,5,5

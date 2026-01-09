@@ -1,0 +1,25 @@
+"Yield on government bonds fell from 4% in Jan 1932 to 2% in Jun 1939.",17,5,1,5,1,5,5,1
+"A $1,000 stock investment in July 1932 would have grown to about $5,000 by March 1937, excluding dividends.",26,5,2,5,1,5,5,1
+"The claim relies on percentage changes of popular indexes.",11,4,5,3,1,2,5,1
+"Chapter 19 states timing is the primary factor in stock trading.",18,4,5,3,1,2,5,1
+"The next most important factor is the choice of stocks to trade.",12,4,5,3,1,2,5,1
+"Market price fluctuations of any security exceed its annual dividend income.",19,5,1,5,1,4,5,1
+"The key factor is determining investment amount and protecting it against price fluctuations.",19,4,5,3,3,2,5,3
+"In bull markets, 55 statistical indexes show tops forming at different times like a fan.",24,5,1,5,1,4,5,1
+"Bull markets consist of five primary waves lasting about two years.",10,5,1,5,1,4,5,1
+"During such periods, several groups move uniformly, driven by a strong cyclical force.",19,4,3,3,1,4,5,1
+"Typically, bear markets last longer than the preceding bull markets.",19,4,3,3,1,2,5,1
+"In the 1929‑1932 decline, both top and inferior stocks and bonds were forced to be sold regardless of true value.",29,5,1,5,1,5,5,1
+"Many traders mistakenly believe all bear‑market declines can repeat with the same parameters.",13,4,5,3,1,2,5,1
+"Studies indicate many years will pass before a similarly deep fall can be expected.",14,3,3,2,1,2,5,1
+"Bear‑market bottoms occur simultaneously with lowest index marks, opposite to bull‑market highs.",30,5,1,5,1,4,5,1
+"In bull markets, superiority is less pronounced, especially in long rallies.",11,4,1,3,1,4,5,1
+"During bear periods, markets become more sensitive to events and external factors.",21,4,1,3,1,4,5,1
+"Traders often become prejudiced against individual stocks due to past bad experiences.",12,4,3,3,1,2,5,1
+"Following tradition, a trader may eventually fail to find a flawless group of stocks.",20,3,3,3,1,2,5,1
+"Sluggishly traded stocks should be avoided; the wave pattern does not form.",17,4,5,3,5,2,5,5
+"Confidential tips from well‑wishers usually refer to thinly traded or cheap stocks.",12,4,3,3,1,2,5,1
+"It is advisable to trade only widely traded stocks.",11,5,3,3,5,2,5,5
+"The stock life cycle is divided into three stages.",9,5,1,5,1,4,5,1
+"The juvenile stage stocks should be avoided because they lack sufficient market testing.",25,5,3,3,5,2,5,5
+"The creative stage stocks have flourished and are an excellent medium to trade.",20,5,3,3,1,2,5,1

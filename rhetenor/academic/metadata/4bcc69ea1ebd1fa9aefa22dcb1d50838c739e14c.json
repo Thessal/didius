@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/4bcc69ea1ebd1fa9aefa22dcb1d50838c739e14c.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Breadth of market/advancedecline-line.txt",
+    "additional_info": {
+        "duration": 132.91882991790771
+    }
+}

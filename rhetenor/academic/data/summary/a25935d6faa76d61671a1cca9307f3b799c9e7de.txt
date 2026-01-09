@@ -1,6 +1,0 @@
-Williams %R is calculated as (high over N days minus today’s close) divided by (high over N days minus low over N days) times 100.  
-Williams used a 10‑trading‑day period and considered %R values below –80 as oversold and above –20 as overbought.  
-The buy rule for an oversold condition is: %R reaches –100 %, then five trading days pass since the –100 % level was last reached, and %R rises above –95 % or –85 %.  
-The sell rule for an overbought condition is: %R reaches 0 %, then five trading days pass since the 0 % level was last reached, and %R drops below –5 % or –15 %.  
-Changing the %R timeframe makes the signal more sensitive or smoother; increasing sensitivity produces more false signals.  
-Because (close today – low N‑days) – (close today – high N‑days) equals high N‑days – low N‑days, the denominator of the %R formula can be expressed equivalently.

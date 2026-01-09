@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/1a09f784baaa369c94d482cf86ddf9217db2844e.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/average-true-range.txt",
+    "additional_info": {
+        "duration": 85.6043860912323
+    }
+}

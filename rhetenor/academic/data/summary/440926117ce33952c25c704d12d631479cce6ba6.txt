@@ -1,6 +1,0 @@
-In finance, standard deviation is often used as a measure of the risk associated with price fluctuations of a given asset such as stocks.  
-The fundamental concept of risk is that as it increases, the expected return on an investment should increase as well, known as the risk premium.  
-Standard deviation provides a quantified estimate of the uncertainty of future returns.  
-Stock A over the past 20 years had an average return of 10 percent with a standard deviation of 20 percentage points, while Stock B had an average return of 12 percent with a standard deviation of 30 percentage points.  
-An investor may consider Stock A the safer choice because Stock B’s additional 2 percentage points of return is not worth the additional 10 percentage points of standard deviation.  
-Risk is an important factor in efficiently managing a portfolio of investments because it determines the variation in returns on the asset or portfolio and provides a mathematical basis for investment decisions such as mean‑variance optimization.

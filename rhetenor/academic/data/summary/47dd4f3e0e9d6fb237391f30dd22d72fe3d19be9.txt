@@ -1,0 +1,22 @@
+"Ichimoku Kinko Hyo is a technical analysis method aiming to improve forecast price accuracy.",35,5,3,5,1,2,5,5
+"The chart plots five lines based on recent highs, lows, and closes.",12,5,2,5,1,2,5,5
+"Two lines create a cloud-like image on the chart, giving the technique its name.",18,5,2,5,1,2,5,5
+"The method is applied across asset classes and used by traders to predict price movements and regime shifts globally.",24,5,2,5,1,2,5,5
+"It was developed in the late 1930s by Goichi Hosoda, a Japanese journalist known as Ichimoku Sanjin, meaning 'what a man in the mountain sees'.",39,5,3,5,1,3,5,5
+"He spent 30 years perfecting the technique before releasing his findings to the public in the late 1960s.",19,5,2,5,1,3,5,5
+"Ichimoku Kinko Hyo translates to 'one glance equilibrium chart' and is also called 'one glance cloud chart' due to its unique clouds.",36,5,2,5,1,2,5,5
+"Ichimoku is a moving-average trend system that, with more data points than standard candlesticks, offers a clearer view of potential price action.",28,5,2,5,1,2,5,5
+"Ichimoku plots moving averages using the 50% point of highs and lows, unlike other methods that use the candle's closing price.",38,5,2,5,1,2,5,5
+"Ichimoku incorporates time as an additional factor alongside price action, similar to William D. Gann's ideas.",24,5,2,5,1,2,5,5
+"In the West, it is known only for its 'Graphic Environment' because the original manual hasn't been translated into major languages.",29,5,2,5,1,2,5,5
+"Ichimoku also incorporates three theories—Time Theory, Wave Movement Theory, and Target Price Theory—to improve the indicator.",23,5,2,5,1,2,5,5
+"Tenkan-sen is calculated as (highest high + lowest low) / 2 over the last 9 periods.",13,5,2,5,1,2,5,5
+"Also called the conversion line, it serves as a signal line and minor support/resistance line.",20,5,2,5,1,2,5,5
+"It is the turning line, derived by averaging the highest high and lowest low over the past nine periods.",22,5,2,5,1,2,5,5
+"The Tenkan Sen indicates the market trend.",10,5,2,5,1,2,5,5
+"If the blue line moves up or down, it signals a trending market.",16,4,3,4,1,2,5,5
+"If it moves horizontally, it signals a ranging market.",11,4,3,4,1,2,5,5
+"Kijun-sen is calculated as (highest high + lowest low) / 2 over the past 26 periods.",13,5,2,5,1,2,5,5
+"Also called the base line, it serves as a confirmation, support/resistance, and trailing stop line.",24,5,2,5,1,2,5,5
+"The Kijun Sen indicates future price movement.",11,5,2,5,1,2,5,5
+"If price exceeds the blue line, it may continue to rise.",15,4,3,4,1,2,5,5

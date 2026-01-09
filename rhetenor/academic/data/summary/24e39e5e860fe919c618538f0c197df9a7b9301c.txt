@@ -1,0 +1,13 @@
+"The ulcer index was created by Peter Martin in 1987 and published with Byron McCann in 1989.",36,5,1,5,1,1,5,4
+"It measures downwards volatility as the amount of drawdown or retracement over a period.",16,5,1,5,1,5,5,4
+"Other volatility measures treat up and down equally, but most market traders are long and welcome upward price movement.",25,4,4,3,1,1,5,4
+"The downside causes stress and the stomach ulcers suggested by the index's name.",16,3,3,3,1,1,5,3
+"The name predates the discovery that most gastric ulcers are caused by a bacterium rather than stress.",17,5,1,5,1,1,5,4
+"Steve Shellans later used the term ulcer index for a different calculation based on drawdown ulcer‑causing potential.",30,5,1,5,1,1,5,4
+"Shellans' index is not described in this article.",8,5,1,5,1,5,5,3
+"The index is based on a given past period of N days.",12,5,1,5,1,5,5,4
+"The method maintains the highest price seen so far and treats any lower close as a percentage retracement.",28,5,1,5,1,5,5,4
+"For example, a high of $5.00 and a price of $4.50 represent a −10% retracement.",19,5,1,5,1,5,5,4
+"The first R is always 0 because there is no drawdown from a single price.",14,5,1,5,1,5,5,4
+"The quadratic mean (root mean square) of these values is taken, similar to a standard deviation calculation.",18,5,1,5,1,5,5,4
+"Since R values are squared, it does not matter if they are positive or negative; both give a positive Ulcer Index.",24,5,1,5,1,5,5,4

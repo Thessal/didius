@@ -1,5 +1,0 @@
-The ultimate oscillator is a theoretical concept in finance developed by Larry Williams to address problems experienced in most oscillators when used over different lengths of time.  
-The oscillator is a technical analysis indicator based on buying or selling pressure represented by where a day's closing price falls within the day's true range.  
-Buying pressure is defined as the amount by which the close is above the true low on a given day, where true low is the lesser of the day's low and the previous close.  
-True range is the difference between the true high and the true low, where true high is the greater of the day's high and the previous close.  
-The total buying pressure over the past 7 days is expressed as a fraction of the total true range over the same period.

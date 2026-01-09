@@ -1,0 +1,7 @@
+"%R is calculated as ((high over N days) minus (close today)) divided by ((high over N days) minus (low over N days)) times 100.",11,5,5,5,1,2,5,2
+"Williams used a 10‑day period and defined values below –80 as oversold and above –20 as overbought.",19,5,5,5,1,2,5,2
+"The oversold and overbought levels are not intended to be traded directly.",16,5,5,5,1,2,5,2
+"Buy rule: %R reaches –100%, after five trading days %R rises above –95% or –85%.",18,5,5,5,5,2,5,5
+"Sell rule: %R reaches 0%, after five trading days %R drops below –5% or –15%.",18,5,5,5,5,2,5,5
+"Increasing sensitivity of the timeframe yields more false signals.",26,5,5,5,3,3,5,4
+"(close today – low over N days) minus (close today – high over N days) equals high over N days minus low over N days.",11,5,5,5,1,2,5,2

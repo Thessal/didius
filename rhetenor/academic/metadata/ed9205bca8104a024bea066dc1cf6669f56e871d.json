@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/ed9205bca8104a024bea066dc1cf6669f56e871d.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/stochastic-oscillator.txt",
+    "additional_info": {
+        "duration": 82.11667561531067
+    }
+}

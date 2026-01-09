@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/ecd47fc98775974cb4ba6a3068c978b6047f0b08.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/trend-line-technical-analysis.txt",
+    "additional_info": {
+        "duration": 48.5237181186676
+    }
+}

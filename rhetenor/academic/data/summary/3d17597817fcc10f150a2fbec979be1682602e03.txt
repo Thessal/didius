@@ -1,0 +1,11 @@
+"Keltner channel is a technical analysis indicator with a central moving average line and upper/lower channel lines.",22,5,1,1,1,2,5,1
+"The indicator is named after Chester W. Keltner, who described it in his 1960 book.",22,5,1,1,1,2,5,1
+"Keltner called it the ten‑day moving average trading rule and did not claim originality.",33,5,1,1,1,3,5,1
+"The center line is a 10‑day simple moving average of the typical price (high+low+close)/3.",28,5,1,1,1,3,5,1
+"The upper and lower lines are offset by the 10‑day SMA of daily trading ranges.",36,5,1,1,1,3,5,1
+"A close above the upper line signals bullishness, below the lower line signals bearishness, guiding trades.",43,4,3,3,1,2,5,2
+"The origin of the Keltner channel idea is uncertain.",7,2,2,2,1,2,5,1
+"Keltner was a Chicago grain trader and the concept may have been common knowledge among traders.",17,4,5,3,1,2,5,1
+"In the 1930s Keltner worked for Ralph Ainsworth testing systems for a prize, possibly influencing the idea.",35,4,3,3,1,2,5,1
+"Channel concepts date back to early charting, so using averaging is not a large conceptual leap.",28,4,5,3,1,2,5,2
+"Later authors like Linda Bradford Raschke have published Keltner channel modifications, such as different periods or ATR multiples.",37,5,1,1,1,3,5,1

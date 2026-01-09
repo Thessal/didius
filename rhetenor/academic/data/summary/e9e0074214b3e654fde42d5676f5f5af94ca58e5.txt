@@ -1,5 +1,0 @@
-The Relative Strength Index (RSI) evaluates a sequence derived from closing prices observed over n market periods.  
-The absolute value |g(t)| equals the absolute price change |close(t)−close(t−1)|, i.e., U + D at time t, multiplied by an exponential factor according to the SMMA weighting for that time.  
-The denominator ‖g‖₁ in the RSI formula is the sum of all absolute price changes over the interval.  
-The numerator of the RSI formula computes the SMMA of only the upward changes U, equivalently g multiplied by the indicator function for positive changes.  
-The RSI therefore weights the positive price changes U over the total changes in the whole interval.

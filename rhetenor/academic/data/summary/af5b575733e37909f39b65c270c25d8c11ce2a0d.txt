@@ -1,9 +1,0 @@
-The Directional Movement Index (DX) is calculated as the DI difference divided by the sum of DI values, expressed as a percentage.  
-The Average Directional Movement Index (ADX) after 14 days is the average of the 14 DX values.  
-Subsequent ADX values are calculated using the moving‑average formula: (previous ADX × 13 + today’s DX) / 14.  
-The ADX rating (ADXR) is the average of the current ADX and the ADX from 14 days ago.  
-The Average True Range over 14 days (ATR14) is the average of the 14‑day True Range values.  
-The Commodity Selection Index (CSI) incorporates ADXR, ATR14, and other metrics to rate commodities, currencies, and stocks.  
-The ADXR is used as a rating of directional movement for stocks.  
-On day 28, the ADX calculated from the first 14 DX values equals 1.86.  
-On day 29, the ADX calculated using (previous ADX × 13 + DX today) / 14 equals approximately 17 (rounded).

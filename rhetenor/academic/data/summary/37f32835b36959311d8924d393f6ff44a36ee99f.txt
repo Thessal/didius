@@ -1,0 +1,24 @@
+"Day 5 SAR value is 50.05.",5,5,1,5,1,5,5,1
+"AF progresses from 0.02 to 0.20.",18,5,5,5,1,1,5,1
+"AF increases by 0.02 each day a new high is made.",14,5,5,5,5,1,5,5
+"In the example a new high occurs daily, so AF increases by 0.02 each day.",19,5,5,5,1,1,5,1
+"SAR for Day 6 calculates to 50.17.",21,5,1,5,1,5,5,1
+"General SAR equation: SAR_Tomorrow = SAR_Today + AF(EP_Trade‑SAR_Today), with AF starting at 0.02 and increasing by 0.02 up to 0.20.",31,5,5,5,1,1,5,1
+"EP is the extreme price point of the trade; for Long it is the extreme high, for Short the extreme low.",33,5,5,5,1,1,5,1
+"SAR7 equals 50.37.",11,5,1,5,1,5,5,1
+"SAR8 equals 50.66.",11,5,1,5,1,5,5,1
+"SAR9 equals 51.04.",11,5,1,5,1,5,5,1
+"SAR10 equals 51.52.",11,5,1,5,1,5,5,1
+"SAR11 equals 52.08.",11,5,1,5,1,5,5,1
+"SAR12 equals 52.71.",11,5,1,5,1,5,5,1
+"A position is entered when price penetrates the SAR.",10,5,5,4,5,1,5,5
+"On the first day of entry, SAR equals the previous Significant Point (SIP).",14,5,5,4,5,1,5,5
+"If entering Long, the SIP is the lowest price reached during the previous Short trade.",16,5,5,4,5,1,5,5
+"If entering Short, the SIP is the highest price reached during the previous Long trade.",16,5,5,4,5,1,5,5
+"For Long positions, SAR tomorrow is SAR today plus AF times the difference between the trade’s highest price and today’s SAR.",51,5,5,5,5,1,5,5
+"AF starts at 0.02 and increases by 0.02 each day a new high occurs, not exceeding 0.20.",46,5,5,5,5,1,5,5
+"For Short positions, SAR tomorrow is SAR today minus AF times the difference between today’s SAR and the trade’s lowest price.",39,5,5,5,5,1,5,5
+"AF starts at 0.02 and increases by 0.02 each day a new low occurs, not exceeding 0.20.",46,5,5,5,5,1,5,5
+"Never move the SAR into the previous day’s range or today’s range.",12,5,5,4,5,1,5,5
+"For Long, SAR tomorrow must not exceed the previous or today’s low; if it does, use the lower low as the new SAR.",46,5,5,4,5,1,5,5
+"For Short, SAR tomorrow must not fall below the previous or today’s high.",16,5,5,4,5,1,5,5

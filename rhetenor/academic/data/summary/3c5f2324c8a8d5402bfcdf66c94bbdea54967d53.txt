@@ -1,0 +1,15 @@
+"Moving average is susceptible to rare events such as rapid shocks or anomalies.",26,5,5,5,1,2,5,4
+"Simple moving median over n time points provides a more robust trend estimate.",16,5,5,5,1,2,5,4
+"Median is obtained by sorting values in the window and selecting the middle value.",20,5,5,5,1,5,5,4
+"For larger n, median can be efficiently computed using an indexable skiplist.",16,5,5,5,1,5,5,4
+"Moving average is optimal for trend recovery when fluctuations are normally distributed.",24,5,5,5,1,2,5,4
+"Normal distribution assigns low probability to large deviations, causing disproportionate impact on trend estimate.",30,5,5,5,1,2,5,4
+"If fluctuations are Laplace distributed, moving median becomes statistically optimal.",17,4,5,5,1,2,5,4
+"Laplace distribution places higher probability on rare events than normal, so moving median tolerates shocks better.",30,5,5,5,1,2,5,4
+"When centered, simple moving median smoothing equals median filter, useful in image signal processing.",23,5,5,5,1,5,5,4
+"Moving Median is a more robust alternative to Moving Average for estimating time series trends.",24,5,5,5,1,2,5,4
+"Moving Average is optimal under normal fluctuations but vulnerable to rare events like rapid shocks.",34,5,5,5,1,2,5,4
+"Moving Median, found by sorting window values, is more resistant to rare events.",33,5,5,5,1,2,5,4
+"Laplace distribution assumed by Moving Median gives higher probability to rare events than normal assumed by Moving Average.",23,5,5,5,1,2,5,4
+"Moving Median provides a more reliable and stable trend estimate even with large deviations.",30,5,5,5,1,2,5,4
+"Moving Median smoothing is identical to Median Filter, which has various image signal processing applications.",19,5,5,5,1,5,5,4

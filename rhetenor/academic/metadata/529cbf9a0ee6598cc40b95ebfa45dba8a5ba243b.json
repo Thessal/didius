@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/529cbf9a0ee6598cc40b95ebfa45dba8a5ba243b.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Support and resistance/fibonacci-retracement.txt",
+    "additional_info": {
+        "duration": 275.9232702255249
+    }
+}

@@ -1,4 +1,0 @@
-Between the pivot point and R1 can be designated as M+.  
-Between R1 and R2 can be designated as M++.  
-Below the pivot point the mid‑points are labeled as M− and M−−.  
-Using a number format starting from 0 to 5, the mid‑points are labeled M0 between S3 and S2 up to M5 between R2 and R3.

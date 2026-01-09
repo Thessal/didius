@@ -1,0 +1,17 @@
+"The McClellan Oscillator and Summation Index are early technical indicators used to interpret the Advance-Decline Line.",29,5,1,5,1,3,5,5
+"The indicators were created in 1969 by Sherman and Marian McClellan.",18,5,1,5,1,3,5,5
+"Tom explains the origin of the McClellan Oscillator and its importance for market analysis.",27,4,2,4,1,2,5,5
+"The Oscillator measures acceleration in daily A-D statistics using two exponential moving averages and their difference.",31,5,1,5,1,3,5,5
+"The tool became well known among analysts, first in Southern California and later nationwide as its reputation spread.",30,4,1,4,1,2,5,5
+"Colonel Leonard Ayres first analyzed Advance-Decline data in 1926 while at Cleveland Trust Company.",24,5,1,5,1,3,5,5
+"He sought an alternative market view beyond individual stock prices or averages like the DJIA.",28,4,2,4,1,3,5,5
+"He shared his work with analysts like James Hughes, who pioneered market breadth statistics.",19,5,1,5,1,3,5,5
+"Barron's began publishing Advance-Decline numbers in 1931.",12,5,1,5,1,3,5,5
+"The primary long-term use of A-D data was building a cumulative A-D Line.",17,5,1,5,1,3,5,5
+"A cumulative A-D Line is calculated by summing daily breadth, the net advancing minus declining issues each day.",29,5,1,5,1,3,5,5
+"Each trading day, the A-D Line moves by the daily breadth value.",16,5,1,5,1,3,5,5
+"A drawback is that varying traded issue counts can alter A-D Line amplitude, especially over long periods.",35,4,2,4,1,2,5,5
+"A solution is to use a ratio rather than raw A-D values.",17,4,2,4,1,2,5,5
+"Analysts compute the ratio by dividing daily A-D difference by total advances plus declines, removing issue count effects.",30,5,1,5,1,3,5,5
+"Data usage only spread in the early 1960s after being publicized by Richard Russell and Joseph Granville.",34,4,2,4,1,2,5,5
+"Its popularity stemmed from the A-D Line accurately signaling a divergent top before a 27% DJIA decline in 1961.",42,5,1,5,1,3,5,5

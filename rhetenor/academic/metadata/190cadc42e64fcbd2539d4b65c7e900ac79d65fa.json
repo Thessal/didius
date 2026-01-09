@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/190cadc42e64fcbd2539d4b65c7e900ac79d65fa.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/vix.txt",
+    "additional_info": {
+        "duration": 85.14298343658447
+    }
+}

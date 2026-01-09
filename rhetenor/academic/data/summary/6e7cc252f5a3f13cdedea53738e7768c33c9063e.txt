@@ -1,0 +1,6 @@
+"VIX cannot predict severe events in anomalous conditions and using it as proof of Black–Scholes is circular reasoning.",57,3,3,3,1,2,5,4
+"A study by UT Austin and Ohio State examined possible VIX manipulation methods.",21,5,2,2,1,2,5,4
+"A law firm sent a Feb 12, 2018 letter to CFTC and SEC alleging VIX manipulation by an anonymous whistleblower.",32,5,2,2,1,2,5,4
+"VIX options' implied volatility skew is often asymmetric, sometimes showing higher volatilities on one side, unlike the typical symmetric smile of equity options.",57,4,3,2,1,3,5,4
+"CBOE introduced the VVIX index in 2012 as a measure of VIX's expected volatility.",22,5,2,2,1,2,5,4
+"VVIX is calculated using the same methodology as VIX, except the inputs are market prices.",15,5,2,2,1,2,5,4

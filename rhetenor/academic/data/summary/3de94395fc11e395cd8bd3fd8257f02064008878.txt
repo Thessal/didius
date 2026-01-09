@@ -1,0 +1,25 @@
+"Mark the area by placing numbers 1‑5 at positions a, b, [A], [B], and [C] as Elliott indicates.",29,5,5,5,5,5,5,5
+"A slightly better layout adds a horizontal triangle as the [B] wave.",12,4,5,4,1,5,5,4
+"It extends beyond the top of the third wave of the triangle, which it should not.",18,5,5,5,1,5,5,5
+"The dictionary defines 'inflation' as 'spreading beyond natural boundaries'.",13,4,5,4,1,2,5,4
+"A single bull‑market section will not breach natural boundaries.",13,5,5,5,1,5,5,5
+"A series of sections stacked can extend beyond natural boundaries.",15,5,5,5,1,5,5,5
+"A bull‑market section is not above another unless alternating with unusual bear markets.",19,5,5,5,1,5,5,5
+"In the 1920s a breakout formed due to unusual bear markets.",12,5,5,5,1,5,5,5
+"During that period there were three regular bull markets and two unusual bear markets, total five.",16,5,5,5,1,5,5,5
+"Breakout warnings followed the order: regular wave 1, unusual wave 2, regular wave 3, unusual wave 4, then wave 5 breaking the parallel line on an arithmetic scale.",31,5,5,5,1,5,5,5
+"Figure 75 depicts a typical bull market and a typical bearish correction (waves a‑c) pulling back deep after the baseline broke.",26,5,5,5,1,5,5,5
+"Figure 76 shows an unusual bearish correction that barely broke the baseline.",13,5,5,5,1,5,5,5
+"Figure 77 is a Dow Jones graph (1921‑Nov 1928) on an arithmetic scale.",19,5,5,5,1,5,5,5
+"Wave 5 breaks the parallel line.",6,5,5,5,1,5,5,5
+"The broken parallel line requires converting the whole 1921‑onward graph to a logarithmic scale.",21,5,5,5,1,5,5,5
+"Figure 78 presents the same index on a logarithmic scale.",13,5,5,5,1,5,5,5
+"Wave 5 touches but does not break the parallel line.",10,5,5,5,1,5,5,5
+"Three methods can predict breakout end: logarithmic‑scale analysis, wave‑ratio, and time factor.",37,5,5,5,1,5,5,5
+"Elliott uses a literal definition of inflation, not a monetary one.",16,4,5,4,1,2,5,4
+"According to Elliott, a breakthrough (inflation) occurs when markets accelerate price takeoff per unit time.",25,5,5,5,1,2,5,5
+"Gold price illustrates the importance of choosing between arithmetic and logarithmic scales.",22,5,5,5,1,5,5,5
+"The chart covers a bull‑market section from 1250 to 1939, about seven centuries.",16,5,5,5,1,5,5,5
+"In Figure 79, wave [2] is simple while wave [4] is complex.",16,5,5,5,1,5,5,5
+"Pay attention to letters [A], [B] and [C] of wave [4].",12,5,5,5,5,5,5,5
+"Figure 79 (arithmetic scale) shows price above the parallel line, so a semi‑logarithmic scale is required (see Figure 80).",27,5,5,5,1,5,5,5

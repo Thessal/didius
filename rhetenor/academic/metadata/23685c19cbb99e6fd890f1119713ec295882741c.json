@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/23685c19cbb99e6fd890f1119713ec295882741c.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/money-flow-index.txt",
+    "additional_info": {
+        "duration": 49.73280358314514
+    }
+}

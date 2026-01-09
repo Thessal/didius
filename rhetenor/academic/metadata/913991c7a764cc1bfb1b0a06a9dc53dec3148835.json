@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/913991c7a764cc1bfb1b0a06a9dc53dec3148835.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/smart-money-index.txt",
+    "additional_info": {
+        "duration": 83.49486804008484
+    }
+}

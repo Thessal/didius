@@ -1,0 +1,27 @@
+"A pivot point is a price level used by traders as a market movement indicator.",22,5,4,3,1,1,5,3
+"A pivot point is calculated as the average of high, low, and close prices from the prior trading period.",25,5,4,3,1,1,5,3
+"Trading above the pivot point suggests bullish sentiment; trading below suggests bearish.",30,5,4,3,1,1,5,3
+"Pivot points and their support/resistance levels often act as turning points for price direction.",23,5,4,3,1,1,5,3
+"In uptrends, pivot points and resistance may act as price ceilings that can trigger reversals.",31,5,4,3,1,1,5,3
+"In downtrends, pivot points and support may form a stable low price level resisting further decline.",25,5,4,3,1,1,5,3
+"Multiple methods exist to calculate a market's pivot point.",12,5,4,3,1,1,5,3
+"Typically, the pivot point is the arithmetic mean of high, low, and close prices from the prior period.",25,5,4,3,1,1,5,3
+"Pivot point equals (H + L + C) divided by 3.",10,5,4,3,1,1,5,3
+"Sometimes the average includes the opening price of the previous or current period.",15,5,4,3,1,1,5,3
+"Pivot point equals (O + H + L + C) divided by 4.",12,5,4,3,1,1,5,3
+"Traders may weight the closing price twice or the opening price twice in the pivot calculation.",36,5,4,3,1,1,5,3
+"Technical analysts define a Central Pivot Range (CPR) using levels above and below the pivot point.",25,5,4,3,1,1,5,3
+"They prefer considering a range rather than a single pivot level.",16,5,4,3,1,1,5,3
+"The lower boundary, BC (Bottom Central), is calculated as follows.",16,5,4,3,1,1,5,3
+"BC equals (H + L) divided by 2.",7,5,4,3,1,1,5,3
+"The upper boundary, TC (Top Central), is calculated as follows.",16,5,4,3,1,1,5,3
+"TC equals (P minus BC) plus P.",7,5,4,3,1,1,5,3
+"Support and resistance levels are essential trading tools in any market.",12,5,4,3,1,1,5,3
+"Support and resistance roles can interchange based on market trend direction.",20,5,4,3,1,1,5,3
+"Price levels are derived from market assumptions and conventions.",12,5,4,3,1,1,5,3
+"Pivot point analysis typically recognizes three levels above and below the pivot point.",17,5,4,3,1,1,5,3
+"Levels are computed by adding or subtracting the prior period's price range to/from the pivot point.",28,5,4,3,1,1,5,3
+"Support S1 and resistance R1 are derived from the upper and lower halves of the prior range.",45,5,4,3,1,1,5,3
+"First resistance adds the lower prior range width to the pivot; first support subtracts the upper width.",47,5,4,3,1,1,5,3
+"R1 equals P plus (P minus L), i.e., 2P minus L.",11,5,4,3,1,1,5,3
+"S1 equals P minus (H minus ...).",6,5,4,3,1,1,5,3

@@ -1,0 +1,21 @@
+"Divide the daily breadth number (A‑D) by total advances plus declines (A + D) to obtain a ratio.",44,5,2,5,1,3,5,3
+"Ignore the number of unchanged issues.",7,5,2,5,1,3,5,3
+"Multiply the ratio by 1000 to bring it back into a normal range.",15,5,2,5,1,3,5,3
+"The step pretends there are always exactly 1000 stocks traded on the exchange.",17,5,2,5,1,3,5,3
+"Ratio‑Adjusted A‑D is calculated as (A‑D)/(A + D) × 1000.",13,5,2,5,1,4,5,3
+"After obtaining this number, calculations for EMAs and the Ratio‑Adjusted McClellan Oscillator proceed as in the standard version.",28,5,2,5,1,3,5,3
+"Marian realized the area under the curve was an important feature of the McClellan Oscillator.",30,5,2,5,1,3,5,3
+"This insight stemmed from Marian’s background as a mathematician familiar with differential calculus.",15,5,2,5,1,3,5,3
+"They created the Summation Index by adding each day’s Oscillator value to a running total of previous values.",27,5,2,5,1,3,5,3
+"The indicator changes daily by the Oscillator value; prolonged positive or negative values extend the Summation Index.",22,5,2,5,1,3,5,3
+"The chart shows the Oscillator and Summation Index together compared to the Dow Jones Industrial Average.",18,5,2,5,1,3,5,3
+"When the DJIA trends upward, positive Oscillator values and a rising Summation Index are typically seen.",17,5,2,5,1,3,5,3
+"When the Summation Index reaches a high value, it normally falls back as the market consolidates, setting up the next move.",27,5,2,5,1,3,5,3
+"Early work showed the Summation Index had a total amplitude of about 2000 points.",24,5,2,5,1,3,5,3
+"They manually adjusted the Summation Index upward by 1000 points so its neutral level would be +1000.",25,5,2,5,1,3,5,3
+"Thus it would oscillate between 0 and +2000 under normal conditions, and any rare negative reading signals an extreme market condition.",26,5,2,5,1,3,5,3
+"The +1000 neutral level for the normal McClellan Summation Index remains the standard today.",16,5,2,5,1,3,5,3
+"The increase in NYSE issues since 1970 has led to larger amplitudes of both the Oscillator and Summation Index.",33,5,2,5,1,3,5,3
+"One must adjust Summation Index values, either mentally or computationally using Ratio‑Adjusted values.",33,5,3,5,5,3,5,4
+"The Ratio‑Adjusted Summation Index (RASI) is calculated as a running total of previous Ratio‑Adjusted Oscillator values.",22,5,2,5,1,3,5,3
+"We employ zero as the neutral value for the Ratio‑Adjusted Summation Index.",24,5,2,5,1,3,5,3

@@ -1,0 +1,24 @@
+"RSI is defined by the formula RSI = 100·(1 - SMMA(D,n)/(SMMA(U,n)+SMMA(D,n))) = 100 - 100/(1+RS).",15,5,1,5,1,5,5,1
+"If the average of U values is zero, both RS and RSI are also zero.",15,5,5,5,1,3,5,2
+"If the average of U values equals the average of D values, the RS is 1 and RSI is 50.",20,5,5,5,1,3,5,2
+"If the average of U values is maximal, so that the average of D values is zero, then the RS value diverges to infinity, while the RSI is 100.",29,5,5,5,1,3,5,2
+"The RSI is presented on a graph above or below the price chart.",13,5,2,2,1,5,5,2
+"The indicator has an upper line and a lower line, typically at 70 and 30 respectively, and a dashed mid-line at 50.",22,5,2,2,1,5,5,2
+"Wilder recommended a smoothing period of 14 (see exponential smoothing, i.e. α = 1/14 or N = 14).",18,4,4,2,4,4,5,3
+"Wilder posited that when price moves up very rapidly, at some point it is considered overbought.",16,3,5,3,1,2,5,2
+"Likewise, when price falls very rapidly, at some point it is considered oversold.",13,3,5,3,1,2,5,2
+"In either case, Wilder deemed a reaction or reversal imminent.",10,3,5,3,1,2,5,2
+"The level of the RSI is a measure of the stock's recent trading strength.",14,4,4,3,1,4,5,2
+"The slope of the RSI is directly proportional to the velocity of a change in the trend.",17,4,4,4,1,4,5,2
+"The distance traveled by the RSI is proportional to the magnitude of the move.",14,4,4,4,1,4,5,2
+"Wilder believed that tops and bottoms are indicated when RSI goes above 70 or drops below 30.",17,3,5,3,1,2,5,2
+"Traditionally, RSI readings greater than the 70 level are considered to be in overbought territory, and RSI readings lower than the 30 level are considered to be in oversold territory.",30,4,4,3,1,3,5,2
+"In between the 30 and 70 level is considered neutral, with the 50 level a sign of no trend.",19,4,4,3,1,3,5,2
+"Wilder further believed that divergence between RSI and price action is a very strong indication that a market turning point is imminent.",22,3,5,3,1,2,5,2
+"Bearish divergence occurs when price makes a new high but the RSI makes a lower high, thus failing to confirm.",20,3,5,3,1,2,5,2
+"Bullish divergence occurs when price makes a new low but RSI makes a higher low.",15,3,5,3,1,2,5,2
+"Wilder thought that \"failure swings\" above 50 and below 50 on the RSI are strong indications of market reversals.",19,3,5,3,1,2,5,2
+"For example, assume the RSI hits 76, pulls back to 72, then rises to 77.",15,2,2,2,1,3,5,2
+"If it falls below 72, Wilder would consider this a \"failure swing\" above 70.",14,3,4,3,4,3,5,3
+"Finally, Wilder wrote that chart formations and areas of support and resistance could sometimes be more easily seen on the RSI chart as opposed to the price chart.",28,3,4,3,1,2,5,2
+"The center line for the relative strength index is 50, which is often seen.",14,4,2,3,1,4,5,2

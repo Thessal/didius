@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/044bc53310a3a68aff869e820f1002783134e999.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Support and resistance/pivot-point-technical-analysis.txt",
+    "additional_info": {
+        "duration": 33.2735059261322
+    }
+}

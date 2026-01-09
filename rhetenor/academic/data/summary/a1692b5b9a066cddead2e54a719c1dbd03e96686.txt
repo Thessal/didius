@@ -1,5 +1,0 @@
-The VIX is calculated as the square root of (2 e^{r τ} / τ) times the sum of the integrals of put and call prices divided by strike squared, where τ is 30 days, r is the risk‑free rate, F is the 30‑day forward price on the S&P 500, and P(K) and C(K) are the prices of puts and calls with strike K and 30‑day maturity.  
-The Sigma Index, a volatility index, was introduced in an academic paper by Brenner and Galai published in the Financial Analysts Journal in July/August 1989.  
-Brenner and Galai stated that their volatility index would be updated frequently, used as the underlying asset for futures and options, and would play the same role for options and futures as a market index does for the underlying stock market.  
-In 1992 the American Stock Exchange announced a feasibility study on a volatility index proposed as the "Sigma Index".  
-On January 19, 1993 the Chicago Board Options Exchange launched real‑time reporting of the CBOE Market Volatility Index (VIX), using a formula tailored to the CBOE S&P 100 Index option prices and developed by Professor Robert E. Whaley.

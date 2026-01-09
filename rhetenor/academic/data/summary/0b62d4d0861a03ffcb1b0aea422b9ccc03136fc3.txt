@@ -1,0 +1,25 @@
+"The Vortex Indicator is a technical indicator invented by Etienne Botes and Douglas Siepman to identify the start of a new trend or the continuation of an existing trend within financial markets.",32,5,2,5,1,3,5,1
+"It was published in the January 2010 edition of Technical Analysis of Stocks & Commodities.",15,5,2,5,1,3,5,1
+"The Vortex Indicator was inspired by the work of an Austrian inventor, Viktor Schauberger, who studied the flow of water in rivers and turbines.",24,5,3,5,1,3,5,1
+"Etienne Botes and Douglas Siepman developed the idea that movements and flows within financial markets are similar to the vortex motions found in water.",24,4,4,5,1,3,5,1
+"The Vortex Indicator was also partly inspired by J. Welles Wilder's concept of directional movement, which assumes the relationship between price bars gives clues as to the direction of a market.",31,5,4,5,1,3,5,1
+"A vortex pattern may be observed in any market by connecting the lows of that market's price bars with the consecutive bars’ highs, and then price bar highs with consecutive lows.",31,5,4,5,1,4,5,1
+"The greater the distance between the low of a price bar and the subsequent bar's high, the greater the upward or positive Vortex movement (VM+).",25,5,4,5,1,4,5,1
+"Similarly, the greater the distance between a price bar's high and the subsequent bar's low, the greater the downward or negative Vortex movement (VM-).",24,5,4,5,1,4,5,1
+"On a chart, VI+ and VI− will be seen to intersect each other at a change of trend, and begin to diverge ever wider as the strength of a trend increases.",31,5,4,5,1,4,5,1
+"When VI+ is larger and above VI−, the market is trending up.",12,5,3,5,1,4,5,1
+"Conversely, when VI− is bigger and above VI+, the market is trending down.",13,5,3,5,1,4,5,1
+"A trader should focus on the key trend change points of the Vortex Indicator (i.e. the crossing points of VI+ and VI−).",22,4,4,3,5,2,4,5
+"When VI+ crosses above VI−, a long (buy) position is indicated.",11,4,3,3,5,2,4,5
+"A short or sell position is suggested when VI− crosses above VI+.",12,4,3,3,5,2,4,5
+"The published article also suggested further measures to ensure an effective trading strategy, for example, only entering a trade at the extreme high or low of the price bar that corresponds with a crossing of the Vortex Indicator.",38,4,4,3,5,2,4,5
+"The high, low and close values are required for any chosen stock, future, commodity or currency.",16,5,2,5,1,4,5,1
+"These values may be 15‑minute, hourly, daily, etc.",8,5,2,5,1,4,5,1
+"Current true range (TR) = Maximum absolute value of either (current high–current low), (current low–previous close), (current high–previous close).",19,5,2,5,1,5,5,1
+"Current Vortex Movement Up (VM+) = absolute value of current high – previous low.",14,5,2,5,1,5,5,1
+"Current Vortex Movement Down (VM−) = absolute value of current low – previous high.",14,5,2,5,1,5,5,1
+"Decide on a parameter length (21 periods was used for this example).",12,4,3,3,5,2,4,5
+"Now, sum the last 21 period's True Range, VM+ and VM-.",11,4,3,3,5,2,4,5
+"Sum of the last 21 periods’ True Range = SUM TR21.",11,5,2,5,1,5,5,1
+"Sum of the last 21 periods’ VM+ = SUM VM21+.",10,5,2,5,1,5,5,1
+"Sum of the last 21 periods’ VM- = SUM VM21−.",10,5,2,5,1,5,5,1

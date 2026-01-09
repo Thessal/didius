@@ -1,0 +1,13 @@
+"Coastal cities have a smaller range of daily maximum temperatures than inland cities.",13,5,4,4,1,5,5,1
+"Even if coastal and inland cities share the same average maximum temperature, the coastal city's temperature standard deviation is lower.",20,5,4,4,1,5,5,1
+"On any given day, the inland city's temperature is more likely to deviate farther from its average than the coastal city's temperature.",22,5,4,4,1,5,5,1
+"Standard deviation is commonly used to measure the risk of price fluctuations for assets.",14,5,5,4,1,2,5,1
+"Risk influences how investors manage portfolios because it determines return variation.",11,5,5,4,1,2,5,1
+"Higher risk should lead to higher expected returns, known as the risk premium.",13,4,5,4,5,2,5,5
+"Investors should expect higher returns when an investment carries higher risk or uncertainty.",13,4,5,4,5,2,5,5
+"Standard deviation provides a quantified estimate of future return uncertainty.",10,5,5,4,1,5,5,1
+"Stock A averaged a 10% return with a 20‑point standard deviation over 20 years.",14,5,5,5,1,5,5,1
+"Stock B averaged a 12% return with a 30‑point standard deviation over the same period.",15,5,5,5,1,5,5,1
+"An investor may deem Stock A safer because Stock B's extra return does not justify its higher risk.",18,3,4,4,5,2,5,5
+"Stock B is more likely to fall short of the initial investment than Stock A under similar conditions.",18,4,4,4,1,2,5,1
+"Stock B also has a higher chance of exceeding the initial investment compared to Stock A.",16,4,4,4,1,2,5,1

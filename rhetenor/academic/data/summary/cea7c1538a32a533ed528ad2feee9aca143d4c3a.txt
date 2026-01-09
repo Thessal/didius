@@ -1,0 +1,23 @@
+"Subset breadth statistics tend to behave homogeneously.",7,5,5,4,1,5,5,4
+"In narrow sectors like gold mining or semiconductors, all stocks typically move together up one day and down the next.",20,5,5,4,1,5,5,4
+"Other industry groups show the same homogeneous effect to varying degrees.",11,5,5,4,1,5,5,4
+"Focusing on small groups loses the key indication provided by breadth statistics.",12,5,5,4,1,5,5,4
+"Examining a diverse stock collection can reveal indications different from price alone.",12,4,5,4,1,5,5,4
+"Breadth statistics are valuable as they indicate the health of market liquidity.",12,5,5,4,1,5,5,4
+"A small amount of money can move a few stocks, and if chosen correctly, can shift major indices.",18,4,5,4,1,5,5,4
+"Changing breadth numbers requires major liquidity changes across the exchange.",10,5,5,4,1,5,5,4
+"Liquidity must be abundant enough to spread widely and lift most stocks higher for sustained positive breadth.",17,4,5,4,1,5,5,4
+"Measuring acceleration in breadth statistics via the McClellan Oscillator can provide insights into upcoming price trend changes.",17,4,5,4,1,5,5,4
+"The standard McClellan Oscillator calculation starts by computing daily breadth as advances minus declines.",14,5,3,5,1,2,5,4
+"Daily breadth equals advances minus declines (A-D).",7,5,3,5,1,2,5,4
+"Two EMAs, the 10% Trend and 5% Trend, are calculated using smoothing constants.",13,5,3,5,1,2,5,4
+"10% Trend today = 0.10*(A-D) + 0.90*10% Trend yesterday.",9,5,3,5,1,2,5,4
+"5% Trend today = 0.05*(A-D) + 0.95*5% Trend yesterday.",9,5,3,5,1,2,5,4
+"The McClellan Oscillator equals the difference between the two EMAs.",10,5,3,5,1,2,5,4
+"McOsc = 10% Trend - 5% Trend.",6,5,3,5,1,2,5,4
+"Many technical-analysis software packages include pre-built McClellan Oscillator modules.",9,4,4,4,1,2,5,4
+"It is very easy to implement the oscillator in any spreadsheet program.",12,4,4,4,1,2,5,4
+"An Excel spreadsheet for the oscillator is available at the given URL.",12,4,4,4,1,2,5,4
+"Changing NYSE stock counts can affect amplitudes of indicators tied to issue numbers, like the oscillator.",16,4,5,4,1,5,5,4
+"To remove issue-count effects, divide daily breadth (A-D) by total advances plus declines (A+D) to get a ratio.",18,5,3,5,1,2,5,4
+"Unchanged issues are ignored in the calculation.",7,5,3,5,1,2,5,4

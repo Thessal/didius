@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/00b6246f5ffbacf3d30e04d9c8ffeec697d28a68.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Breadth of market/mcclellan-oscillator.txt",
+    "additional_info": {
+        "duration": 146.21871376037598
+    }
+}

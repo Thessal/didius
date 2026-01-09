@@ -1,8 +1,0 @@
-The 7‑day average (avg₇) is calculated as the sum of the buying pressure values for the last 7 days divided by the sum of the true range values for the last 7 days: avg₇ = (bp₁+…+bp₇)/(tr₁+…+tr₇).  
-The same average calculation is performed for the past 14 days (avg₁₄) and past 28 days (avg₂₈).  
-The Ultimate Oscillator combines the three averages in the proportion 4:2:1, scales the result by 100, and yields a value between 0 and 100.  
-The formula for the Ultimate Oscillator is: Ultimate Oscillator = 100 × (4·avg₇ + 2·avg₁₄ + avg₂₈) / (4+2+1).  
-According to Larry Williams, a bullish buy signal occurs when price makes new lows while the oscillator does not, indicating bullish divergence, and the oscillator has fallen below 30 during the divergence.  
-The bullish buy signal is confirmed when the oscillator rises above the high reached between the two price lows, and the trigger is the rise through that high.  
-A bullish position is closed when the oscillator rises above 70 (overbought) or rises above 50 and then falls back through 45.  
-A bearish sell signal is generated when the oscillator shows divergence above level 70, and the position is closed when the oscillator falls below 30 (oversold).

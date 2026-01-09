@@ -1,0 +1,25 @@
+"In 1942 the correction was a triangle instead of waves A, B, and C.",14,5,3,3,1,3,5,3
+"A long time ago, farming was the main occupation.",9,5,4,4,1,3,5,3
+"Farmers could have a shop or produce certain goods in addition to farming.",21,4,4,3,1,3,4,3
+"Production was a piece-by-piece production of goods at home.",9,4,4,3,1,3,4,3
+"Natural resources, climate, zeitgeist, and democracy in the United States required the creation of corporations for individual financial initiative.",20,4,5,4,1,2,4,3
+"Inventions and the introduction of machinery gradually changed everything.",9,3,5,3,1,2,3,3
+"The Louisiana Purchase, conquest of California, annexation of Texas and Oregon, and border establishment with Mexico and Canada added significant territory.",28,5,4,4,1,4,5,3
+"Zeitgeist is and still is a major asset.",8,3,5,3,1,2,3,3
+"A timeline of patent applications from 1850 to 1942 demonstrates this.",13,4,4,4,1,4,5,3
+"The shape of this chart is the same as the shape of the stock market chart.",19,4,4,4,1,4,5,3
+"The United States is very different from other countries because its ancestors come from all parts of the world.",23,4,5,4,1,2,4,3
+"Ancestors were dissatisfied with tyranny in their homelands and came to the United States for freedom and personal development.",26,4,5,3,1,2,4,3
+"The Wave Law reflects more than emotional phenomena; it is also a historical document of human development marked by wave patterns based on collective emotional rhythm.",37,3,5,3,1,2,4,3
+"Mood indices are not required as proof of progress cause; apparently, a prevailing upward mood leads to more invention.",38,2,5,2,1,1,3,4
+"Movement on a chart in one area of human activity is rarely a reliable guide to other areas.",20,4,5,4,1,3,4,3
+"Figure 83 is a graph of three indices: the London Industrials, the Dow-Jones Industrials, and U.S. manufacturing.",24,5,3,5,1,5,5,3
+"All graphs reflect the period from 1928 to January 1943.",10,5,3,5,1,5,5,3
+"Goods production schedule was provided by Cleveland Trust Company.",8,5,3,5,1,5,5,3
+"The Dow Jones average chart shows a five-wave triangle from November 1928 to April 1942.",17,5,3,5,1,5,5,3
+"The amplitude ratio of each triangle wave to the previous one is approximately 61.8%.",20,5,3,5,1,5,5,3
+"The presence of a triangle is confirmed by its generating lines, time relationships, wave structure, and a single coefficient of wave ratios.",30,4,4,4,1,4,5,3
+"A high-speed breakthrough from 1921 to 1929 was followed by a wave-like pattern.",15,4,4,4,1,3,4,3
+"Important events that disrupted the pattern include wars in 1937‑1939, the September 1, 1939 declaration of war, and subsequent market cycle positions.",38,5,3,5,1,4,5,3
+"Prices are expressed in 1/8 and 1/4 instead of decimals.",10,5,3,5,1,5,5,3
+"Students studying wave analysis may benefit from detailed suggestions.",8,3,5,3,2,2,3,4

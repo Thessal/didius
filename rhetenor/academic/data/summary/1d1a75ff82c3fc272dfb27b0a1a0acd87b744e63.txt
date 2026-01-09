@@ -1,0 +1,7 @@
+"The MFI scale measures accumulated volume per day, unlike RSI which measures price change amounts.",28,5,2,2,1,2,5,5
+"Marek and Čadková (2020) investigated various MFI parameter settings.",10,5,1,1,1,2,5,5
+"The tests were randomized across time periods and across companies such as Apple, ExxonMobil, IBM, and Microsoft.",13,5,1,1,1,2,5,5
+"Results indicated that MFI outperforms a simple buy-and-hold strategy, making it potentially useful for trading.",17,4,3,3,1,4,5,5
+"The authors found that commonly recommended MFI settings provide no trading advantage.",18,4,5,3,1,4,5,5
+"Optimizing MFI settings individually for each stock is required.",10,5,3,3,5,2,5,5
+"Additional price‑volume indicators are On-balance volume, Price and Volume Trend, and Accumulation/Distribution Index.",15,5,1,1,1,2,5,5

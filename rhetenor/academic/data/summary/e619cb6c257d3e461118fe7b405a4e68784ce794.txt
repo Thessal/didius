@@ -1,0 +1,26 @@
+"I tried to define the word 'cycle' but could not find a definition.",20,5,1,1,1,5,5,3
+"I discovered a rhythm in price changes, described in my 1938 work 'The Law of Waves'.",25,5,3,3,1,5,5,4
+"I concluded that my discoveries were based on a law of nature known to Great Pyramid designers, likely built five thousand years ago.",32,2,5,3,1,1,5,4
+"The Pyramid of Cheops is the first and largest pyramid on Earth, located in Giza Valley, Egypt.",18,5,2,5,1,3,5,3
+"Giza is an area on the Nile's left bank opposite Cairo, known for its pyramids.",20,5,2,5,1,3,5,3
+"The three Great pyramids belong to pharaohs Cheops, Khafre, and Menkaure, with several smaller pyramids nearby.",21,5,2,5,1,3,5,3
+"The Great Pyramids were completed in 2590, 2550, and 2505 BC respectively, though the author refers to only one.",23,5,2,5,1,3,5,3
+"The Pyramid of Giza is the first of its kind and the only one displaying symbolic figures.",31,3,4,3,1,2,5,3
+"Later pyramids served as crypts for kings and their families.",19,4,3,4,1,2,5,3
+"In 820 BC the Turkish caliph Al Mamoun mistakenly thought the Giza pyramid hid pharaohs' bodies and gold.",28,4,2,4,1,2,5,3
+"This suggests that symbolic figures on the Giza pyramid were unknown at that time.",22,3,4,3,1,1,5,4
+"The pyramid's design predates both literature and hieroglyphic writing.",22,4,3,4,1,2,5,3
+"Other pyramids outside Giza already contain hieroglyphs.",11,5,2,5,1,3,5,3
+"Recent years have seen enormous funds spent studying the pyramids.",14,4,2,4,1,2,5,3
+"The law of nature was known at least five thousand years ago.",12,2,5,3,1,1,5,4
+"Around 1500 BC Egypt was at the height of its power.",18,4,2,4,1,2,5,3
+"The construction date of the Egyptian pyramids is unknown.",10,5,1,5,1,3,5,3
+"The Great Pyramid of Giza was designed at least five thousand years ago.",13,3,4,3,1,2,5,3
+"Some scholars propose the pyramid existed before a worldwide flood that led Noah to build the ark.",20,2,5,2,1,1,5,4
+"Others argue the pyramid may be thirty thousand years old.",10,2,5,2,1,1,5,4
+"Life magazine (Dec 3 1945) featured an article titled 'Building the Great Pyramid'.",15,5,2,5,1,3,5,3
+"Mr. Bel Geddes created construction stage examples and sketches.",14,5,2,5,1,3,5,3
+"The report was prepared for Encyclopedia Britannica.",7,5,2,5,1,3,5,3
+"The pyramid's building materials weigh 3,277,000 tons, versus 305,000 tons for the Empire State Building.",26,5,2,5,1,3,5,3
+"The pyramids' ingenuity and labor demonstrate a profound message intended for posterity.",29,3,4,3,1,2,5,4
+"This was a historical period before the emergence.",8,2,3,2,1,1,5,2

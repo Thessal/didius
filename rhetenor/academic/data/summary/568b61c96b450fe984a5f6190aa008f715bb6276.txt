@@ -1,5 +1,0 @@
-When momentum slows, settlement prices retreat from the upper boundaries of the range, causing the stochastic indicator to turn down at or before the final price high.  
-An alert is present when the %D line is in an extreme area and diverging from price action, and the signal occurs when the %K line crosses the %D line.  
-Divergence-convergence indicates that market momentum is waning and a reversal may be forthcoming.  
-A divergence in stochastics relative to price forecasts a reversal in price direction.  
-A “stochastic pop” occurs when prices break out and continue upward, signaling to increase the position or liquidate if the direction is adverse.

@@ -1,0 +1,9 @@
+"VIX index provides a measure of market volatility used to base expectations of future volatility.",26,5,4,4,1,2,5,5
+"Current VIX value reflects expected annualized S&P 500 change over the next 30 days from options theory and data.",29,5,4,4,1,2,5,5
+"VIX is derived from S&P 500 options, with each option price representing 30‑day forward volatility expectations.",32,5,4,4,1,2,5,5
+"VIX calculation follows rules for selecting options and a formula to compute index values.",20,5,4,4,1,2,5,5
+"VIX cannot be bought or sold directly.",11,5,4,4,1,2,5,5
+"VIX is accessed via derivative contracts, ETFs, and ETNs that track VIX futures.",19,5,4,4,1,2,5,5
+"CBOE applies the same method to create volatility indexes for Nasdaq‑100, DJIA, and Russell 2000.",32,5,4,4,1,2,5,5
+"VVIX measures the expected volatility of the VIX’s 30‑day forward price.",34,5,4,4,1,2,5,5
+"Implied volatility indexes trace back to Black‑Scholes’ 1973 paper on option pricing.",36,5,4,4,1,2,5,5

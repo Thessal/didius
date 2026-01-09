@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/136870b34ba871823d5ad8856174bda5ca73ffb8.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volatility/bollinger-bands.txt",
+    "additional_info": {
+        "duration": 126.42043018341064
+    }
+}

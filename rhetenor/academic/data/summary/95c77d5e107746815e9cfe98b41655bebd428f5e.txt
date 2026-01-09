@@ -1,8 +1,0 @@
-The advance–decline line is a stock market technical indicator used by investors to measure the number of individual stocks participating in a market rise or fall.  
-Price changes of large stocks can have a disproportionate effect on capitalization‑weighted indices such as the S&P 500, NYSE Composite, and NASDAQ Composite, making it useful to know how broadly the movement extends into smaller stocks.  
-Market indexes represent a group of stocks and therefore do not present the whole picture of the trading day’s market performance.  
-Advance/decline numbers provide information about the individual performance of particular stocks, complementing market indices.  
-The advance–decline line plots the cumulative sum of the daily difference between the number of advancing issues (above the previous day’s close) and the number of declining issues in a given stock market index.  
-The advance–decline line moves up when an index has more advancing than declining issues and moves down when there are more declining than advancing issues.  
-The advance–decline line value is calculated as today’s advancing stocks minus today’s declining stocks plus yesterday’s AD line value.  
-The advance/decline line formula can also be applied to the volume of advancing and declining stocks, using advanced volume minus declined volume plus yesterday’s AD volume line value.

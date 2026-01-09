@@ -1,8 +1,0 @@
-VIX has virtually the same predictive power as past volatility, as shown by nearly identical correlation coefficients.  
-VIX is sometimes criticized as a prediction of future volatility, but it is described as a measure of the current price of index options.  
-Critics claim that despite sophisticated formulation, the predictive power of most volatility forecasting models is similar to that of plain‑vanilla measures such as simple past volatility.  
-Other works have countered that these critiques failed to correctly implement the more complicated volatility models.  
-The risk inherent in attempting to time short‑term volatility is often overlooked.  
-Some practitioners and portfolio managers have questioned the depth of understanding of the fundamental concept of volatility.  
-Daniel Goldstein and Nassim Taleb titled a research article “We Don’t Quite Know What We Are Talking About When We Talk About Volatility.”  
-Emanuel Derman has expressed disillusion with empirical models that are unsupported by theory.

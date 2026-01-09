@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/65a9a0ef5fb1f188b62aec674cab412eab24f5c5.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/moving-average.txt",
+    "additional_info": {
+        "duration": 118.08414196968079
+    }
+}

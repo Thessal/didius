@@ -1,0 +1,13 @@
+"The two standard deviations from the mean account for 95.45% of the data; three standard deviations account for 99.73%; and four standard deviations account for 99.994%.",24,5,1,5,1,1,5,4
+"The two points of the curve that are one standard deviation from the mean are also the inflection points.",18,5,1,5,1,1,5,4
+"The central limit theorem states that the distribution of an average of many independent, identically distributed random variables tends toward the normal distribution with the probability density function f(x, μ, σ^2) = 1/(σ√(2π)) e^{-½((x-μ)/σ)^2}.",33,5,1,5,1,1,5,4
+"In that formula, μ is the expected value of the random variables, σ equals their distribution's standard deviation divided by √n, and n is the number of random variables.",28,5,1,5,1,1,5,4
+"The standard deviation is a scaling variable that adjusts how broad the curve will be, and it also appears in the normalizing constant.",22,5,1,5,1,1,5,4
+"If a data distribution is approximately normal, then the proportion of data values within z standard deviations of the mean is defined by Proportion = erf(z/√2).",25,5,1,5,1,1,5,4
+"The error function erf is used in this definition.",8,5,1,5,1,1,5,4
+"The proportion that is less than or equal to a number x is given by the cumulative distribution function: Proportion ≤ x = ½[1 + erf((x-μ)/(σ√2))] = ½[1 + erf(z/√2)].",30,5,1,5,1,1,5,4
+"If a data distribution is approximately normal then about 68 percent of the data values are within one standard deviation of the mean (μ ± σ).",25,5,5,5,1,1,5,4
+"About 95 percent are within two standard deviations (μ ± 2σ).",10,5,5,5,1,1,5,4
+"About 99.7 percent lie within three standard deviations (μ ± 3σ).",10,5,5,5,1,1,5,4
+"This is known as the 68–95–99.7 rule, or the empirical rule.",10,5,1,5,1,1,5,4
+"For various values of z, the percentage of values expected to lie in and outside the symmetric interval CI = (−zσ, zσ) are as follows.",24,5,1,5,1,1,5,4

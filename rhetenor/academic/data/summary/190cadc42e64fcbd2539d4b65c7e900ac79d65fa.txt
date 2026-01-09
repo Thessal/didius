@@ -1,0 +1,10 @@
+"Professor Robert E. Whaley of Duke University (now at Vanderbilt University) was commissioned by the CBOE to develop the index now known as the VXO, a measure of implied volatility using 30‑day S&P 100 at‑the‑money options.",20,5,2,5,1,5,5,5
+"In 1993, Professors Brenner and Galai published their 1989 proposal for a series of volatility indexes in the paper 'Hedging Volatility in Foreign Currencies' in the Journal of Derivatives.",34,5,2,5,1,5,5,5
+"In 2003, the CBOE introduced a new VIX methodology with Goldman Sachs, switching the underlying index from the CBOE S&P 100 to the CBOE S&P 500, and renamed the old method VXO.",45,5,2,5,1,5,5,5
+"On March 26, 2004, the first futures trading on the VIX Index began on the CBOE Futures Exchange.",21,5,2,5,1,5,5,5
+"VIX is now offered on various trading platforms, such as XTB.",10,4,3,4,1,3,5,5
+"VIX options were launched in February 2006.",10,5,2,5,1,5,5,5
+"On October 24, 2008, the VIX reached an intraday high of 89.53.",13,5,2,5,1,5,5,5
+"On November 21, 2008, the VIX closed at a record 80.74.",12,5,2,5,1,5,5,5
+"On February 5, 2018, the VIX closed at 37.32, up 103.99% from the previous close.",14,5,2,5,1,5,5,5
+"On March 9, 2020, the VIX hit 62.12, the highest level since the 2008 financial crisis.",16,5,2,5,1,5,5,5

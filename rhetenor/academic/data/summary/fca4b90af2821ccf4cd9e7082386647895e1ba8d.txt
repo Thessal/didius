@@ -1,0 +1,20 @@
+"RASI is calculated as a running total of previous Oscillator values using Ratio-Adjusted values.",21,5,1,5,1,5,5,3
+"Zero is used as the neutral value for RASI instead of the artificial +1000 level.",25,5,1,5,1,5,5,3
+"RASI provides intermediate-term overbought and oversold signals.",19,4,5,4,1,4,4,4
+"RASI indicates when to expect further strength or weakness in major averages.",17,4,5,4,1,4,4,4
+"If RASI rises from oversold to above +500, it predicts higher highs.",15,3,5,3,1,4,3,4
+"The market may correct, but higher highs should follow after the correction.",17,3,5,3,1,4,3,4
+"Failure of RASI to exceed +500 signals expected further weakness in the downtrend.",30,4,5,4,1,4,4,4
+"Early citations show the A‑D line has been studied for many decades.",17,5,1,5,1,5,5,3
+"Early citations establish long‑standing interest in breadth statistics.",16,5,1,5,1,5,5,3
+"Critics say many NYSE issues dilute the A‑D line signal because they are not real companies.",37,4,5,4,1,4,4,4
+"Historically the NYSE provided common‑only data for symbols of three letters or fewer.",14,5,1,5,1,5,5,3
+"The data excludes preferred stocks, warrants, rights, bond funds, closed‑end funds, and country funds.",25,5,1,5,1,5,5,3
+"A refined method constructs a pure‑common A‑D line by removing closed‑end fund contributions.",19,4,5,4,1,4,4,4
+"Figure 7 shows composite, common‑only, and pure‑common A‑D lines are virtually identical, indicating minimal impact of CEFs.",34,4,4,4,1,5,5,4
+"Before 1997 most stocks traded in 1/8‑point increments (ticks).",11,5,1,5,1,5,5,3
+"The NYSE switched to 1/16‑point increments in 1997 and fully decimalized in 2001.",23,5,1,5,1,5,5,3
+"Previously a move of at least 1/8 point was needed to count; now a single penny suffices.",24,5,1,5,1,5,5,3
+"Some analysts claim increased voting bias makes the A‑D line unusable due to possible specialist manipulation.",23,2,5,2,1,2,2,3
+"A study of NYSE closing data (2001‑2004) examined composite, >1/16‑point, and <1/16‑point categories.",39,5,1,5,1,5,5,3
+"The 1/16‑point threshold assumes rounding rules that affect how moves are counted as advancing or unchanged.",38,4,5,4,1,4,4,4

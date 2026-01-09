@@ -1,0 +1,21 @@
+"ADX was developed in 1978 by J. Welles Wilder as a trend strength indicator.",29,5,1,5,1,1,5,1
+"ADX has become a widely used indicator for technical analysts and is standard on many trading platforms.",25,5,1,5,1,1,5,1
+"ADX combines the positive directional indicator (+DI) and negative directional indicator (-DI).",23,5,1,5,1,1,5,1
+"ADX smooths the combined result with a smoothed moving average.",13,5,1,5,1,1,5,1
+"Calculating +DI and -DI requires high, low, and closing price data for each period.",21,5,1,5,1,1,5,1
+"The smoothed moving average and average true range are calculated over the selected number of periods.",25,5,1,5,1,1,5,1
+"Variations of the ADX calculation often use different types of moving averages, such as exponential, weighted, or adaptive.",27,4,5,4,1,1,5,1
+"ADX does not indicate trend direction or momentum, only trend strength.",12,5,1,5,1,1,5,1
+"ADX is a lagging indicator; a trend must be established before it signals a trend.",26,5,1,5,1,1,5,1
+"ADX values range from 0 to 100.",7,5,1,5,1,1,5,1
+"Readings below 20 suggest weak trends, while readings above 40 suggest strong trends.",15,5,2,5,1,1,5,1
+"Readings above 50 indicate an extremely strong trend.",10,5,1,5,1,1,5,1
+"Alternative interpretations of ADX have been proposed and accepted by technical analysts.",11,4,3,4,1,1,5,1
+"Studies show ADX is a reliable coincident indicator for chart pattern development, with readings below 20 preceding breakouts.",29,4,4,4,1,2,5,1
+"The ADX value is proportional to the trend's slope.",13,5,2,5,1,1,5,1
+"The slope of the ADX line is proportional to the acceleration of price movement.",18,5,2,5,1,1,5,1
+"If the trend slope is constant, the ADX value tends to flatten.",15,4,3,5,1,1,5,1
+"Various market timing methods have been created using ADX.",9,5,1,5,1,1,5,1
+"Alexander Elder discusses an ADX-based method in his book Trading for a Living.",16,5,1,5,1,1,5,1
+"A strong buy signal occurs when ADX rises while below both directional lines and +DI exceeds -DI.",21,4,4,4,3,1,5,4
+"Traders should sell when ADX turns back down.",8,4,4,4,5,1,5,5

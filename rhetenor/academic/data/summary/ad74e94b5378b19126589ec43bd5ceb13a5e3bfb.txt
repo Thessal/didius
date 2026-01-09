@@ -1,0 +1,27 @@
+"The category of interest to us is the price of shares.",11,5,1,1,1,2,5,4
+"Prepare for a black day.",5,3,4,1,5,2,5,5
+"For long-term growth, for example in areas such as construction of buildings, the preservation of residential complexes, roads, bridges, factories, houses, etc., a cyclical downturn is to be expected with low prices for both workers and employers.",37,4,5,3,1,2,5,4
+"Fluctuations in economic well-being are inevitable like the rotation of the Earth.",12,5,5,4,1,2,5,4
+"See the charts in the last chapter of The Wave Principle.",11,3,3,1,4,2,5,5
+"All human activity has three characteristic features - shape (pattern), time and proportion - each of which adheres to the Fibonacci numerical sequence.",23,4,5,2,1,2,5,4
+"Once the waves are recognizable, this knowledge can be applied to any movement, as the same rules apply to the prices of stocks, bonds, grain, cotton, coffee, and any other activity mentioned earlier.",33,3,5,3,1,2,5,4
+"The most significant of these three factors is the shape (model, pattern).",12,4,4,2,1,2,5,4
+"Some model is always in the process of formation.",9,4,5,2,1,2,5,4
+"As a rule, but not always, the researcher can imagine in advance the appearance of the model.",17,3,5,2,1,2,5,4
+"This possibility is provided by the type of the predecessor model.",11,4,5,2,1,2,5,4
+"The ideal cycle chart for the stock market is shown in Figures 5, 6 and 7.",16,5,1,1,1,5,5,5
+"Initially it is subdivided into a bull market and a bear market.",12,5,1,1,1,5,5,5
+"Figure 5 subdivides a bull market into five waves of the Primary level (Major (1)) and a bear market into three waves of the Primary level (Major).",27,5,1,1,1,5,5,5
+"The bull-market chart in Figure 6 subdivides the waves [1], [3] and [5] of the Primary level (Major) into five waves of the Intermediate level each.",25,5,1,1,1,5,5,5
+"Figure 7 subdivides Intermediate waves 1, 3 and 5 into five Minor waves each.",13,5,1,1,1,5,5,5
+"In Figure 5 the bear market is subdivided into three waves of the Primary level (Major), denoted by the letters [A], [B] and [C].",24,5,1,1,1,5,5,5
+"In Figure 6 down-waves [A] and [C] are subdivided into five waves of the Intermediate level.",16,5,1,1,1,5,5,5
+"The ascending wave [B] is subdivided into three waves of the Intermediate level.",13,5,1,1,1,5,5,5
+"In Figure 7 these Intermediate waves are subdivided into five Minor waves.",12,5,1,1,1,5,5,5
+"In other words, a bear market is an inverted bull market, except that a bear market has three Major down-waves while a bull market has five Major up-waves.",28,5,1,1,1,2,5,4
+"Corrections in both bullish and bearish areas are the most difficult to study.",13,4,4,2,1,2,5,4
+"Since the discoveries described here have no analogues, it is necessary to introduce new terms.",15,4,5,2,3,2,5,4
+"The expression wave levels degree has a related meaning here.",10,5,1,1,1,2,5,4
+"For example, the Primary level Major is associated with the waves in Figure 5; the Intermediate level Intermediate with the waves in Figure 6; the Secondary level Minor with the waves shown in Figure 7.",35,5,1,1,1,5,5,5
+"The term Major is used by Elliott in the next few chapters as a substitute for the term Primary, which was introduced in the first monograph.",26,5,1,1,1,5,5,5
+"Elliott improved the wave notation introduced in the first monograph.",10,5,1,1,1,5,5,5

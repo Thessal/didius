@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/6e67064062f3f0ed088bd494e39d3b9b4b2aa07c.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Market trend/average-directional-movement-index.txt",
+    "additional_info": {
+        "duration": 153.91671442985535
+    }
+}

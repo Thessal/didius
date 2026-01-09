@@ -1,0 +1,10 @@
+"Standard deviation σ is estimated from a random sample by computing a statistic used as an estimate of the population standard deviation.",40,5,2,5,1,1,5,5
+"Such a statistic is called an estimator, and the estimator value is termed a sample standard deviation denoted by s.",33,5,2,5,1,1,5,5
+"There is no single estimator for standard deviation with all desirable properties, unlike the sample mean, making unbiased estimation technically complex.",55,5,2,5,1,1,5,5
+"Typically the corrected sample standard deviation (using N−1) is used and referred to as the sample standard deviation.",30,5,2,5,1,1,5,5
+"Other estimators may be better: the uncorrected estimator (using N) lowers MSE, and using N−1.5 nearly eliminates bias for normal data.",29,5,2,5,1,1,5,5
+"The population standard deviation formula can be applied to a sample by treating the sample size as the population size, even if the true population is larger.",44,5,2,5,1,1,5,5
+"The estimator s_N is known as the uncorrected sample standard deviation or the sample's standard deviation as if the sample were the whole population.",26,5,2,5,1,1,5,5
+"It is defined as s_N = sqrt((1/N) Σ (x_i – x̄)^2).",13,5,2,5,1,1,5,5
+"The observed sample values {x_i} and mean x̄ define the denominator N, making s_N the square root of the sample variance, the average squared deviation from the mean.",54,5,2,5,1,1,5,5
+"s_N is a consistent estimator converging to the population value and is the maximum‑likelihood estimate for normally distributed populations.",32,5,2,5,1,1,5,5

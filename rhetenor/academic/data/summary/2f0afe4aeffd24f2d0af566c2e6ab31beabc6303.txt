@@ -1,0 +1,10 @@
+"Population variance calculated as 4 from the eight values.",21,5,5,5,1,5,5,5
+"Population standard deviation equals 2.",7,5,5,5,1,5,5,5
+"Formula is valid only when the eight values constitute the entire population.",17,5,5,5,1,3,5,5
+"If the values are a random sample, divide by n‑1 giving s ≈ 2.1.",60,5,5,5,2,3,5,5
+"The original formula result is called the sample standard deviation and denoted by s.",22,5,5,5,1,3,5,5
+"Dividing by n‑1 provides an unbiased variance estimate (Bessel's correction).",25,5,5,5,2,3,5,5
+"The sample variance formula underestimates variability if divided by n because the sample mean is close to observations.",48,4,5,4,1,3,5,5
+"When the population is approximately normal, standard deviation indicates proportion of observations above or below values.",24,4,5,4,1,3,5,5
+"Average adult male height in the US is about 69 inches with a standard deviation of ~3 inches.",22,4,4,3,1,2,5,5
+"About 68% of men are within 3 inches of the mean height (66–72 inches).",22,4,4,3,1,2,5,5

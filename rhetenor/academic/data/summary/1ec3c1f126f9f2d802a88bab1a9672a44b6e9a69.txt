@@ -1,6 +1,0 @@
-In a complete cycle of the stock market, the number of minor waves is 144.  
-The table shows that a complete market cycle contains 5 primary bullish waves, 3 primary bearish waves, 21 intermediate bullish waves, 13 intermediate bearish waves, 89 secondary bullish waves, and 55 secondary bearish waves, totaling 144 waves.  
-All wave numbers belong to the Fibonacci series and the entire sequence is used in the stock market cycle.  
-The wavelength may change, but the number of waves does not.  
-Through experience the author found that 144 is the largest number of practical value in stock market cycles.  
-Dividing any two adjacent Fibonacci numbers, such as 55 ÷ 34, yields approximately 1.618, and the reverse division yields approximately 0.618.

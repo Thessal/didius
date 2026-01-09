@@ -1,0 +1,23 @@
+"A move is considered good if prices stay up while volume subsides for several days.",22,3,4,5,1,2,4,3
+"The market is in a strong position if it holds its own on negative volume days after advancing on positive volume.",22,3,4,5,1,2,4,3
+"PVI is called the 'majority' curve.",6,5,2,2,1,3,5,2
+"Dysart distinguished actions of the majority from those of the minority.",13,5,2,2,1,3,5,2
+"The majority tends to emulate the minority, but with less sharp timing.",19,4,4,3,1,2,4,3
+"When the majority shows appetite for stocks, PVI usually moves to new high ground, as in 1961.",20,5,2,2,1,3,5,2
+"Smart money trades on quiet days and the crowd trades on very active days.",21,4,5,4,1,2,4,3
+"The negative volume index identifies days with lower volume than the previous day.",16,5,2,2,1,3,5,2
+"The positive index identifies days with higher volume.",10,5,2,2,1,3,5,2
+"Few of Dysart's writings are available besides a 1967 Barron's article.",12,4,2,2,1,3,4,2
+"A rise of NVI above a prior high while DJIA trends up signals a bull market.",18,5,3,5,1,3,5,3
+"A fall of NVI below a prior low while DJIA trends down signals a bear market.",18,5,3,5,1,3,5,3
+"PVI is interpreted in reverse.",6,5,2,2,1,3,5,2
+"Not all NVI/PVI movements generate signals; Dysart labeled some as 'bullis' or 'bearish penetrations'.",20,4,4,4,1,2,4,3
+"These penetrations can occur before or after market signals and are sometimes called reaffirmations.",16,4,4,4,1,2,4,3
+"Signals are most authentic when NVI moves sideways for months in a narrow range.",19,5,3,5,1,3,5,4
+"No mathematical system without judgment can work continuously without error in the stock market.",18,5,2,5,1,2,5,5
+"Between 1946‑1967, NVI gave 17 signals, 14 correct (average 4.32% gain) and 3 wrong (average 6.33% loss).",26,5,2,4,1,4,5,2
+"NVI seriously erred in 1963‑1964 and in 1968.",7,5,2,2,1,4,5,2
+"In 1969 Dysart reduced NVI's weight because it was no longer decisive for primary trend, though it still indicated short‑term reversals.",34,5,3,3,1,3,5,3
+"A probable cause for NVI's loss of efficacy in the mid‑1960s is higher NYSE volume from more issues traded, causing prices to rise on declining volume.",30,2,5,3,1,2,3,3
+"NVI peaked in 1955 and trended down until at least 1968, while DJIA rose.",17,5,2,2,1,3,5,2
+"Norman G. Fosback linked the long‑term increase in issues traded to a downward bias in the advance‑decline line.",24,5,3,3,1,3,5,2

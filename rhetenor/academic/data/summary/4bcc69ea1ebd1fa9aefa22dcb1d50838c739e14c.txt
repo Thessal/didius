@@ -1,0 +1,16 @@
+"The ADL is one of the oldest indicators based on the Advance-Decline Data and it was the most popular of all internal indicators.",23,5,2,1,1,2,5,5
+""Divergence" is when the stock market index moves in one direction while the ADL on that index moves in the opposite direction.",22,5,3,1,1,2,5,5
+"If the index moves up while the ADL moves down, the index may be misleading about the true direction of the overall market, as happened toward the end of the US Dot-com bubble in 1999–2000, when the indices continued to rally while the ADL diverged downward starting at the beginning of 1999.",52,4,3,5,1,2,5,5
+"Such negative divergence was also seen toward the end of the roaring twenties bull market, during 1972 at the height of the Nifty Fifty market, and starting in March 2008 during the 2008 financial crisis.",35,5,2,1,1,2,5,5
+"There may be cases in which an index reports a gain at the end of the trading day.",18,4,3,4,1,2,5,5
+"This gain may be caused by an increase in a certain number of stocks.",14,4,3,4,1,2,5,5
+"However, a significant lead by declining stocks may be observed relative to the advancing stocks.",15,4,3,4,1,2,5,5
+"These results should be interpreted as a decline in the market, no matter that the index has experienced an increase.",20,4,3,2,3,2,5,5
+"Therefore, you should base your judgments regarding the performance of the market on the advance/decline numbers, not on the performance of a particular index no matter how broad it is.",30,4,3,2,4,2,5,5
+"There have been many cases in which a major increase in an index was not accompanied by an increase in the advance number.",23,5,2,1,1,2,5,5
+"In such a case it is reasonable to conclude that by the end of the trading day the index will decline.",21,4,3,4,1,2,5,5
+"The reverse is also true.",5,4,2,1,1,2,5,5
+"For instance, if there is a significant movement in the advance/decline numbers, you can expect a movement in the different indexes as well.",23,4,3,4,1,2,5,5
+"Additionally, a market that experiences a trend toward either a decline or an advance is highly unlikely to reverse its movement immediately on the next trading day.",27,5,3,4,1,2,5,5
+"Advance–decline numbers can be also used in your daily observations of the trades to determine whether a particular trend is a false or a spot.",25,4,3,4,1,2,5,5
+"AD volume line = Advanced Volume - Declined Volume + yesterday's AD volume line.",14,5,2,1,1,2,5,5

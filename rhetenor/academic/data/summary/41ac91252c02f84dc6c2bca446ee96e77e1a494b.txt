@@ -1,0 +1,16 @@
+"A weighted average assigns different multiplying factors to data points based on their positions in the sample window.",23,5,2,5,1,2,5,5
+"The weighted moving average is mathematically the convolution of the data with a fixed weighting function.",16,5,2,5,1,2,5,5
+"One application of weighted averaging is removing pixelization from digital images.",10,5,2,5,1,2,5,5
+"This technique is also known as anti-aliasing.",6,5,2,5,1,2,5,5
+"In finance, a weighted moving average uses weights that decrease in arithmetic progression.",19,5,2,5,1,2,5,5
+"In an n‑day WMA, the most recent day has weight n, the next has n‑1, down to one.",18,5,2,5,1,2,5,5
+"The denominator of the WMA formula is the triangular number n(n+1)/2.",9,5,2,5,1,2,5,5
+"When updating WMA values, the numerator difference equals n p_{M+1} minus the sum of the previous n data points.",25,5,2,5,1,2,5,5
+"If the sum of the last n data points is called Total_M, then Total_{M+1}=Total_M + p_{M+1} – p_{M‑n+1}.",20,5,2,5,1,2,5,5
+"The numerator for the next period equals the previous numerator plus n p_{M+1} minus Total_M.",8,5,2,5,1,2,5,5
+"WMA_{M+1} equals its numerator divided by the sum of the weights.",9,5,2,5,1,2,5,5
+"The graph shows weights decreasing from the highest for the most recent data down to zero.",18,5,2,5,1,2,5,5
+"These weights can be compared to those of the exponential moving average.",12,5,2,5,1,2,5,5
+"An exponential moving average (EMA), also called an exponentially weighted moving average (EWMA), is a first‑order IIR filter whose weighting factors decrease exponentially.",28,5,2,5,1,2,5,5
+"Each older datum’s weighting factor decreases exponentially and never reaches zero.",11,5,2,5,1,2,5,5
+"This formulation is attributed to Hunter (1986).",7,5,2,5,1,2,5,5

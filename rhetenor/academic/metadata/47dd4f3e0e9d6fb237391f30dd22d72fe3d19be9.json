@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/47dd4f3e0e9d6fb237391f30dd22d72fe3d19be9.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Market trend/ichimoku-kinko-hyo.txt",
+    "additional_info": {
+        "duration": 170.33545637130737
+    }
+}

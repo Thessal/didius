@@ -1,6 +1,0 @@
-The first-ever trading in futures on the VIX Index began on March 26, 2004 on the CBOE Futures Exchange.  
-VIX options were launched in February 2006.  
-The VIX reached an intraday high of 89.53 on October 24, 2008.  
-The VIX closed at a record 80.74 on November 21, 2008.  
-On February 5, 2018, the VIX closed at 37.32, up 103.99% from the previous close.  
-On March 9, 2020, the VIX hit 62.12, the highest level since the 2008 financial crisis.

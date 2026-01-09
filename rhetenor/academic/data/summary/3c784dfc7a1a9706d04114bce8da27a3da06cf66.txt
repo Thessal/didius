@@ -1,0 +1,17 @@
+"Market price movements result from rhythmic, ordered sequences.",11,3,4,3,1,2,5,4
+"Market predictions are essentially random and lack validity.",13,3,4,3,1,2,5,4
+"Without a market law, prices could not circulate and a market would not exist.",23,3,4,4,1,2,5,4
+"Absent a law, daily price fluctuations would be spontaneous and erratic with no order.",17,3,4,3,1,2,5,4
+"Careful market research shows that the random-fluctuation scenario is false.",10,4,3,3,1,2,5,4
+"Rhythmic and harmonious market movements will be highlighted in analysis.",9,3,3,2,1,2,5,3
+"The market law can be discovered only by viewing the market from the proper angle and using this method.",25,3,4,3,1,2,5,4
+"The wave law is a universal phenomenon present in all human activities.",16,2,4,2,1,2,5,3
+"Waves of various degrees develop regardless of a registration mechanism.",16,3,4,3,1,2,5,3
+"If a similar mechanism exists, wave patterns emerge and become visible to trained observers.",23,3,4,3,1,2,5,4
+"Daily price recording began in 1928 and hourly recording started in 1932.",16,5,1,5,1,5,5,5
+"Observing minor and minute waves requires daily range data, especially in fast markets.",16,3,4,3,1,2,5,4
+"Unlike Dow Theory, the Law of Nature does not need confirmation for two stock indices.",27,3,3,3,1,2,5,4
+"Each index, group, stock, or human activity is interpreted by its own waves.",16,3,3,3,1,2,5,3
+"The author attempted to define 'cycle' years ago but found no definition.",20,3,2,2,1,5,5,3
+"Studying charts revealed rhythmic price changes, later published in 1938 as The Law of Waves.",25,3,3,2,1,5,5,4
+"Later the author realized the basis of his discoveries was the ...",11,3,2,2,1,5,5,3

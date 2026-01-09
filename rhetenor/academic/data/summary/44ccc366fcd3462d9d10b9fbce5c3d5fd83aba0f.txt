@@ -1,0 +1,15 @@
+"Statistical independence is assumed.",4,5,5,1,1,5,5,5
+"The variance of a scaled variable equals the scale factor squared times the original variance.",15,5,3,5,1,5,5,5
+"The standard deviation of the mean equals the population standard deviation divided by the square root of N.",18,5,5,5,1,5,5,5
+"Estimating the standard deviation of the mean requires prior knowledge of the population standard deviation.",15,5,3,3,1,5,5,5
+"In most applications the population standard deviation is unknown.",9,4,5,3,1,4,5,5
+"With ten measurements of an unknown quantity, one can compute the sample mean and standard deviation but cannot compute the standard deviation of the mean.",25,5,3,5,1,5,5,5
+"One can estimate the population standard deviation from the sample and thus estimate the standard error of the mean.",19,4,4,4,1,4,5,5
+"Two formulas can represent a running standard deviation.",8,5,3,3,1,5,5,5
+"Two power sums s1 and s2 are computed over N values of x.",13,5,3,3,1,5,5,5
+"s_j equals the sum of x_k to the power j for k from 1 to N.",16,5,3,5,1,5,5,5
+"Using N, s1, and s2 one can compute the current running standard deviation as sigma equals the square root of (N s2 minus s1 squared) divided by N.",28,5,3,5,1,5,5,5
+"The sample standard deviation can be computed as s equals the square root of (N s2 minus s1 squared) divided by N times (N minus 1).",26,5,3,5,1,5,5,5
+"When the sums become large, computer implementations must consider round-off error, overflow, and underflow.",14,5,3,3,5,4,5,5
+"The method below calculates running sums with reduced rounding errors.",10,5,3,3,1,5,5,5
+"This is a one-pass algorithm for calculating variance of n samples without storing prior data.",15,5,3,3,1,5,5,5

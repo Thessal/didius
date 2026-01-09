@@ -1,0 +1,6 @@
+"EMA(m0,n) is defined by the recursive formula EMA(m0,n) = (2/(n+1))[m0 - EMA(m1,n)] + EMA(m1,n)",5,5,1,5,1,5,5,1
+"The EMA smoothing period for momentum (r) is typically 25",8,4,5,3,1,5,5,1
+"The EMA smoothing period for smoothed momentum (s) is typically 13",9,4,5,3,1,5,5,1
+"TSI output is bounded between +100 and -100, but most values fall between +25 and -25",17,4,3,4,1,5,5,2
+"Blau suggests interpreting these values as overbought and oversold levels, where a trader may anticipate a market turn",21,3,4,2,3,2,5,4
+"The slope of the TSI indicates trend direction; a rising TSI suggests an up‑trend and a falling TSI suggests a down‑trend",26,4,4,3,1,5,5,3

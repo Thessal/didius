@@ -1,7 +1,0 @@
-The concept of computing implied volatility dates to the 1973 Black and Scholes paper that introduced the Black–Scholes model for valuing options.  
-An option‑implied volatility can be computed by equating the asset option’s market price to its valuation formula.  
-In the VIX, the option prices used are the S&P 500 index option prices.  
-The VIX takes as inputs the market prices of call and put options on the S&P 500 index for near‑term options with more than 23 days until expiration, next‑term options with less than 37 days until expiration, and risk‑free U.S. Treasury bill interest rates.  
-Options are ignored in the VIX calculation if their bid prices are zero or if their strike prices are outside the level where two consecutive bid prices are zero.  
-The goal of the VIX is to estimate the implied volatility of S&P 500 index options at an average expiration of 30 days.  
-It is possible to create a hedging position equivalent to a variance swap using only vanilla puts and calls (static replication).

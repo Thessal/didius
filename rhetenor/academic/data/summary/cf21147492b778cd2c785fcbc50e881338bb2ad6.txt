@@ -1,2 +1,0 @@
-An investor may want the average price of all stock transactions for a particular stock up until the current time.  
-The cumulative average can be updated incrementally using the formula CAₙ₊₁ = (xₙ₊₁ + n·CAₙ)/(n + 1).

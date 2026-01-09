@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/136a10b092a276104ec54179a6f0468843ec69c4.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Momentum/williams-r.txt",
+    "additional_info": {
+        "duration": 71.82153964042664
+    }
+}

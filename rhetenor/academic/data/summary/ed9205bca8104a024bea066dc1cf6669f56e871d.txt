@@ -1,0 +1,11 @@
+"Low_5 are the highest and lowest prices in the last 5 days, while %D is the N‑day moving average of %K.",28,5,1,5,1,1,5,1
+"Usually %D is calculated with a simple moving average, but it can use an exponential moving average for recent weighting.",23,4,5,4,1,1,5,3
+"The only valid signal when using %D alone is a divergence between %D and the security.",20,5,1,5,1,1,5,5
+"The calculation finds the price range between an asset's high and low over a period.",19,5,1,5,1,1,5,1
+"The security's price is expressed as a percentage of this range, with 0% at the bottom and 100% at the top.",35,5,1,5,1,1,5,1
+"The indicator assumes prices close near range extremes before turning points.",21,4,5,4,1,1,5,3
+"%K equals (Price minus Low_N) divided by (High_N minus Low_N) times 100.",11,5,1,5,1,1,5,1
+"%D equals the average of %K1, %K2 and %K3.",9,5,1,5,1,1,5,1
+"Price is the last closing price.",6,5,1,5,1,1,5,1
+"Low_N is the lowest price over the last N periods.",10,5,1,5,1,1,5,1
+"High_N is the highest price over the last N periods.",10,5,1,5,1,1,5,1

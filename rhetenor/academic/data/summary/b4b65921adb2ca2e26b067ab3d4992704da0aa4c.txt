@@ -1,3 +1,0 @@
-The Money Flow Index (MFI) uses volume (or dollar‑volume approximation) as its scale, unlike the Relative Strength Index (RSI) which uses price‑change amounts.  
-Marek and Čadková (2020) found that the MFI can outperform a simple buy‑and‑hold strategy, indicating it can be useful for stock trading.  
-They also found that the MFI parameter settings commonly recommended in the literature provide no trading advantage, so settings must be optimized for each individual stock.

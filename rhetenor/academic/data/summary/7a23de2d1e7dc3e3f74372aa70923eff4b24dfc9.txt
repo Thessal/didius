@@ -1,8 +1,0 @@
-The A‑D Line correctly indicated a divergent top before a 27 % decline in the Dow Jones Industrial Average in 1962.  
-Peter N. Haurlan was among the first people to use a computer for technical analysis of stock market data.  
-Haurlan was the first to employ exponential moving averages (EMAs) of price and breadth data in stock market analysis.  
-An EMA differs from a simple moving average because it weights more recent data more heavily using a smoothing constant.  
-A 10 % smoothing‑constant EMA counts today’s price as 10 % and yesterday’s EMA value as 90 % in the calculation.  
-Haurlan referred to a 10 % smoothing‑constant EMA as a “10 % Trend” and a 5 % smoothing‑constant EMA as a “5 % Trend”.  
-Haurlan advocated using smoothing constants of 1 %, 2 %, 5 %, 10 %, 20 %, and 50 % for stock market analysis.  
-Haurlan encoded stock prices onto IBM punch cards and processed them on JPL’s computer during off‑hours.

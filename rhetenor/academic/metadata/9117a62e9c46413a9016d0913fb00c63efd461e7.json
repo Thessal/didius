@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/9117a62e9c46413a9016d0913fb00c63efd461e7.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/negative-volume-index.txt",
+    "additional_info": {
+        "duration": 115.59131860733032
+    }
+}

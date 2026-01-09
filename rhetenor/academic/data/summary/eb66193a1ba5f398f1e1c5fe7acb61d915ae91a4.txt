@@ -1,0 +1,12 @@
+"The standard deviation s equals 0.6 times the range R.",6,5,1,1,1,5,5,5
+"For N>100 approximately normal data, the range rule estimates s ≈ R/4 because 95% of the normal distribution spans about four standard deviations.",60,4,5,4,1,2,5,5
+"The range rule aids sample size estimation because ranges are easier to estimate than standard deviations.",24,4,4,2,1,2,5,4
+"Alternative divisors K(N) provide s ≈ R/K(N) for different N and non‑normal distributions.",22,5,4,4,1,3,5,5
+"Standard deviation is unchanged by location shifts and scales proportionally with the variable's scale.",19,5,1,5,1,5,5,5
+"The standard deviation of a constant c equals zero.",3,5,1,5,1,5,5,5
+"Adding a constant to X does not change its standard deviation.",3,5,1,5,1,5,5,5
+"Multiplying X by constant c scales its standard deviation by |c|.",4,5,1,5,1,5,5,5
+"The standard deviation of X+Y equals the square root of var(X)+var(Y)+2 cov(X,Y).",10,5,1,5,1,5,5,5
+"Standard deviation of X equals the square root of the expected squared deviation, i.e., sqrt(E[X^2] - (E[X])^2).",12,5,1,5,1,5,5,5
+"Sample standard deviation s(X) equals sqrt(N/(N-1)) times the population standard deviation formula.",12,5,1,5,1,5,5,5
+"In a finite population with equal point probabilities, a specific formula holds.",12,5,1,5,1,5,5,5

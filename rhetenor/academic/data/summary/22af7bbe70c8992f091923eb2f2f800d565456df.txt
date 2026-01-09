@@ -1,8 +1,0 @@
-Because the R values are squared it does not matter whether they are expressed as positives or negatives; both result in a positive Ulcer Index.  
-The Ulcer Index calculation is relatively immune to the sampling rate used and gives similar results when calculated on weekly prices as on daily prices.  
-Martin advises against sampling less often than weekly because with quarterly prices a fall and recovery could occur entirely within a period and thereby not affect the index.  
-Martin recommends his Ulcer Index as a measure of risk in contexts where the standard deviation is usually used.  
-The Ulcer Index can replace the standard deviation to create an Ulcer Performance Index (UPI) or Martin ratio.  
-In both the Sharpe ratio and the UPI, annualized rates of return are used (net of costs, inclusive of dividend reinvestment, etc.).  
-The Ulcer Index can be charted over time and used as a technical analysis indicator to show stocks entering ulcer‑forming territory or to compare volatility across different stocks.  
-As with the Sharpe ratio, a higher value of the UPI is better than a lower value because investors prefer more return for less risk.

@@ -1,0 +1,20 @@
+"Additional 10‑pp standard deviation is not worth the extra risk.",22,5,3,1,1,3,5,4
+"Stock B is more likely than Stock A to miss the initial investment and only yields about 2% higher average return.",38,4,5,1,1,2,5,4
+"Stock A is expected to earn ~10% ±20 pp, ranging from −10% to 30%, covering about two‑thirds of future yearly returns.",32,5,3,3,1,2,5,4
+"Investors should expect extreme outcomes up to 10% ± 60 pp, i.e., a range of −50% to 70%, covering three standard deviations (~99.7% of returns).",52,5,3,5,1,2,5,4
+"The arithmetic mean of a security's returns over a period yields its expected return.",24,5,1,1,1,5,5,3
+"Subtracting expected return from actual return gives the deviation from the mean for each period.",18,5,1,1,1,5,5,3
+"Averaging the squared deviations yields the asset's return variance.",20,5,1,1,1,5,5,3
+"Higher variance implies higher risk for the security.",10,5,1,1,1,5,5,3
+"The square root of variance provides the investment's standard deviation.",18,5,1,1,1,5,5,3
+"Standard deviation calculations are valid only for stationary series, but financial time series are typically non‑stationary.",23,5,3,1,1,4,5,3
+"Non‑stationary series must be transformed into stationary series before applying statistical tools.",34,5,3,1,1,4,5,3
+"Begin geometric analysis with three values x₁, x₂, x₃.",19,5,1,1,1,5,5,3
+"The three values define point P = (x₁, x₂, x₃) in ℝ³.",10,5,1,1,1,5,5,3
+"Define line L as the set of points (r, r, r) for r in ℝ.",12,5,1,1,1,5,5,3
+"Line L is the main diagonal passing through the origin.",9,5,1,1,1,5,5,3
+"Equal values give zero standard deviation, placing point P on line L.",21,5,1,1,1,5,5,3
+"Standard deviation likely corresponds to the distance between point P and line L.",20,4,5,2,1,4,5,4
+"The relationship holds true.",5,5,1,1,1,4,5,3
+"Point M = (x̄, x̄, x̄) has coordinates equal to the mean of the values.",17,5,1,1,1,5,5,3
+"Since M lies on L, M equals (ℓ,ℓ,ℓ) for some real ℓ.",13,5,1,1,1,5,5,3

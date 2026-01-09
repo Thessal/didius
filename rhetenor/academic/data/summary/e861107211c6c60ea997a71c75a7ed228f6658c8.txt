@@ -1,9 +1,0 @@
-A price that is inside the Ichimoku cloud signals a decline in the security’s value.  
-A Tenkan‑sen crossing above the Kijun‑sen above the cloud indicates an expected increase in the asset’s price.  
-If the Tenkan‑sen crosses above the Kijun‑sen within the cloud, the signal is considered neutral, and a cross below the cloud suggests a low likelihood of a positive price movement.  
-A Tenkan‑sen crossing below the Kijun‑sen indicates a bearish move in the price.  
-Some experts require the Chikō Span to be above the current market price as confirmation of Ichimoku signals.  
-The traditional Ichimoku settings use a 9/26/52 period, but traders have adapted settings such as 10/30/60 or 20/60/120 for different assets or markets.  
-Shorter Ichimoku timeframes (e.g., 9/26/52) increase the likelihood of false signals, while longer timeframes may delay signal visibility and cause traders to miss price movements.  
-Ichimoku charts are most commonly used by equities, futures, and foreign‑exchange traders who combine them with risk‑management tools such as trailing stop‑loss orders.  
-Backtesting has shown that Ichimoku tends to underperform the market index significantly, indicating limitations in its predictive power.

@@ -1,0 +1,9 @@
+"Price inside the cloud signals a fall in value.",18,4,4,4,1,2,5,4
+"A Tenkan-sen cross above the cloud indicates an increase in price.",23,4,4,4,1,2,5,4
+"A cross within the cloud is neutral, while below suggests weak positive movement.",25,3,4,4,1,2,5,4
+"Tenkan-sen crossing below Kijun-sen indicates a bearish price move.",16,4,4,4,1,2,5,4
+"Some experts require the Chikō Span to be above the market price as confirmation.",20,3,4,3,3,2,5,4
+"The Ichimoku chart settings have been adapted from the traditional 9/26/52 to other periods for different assets.",26,4,4,3,1,2,5,4
+"Shorter timeframes increase false signals; longer timeframes may delay signals, causing missed movements.",38,3,4,3,1,2,5,4
+"Ichimoku charts are commonly used by equity, futures, and FX traders together with risk‑management tools like stop‑losses.",31,4,4,3,1,2,5,4
+"Backtesting shows Ichimoku often underperforms the market index, suggesting limited predictive power.",20,4,4,3,1,3,5,4

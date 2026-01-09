@@ -1,0 +1,8 @@
+"Approach is imperfect; chart ellipses highlight all whipsaws",13,4,4,4,1,3,5,3
+"KST can give false or misleading signals, shown by April 2005 buy signal",19,4,4,4,1,3,5,3
+"KST is generally more accurate than MACD despite occasional whipsaws",25,4,4,4,1,3,5,3
+"Indicator crossing overbought/oversold zones triggers momentum buy and sell signals",17,4,4,4,1,3,5,3
+"One must wait for a price trend reversal signal such as pattern completion or trendline violation",23,3,4,3,5,3,5,4
+"KST often diverges positively and negatively with price",10,4,4,4,1,3,5,3
+"It is possible to construct a trendline on KST and detect violations, though rarely",20,3,4,3,1,3,5,4
+"When violations occur, they usually produce a strong signal",11,4,4,4,1,3,5,3

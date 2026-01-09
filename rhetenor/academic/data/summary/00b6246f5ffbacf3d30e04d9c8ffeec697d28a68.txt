@@ -1,0 +1,17 @@
+"An Uncommon line above its long-term average coincides with strong bond performance and a weakening line predicts weaker bond periods.",20,4,3,3,1,5,4,4
+"Figure 8 illustrates the Uncommon A-D line with a 200-day EMA alongside the Dow Jones Corporate Bond Index.",18,5,1,1,1,5,4,4
+"Decimal pricing began in 1997 and was fully implemented by the NYSE on Jan 29 2001 and Nasdaq on Apr 9 2001.",22,5,1,1,1,5,4,4
+"Previously a stock needed at least a 1/8-point change to be counted as advancing or declining; now a single penny suffices.",21,5,1,1,1,5,4,4
+"Critics argue that the increased number of votes from small-price-change stocks biases the A-D line upward.",16,2,4,3,1,2,3,4
+"A study of NYSE closing data from Nov 1 2001 to Mar 5 2004 examined three issue categories: Composite, >1/16-point changes, and <1/16-point changes.",24,5,1,1,1,5,4,4
+"The 1/16-point threshold assumes that a 7-cent move should be rounded up to the old 1/8-point increment and counted, while moves of 6 cents or less are treated as unchanged.",30,3,5,3,1,3,4,3
+"Cumulative A-D ratios show that the sub-tick group (≤1/16-point changes) has a weaker bias than the market overall, holding back the Composite Cumulative A-D ratio.",25,5,1,3,1,5,4,4
+"Decimalization has not artificially created a more bullish A-D line.",10,5,1,3,1,5,4,4
+"In 1872 the NYSE implemented a continuous trading system to replace scheduled stock calls.",14,5,1,1,1,5,4,4
+"The new system created the specialist system where an independent trader or company manages the auction market for specific securities.",20,5,1,1,1,5,4,4
+"Specialists are tasked with making a market in their issues and use their own capital to bridge temporary supply-demand gaps to reduce price volatility.",24,5,1,1,2,5,4,4
+"There is concern that specialists may have too much power to rig the market for their issues.",17,3,4,3,1,2,3,4
+"Data indicate that sub-tick price changes have restrained the Composite Cumulative A-D ratio, refuting the notion that decimalization made the A-D line artificially bullish.",24,5,1,3,1,5,4,4
+"The A-D line remains a useful indicator, and analysts should listen to what it tells rather than denigrate it for not meeting expectations.",23,3,4,1,5,2,3,5
+"Strong A-D statistics in 2003-2004 suggest there should be much more upside for stock prices.",15,4,4,3,1,4,3,4
+"While minor declines may occur, strong breadth indicates many months will pass before a meaningful decline appears.",17,4,4,3,1,4,3,4

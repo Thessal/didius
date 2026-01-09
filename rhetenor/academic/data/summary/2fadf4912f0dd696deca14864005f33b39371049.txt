@@ -1,0 +1,11 @@
+"Money ratio is defined as positive money flow divided by negative money flow.",9,5,4,5,1,5,5,5
+"Money Flow Index equals 100 minus 100 divided by (1 plus money ratio).",10,5,4,5,1,5,5,5
+"Money Flow Index equals 100 times positive money flow divided by total money flow.",14,5,4,5,1,5,5,5
+"The formula shows MFI as the percentage of positive money flow to total money flow.",22,5,4,5,1,5,5,5
+"MFI measures market enthusiasm.",11,5,4,4,1,3,5,5
+"MFI values ≥80 indicate overbought; ≤20 indicate oversold.",20,5,4,4,1,3,5,5
+"Divergence where price makes new high but MFI does not may signal a weak advance likely to reverse.",30,4,4,3,1,2,5,5
+"MFI is constructed similarly to the RSI.",13,5,4,4,1,5,5,5
+"MFI uses volume as the scale, unlike RSI which uses price changes.",28,5,4,4,1,5,5,5
+"Marek and Čadková (2020) studied various MFI parameter settings.",12,5,3,3,1,5,5,5
+"Their testing was randomized across time and companies.",9,5,3,3,1,5,5,5

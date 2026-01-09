@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/4d1d41ae8278321188bad5499d710944bcaa5920.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/articles/Market trend/parabolic-sar.txt",
+    "additional_info": {
+        "duration": 138.9163682460785
+    }
+}

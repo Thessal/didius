@@ -1,9 +1,0 @@
-Stock A is expected to earn about 10 percent, plus or minus 20 percentage points (a range of 30 percent to ‑10 percent), covering roughly two‑thirds of future year returns.  
-When considering more extreme possible returns, an investor should expect results up to 10 percent plus or minus 60 percentage points (a range of 70 percent to ‑50 percent), which corresponds to three standard deviations and about 99.7 percent of probable returns.  
-Calculating the arithmetic mean of a security’s return over a given period yields the expected return of the asset.  
-Subtracting the expected return from the actual return for each period gives the deviation from the mean; squaring these deviations, averaging them, and taking the square root provides the standard deviation of the investment.  
-The larger the variance of a security’s return, the greater the risk the security carries.  
-Financial time series are non‑stationary, and statistical calculations such as standard deviation apply only to stationary series.  
-To apply statistical tools like standard deviation to non‑stationary series, the series must first be transformed into a stationary series.  
-If three observed values are all equal, the standard deviation is zero and the point representing those values lies on the main diagonal line in three‑dimensional space.  
-The standard deviation is related to the distance of the point representing a set of values from the main diagonal line in three‑dimensional space.

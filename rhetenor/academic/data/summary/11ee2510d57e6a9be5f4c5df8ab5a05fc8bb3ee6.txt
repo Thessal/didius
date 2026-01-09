@@ -1,0 +1,15 @@
+"MACD was created by Gerald Appel in the late 1970s as a trading indicator.",25,5,4,5,1,5,5,3
+"MACD is designed to reveal changes in strength, direction, momentum, and trend duration.",20,5,4,5,1,5,5,3
+"The MACD indicator consists of three time series calculated from historical price data, usually the closing price.",22,5,4,5,1,5,5,3
+"The three MACD series are the MACD line, the signal/average line, and the divergence line.",24,5,4,5,1,5,5,3
+"The MACD line is the difference between a fast EMA and a slow EMA of the price.",25,5,4,5,1,5,5,3
+"The signal line is an EMA of the MACD line itself.",11,5,4,5,1,5,5,3
+"MACD depends on three EMA time‑constant parameters.",17,5,4,5,1,5,5,3
+"Notation MACD(a,b,c) denotes EMAs with periods a and b for the MACD line and period c for the signal line.",37,5,4,5,1,5,5,3
+"These MACD parameters are measured in days.",7,5,4,5,1,5,5,3
+"The common MACD settings are 12, 26, and 9 days (MACD(12,26,9)).",14,5,4,5,1,5,5,3
+"MACD period settings originate from historic daily‑chart analysis.",30,5,4,4,1,3,5,3
+"The original settings were due to lack of modern platforms showing real‑time prices.",17,5,4,4,1,3,5,3
+"When weeks were six days, the (12,26,9) settings corresponded to two weeks, one month, and one‑and‑a‑half weeks.",26,5,4,4,1,3,5,3
+"With five‑day trading weeks, changing the period settings remains possible.",18,5,4,4,1,3,5,3
+"It is advisable to use the period settings most traders employ.",19,4,3,2,5,3,5,5

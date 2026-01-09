@@ -1,0 +1,9 @@
+"VIX predicts future volatility as well as past volatility, based on similar correlation coefficients.",19,5,2,4,1,5,5,3
+"VIX is criticized as a predictor of future volatility.",10,3,3,2,1,2,4,3
+"VIX is described as measuring the current price of index options.",14,4,2,3,1,3,5,3
+"Critics say most volatility models forecast no better than simple past volatility.",27,3,4,3,1,2,4,4
+"Some studies argue critiques mis‑implemented complex volatility models.",15,3,4,3,1,2,4,4
+"The risk of trying to time short‑term volatility is often overlooked.",13,3,3,3,1,3,4,3
+"Practitioners and portfolio managers doubt our understanding of volatility.",19,3,4,3,1,2,4,4
+"Goldstein and Taleb titled a paper claiming uncertainty about defining volatility.",26,4,2,3,1,3,5,3
+"Emanuel Derman expressed disappointment with theory‑unsupported empirical models.",13,3,3,3,1,2,4,3

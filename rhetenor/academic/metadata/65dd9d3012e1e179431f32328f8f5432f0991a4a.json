@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/65dd9d3012e1e179431f32328f8f5432f0991a4a.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/put-call-ratio.txt",
+    "additional_info": {
+        "duration": 73.7529845237732
+    }
+}

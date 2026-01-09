@@ -1,0 +1,18 @@
+"Elliott frequently used the term \"circle\" to refer to a cycle on stock charts.",14,5,4,4,1,4,5,5
+"The concept of \"depression\" is applied to geography as well as economics.",12,5,4,4,1,4,5,5
+"The Grand Canyon of Colorado is called a \"depression\" because it lies below the prevailing surface for many miles in any direction.",22,5,4,4,1,5,5,5
+"The same terminology is sometimes used to describe prolonged market downturns.",11,5,4,4,1,4,5,5
+"Some writers describe the 13-year triangle of the DJIA (1928-1942) as a \"throw\" that always exceeds the top of wave 3.",21,4,4,4,1,3,5,5
+"During a rise, the volume of wave 5 does not exceed the volume of wave 3; sometimes it is less.",20,5,4,4,1,5,5,5
+"As long as volume increases, the next rise is formed, and so on until a new rise is registered without an increase in volume.",24,5,4,4,1,5,5,5
+"Wave 2 volume is smaller than wave 1 volume.",9,5,4,4,1,5,5,5
+"The word \"cycle\" means circle.",5,5,4,4,1,4,5,5
+"The circle in Figure 96 is divided into four segments A, B, C and D.",15,5,4,4,1,5,5,5
+"When the chart forms a downward rounding in segment C, the pattern is complete because the number of waves suggests that one or more three-wave formations may occur by the end of the downward movement.",35,5,4,4,1,5,5,5
+"An accelerated ascent then follows in segment D.",8,5,4,4,1,5,5,5
+"The overall pattern of ascent and descent resembles the combined segments C and D, i.e., the lower half of the circle.",21,5,4,4,1,5,5,5
+"The many strikes at the end of 1945 are simply a swing of the pendulum from left to right, from 1 to 2 and then to 3, as shown in Figure 96.",32,5,4,4,1,4,5,5
+"The bottom of A-B (3), shown in Figure 53 of Chapter 6, sometimes consists of double or even triple triplets, as described in Chapter 5.",25,5,4,4,1,5,5,5
+"This is especially true when the rounding bottom is formed.",10,5,4,4,1,4,5,5
+"The bottom of A-B is suitable for describing the first two waves of the extended wave plane.",17,5,4,4,1,4,5,5
+"The thirteen-year triangle of the DJIA from 1928 to April 1942 is shown in Figure 71.",16,5,4,4,1,5,5,5

@@ -1,9 +1,0 @@
-Keltner channel is a technical analysis indicator that consists of a central moving average line with channel lines drawn above and below it.  
-The indicator is named after Chester W. Keltner, who described it in his 1960 book *How To Make Money in Commodities*.  
-Keltner referred to the method as the ten‑day moving average trading rule and did not claim originality for the idea.  
-In Keltner’s description, the center line is a 10‑day simple moving average of the typical price, where typical price is the average of the high, low, and close for each day.  
-The upper and lower lines are placed at a distance equal to the simple moving average of the past 10 days’ trading ranges (high minus low).  
-The trading strategy treats a close above the upper line as a strong bullish signal and a close below the lower line as a strong bearish signal, prompting buying or selling with the trend, possibly confirmed by other indicators.  
-Keltner was a Chicago grain trader, and the concept may have been common knowledge among traders of his era.  
-Concepts of channels with fixed widths date back to the earliest days of charting.  
-Later authors such as Linda Bradford Raschke have published modifications to the Keltner channel, including different averaging periods, the use of an exponential moving average, and using a multiple of Wilder’s average true range for the bands.

@@ -1,0 +1,11 @@
+{
+    "data_type": "summary",
+    "last_validated": "2026-01-09",
+    "path": "./data/summary/78e9fb6777b9d0839505d1ac1f7b0225d7959251.txt",
+    "model": "gpt-oss:120b",
+    "prompt_path": "./prompts/summary.json",
+    "original_path": "./data/wikipedia/Volume/on-balance-volume.txt",
+    "additional_info": {
+        "duration": 43.154454469680786
+    }
+}

@@ -1,0 +1,29 @@
+"K can be calculated once per commodity and used daily with ADXR and ATR14 to compute CSI.",17,5,5,5,1,1,5,2
+"K must be recalculated only when the margin requirement or commission rate changes.",13,5,5,5,1,1,5,2
+"The previous SCI equation for Soybeans defines CSI as 50 × 15.00 × (50/√3000) × 1/(150+45) × 100.",10,5,5,5,1,1,5,2
+"K equals 0.4641 as calculated from the Soybeans formula.",9,5,5,5,1,1,5,2
+"Therefore, CSI for Soybeans equals ADXR × ATR14 × K = 348.",8,5,5,5,1,1,5,2
+"For Bellies, K is calculated as 4.464.",7,5,5,5,1,1,5,2
+"Thus, CSI for Bellies equals ADXR × ATR14 × K = 280.",8,5,5,5,1,1,5,2
+"The Directional Movement index worksheet columns are labeled ADXR, ATR44, and CSI.",12,5,5,5,1,5,5,2
+"A space for K is located just above these three columns.",11,5,5,5,1,5,5,2
+"CSI can be calculated daily using K and the worksheet values.",11,5,5,5,1,1,5,2
+"ADXR is the average of the latest ADX and the ADX from 14 days ago.",15,5,5,5,1,1,5,2
+"ATR44 equals the ATR column value divided by 14.",9,5,5,5,1,1,5,2
+"To obtain daily CSI, multiply ADXR, ATR44, and K and place the result in the CSI column.",17,5,5,5,3,1,5,5
+"An extreme example is considered next.",6,4,5,4,1,1,5,2
+"Suppose Coffee has ADXR 70 and ATR44 of 3.75c.",9,3,5,3,1,1,5,2
+"At $375 per 1c move, average daily dollar movement is $1,406.25.",11,5,5,5,1,1,5,2
+"If margin requirement is $9,000 and commission $85, the comparison with Soybeans is questioned.",14,3,5,3,1,1,5,3
+"Soybeans: ADXR 50, ATR14 15c, margin $3000, commission $45, vM $50; Coffee: ADXR 70, ATR14 3.75c, margin $9000, commission $85, vM $375.",21,5,5,5,1,1,5,2
+"Coffee's CSI calculates to 318 using its parameters.",8,5,5,5,1,1,5,2
+"Soybeans' CSI was 348, making Soybeans the better overall deal.",10,5,5,5,1,1,5,3
+"Soybean ATR equals 15c × 50 = $750 average daily dollar movement.",10,5,5,5,1,1,5,2
+"Soybeans' daily movement is about half of Coffee's and has less directional movement.",13,4,5,4,1,1,5,2
+"Two suppositions are introduced to illustrate the CSI equation's effect.",10,3,5,3,1,1,5,2
+"Supposition 1: Assume 70% of Coffee's move is captured due to ADXR 70, and 50% for Soybeans.",16,3,5,3,1,1,5,2
+"Supposition 2: Assume each trade lasts ten days, tying up money for the same period.",15,3,5,3,1,1,5,2
+"Coffee profit calculation: $1,406.25 × 10 × 70% − $85 = $9,758.75.",12,5,5,5,1,1,5,2
+"Soybeans profit calculation: $750 × 10 × 50% − $45 = $3,705.",12,5,5,5,1,1,5,2
+"Because Soybeans require less margin, three Soybeans contracts equal one Coffee contract, yielding $11,115 profit.",15,5,5,5,1,1,5,3
+"Total profit: Soybeans $11,115.00; Coffee $9,758.75.",6,5,5,5,1,1,5,2

@@ -1,0 +1,12 @@
+"The standard error of the mean equals the population standard deviation divided by the square root of the sample size, and is estimated using the sample standard deviation similarly.",39,5,3,5,1,2,5,4
+"A poll's standard error, reported as its margin of error, is the expected standard deviation of the estimated mean across repeated polls.",34,5,3,5,1,2,5,4
+"Standard error estimates the standard deviation of an estimate, reflecting how much the estimate depends on the specific sample.",29,5,3,5,1,2,5,4
+"In science it is common to report both the data's standard deviation and the estimate's standard error.",34,4,4,4,1,2,4,4
+"By convention effects more than two standard errors from the null are deemed statistically significant to guard against random sampling error.",31,4,4,4,1,2,3,4
+"Suppose the entire population of interest consists of eight students in a class.",14,2,3,3,1,1,1,2
+"The students' marks are 2, 4, 4, 4, 5, 5, 7, and 9.",15,5,3,5,1,5,5,2
+"Population standard deviation is calculated as the square root of the average of squared deviations from the mean.",32,5,3,5,1,2,2,4
+"The eight data points have a mean of 5.",10,5,3,5,1,5,5,2
+"Variance is the mean of the squared deviations.",8,5,3,5,1,2,2,4
+"σ equals the square root of the average of (v minus μ) squared for each value v, where μ is the average of the values.",15,5,3,5,1,2,2,4
+"σ squared equals (9+1+1+1+0+0+4+16)/8, which simplifies to 4.",25,5,3,5,1,2,2,4

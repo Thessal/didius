@@ -1,0 +1,7 @@
+"σ^2_n is defined with n total elements and n' non-zero-weight elements.",19,5,3,5,1,5,5,2
+"Formulas match simpler ones when all weights equal one.",18,5,4,5,1,5,5,2
+"Karl Pearson first wrote 'standard deviation' in 1894 after lecturing on it.",20,5,1,1,1,2,5,2
+"It replaced earlier names like Gauss's 'mean error'.",18,4,3,1,1,2,5,2
+"SDI is employed in external quality assessments for medical labs.",14,5,3,3,1,3,5,2
+"SDI equals (Laboratory mean minus Consensus group mean) divided by Consensus group standard deviation.",16,5,3,5,1,5,5,2
+"Standard deviation is algebraically simpler but less robust than average absolute deviation.",14,4,4,3,1,3,5,2

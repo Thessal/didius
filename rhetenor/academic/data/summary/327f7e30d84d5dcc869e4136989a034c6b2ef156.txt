@@ -1,0 +1,12 @@
+"The 1938‑1939 triangle wave is an inverted zigzag.",13,5,5,5,1,4,5,5
+"The 1939‑April 1942 triangle wave is a wave flat.",14,5,5,5,1,4,5,5
+"The prolonged decline was necessary to match a 13‑year period from 1928 and a 21‑year period from July 1921.",27,4,5,4,1,2,5,4
+"Elliott’s thirteen‑year triangle concept is invalid because sub‑waves must be threes, yet the 1932‑1937 rise and 1937‑1938 fall are fives.",36,4,5,5,1,2,5,5
+"Turning points are not coincidental; applying the double‑pass rule is far‑fetched, and the 1921‑1928 wave‑5 extension was taken twice by waves A, B, and C.",38,3,5,4,1,2,5,4
+"It is the most dramatic US bull market in percentage growth.",15,5,4,5,1,3,5,5
+"Elliott calls the first three waves a wave flat because the triangle’s third wave is a five.",21,5,5,5,1,3,5,5
+"Elliott contradicts his rule: the 1937‑1938 move must be a five if a C‑wave, or a three if a triangle wave, so it should not be labeled both ways.",42,5,5,5,1,2,5,5
+"Elliott’s labeling in figures 72 and 74 does not match his triangle suggestion but fits the correct wave pattern interpretation.",25,5,5,5,1,2,5,5
+"Frost and the author argue a five‑wave movement can be counted as a three only to suit the Wave Principle; wave planes are flat, and the 1932‑1937 rise should be a five.",64,4,5,4,1,2,5,5
+"Wave planes are flat and should not fall; the 1937‑originating zigzag is a five‑wave drop without overlap, and labeling should follow a specific A‑B‑C scheme, possibly using a horizontal triangle for the B wave.",62,5,5,5,1,2,5,5
+"The pattern extends beyond the top of the triangle’s third wave.",12,4,5,4,1,2,5,4

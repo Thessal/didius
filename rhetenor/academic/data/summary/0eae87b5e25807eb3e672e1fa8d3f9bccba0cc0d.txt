@@ -1,0 +1,15 @@
+"The uncorrected sample standard deviation is the maximum‑likelihood estimate for a normal population.",13,5,5,5,1,1,5,5
+"Bias decreases with sample size, dropping as 1/N, and is below 1% for N > 75.",14,5,5,5,1,1,5,5
+"For very large samples the uncorrected sample standard deviation is generally acceptable.",12,5,5,5,1,1,5,5
+"This estimator has a uniformly smaller mean squared error than the corrected sample standard deviation.",15,5,5,5,1,1,5,5
+"Using the biased sample variance gives s_N = sqrt(1/N ∑(x_i‑x̄)²) as an estimate of the population standard deviation.",17,5,5,5,1,1,5,5
+"Taking the square root introduces additional downward bias because the square root is a concave function (Jensen’s inequality).",18,5,5,5,1,1,5,5
+"The variance bias is easy to correct, but bias from the square root is harder and depends on the distribution.",20,5,5,5,1,1,5,5
+"Applying Bessel’s correction (using N‑1) yields the unbiased sample variance s² = 1/(N‑1) ∑(x_i‑x̄)².",13,5,5,5,1,1,5,5
+"The unbiased variance estimator requires that the variance exists and samples are drawn independently with replacement.",16,5,5,5,1,1,5,5
+"N‑1 equals the degrees of freedom in the vector of deviations from the mean.",14,5,5,5,1,1,5,5
+"Taking square roots reintroduces bias, giving the corrected sample standard deviation s = sqrt(1/(N‑1) ∑(x_i‑x̄)²).",14,5,5,5,1,1,5,5
+"Although s² is unbiased for variance, s remains a biased estimator for the population standard deviation, though less biased than the uncorrected version.",23,5,5,5,1,1,5,5
+"This estimator is commonly used and known as the sample standard deviation.",12,5,5,5,1,1,5,5
+"The bias can be large for small samples (N < 10).",9,5,5,5,1,1,5,5
+"As sample size increases, the amount of bias decreases.",9,5,5,5,1,1,5,5

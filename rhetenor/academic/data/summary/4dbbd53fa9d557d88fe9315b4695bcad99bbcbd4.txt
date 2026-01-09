@@ -1,0 +1,28 @@
+"Illustrate price‑oscillator interaction by using a straight line-price relationship and plotting oscillator points.",29,5,3,5,1,2,5,5
+"Figure 6.1 starts on Day 10 with a closing price of 48.50.",14,5,2,2,1,5,5,5
+"Price on Day 1 (ten days earlier) was 50.75.",10,5,2,2,1,5,5,5
+"Using a ten‑day oscillator, subtract the price ten days ago (50.75) from today's price (48.50) to get an oscillator value of -2.25.",25,5,3,5,1,2,5,5
+"Plot the -2.25 oscillator value beneath the zero line.",11,5,2,2,1,2,5,5
+"Develop the oscillator curve by applying the method daily.",10,5,3,3,1,2,5,5
+"The hypothetically generated oscillator curve is noted as very interesting.",11,4,2,2,1,1,5,5
+"When price declines uniformly from Days 10‑14, the oscillator curve remains a horizontal line.",23,5,3,5,1,2,5,5
+"On Day 15 the price rises 25 points while the oscillator rises 50 points.",18,5,2,3,1,5,5,5
+"Oscillator increases at double the rate of the price.",10,5,2,4,1,2,5,5
+"Oscillator maintains its rate until Day 23 when it stabilizes, while price keeps rising at the same pace.",26,5,3,4,1,2,5,5
+"A notable event occurs on Day 29.",8,4,2,2,1,5,5,5
+"Price stabilizes at 51.00 while the oscillator starts declining.",13,5,2,3,1,5,5,5
+"Should price stay horizontal, the oscillator will keep descending until the tenth day, after which both move horizontally.",30,4,5,5,1,1,5,5
+"Observe the interaction between oscillator and price curves.",11,5,2,2,3,1,5,5
+"Oscillator seems one step ahead of price because it measures price’s rate of change.",28,4,3,4,1,2,5,5
+"From Days 14‑23, oscillator indicates a very fast price change as price direction shifts from down to up.",29,5,2,4,1,5,5,5
+"When price ten days prior bottoms and rises, the rate of change decelerates as changes occur in a single direction.",31,4,3,4,1,2,5,5
+"Oscillator is a valuable technical tool for knowledgeable traders, but three problems arise in creating a meaningful oscillator.",27,4,3,2,1,1,5,5
+"First problem: erratic movement within the oscillator’s configuration.",11,5,2,2,1,1,5,5
+"Example: with a ten‑day oscillator, assume price dropped sharply ten days ago.",21,3,5,5,1,1,5,5
+"Assume today's closing price equals yesterday's.",11,3,5,5,1,1,5,5
+"Subtracting ten‑day‑ago price from today’s price can produce an erroneously high oscillator value.",23,4,3,4,1,2,5,5
+"A method is needed to dampen or smooth extreme points when calculating the oscillator.",22,4,3,3,3,1,5,5
+"Second problem: determining the appropriate Y‑axis scale for oscillators.",15,5,2,2,1,1,5,5
+"Clarify what constitutes high and low values.",12,4,2,2,1,1,5,5
+"Scale varies across different commodities.",10,5,2,3,1,5,5,5
+"A common denominator should be applied across commodities to make oscillator amplitude relative.",23,4,3,3,3,1,5,5

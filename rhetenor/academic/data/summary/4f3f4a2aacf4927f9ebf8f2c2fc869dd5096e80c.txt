@@ -1,0 +1,39 @@
+"In birds, five branches depart from the body – a head, two paws and two wings.",16,5,1,5,1,5,5,1
+"Octave means eight.",3,5,1,5,1,5,5,1
+"Each octave consists of eight white keys and five black keys, for a total of 13.",16,5,1,5,1,5,5,1
+"There are about 89 basic chemical elements.",6,5,1,5,1,5,5,1
+"There are three primary colors.",5,5,1,5,1,5,5,1
+"Mixing the three primary colors gives the rest of the colors.",8,5,4,5,1,5,5,1
+"The Western Hemisphere consists of three regions: North, Central and South America.",12,5,1,5,1,5,5,1
+"There are 21 republics in the Western Hemisphere, each a member of the Pan‑American Union.",18,5,1,5,1,5,5,1
+"There are three countries in North America: Canada, Mexico and the United States.",13,5,1,5,1,5,5,1
+"In South America there are many republics and three European colonies, 13 in total.",14,5,1,5,1,5,5,1
+"In Central America (the former Panama Canal) there are five republics.",11,5,1,5,1,5,5,1
+"The original United States consisted of 13 states.",8,5,1,5,1,5,5,1
+"The United States is currently divided into 55 administrative divisions: 48 states, the District of Columbia, the Philippines, the Panama Canal Zone, Puerto Rico, Alaska, the Hawaiian Islands, and the Virgin Islands.",30,5,1,5,1,5,5,1
+"The Declaration of Independence has 56 signatures.",7,5,1,5,1,5,5,1
+"The original number of signatures on the Declaration of Independence was 55.",5,5,1,5,1,5,5,1
+"The last signature was added later.",6,5,1,5,1,5,5,1
+"The main branches of the Federal Government are three.",8,5,1,5,1,5,5,1
+"The largest salute in the Army is 21 guns.",8,5,1,5,1,5,5,1
+"Voting age is 21 years.",4,5,1,5,1,5,5,1
+"The Bill of Rights contains 13 clauses.",7,5,1,5,1,5,5,1
+"National flag colors are three.",4,5,1,5,1,5,5,1
+"The Axis countries consisted of three partners.",7,5,1,5,1,5,5,1
+"Germany swallowed up 13 countries in rapid succession, but stalled at the fourteenth, Russia.",14,5,1,5,1,5,5,1
+"Mussolini was dictator for 21 years.",6,5,1,5,1,5,5,1
+"In 1852 Squadron Commander Perry made a courtesy visit to Japan and urged the “Son of Heaven” to break the absolute isolation.",22,5,1,5,1,5,5,1
+"In 1907, 55 years later, Japan seriously threatened the United States.",11,5,1,5,1,5,5,1
+"In 1941, 34 years later (and 89 years after 1852), Japan attacked Pearl Harbor.",14,5,1,5,1,5,5,1
+"The Washington Monument first stone was laid on July 4, 1848.",15,5,1,5,1,5,5,1
+"The total cost of the Washington Monument was $1,300,000 (13 Fibonacci).",5,5,1,5,1,5,5,1
+"The height of the spire of the Washington Monument is 500 ft (5 Fibonacci).",8,5,1,5,1,5,5,1
+"The height of the base of the Washington Monument is 55 ft (55 Fibonacci).",8,5,1,5,1,5,5,1
+"The area of the base of the spire of the Washington Monument is 55 sq ft (55 Fibonacci).",12,5,1,5,1,5,5,1
+"The top of the spire of the Washington Monument is 34 ft (34 Fibonacci).",8,5,1,5,1,5,5,1
+"The foundation steps of the Washington Monument are 8 (8 Fibonacci).",5,5,1,5,1,5,5,1
+"There are two windows on each side of the Washington Monument, total 8 (8 Fibonacci).",8,5,1,5,1,5,5,1
+"The term “human activity” includes categories such as stock and bond pricing, patents, the price of gold, population size, migration, commodity pricing, government spending, industrial production, life insurance, electricity generation, gasoline consumption, fire damage, stock‑exchange membership costs, epidemics, and real‑estate.",50,5,1,5,1,5,5,1
+"The main category of interest is the price of shares.",12,5,1,5,1,5,5,1
+"Prepare for a “black day”.",5,3,4,3,5,2,5,5
+"A cyclical downturn is to be expected with low prices for construction and related sectors.",34,3,4,3,1,2,5,4
