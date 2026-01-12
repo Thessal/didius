@@ -32,7 +32,7 @@ def expand():
     with open(args.butterflow_syntax, "rt") as f:
         syntax = f.read()
 
-    syntax += "\n"
+    syntax += "\n\nStandard functions\n"
     for path in glob(args.butterflow_stdlib):
         stdlib_doc = load_stdlib_doc(path)
         syntax += f"{stdlib_doc['name']}: {' '.join(stdlib_doc['description'].split())}\n"

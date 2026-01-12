@@ -14,14 +14,14 @@ def load_stdlib_doc(path: str) -> Dict:
     headers = ["1. Type signature", "2. Arguments",
                "3. Semantic Definition", "4. Example"]
     with open(path, "rt") as f:
-        lines = f.readlines()
-    segments = defaultdict(lambda x: [])
+        lines = [x.strip() for x in f.readlines()]
+    segments = defaultdict(lambda : [])
     header = "title"
     for line in lines:
         if line in headers:
             header = line
         else:
-            segments[header] = line
+            segments[header].append(line)
     segments = {k: "\n".join(v) for k, v in segments.items()}
     result = {
         "name": os.path.splitext(os.path.split(path)[-1])[0],
