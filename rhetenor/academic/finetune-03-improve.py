@@ -4,6 +4,7 @@ from typing import Dict
 from morpho.score import SemanticTeacher, SyntaxTeacher
 import argparse
 from finetune_util import hasher, load_stdlib_doc, query_ollama, check_save, check_exist
+import sys 
 
 
 class Grader:
@@ -109,6 +110,7 @@ def improve(step2_result, grader, args, syntax, stdlib, prompt_config):
     last_history = step2_result["history"][-1]
     code = last_history["code"]
     error_msg = last_history["code_error_msg"]
+    user_prompt = user_prompt.replace("{pseudocode}", step2_result["desired_response"])
     user_prompt = user_prompt.replace("{code}", code)
     user_prompt = user_prompt.replace("{quality_score}", score_summary(last_history["scores"]))
     user_prompt = user_prompt.replace("{error_msg}", error_msg)
@@ -170,17 +172,25 @@ def main():
 
     files = glob(args.input_path)
     for i, path in enumerate(files):
-        fname = path.split("/")[-1].split(".")[0]
-        with open(path, "rt") as f:
-            info = json.load(f)
-        if "history" not in info:
-            info = adapter(grader, info)
-        improved = improve(info, grader, args, syntax, stdlib, prompt_config)
-        check_save(args.output_dir, fname, improved)
-        print(f"[{i}/{len(files)}] ", end="\r")
+        try:
+            fname = path.split("/")[-1].split(".")[0]
+            if not check_exist(args.output_dir, fname):
+                with open(path, "rt") as f:
+                    info = json.load(f)
+                if "history" not in info:
+                    info = adapter(grader, info)
+                improved = improve(info, grader, args, syntax, stdlib, prompt_config)
+                check_save(args.output_dir, fname, improved)
+            print(f"[{i}/{len(files)}] ", end="\r")
+        except KeyboardInterrupt:
+            sys.exit()
+        except Exception as e:
+            print(e)
     print("Done")
 
 
 # python finetune-03-improve.py --input_path "./data/finetune-02/*.json" --output_dir "./data/finetune-03/" --endpoint "http://192.168.0.23:11434" --model "gpt-oss:120b"
+# python finetune-03-improve.py --input_path "./data/finetune-02/*.json" --output_dir "./data/finetune-03/" --endpoint "http://rocm.c-jk.com:11434" --model "gpt-oss:120b"
+# for ITER in `seq 100`; do python finetune-03-improve.py --input_path "./data/finetune-03-2/*.json" --output_dir "./data/finetune-03-2/" --endpoint "http://192.168.0.23:11434" --model "gpt-oss:120b"; done
 if __name__ == "__main__":
     main()

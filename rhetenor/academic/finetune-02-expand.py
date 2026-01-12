@@ -77,11 +77,6 @@ def expand():
         rag_stdlib = "".join(random.sample(stdlib_all, args.n_stdlib_docs))
         # FIXME : Using result of finetune-01 as a random feature. May lack coverage.
         random_feature_list = prompt
-        {
-            "description": "Uses the spec to hallucinate NEW code scenarios, expanding the dataset.",
-            "system": "You are a code generator for {language_name}. You will generate valid code based on random semantic combinations from the documentation.\n\nLANGUAGE SPEC:\n{language_spec}\nSTANDARD LIB:\n{rag_stdlib}",
-            "user": "Generate a valid source code snippet that utilizes the following language features: {random_feature_list}.\n1. First, describe the goal in natural language (`thought`).\n2. Then, write the code (`code`).\n\nResponse format (JSON):\n{\n  \"thought\": \"...\",\n  \"code\": \"...\"\n}"
-        }
         # prompt building
         system_context = config["system"]
         system_context = system_context.replace(
