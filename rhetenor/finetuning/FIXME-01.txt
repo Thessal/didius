@@ -1,0 +1,59 @@
+$ python finetune-03-inspect.py 
+[1]                                                | [2]                                               
+money_flow_multiplier: Signal<Float>(close: Signal | high : Signal<Float> = data(id="high")            
+    num1 = subtract(close, low)                    | low : Signal<Float> = data(id="low")              
+    num2 = subtract(high, close)                   | lookback : Int = 20                               
+    numerator = subtract(num1, num2)               | ucl : Signal<Float> = ts_max(signal=high, period=l
+    denominator = subtract(high, low)              | lcl : Signal<Float> = ts_min(signal=low, period=lo
+    result = divide(dividend=numerator, divisor=de | result : Signal<Float> = ucl                      
+}                                                  |                                                   
+                                                   |                                                   
+money_flow_volume: Signal<Float>(close: Signal<Flo |                                                   
+    mfm = money_flow_multiplier(close=close, high= |                                                   
+    result = multiply(mfm, volume)                 |                                                   
+}                                                  |                                                   
+                                                   |                                                   
+chaikin_money_flow: Signal<Float>(close: Signal<Fl |                                                   
+    mfv = money_flow_volume(close=close, high=high |                                                   
+    num = ts_sum(signal=mfv, period=period)        |                                                   
+    den = ts_sum(signal=volume, period=period)     |                                                   
+    result = divide(dividend=num, divisor=den)     |                                                   
+}                                                  |                                                   
+                                                   |                                                   
+accumulation_distribution_line: Signal<Float>(clos |                                                   
+    mfv = money_flow_volume(close=close, high=high |                                                   
+    result = ts_sum(signal=mfv, period=0)  // cumu |                                                   
+}                                                  |                                                   
+                                                   |                                                   
+chaikin_oscillator: Signal<Float>(close: Signal<Fl |                                                   
+    adl = accumulation_distribution_line(close=clo |                                                   
+    fast_ema = ts_decay_exp(signal=adl, period=fas |                                                   
+    slow_ema = ts_decay_exp(signal=adl, period=slo |                                                   
+    result = subtract(fast_ema, slow_ema)          |                                                   
+}                                                  |                                                   
+                                                   |                                                   
+chaikin_volatility: Signal<Float>(high: Signal<Flo |                                                   
+    range = subtract(high, low)                    |                                                   
+    fast_ma = ts_mean(signal=range, period=fast)   |                                                   
+    slow_ma = ts_mean(signal=range, period=slow)   |                                                   
+    diff = subtract(fast_ma, slow_ma)              |                                                   
+    perc = divide(dividend=diff, divisor=slow_ma)  |                                                   
+    hundred = const(value=100.)                    |                                                   
+    result = multiply(perc, hundred)               |                                                   
+}                                                  |                                                   
+                                                   |                                                   
+// Example data bindings (user can replace IDs as  |                                                   
+close_price: Signal<Float> = data(id="close")      |                                                   
+high_price: Signal<Float> = data(id="high")        |                                                   
+low_price: Signal<Float> = data(id="low")          |                                                   
+volume_data: Signal<Float> = data(id="volume")     |                                                   
+                                                   |                                                   
+// Example usage (periods can be adjusted by the c |                                                   
+cmf_20: Signal<Float> = chaikin_money_flow(close=c |                                                   
+adl_line: Signal<Float> = accumulation_distributio |                                                   
+co_signal: Signal<Float> = chaikin_oscillator(clos |                                                   
+cv_signal: Signal<Float> = chaikin_volatility(high |                                                   
+Which one is better? [1/2]:1
+The score function says: 2 (9.0, 26.0)
+{'lex': 5.0, 'parse': 1.0, 'type_check': None, 'build': None, 'position': None, 'normalize': None, 'position_concentration': None, 'pnl': None, 'mdd': None, 'ret': None, 'std': None, 'tvr': None, 'max_tvr': None}
+{'lex': 5.0, 'parse': 5.0, 'type_check': 5.0, 'build': 5.0, 'position': 1.0, 'normalize': 5.0, 'position_concentration': 0.34541177244883337, 'pnl': 5.0, 'mdd': 0.009719938863286159, 'ret': -1.6631193824094668e-06, 'std': 0.0004510480855537217, 'tvr': 0.00022108870704511647, 'max_tvr': 0.0690107614534708}

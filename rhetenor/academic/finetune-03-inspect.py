@@ -114,9 +114,9 @@ def score_fn(scores):
 def side_by_side(a,b, w=50):
     aa = a.split("\n")
     bb = b.split("\n")
-    ll = max(len(a),len(b))
-    aa.extend(["\n"]*ll)
-    bb.extend(["\n"]*ll)
+    ll = max(len(aa),len(bb))
+    aa.extend([""]*ll)
+    bb.extend([""]*ll)
     aa = [(a+" "*w)[:w] for a in aa[:ll]]
     bb = [(b+" "*w)[:w] for b in bb[:ll]]
     for a,b in zip(aa,bb):
@@ -132,7 +132,7 @@ sample_2 = (code_2, score_fn(scores_2))
 side_by_side("[1]","[2]")
 side_by_side(sample_1[0], sample_2[0])
 choice = input("Which one is better? [1/2]:")
-pred = '1' if sample_1[1] > sample_2[1] else '2'
+pred = '1' if sample_1[1] >= sample_2[1] else '2'
 print(f"The score function says: {pred} ({sample_1[1]}, {sample_2[1]})")
 print(scores_1)
 print(scores_2)
