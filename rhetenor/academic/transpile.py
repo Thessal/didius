@@ -78,25 +78,25 @@ def main():
     teacher_sem = SemanticTeacher(datadir=args.datadir, propritary=False)
 
     # Load data
-    for hash in library.get_hash_list():
+    hash_lst = library.get_hash_list()
+    for i, hash in enumerate(hash_lst):
         metadata = library.get_by_hash(hash)
         with open(metadata["path"], "rt") as f:
             idea = f.read()
         response = transpiler.generate(system_context_args={
                                        "syntax": syntax_doc, "functions": stdlib_doc}, user_prompt_args={"idea_text": idea})
-        print(response.strategies[0].name)
         results = []
         for r in response.strategies:
             try:
                 resp_name = r.name
                 resp_desc = r.description
-                r.code = "result = data(id=\"close\")"
-                graph, scores_1, error_msg_1 = teacher_syn.score(r.code)
+                resp_code = r.code
+                graph, scores_1, error_msg_1 = teacher_syn.score(resp_code)
                 ret_tvr, scores_2, error_msg_2 = teacher_sem.score(graph)
                 if ret_tvr:
                     ret, tvr = ret_tvr
                     results.append(
-                        {"name": resp_name, "desc": resp_desc, "ret": ret.tolist(), "tvr": tvr.tolist()})
+                        {"name": resp_name, "desc": resp_desc, "code": resp_code, "ret": ret.tolist(), "tvr": tvr.tolist()})
             except:
                 pass
         if results:
@@ -104,8 +104,9 @@ def main():
             metadata["results"] = results
             out_path = args.output_dir + "/" + hash + "_" + \
                 datetime.now().strftime("%Y%m%d%H%M%S") + ".json"
-            with open(out_path, "rt") as f:
-                json.dump(metadata, out_path)
+            with open(out_path, "wt") as f:
+                json.dump(metadata, f)
+        print(f"[{i}/{len(hash_lst)}] : {len(results)}")
 
     print(f"\r\nDone!")
 
