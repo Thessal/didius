@@ -504,14 +504,14 @@ impl HantooAdapter {
                          if bp > Decimal::ZERO { bids.push((bp, bq)); }
                     }
 
-                    let delta = crate::oms::order_book::OrderBookDelta {
-                        symbol: symbol.to_string(),
-                        bids,
-                        asks,
-                        update_id: Local::now().timestamp_millis(),
-                        timestamp: Local::now().timestamp_millis() as f64 / 1000.0,
-                    };
-                    return Some(IncomingMessage::OrderBookDelta(delta));
+                 return Some(IncomingMessage::OrderBookSnapshot(crate::oms::order_book::OrderBookSnapshot {
+                     symbol: symbol.to_string(),
+                     
+                     bids: bids.clone(),
+                     asks: asks.clone(),
+                     update_id: Local::now().timestamp_millis(),
+                     timestamp: Local::now().timestamp_millis() as f64 / 1000.0,
+                 }));
                 }
             },
             _ => {}

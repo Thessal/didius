@@ -353,14 +353,22 @@ impl OMSEngine {
         self.order_books.lock().unwrap().get(symbol).cloned()
     }
 
-    pub fn on_order_book_delta(&self, delta: crate::oms::order_book::OrderBookDelta) -> PyResult<()> {
-        let symbol = delta.symbol.clone();
+    pub fn on_order_book_information(&self, msg: IncomingMessage) -> PyResult<()> {
+        let (symbol, delta_opt, snapshot_opt) = match msg {
+            IncomingMessage::OrderBookDelta(d) => (d.symbol.clone(), Some(d), None),
+            IncomingMessage::OrderBookSnapshot(s) => (s.symbol.clone(), None, Some(s)),
+            _ => return Ok(()),
+        };
         
         let mut books = self.order_books.lock().unwrap();
         // If book doesn't exist, create empty.
         let book = books.entry(symbol.clone()).or_insert_with(|| OrderBook::new(symbol.clone()));
         
-        book.apply_delta(&delta);
+        if let Some(delta) = delta_opt {
+            book.apply_delta(&delta);
+        } else if let Some(snapshot) = snapshot_opt {
+            book.rebuild(snapshot.bids, snapshot.asks, snapshot.update_id, snapshot.timestamp);
+        }
         
         if !book.validate() {
             // Reconcile if invalid
@@ -428,7 +436,7 @@ impl OMSEngine {
 
     pub fn start_gateway_listener(&self, receiver: Receiver<IncomingMessage>) -> PyResult<()> {
         let engine = self.clone();
-        
+    
         thread::spawn(move || {
             for msg in receiver {
                 // Log it (Lazy / Async)
@@ -456,12 +464,12 @@ impl OMSEngine {
                             IncomingMessage::Execution{order_id, fill_qty, ..} => serde_json::json!({"type": "Execution", "order_id": order_id, "qty": fill_qty}),
                             IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({"type": "OrderBookSnapshot", "symbol": s.symbol}),
                         }
-                     }));
+                    }));
                 }
                 // Process it
                 match msg {
-                    IncomingMessage::OrderBookDelta(delta) => {
-                         let _ = engine.on_order_book_delta(delta);
+                    IncomingMessage::OrderBookDelta(_) | IncomingMessage::OrderBookSnapshot(_) => {
+                         let _ = engine.on_order_book_information(msg);
                     },
                     IncomingMessage::Trade(_trade) => {
                          // engine.on_market_trade(trade); // TODO implement
@@ -469,7 +477,6 @@ impl OMSEngine {
                     IncomingMessage::Execution{order_id, fill_qty, fill_price} => {
                          engine.on_trade_update(&order_id, fill_qty, fill_price);
                     },
-                    IncomingMessage::OrderBookSnapshot(_) => {}
                 }
             }
         });

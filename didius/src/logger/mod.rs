@@ -189,3 +189,9 @@ impl Logger {
         Ok(())
     }
 }
+
+impl Drop for Logger {
+    fn drop(&mut self) {
+        self.stop();
+    }
+}

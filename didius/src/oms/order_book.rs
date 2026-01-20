@@ -19,6 +19,15 @@ pub struct OrderBookDelta {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct OrderBookSnapshot {
+    pub symbol: String,
+    pub bids: Vec<(Decimal, i64)>,
+    pub asks: Vec<(Decimal, i64)>,
+    pub update_id: i64,
+    pub timestamp: f64,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct OrderBook {
     pub symbol: String,
     // Using simple BTreeMap might be sorted by price automatically? 

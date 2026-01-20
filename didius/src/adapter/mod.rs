@@ -22,7 +22,7 @@ pub enum IncomingMessage {
         fill_qty: i64,
         fill_price: f64,
     },
-    OrderBookSnapshot(crate::oms::order_book::OrderBook),
+    OrderBookSnapshot(crate::oms::order_book::OrderBookSnapshot),
 }
 
 pub trait Adapter: Send + Sync {

@@ -43,7 +43,7 @@ fn test_reconcile_flow() {
     let symbol = "TEST".to_string();
     
     // 1. Initial State: Valid
-    engine.on_order_book_delta(OrderBookDelta {
+    engine.on_order_book_update(OrderBookDelta {
         symbol: symbol.clone(),
         bids: vec![(dec!(100), 10)],
         asks: vec![(dec!(101), 10)],
@@ -67,7 +67,7 @@ fn test_reconcile_flow() {
     
     // 3. Send Invalid Delta (Crossed)
     // This should trigger reconcile (fetch snapshot).
-    engine.on_order_book_delta(OrderBookDelta {
+    engine.on_order_book_update(OrderBookDelta {
         symbol: symbol.clone(),
         bids: vec![(dec!(105), 10)], // Crosses Ask 101
         asks: vec![],
