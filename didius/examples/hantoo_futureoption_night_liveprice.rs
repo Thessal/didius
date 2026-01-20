@@ -9,6 +9,7 @@ fn main() -> Result<()> {
     // 1. Initialize Adapter
     println!("Initializing Adapter...");
     let adapter = HantooNightAdapter::new("auth/hantoo.yaml")?;
+    adapter.set_debug_mode(true);
     
     // 2. Setup Channel
     let (tx, rx) = mpsc::channel();

@@ -431,34 +431,33 @@ impl OMSEngine {
         
         thread::spawn(move || {
             for msg in receiver {
-                // Log it
+                // Log it (Lazy / Async)
                 {
-                    let log_data = match &msg {
-                        IncomingMessage::OrderBookDelta(d) => {
-                            let (bp, bv): (Vec<_>, Vec<_>) = d.bids.iter().map(|(p, q)| (*p, *q)).unzip();
-                            let (ap, av): (Vec<_>, Vec<_>) = d.asks.iter().map(|(p, q)| (*p, *q)).unzip();
-                            
-                            serde_json::json!({
-                                "type": "OrderBookDelta", 
-                                "symbol": d.symbol, 
-                                "update_id": d.update_id,
-                                "data": {
-                                    "bp": bp,
-                                    "bv": bv,
-                                    "ap": ap,
-                                    "av": av
-                                }
-                            })
-                        },
-                        IncomingMessage::Trade(t) => serde_json::json!({"type": "Trade", "symbol": t.symbol, "price": t.price, "qty": t.quantity}),
-                        IncomingMessage::Execution{order_id, fill_qty, ..} => serde_json::json!({"type": "Execution", "order_id": order_id, "qty": fill_qty}),
-                        IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({"type": "OrderBookSnapshot", "symbol": s.symbol}),
-                    };
-                    
-                    let log_msg = Message::new("MARKET_DATA".to_string(), log_data);
-                    engine.logger.lock().unwrap().log(log_msg);
+                     let msg_clone = msg.clone();
+                     engine.logger.lock().unwrap().log_lazy("MARKET_DATA".to_string(), Box::new(move || {
+                        match &msg_clone {
+                            IncomingMessage::OrderBookDelta(d) => {
+                                let (bp, bv): (Vec<_>, Vec<_>) = d.bids.iter().map(|(p, q)| (*p, *q)).unzip();
+                                let (ap, av): (Vec<_>, Vec<_>) = d.asks.iter().map(|(p, q)| (*p, *q)).unzip();
+                                
+                                serde_json::json!({
+                                    "type": "OrderBookDelta", 
+                                    "symbol": d.symbol, 
+                                    "update_id": d.update_id,
+                                    "data": {
+                                        "bp": bp,
+                                        "bv": bv,
+                                        "ap": ap,
+                                        "av": av
+                                    }
+                                })
+                            },
+                            IncomingMessage::Trade(t) => serde_json::json!({"type": "Trade", "symbol": t.symbol, "price": t.price, "qty": t.quantity}),
+                            IncomingMessage::Execution{order_id, fill_qty, ..} => serde_json::json!({"type": "Execution", "order_id": order_id, "qty": fill_qty}),
+                            IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({"type": "OrderBookSnapshot", "symbol": s.symbol}),
+                        }
+                     }));
                 }
-                
                 // Process it
                 match msg {
                     IncomingMessage::OrderBookDelta(delta) => {

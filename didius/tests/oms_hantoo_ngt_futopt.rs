@@ -26,6 +26,7 @@ mod tests {
         let logger = Arc::new(Mutex::new(Logger::new(logger_config)));
         
         let adapter = Arc::new(HantooNightAdapter::new("auth/hantoo.yaml")?);
+        adapter.set_debug_mode(true);
         
         // Setup Channel
         let (tx, rx) = mpsc::channel::<IncomingMessage>();
@@ -66,7 +67,7 @@ mod tests {
 
         // 5. Comparison Loop (Run for 15s, check every 5s)
         let total_duration = Duration::from_secs(15);
-        let check_interval = Duration::from_secs(1);
+        let check_interval = Duration::from_secs(5);
         let start_time = std::time::Instant::now();
         
         println!("Starting Comparison Loop...");

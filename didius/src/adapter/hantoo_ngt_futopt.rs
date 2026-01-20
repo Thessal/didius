@@ -13,6 +13,7 @@ use tungstenite::{connect, Message};
 use url::Url;
 use std::thread;
 use std::sync::mpsc;
+use std::sync::atomic::{AtomicBool, Ordering};
 use crate::adapter::{IncomingMessage, Trade};
 use crate::oms::order_book::{OrderBookDelta, PriceLevel};
 use rust_decimal::Decimal;
@@ -43,6 +44,7 @@ pub struct HantooNightAdapter {
     order_map: Mutex<HashMap<String, NightOrderInfo>>,
     ws_thread: Mutex<Option<thread::JoinHandle<()>>>,
     sender: Mutex<Option<mpsc::Sender<IncomingMessage>>>,
+    debug_ws: Arc<AtomicBool>,
 }
 
 impl HantooNightAdapter {
@@ -53,7 +55,12 @@ impl HantooNightAdapter {
             order_map: Mutex::new(HashMap::new()),
             ws_thread: Mutex::new(None),
             sender: Mutex::new(None),
+            debug_ws: Arc::new(AtomicBool::new(false)),
         })
+    }
+    
+    pub fn set_debug_mode(&self, enabled: bool) {
+        self.debug_ws.store(enabled, Ordering::Relaxed);
     }
 
     pub fn set_monitor(&self, sender: mpsc::Sender<IncomingMessage>) {
@@ -73,6 +80,8 @@ impl HantooNightAdapter {
         let approval_key = self.inner.get_ws_approval_key()?;
         
         let sender = self.sender.lock().unwrap().clone();
+
+        let debug_ws = self.debug_ws.clone();
 
         let handle = thread::spawn(move || {
             let full_url = format!("{}/tryitout/H0STCNT0", ws_url_str); 
@@ -117,7 +126,9 @@ impl HantooNightAdapter {
                             Ok(msg) => {
                                 match msg {
                                     Message::Text(text) => {
-                                        println!("WS_RECV: {}", text);
+                                        if debug_ws.load(Ordering::Relaxed) {
+                                            println!("[{}] WS_RECV: {}", chrono::Local::now().format("%Y-%m-%d %H:%M:%S%.3f"), text);
+                                        }
                                         if text.contains("PINGPONG") {
                                             let _ = socket.write_message(Message::Text(text)); 
                                             continue;
