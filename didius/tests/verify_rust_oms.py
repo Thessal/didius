@@ -6,7 +6,7 @@ import json
 import shutil
 
 # Add target/release to path to import generated module
-sys.path.append("target/release")
+sys.path.append("/home/jongkook90/antigravity/didius/rust/target/release")
 
 if "didius_oms" in sys.modules:
     del sys.modules["didius_oms"]

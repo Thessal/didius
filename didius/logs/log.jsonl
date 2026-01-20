@@ -1,0 +1,5 @@
+{"log_type":"INIT","log_body":{"msg":"Initializing HantooAdapter"},"timestamp":1768889731.527}
+{"log_type":"ORDER_PLACE_REQ","log_body":{"order":{"average_fill_price":0.0,"created_at":1768889731.696,"error_message":null,"exchange_order_id":null,"filled_quantity":0,"limit_price":null,"order_id":"trade_check_manual_1","order_type":"LIMIT","price":1601.0,"quantity":1,"side":"BUY","state":"CREATED","stop_price":null,"strategy":"NONE","strategy_params":{},"symbol":"001360","updated_at":1768889731.696}},"timestamp":1768889731.696}
+{"log_type":"ORDER_PLACED","log_body":{"order_id":"trade_check_manual_1"},"timestamp":1768889731.756}
+{"log_type":"ORDER_CANCEL_REQ","log_body":{"order_id":"trade_check_manual_1"},"timestamp":1768889741.757}
+{"log_type":"ORDER_CANCELLED","log_body":{"order_id":"trade_check_manual_1"},"timestamp":1768889741.939}

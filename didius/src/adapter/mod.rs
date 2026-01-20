@@ -2,6 +2,28 @@ use crate::oms::order::Order;
 use crate::oms::order_book::OrderBook;
 use crate::oms::account::AccountState;
 use anyhow::Result;
+use rust_decimal::Decimal;
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Trade {
+    pub symbol: String,
+    pub price: Decimal,
+    pub quantity: i64,
+    pub timestamp: f64,
+}
+
+#[derive(Debug, Clone)]
+pub enum IncomingMessage {
+    OrderBookDelta(crate::oms::order_book::OrderBookDelta),
+    Trade(Trade),
+    Execution {
+        order_id: String,
+        fill_qty: i64,
+        fill_price: f64,
+    },
+    OrderBookSnapshot(crate::oms::order_book::OrderBook),
+}
 
 pub trait Adapter: Send + Sync {
     fn connect(&self) -> Result<()>;
@@ -14,3 +36,4 @@ pub trait Adapter: Send + Sync {
 
 pub mod mock;
 pub mod hantoo;
+pub mod hantoo_ngt_futopt;

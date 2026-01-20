@@ -12,7 +12,10 @@ use crate::logger::Logger;
 use crate::logger::message::Message;
 use uuid::Uuid;
 use chrono::Local;
+use std::sync::mpsc::Receiver;
+use crate::adapter::{IncomingMessage, Trade};
 
+#[derive(Clone)]
 pub struct OMSEngine {
     adapter: Arc<dyn Adapter>,
     order_books: Arc<Mutex<HashMap<String, OrderBook>>>,
@@ -420,6 +423,57 @@ impl OMSEngine {
              eprintln!("OrderBook for {} still invalid after reconciliation!", symbol);
         }
         
+        Ok(())
+    }
+
+    pub fn start_gateway_listener(&self, receiver: Receiver<IncomingMessage>) -> PyResult<()> {
+        let engine = self.clone();
+        
+        thread::spawn(move || {
+            for msg in receiver {
+                // Log it
+                {
+                    let log_data = match &msg {
+                        IncomingMessage::OrderBookDelta(d) => {
+                            let (bp, bv): (Vec<_>, Vec<_>) = d.bids.iter().map(|(p, q)| (*p, *q)).unzip();
+                            let (ap, av): (Vec<_>, Vec<_>) = d.asks.iter().map(|(p, q)| (*p, *q)).unzip();
+                            
+                            serde_json::json!({
+                                "type": "OrderBookDelta", 
+                                "symbol": d.symbol, 
+                                "update_id": d.update_id,
+                                "data": {
+                                    "bp": bp,
+                                    "bv": bv,
+                                    "ap": ap,
+                                    "av": av
+                                }
+                            })
+                        },
+                        IncomingMessage::Trade(t) => serde_json::json!({"type": "Trade", "symbol": t.symbol, "price": t.price, "qty": t.quantity}),
+                        IncomingMessage::Execution{order_id, fill_qty, ..} => serde_json::json!({"type": "Execution", "order_id": order_id, "qty": fill_qty}),
+                        IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({"type": "OrderBookSnapshot", "symbol": s.symbol}),
+                    };
+                    
+                    let log_msg = Message::new("MARKET_DATA".to_string(), log_data);
+                    engine.logger.lock().unwrap().log(log_msg);
+                }
+                
+                // Process it
+                match msg {
+                    IncomingMessage::OrderBookDelta(delta) => {
+                         let _ = engine.on_order_book_delta(delta);
+                    },
+                    IncomingMessage::Trade(_trade) => {
+                         // engine.on_market_trade(trade); // TODO implement
+                    },
+                    IncomingMessage::Execution{order_id, fill_qty, fill_price} => {
+                         engine.on_trade_update(&order_id, fill_qty, fill_price);
+                    },
+                    IncomingMessage::OrderBookSnapshot(_) => {}
+                }
+            }
+        });
         Ok(())
     }
 }
