@@ -59,8 +59,8 @@ mod tests {
             let live_best_bid = live_ob.get_best_bid().map(|(p, _)| p.to_f64().unwrap_or(0.0)).unwrap_or(0.0);
             let live_best_ask = live_ob.get_best_ask().map(|(p, _)| p.to_f64().unwrap_or(0.0)).unwrap_or(0.0);
             
-            println!("REST Snapshot: Bid={}, Ask={}", rest_best_bid, rest_best_ask);
-            println!("Live OrderBook: Bid={}, Ask={}", live_best_bid, live_best_ask);
+            println!("REST Snapshot: {}", snapshot);
+            println!("Live OrderBook: {}", live_ob);
 
             if live_best_bid > 0.0 || live_best_ask > 0.0 {
                 if rest_best_bid != live_best_bid {

@@ -13,6 +13,8 @@ use std::io::Write;
 use aws_sdk_s3::Client as S3Client;
 use aws_sdk_s3::primitives::ByteStream;
 use tokio::runtime::Runtime;
+use std::io::Cursor;
+use zstd::stream::encode_all;
 
 use std::sync::mpsc;
 use crate::logger::message::AsyncMessage;
@@ -159,16 +161,32 @@ impl Logger {
                              }
                          }
                          let timestamp = chrono::Local::now().format("%Y%m%d_%H%M%S").to_string();
-                         let key = format!("{}/{}_{}.jsonl", key_prefix, timestamp, uuid::Uuid::new_v4());
+                         // Compress using zstd
+                         let compressed = match encode_all(Cursor::new(content.as_bytes()), 0) {
+                             Ok(c) => c,
+                             Err(e) => {
+                                 eprintln!("Failed to compress logs: {}", e);
+                                 return;
+                             }
+                         };
+                         
+                         let key = format!("{}/{}_{}.jsonl.zstd", key_prefix, timestamp, uuid::Uuid::new_v4());
                          
                          let result = client.put_object()
                                 .bucket(bucket)
                                 .key(&key)
-                                .body(ByteStream::from(content.into_bytes()))
+                                .body(ByteStream::from(compressed))
                                 .send()
                                 .await;
                          if let Err(e) = result { eprintln!("S3 Upload Failed: {}", e); }
                      });
+                }
+            },
+            LogDestinationInfo::Console => {
+                for msg in batch {
+                    if let Ok(json) = serde_json::to_string(&msg) {
+                        println!("{}", json);
+                    }
                 }
             }
         }

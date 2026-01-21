@@ -462,7 +462,12 @@ impl OMSEngine {
                             },
                             IncomingMessage::Trade(t) => serde_json::json!({"type": "Trade", "symbol": t.symbol, "price": t.price, "qty": t.quantity}),
                             IncomingMessage::Execution{order_id, fill_qty, ..} => serde_json::json!({"type": "Execution", "order_id": order_id, "qty": fill_qty}),
-                            IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({"type": "OrderBookSnapshot", "symbol": s.symbol}),
+                            IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({
+                                "type": "OrderBookSnapshot", 
+                                "symbol": s.symbol,
+                                "bids": s.bids,
+                                "asks": s.asks 
+                            }),
                         }
                     }));
                 }

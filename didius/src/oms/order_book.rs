@@ -136,3 +136,56 @@ impl OrderBook {
     }
 }
 
+impl PartialEq for OrderBook {
+    fn eq(&self, other: &Self) -> bool {
+        self.symbol == other.symbol &&
+        self.bids == other.bids &&
+        self.asks == other.asks
+    }
+}
+
+impl Eq for OrderBook {}
+
+impl std::fmt::Display for OrderBookSnapshot {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "OrderBookSnapshot [{}] (UpdateID: {})", self.symbol, self.update_id)?;
+        if !self.bids.is_empty() {
+             write!(f, "\n  Bids: ")?;
+             for (p, q) in self.bids.iter().take(5) {
+                 write!(f, "({} @ {}) ", q, p)?;
+             }
+        }
+        if !self.asks.is_empty() {
+             write!(f, "\n  Asks: ")?;
+             for (p, q) in self.asks.iter().take(5) {
+                 write!(f, "({} @ {}) ", q, p)?;
+             }
+        }
+        Ok(())
+    }
+}
+
+impl std::fmt::Display for OrderBook {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "OrderBook [{}] (UpdateID: {} | Time: {})", self.symbol, self.last_update_id, self.timestamp)?;
+        if let Some((bp, bq)) = self.get_best_bid() {
+            write!(f, "\n  Best Bid: {} @ {}", bq, bp)?;
+        }
+        if let Some((ap, aq)) = self.get_best_ask() {
+            write!(f, "\n  Best Ask: {} @ {}", aq, ap)?;
+        }
+        // Maybe print top 5 levels?
+        write!(f, "\n  Bids: ")?;
+        for (p, q) in self.bids.iter().rev().take(5) {
+             write!(f, "({} @ {}) ", q, p)?;
+        }
+        write!(f, "\n  Asks: ")?;
+        for (p, q) in self.asks.iter().take(5) {
+             write!(f, "({} @ {}) ", q, p)?;
+        }
+
+        Ok(())
+    }
+}
+
+

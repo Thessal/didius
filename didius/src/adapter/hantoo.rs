@@ -12,6 +12,7 @@ use std::fs;
 use std::io::Write;
 use std::path::PathBuf;
 use std::sync::{Arc, Mutex};
+use std::sync::atomic::{AtomicBool, Ordering};
 use std::thread;
 use std::sync::mpsc;
 use std::collections::HashMap;
@@ -20,7 +21,7 @@ use url::Url;
 use crate::adapter::{IncomingMessage, Trade};
 use rust_decimal::Decimal;
 use std::str::FromStr;
-use crate::oms::order_book::{OrderBookDelta, PriceLevel};
+use crate::oms::order_book::{OrderBookSnapshot, PriceLevel};
 
 #[derive(Debug, Deserialize, Clone)]
 pub struct HantooConfig {
@@ -54,6 +55,10 @@ pub struct HantooAdapter {
     order_map: Mutex<HashMap<String, HantooOrderInfo>>,
     // Channel to Engine
     sender: Mutex<Option<mpsc::Sender<IncomingMessage>>>,
+    // Subscribed Symbols
+    subscribed_symbols: Mutex<Vec<String>>,
+    // Debug flag for WS logging
+    debug_ws: Arc<AtomicBool>,
 }
 
 #[derive(Debug, Clone)]
@@ -80,6 +85,8 @@ impl HantooAdapter {
             ws_thread: Mutex::new(None), // Thread handle
             order_map: Mutex::new(HashMap::new()),
             sender: Mutex::new(None),
+            subscribed_symbols: Mutex::new(Vec::new()),
+            debug_ws: Arc::new(AtomicBool::new(false)),
         };
 
         Ok(adapter)
@@ -99,36 +106,12 @@ impl HantooAdapter {
     }
     
     pub fn subscribe_market(&self, symbols: &[String]) -> Result<()> {
-        // For now, simpler implementation: 
-        // We assume WS thread is running or will act on this if we store it?
-        // But start_ws_thread is called in connect().
-        // We need to send subscription frames.
-        // Problem: We need the socket write access. 
-        // Current impl of start_ws_thread owns the socket loop.
-        // We might need a channel TO the WS thread to send commands.
-        // OR we just reconnect (heavy).
-        // OR we just assume start_ws_thread subscribes to everything in a specific list?
-        // NO, user wants specific symbol "005930".
-        
-        // I'll leave this stub for now and rely on hardcoding "005930" in start_ws_thread 
-        // OR better, update start_ws_thread to read a "subscriptions" list from struct 
-        // that we populate here BEFORE connect/start_ws_thread is called.
-        // But connect() is called before subscribe usually. 
-        
-        // Let's assume user calls subscribe AFTER connect?
-        // If so, we need a way to message the thread.
-        // Simplest for now: HantooAdapter holds a "command_sender" to the thread?
-        // Too complex for this patch.
-        
-        // Alternative: Modify start_ws_thread to subscribe to a fixed list provided in Config? 
-        // User request: "write an example that subscribes to symbol 005930".
-        // Example can set config or call a method.
-        // I will add `subscriptions` to HantooAdapter struct protected by Mutex, 
-        // pop it in start_ws_thread.
-        // If start_ws_thread is already running, we can't easily add more without channel.
-        
-        // Let's hardcode "005930" support in start_ws_thread for now via a "target_symbols" list passed to it?
-        // No, I'll update HantooAdapter to have `wanted_symbols: Mutex<Vec<String>>`.
+        let mut guard = self.subscribed_symbols.lock().unwrap();
+        for s in symbols {
+            if !guard.contains(s) {
+                guard.push(s.to_string());
+            }
+        }
         Ok(())
     }
     
@@ -289,6 +272,12 @@ impl HantooAdapter {
         Ok(key)
     }
 
+
+
+    pub fn set_debug_mode(&self, enabled: bool) {
+        self.debug_ws.store(enabled, Ordering::Relaxed);
+    }
+
     fn start_ws_thread(&self) -> Result<()> {
         let ws_url_str = self.config.ops.clone().ok_or(anyhow!("No WebSocket URL (ops) in config"))?;
         let approval_key = self.get_ws_approval_key()?;
@@ -296,6 +285,10 @@ impl HantooAdapter {
         
         // Sender clone
         let sender = self.sender.lock().unwrap().clone();
+        
+        // Get symbols to subscribe
+        let symbols: Vec<String> = self.subscribed_symbols.lock().unwrap().clone();
+        let debug_ws = self.debug_ws.clone();
         
         let handle = thread::spawn(move || {
             let full_url = format!("{}/tryitout/H0STCNT0", ws_url_str); // Typical suffix
@@ -316,37 +309,28 @@ impl HantooAdapter {
                          let _ = socket.write_message(Message::Text(sub_body.to_string()));
                     }
                     
-                    // Subscribe to "005930" (Samsung Electronics) as per request
-                    // Both Trade (H0UNCNT0) and Asking Price (H0UNASP0)
-                    let target_symbol = "005930"; 
-                    
-                    // Trade
-                    {
-                        let tr_id = "H0STCNT0"; // Realtime Conclusion (General)? No, H0STCNT0 is the PATH.
-                        // For Stock Trade: "H0STCNT0" (Real)
-                        let sub_body = serde_json::json!({
-                            "header": {"approval_key": approval_key, "custtype": "P", "tr_type": "1", "content-type": "utf-8"},
-                            "body": {"input": {"tr_id": "H0SCCNT0", "tr_key": target_symbol}} // H0SCCNT0 is "Realtime Stock Conclusion" (KOSPI)
-                        }); 
-                        // Note: TR_ID for trade might be H0STCNT0? 
-                        // Docs say: H0STCNT0 for API URL path, but TR_ID in body is H0STCNT0 (Execution) or H0SCCNT0 (KOSPI Trade) or H0STASP0 (KOSPI Ask).
-                        // Let's try H0STCNT0 (Trade) and H0STASP0 (Ask).
-                        // Correction: The Python example uses H0UNCNT0? No, `ccnl_total` uses `H0STCNT0`.
-                        // Wait, `ccnl_total.py` uses TR_ID `H0STCNT0` in the body input?
-                        // Let's assume H0STCNT0 (Trade) and H0STASP0 (Ask) for KOSPI.
-                        let _ = socket.write_message(Message::Text(sub_body.to_string()));
+                    // Subscribe to Market Data for all symbols
+                    for target_symbol in symbols {
+                        // Trade
+                        {
+                            let sub_body = serde_json::json!({
+                                "header": {"approval_key": approval_key, "custtype": "P", "tr_type": "1", "content-type": "utf-8"},
+                                "body": {"input": {"tr_id": "H0SCCNT0", "tr_key": target_symbol}} // H0SCCNT0 is "Realtime Stock Conclusion" (KOSPI)
+                            }); 
+                            let _ = socket.write_message(Message::Text(sub_body.to_string()));
+                        }
+                        
+                        // Asking Price (Total - 10 levels) H0UNASP0
+                        {
+                            let sub_body = serde_json::json!({
+                                "header": {"approval_key": approval_key, "custtype": "P", "tr_type": "1", "content-type": "utf-8"},
+                                "body": {"input": {"tr_id": "H0UNASP0", "tr_key": target_symbol}} 
+                            });
+                            let _ = socket.write_message(Message::Text(sub_body.to_string()));
+                        }
+                        
+                        info!("Subscribed to {} Trade/Ask(Total)", target_symbol);
                     }
-                    
-                    // Asking Price (Total - 10 levels) H0UNASP0
-                    {
-                        let sub_body = serde_json::json!({
-                            "header": {"approval_key": approval_key, "custtype": "P", "tr_type": "1", "content-type": "utf-8"},
-                            "body": {"input": {"tr_id": "H0UNASP0", "tr_key": target_symbol}} 
-                        });
-                        let _ = socket.write_message(Message::Text(sub_body.to_string()));
-                    }
-                    
-                    info!("Subscribed to 005930 Trade/Ask(Total)");
 
                     // Loop
                     loop {
@@ -354,7 +338,9 @@ impl HantooAdapter {
                             Ok(msg) => {
                                 match msg {
                                     Message::Text(text) => {
-                                        println!("WS_RECV: {}", text);
+                                        if debug_ws.load(Ordering::Relaxed) {
+                                            println!("[{}] WS_RECV: {}", chrono::Local::now().format("%Y-%m-%d %H:%M:%S%.3f"), text);
+                                        }
                                         if text.contains("PINGPONG") {
                                             let _ = socket.write_message(Message::Text(text)); 
                                             continue;
@@ -450,14 +436,14 @@ impl HantooAdapter {
                      bids.push((b1, bq1));
                      
                      // Helper delta
-                     let delta = OrderBookDelta {
+                     let delta = OrderBookSnapshot {
                          symbol: symbol.to_string(),
                          bids,
                          asks,
                          update_id: Local::now().timestamp_millis(),
                          timestamp: Local::now().timestamp_millis() as f64 / 1000.0,
                      };
-                     return Some(IncomingMessage::OrderBookDelta(delta));
+                     return Some(IncomingMessage::OrderBookSnapshot(delta));
                 }
             },
              "H0STCNI0" | "H0STCNI9" => { // Execution Notice

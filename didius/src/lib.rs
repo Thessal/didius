@@ -2,6 +2,7 @@ pub mod oms;
 pub mod adapter;
 pub mod strategy;
 pub mod logger;
+pub mod utils;
 
 use pyo3::prelude::*;
 use pyo3::types::PyModule;
@@ -10,5 +11,6 @@ use pyo3::types::PyModule;
 #[pymodule]
 fn didius_oms(m: &Bound<'_, PyModule>) -> PyResult<()> {
     oms::register(m)?;
+    utils::register(m)?;
     Ok(())
 }

@@ -4,6 +4,7 @@ use serde::{Serialize, Deserialize};
 pub enum LogDestinationInfo {
     LocalFile { path: String },
     AmazonS3 { bucket: String, key_prefix: String, region: String },
+    Console,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

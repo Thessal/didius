@@ -47,6 +47,10 @@ fn main() -> anyhow::Result<()> {
     // 4. Wire up Adapter
     adapter.set_monitor(tx);
     
+    // Configure Subscription for Samsung (005930) and SK Hynix (000660)
+    let symbols = vec!["005930".to_string(), "000660".to_string()];
+    adapter.subscribe_market(&symbols)?;
+    
     // 5. Initialize Engine
     let engine = OMSEngine::new(
         adapter.clone(),
@@ -54,32 +58,27 @@ fn main() -> anyhow::Result<()> {
         logger.clone()
     );
     
-    // 6. Connect Adapter (Starts WS thread which subscribes to 005930)
+    // 6. Connect Adapter (Starts WS thread)
+    adapter.set_debug_mode(true);
     adapter.connect()?;
     
-    println!("Adapter Connected & WS Thread Started (Subscribed to 005930)");
+    println!("Adapter Connected & WS Thread Started (Subscribed to {:?})", symbols);
     
     // 7. Start Gateway Listener (Logs & Updates Engine)
     engine.start_gateway_listener(rx).expect("Failed to start listener");
     
     println!("Gateway Listener Started");
     
-    // 8. Main Loop: Print OrderBook every 30s
-    let symbol = "005930";
+    // 8. Main Loop: Print OrderBook every 5s
     loop {
-        thread::sleep(Duration::from_secs(30));
+        thread::sleep(Duration::from_secs(5));
         
-        if let Some(book) = engine.get_order_book(symbol) {
-            println!("--- OrderBook for {} ---", symbol);
-            if let Some((bp, bq)) = book.get_best_bid() {
-                println!("Best Bid: {} @ {}", bq, bp);
+        for symbol in &symbols {
+            if let Some(book) = engine.get_order_book(symbol) {
+                println!("{}", book);
+            } else {
+                println!("OrderBook for {} not yet available.", symbol);
             }
-            if let Some((ap, aq)) = book.get_best_ask() {
-                println!("Best Ask: {} @ {}", aq, ap);
-            }
-            println!("Last Update: {}", book.timestamp);
-        } else {
-            println!("OrderBook for {} not yet available.", symbol);
         }
     }
 }

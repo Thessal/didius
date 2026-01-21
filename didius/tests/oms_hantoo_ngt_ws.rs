@@ -61,17 +61,7 @@ mod tests {
             thread::sleep(Duration::from_secs(1));
             
             if let Some(book) = engine.get_order_book(&symbol) {
-                println!("[{}] {} Snapshot:", chrono::Local::now().format("%Y-%m-%d %H:%M:%S%.3f"), symbol);
-                
-                println!("  Asks:");
-                for (p, q) in book.asks.iter().take(5) {
-                    println!("    {} @ {}", p, q);
-                }
-                
-                println!("  Bids:");
-                for (p, q) in book.bids.iter().rev().take(5) {
-                    println!("    {} @ {}", p, q);
-                }
+                println!("{}", book);
             } else {
                 println!("[{}] {} | No Book Yet", chrono::Local::now().format("%Y-%m-%d %H:%M:%S%.3f"), symbol);
             }
