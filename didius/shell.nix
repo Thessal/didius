@@ -23,11 +23,13 @@ in pkgs.mkShell {
     didiusPackage
     pkgs.cargo # for dev 
     pkgs.rustc # for dev
+    pkgs.rust-analyzer # for dev
   ] ++ (with python.pkgs; [
     matplotlib                                                                
     pandas                                                                    
     numpy                                                                     
     ipython
+    ipykernel
     jupyter
     #seaborn
     #mplfinance
