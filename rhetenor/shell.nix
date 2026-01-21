@@ -29,6 +29,10 @@ in pkgs.mkShell {
       jupyter
       seaborn
       mplfinance
+      
+      # Dependencies needed for data loader
+      boto3
+      zstandard
+      pyyaml
   ]); 
 }
-
