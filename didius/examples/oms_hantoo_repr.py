@@ -9,6 +9,7 @@ from decimal import Decimal
 
 # Ensure we can import didius
 import didius
+from didius import utils
 
 def get_input_with_timeout(prompt, timeout):
     sys.stdout.write(prompt)
@@ -33,6 +34,20 @@ def main():
         print(f"Failed to create adapter: {e}")
         return
 
+    print("Attempting to download KOSPI50 constituents...")
+    try:
+        # Calls the exposed download_kospi_50 function from utils module
+        symbols = utils.download_kospi_50()
+        if not symbols:
+            print("Downloaded list is empty. Using fallback.")
+            symbols = ["005930", "000660"]
+        else:
+            print(f"Successfully downloaded {len(symbols)} KOSPI50 constituents.")
+            print(f"First 5: {symbols[:5]}")
+    except Exception as e:
+        print(f"Failed to download KOSPI50: {e}. Using fallback.")
+        symbols = ["005930", "000660"]
+
     # S3 Logger
     omse = didius.OMSEngine(adapter, "didius", "ap-northeast-2", "logs") 
     oms = omse # Alias
@@ -40,6 +55,7 @@ def main():
     symbol = input("Enter Symbol to Monitor (e.g. 005930, 001360): ").strip()
     if not symbol:
         symbol = "005930" # Default Samsung
+    assert symbol in symbols
     
     ticksize = input("Enter ticksize: ").strip()
     if not ticksize:
@@ -47,9 +63,9 @@ def main():
     ticksize = int(ticksize)
     assert ticksize > 0
 
-    print(f"Subscribing to {symbol}...")
+    print(f"Subscribing to {symbols[0]}...{symbols[-1]}")
     try:
-        adapter.subscribe_market([symbol])
+        adapter.subscribe_market(symbols)
     except Exception as e:
         print(f"Subscription failed: {e}")
         
