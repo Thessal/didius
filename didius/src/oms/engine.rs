@@ -466,8 +466,8 @@ impl OMSEngine {
                             IncomingMessage::OrderBookSnapshot(s) => serde_json::json!({
                                 "type": "OrderBookSnapshot", 
                                 "symbol": s.symbol,
-                                // "bids": s.bids,
-                                // "asks": s.asks 
+                                "bids": s.bids,
+                                "asks": s.asks 
                             }),
                             IncomingMessage::OrderUpdate{order_id, state, ..} => serde_json::json!({"type": "OrderUpdate", "order_id": order_id, "state": format!("{:?}", state)}),
                         }
