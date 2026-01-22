@@ -16,6 +16,7 @@ use std::sync::mpsc::Receiver;
 use crate::adapter::{IncomingMessage, Trade};
 use rust_decimal::Decimal;
 use rust_decimal::prelude::FromPrimitive;
+use anyhow::anyhow;
 
 #[derive(Clone)]
 pub struct OMSEngine {
@@ -45,6 +46,10 @@ impl OMSEngine {
     }
 
     pub fn start(&self, _py: Python, account_id: Option<String>) -> PyResult<()> {
+        self.start_internal(account_id).map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))
+    }
+
+    pub fn start_internal(&self, account_id: Option<String>) -> anyhow::Result<()> {
         let _running = {
             let mut r = self.is_running.lock().unwrap();
             if *r {
@@ -54,13 +59,14 @@ impl OMSEngine {
             true
         };
         
-        self.adapter.connect().map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))?;
+        self.adapter.connect().map_err(|e| anyhow::anyhow!(e.to_string()))?;
         
         if let Some(acc) = account_id {
-            self.initialize_account(_py, acc)?;
+            // self.initialize_account(_py, acc)?; // initialize_account also takes Py
+            // We need pure rust initialize_account too.
+            self.initialize_account_internal(acc).map_err(|e| anyhow::anyhow!(e.to_string()))?;
         }
 
-        
         // Start logger
         {
             let mut l = self.logger.lock().unwrap();
@@ -85,6 +91,10 @@ impl OMSEngine {
     }
 
     pub fn stop(&self, _py: Python) -> PyResult<()> {
+        self.stop_internal().map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))
+    }
+
+    pub fn stop_internal(&self) -> anyhow::Result<()> {
         {
             let mut r = self.is_running.lock().unwrap();
             *r = false;
@@ -95,29 +105,37 @@ impl OMSEngine {
             l.stop();
         }
 
-        self.adapter.disconnect().map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))?;
+        self.adapter.disconnect().map_err(|e| anyhow::anyhow!(e.to_string()))?;
         Ok(())
     }
 
     pub fn initialize_symbol(&self, _py: Python, symbol: String) -> PyResult<()> {
-        let snapshot = self.adapter.get_order_book_snapshot(&symbol)
-            .map_err(|e| pyo3::exceptions::PyValueError::new_err(e.to_string()))?;
-        
+        self.initialize_symbol_internal(symbol).map_err(|e| pyo3::exceptions::PyValueError::new_err(e.to_string()))
+    }
+
+    pub fn initialize_symbol_internal(&self, symbol: String) -> anyhow::Result<()> {
+        let snapshot = self.adapter.get_order_book_snapshot(&symbol)?;
         let mut books = self.order_books.lock().unwrap();
         books.insert(symbol.clone(), snapshot);
         Ok(())
     }
     
     pub fn initialize_account(&self, _py: Python, account_id: String) -> PyResult<()> {
-        let snapshot = self.adapter.get_account_snapshot(&account_id)
-            .map_err(|e| pyo3::exceptions::PyValueError::new_err(e.to_string()))?;
-        
+        self.initialize_account_internal(account_id).map_err(|e| pyo3::exceptions::PyValueError::new_err(e.to_string()))
+    }
+
+    pub fn initialize_account_internal(&self, account_id: String) -> anyhow::Result<()> {
+        let snapshot = self.adapter.get_account_snapshot(&account_id)?;
         let mut acct = self.account.lock().unwrap();
         *acct = snapshot;
         Ok(())
     }
 
-    pub fn send_order(&self, _py: Python, mut order: Order) -> PyResult<()> {
+    pub fn send_order(&self, py: Python, order: Order) -> PyResult<String> {
+        self.send_order_internal(order).map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))
+    }
+
+    pub fn send_order_internal(&self, mut order: Order) -> anyhow::Result<String> {
         if order.order_id.is_none() {
             order.order_id = Some(Uuid::new_v4().to_string());
         }
@@ -135,13 +153,14 @@ impl OMSEngine {
                 };
                 if !passed {
                     println!("FOK Check Failed for Order {}", order.order_id.as_ref().unwrap_or(&"".to_string()));
+                    let oid = order.order_id.clone().unwrap_or_default();
                     // Rejection
                     {
                          let mut orders = self.orders.lock().unwrap();
-                         if let Some(oid) = &order.order_id {
+                         if let Some(oid_ref) = &order.order_id {
                              order.state = OrderState::REJECTED;
                              order.error_message = Some("FOK verification failed".into());
-                             orders.insert(oid.clone(), order.clone());
+                             orders.insert(oid_ref.clone(), order.clone());
                          }
 
                     }
@@ -150,12 +169,12 @@ impl OMSEngine {
                         "ORDER_REJECTED".to_string(),
                         serde_json::json!({
                             "reason": "IOC No Liquidity",
-                            "order_id": order.order_id
+                            "order_id": oid
                         })
                     );
                     self.logger.lock().unwrap().log(msg);
 
-                    return Ok(());
+                    return Ok(oid);
                 }
             },
             ExecutionStrategy::IOC => {
@@ -169,13 +188,14 @@ impl OMSEngine {
                 };
                 
                 if fillable == 0 {
+                    let oid = order.order_id.clone().unwrap_or_default();
                     // Reject
                     {
                          let mut orders = self.orders.lock().unwrap();
-                         if let Some(oid) = &order.order_id {
+                         if let Some(oid_ref) = &order.order_id {
                              order.state = OrderState::REJECTED;
                              order.error_message = Some("IOC: No liquidity".into());
-                             orders.insert(oid.clone(), order.clone());
+                             orders.insert(oid_ref.clone(), order.clone());
                          }
                     }
                     
@@ -183,12 +203,12 @@ impl OMSEngine {
                         "ORDER_REJECTED".to_string(),
                         serde_json::json!({
                             "reason": "IOC No Liquidity",
-                            "order_id": order.order_id
+                            "order_id": oid
                         })
                     );
                     self.logger.lock().unwrap().log(msg);
 
-                    return Ok(());
+                    return Ok(oid);
                 }
                 
                 // Modify Quantity
@@ -228,8 +248,7 @@ impl OMSEngine {
              }
         }
         
-        let success = self.adapter.place_order(&order)
-            .map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))?;
+        let success = self.adapter.place_order(&order)?;
         
         if !success {
              let mut orders = self.orders.lock().unwrap();
@@ -240,22 +259,25 @@ impl OMSEngine {
              }
         }
 
-        Ok(())
+        Ok(order.order_id.unwrap_or_default())
     }
 
     pub fn cancel_order(&self, _py: Python, order_id: String) -> PyResult<()> {
+        self.cancel_order_internal(order_id).map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))
+    }
+
+    pub fn cancel_order_internal(&self, order_id: String) -> anyhow::Result<()> {
         let mut orders = self.orders.lock().unwrap();
         if let Some(order) = orders.get_mut(&order_id) {
             order.update_state(OrderState::PENDING_CANCEL, None);
         } else {
-             return Err(pyo3::exceptions::PyValueError::new_err("Order not found"));
+             return Err(anyhow::anyhow!("Order not found"));
         }
         // Release lock before calling adapter to avoid potential deadlock? 
         // Adapter call might be slow.
         drop(orders);
         
-        let success = self.adapter.cancel_order(&order_id)
-            .map_err(|e| pyo3::exceptions::PyRuntimeError::new_err(e.to_string()))?;
+        let success = self.adapter.cancel_order(&order_id)?;
             
         let msg = Message::new(
             "ORDER_CANCEL_REQ".to_string(),

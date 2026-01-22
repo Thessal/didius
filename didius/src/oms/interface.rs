@@ -73,8 +73,8 @@ impl Interface {
     }
 
     fn place_order(&self, py: Python, order: Order) -> PyResult<String> {
-        self.engine.send_order(py, order.clone())?;
-        Ok(order.order_id.unwrap_or_default())
+        let order_id = self.engine.send_order(py, order.clone())?;
+        Ok(order_id)
     }
     
     fn cancel_order(&self, py: Python, order_id: String) -> PyResult<()> {

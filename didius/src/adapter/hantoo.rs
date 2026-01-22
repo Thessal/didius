@@ -23,6 +23,14 @@ use rust_decimal::Decimal;
 use std::str::FromStr;
 use crate::oms::order_book::{OrderBookSnapshot, PriceLevel};
 
+use aes::Aes256;
+use cbc::Decryptor;
+use block_padding::Pkcs7;
+use base64::{Engine as _, engine::general_purpose::STANDARD as BASE64};
+use cbc::cipher::{BlockDecryptMut, KeyIvInit};
+
+type Aes256CbcDec = Decryptor<Aes256>;
+
 #[derive(Debug, Deserialize, Clone)]
 pub struct HantooConfig {
     pub my_app: String,
@@ -60,6 +68,10 @@ pub struct HantooAdapter {
     subscribed_symbols: Mutex<Vec<String>>,
     // Debug flag for WS logging
     debug_ws: Arc<AtomicBool>,
+    
+    // Encryption
+    ws_aes_iv: Arc<Mutex<Option<Vec<u8>>>>,
+    ws_aes_key: Arc<Mutex<Option<Vec<u8>>>>,
 }
 
 #[derive(Debug, Clone)]
@@ -88,6 +100,9 @@ impl HantooAdapter {
             sender: Mutex::new(None),
             subscribed_symbols: Mutex::new(Vec::new()),
             debug_ws: Arc::new(AtomicBool::new(false)),
+            
+            ws_aes_iv: Arc::new(Mutex::new(None)),
+            ws_aes_key: Arc::new(Mutex::new(None)),
         };
 
         Ok(adapter)
@@ -276,6 +291,9 @@ impl HantooAdapter {
         let debug_ws = self.debug_ws.clone();
         let order_map_clone = self.order_map.clone();
         
+        let aes_iv = self.ws_aes_iv.clone();
+        let aes_key = self.ws_aes_key.clone();
+        
         let handle = thread::spawn(move || {
             let full_url = format!("{}/tryitout/H0STCNT0", ws_url_str); // Typical suffix
             let url = Url::parse(&full_url).expect("Invalid WS URL");
@@ -332,11 +350,29 @@ impl HantooAdapter {
                                             continue;
                                         }
                                         
+                                        // Check for Subscription Response with IV/Key
+                                        if text.contains("SUBSCRIBE SUCCESS") && text.contains("iv") {
+                                            if let Ok(val) = serde_json::from_str::<Value>(&text) {
+                                                if let Some(output) = val.get("body").and_then(|b| b.get("output")) {
+                                                    let iv_str = output["iv"].as_str().unwrap_or("");
+                                                    let key_str = output["key"].as_str().unwrap_or("");
+                                                    if !iv_str.is_empty() && !key_str.is_empty() {
+                                                        info!("Received Encryption Keys: IV={}, Key={}", iv_str, key_str);
+                                                        *aes_iv.lock().unwrap() = Some(iv_str.as_bytes().to_vec());
+                                                        *aes_key.lock().unwrap() = Some(key_str.as_bytes().to_vec());
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
                                         if let Some(first) = text.chars().next() {
                                             if first == '0' || first == '1' { // Data
                                                 if let Some(s) = &sender {
-                                                    // Helper to parse and send
-                                                    if let Some(msg) = Self::parse_ws_message(&text, &order_map_clone) {
+                                                    // Pass keys to parse
+                                                    let iv = aes_iv.lock().unwrap().clone();
+                                                    let key = aes_key.lock().unwrap().clone();
+                                                    
+                                                    if let Some(msg) = Self::parse_ws_message(&text, &order_map_clone, iv, key) {
                                                         let _ = s.send(msg);
                                                     }
                                                 }
@@ -364,14 +400,50 @@ impl HantooAdapter {
         Ok(())
     }
     
-    fn parse_ws_message(text: &str, order_map: &Mutex<HashMap<String, HantooOrderInfo>>) -> Option<IncomingMessage> {
+    fn parse_ws_message(text: &str, order_map: &Mutex<HashMap<String, HantooOrderInfo>>, iv_opt: Option<Vec<u8>>, key_opt: Option<Vec<u8>>) -> Option<IncomingMessage> {
         let parts: Vec<&str> = text.split('|').collect();
         if parts.len() < 4 { return None; }
         
         let tr_id = parts[1];
         let symbol = parts[2];
         let data_part = parts[3..].join("|"); 
-        let fields: Vec<&str> = data_part.split('^').collect();
+        
+        // Decryption Logic for H0STCNI0/9
+        let final_data = if (tr_id == "H0STCNI0" || tr_id == "H0STCNI9") {
+             // Check if it looks encrypted (Base64 is alphanumeric + +/=)
+             // And if we have keys
+             if let (Some(iv), Some(key)) = (iv_opt, key_opt) {
+                 // Try to decode base64
+                 if let Ok(mut ciphertext) = BASE64.decode(&data_part) {
+                     // Decrypt
+                     let decryptor = Aes256CbcDec::new_from_slices(&key, &iv).ok()?;
+                     // We need a buffer copy because decrypt works in place usually or writes to out
+                     // Using decrypt_padded_mut
+                     if let Ok(plaintext_slice) = decryptor.decrypt_padded_mut::<Pkcs7>(&mut ciphertext) {
+                         if let Ok(s) = String::from_utf8(plaintext_slice.to_vec()) {
+                              // success
+                              s
+                         } else {
+                             data_part
+                         }
+                     } else {
+                         data_part 
+                     }
+                 } else {
+                     data_part
+                 }
+             } else {
+                 data_part
+             }
+        } else {
+            data_part
+        };
+
+        if tr_id == "H0STCNI0" || tr_id == "H0STCNI9" {
+            // Decrypted successfully
+        }
+
+        let fields: Vec<&str> = final_data.split('^').collect();
         
         match tr_id {
             "H0STCNT0" | "H0SCCNT0" => { // Trade
@@ -422,11 +494,15 @@ impl HantooAdapter {
                      
                      // Find Client Order ID
                      let map = order_map.lock().unwrap();
-                     if let Some((client_id, _)) = map.iter().find(|(_, info)| info.order_no == order_no) {
+                     if let Some((client_id, info)) = map.iter().find(|(_, info)| info.order_no == order_no) {
+                          info!("Hantoo Parse: Found Order Map for OrderNo: {} -> ClientID: {}", order_no, client_id);
+                          info!("Hantoo Parse: fields[9](qty)={}, fields[10](price)={}, cntg_yn={}, rfus_yn={}", fields[9], fields[10], cntg_yn, fields[12]);
+
                           if cntg_yn == "2" { // Execution
                                let fill_qty = fields[9].parse::<i64>().unwrap_or(0);
                                let fill_price = Decimal::from_str(fields[10]).unwrap_or_default();
                                
+                               info!("Hantoo Parse: Execution for {}, qty={}, price={}", client_id, fill_qty, fill_price);
                                return Some(IncomingMessage::Execution {
                                    order_id: client_id.clone(),
                                    fill_qty,
@@ -444,6 +520,7 @@ impl HantooAdapter {
                                    OrderState::NEW 
                                };
                                
+                               info!("Hantoo Parse: Update for {}, state={:?}", client_id, state);
                                return Some(IncomingMessage::OrderUpdate {
                                    order_id: client_id.clone(),
                                    state,
@@ -453,8 +530,12 @@ impl HantooAdapter {
                           }
                      } else {
                          // Unknown order (maybe manual order not in OMS). Log/Ignore?
-                         warn!("Received notice for unknown order_no: {}", order_no);
+                         // Print map keys for debugging
+                         let keys: Vec<_> = map.values().map(|v| v.order_no.clone()).collect();
+                         warn!("Received notice for unknown order_no: {}. Known OrderNos: {:?}", order_no, keys);
                      }
+                 } else {
+                     warn!("H0STCNI0 received but insufficient fields: len={}", fields.len());
                  }
              },
             "H0UNASP0" => { // Asking Price (Total - 10 levels)

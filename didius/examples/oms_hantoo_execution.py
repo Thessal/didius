@@ -22,6 +22,7 @@ def main():
     
     try:
         adapter = didius.HantooAdapter(config_path)
+        adapter.set_debug_mode(True)
     except Exception as e:
         print(f"Failed to create adapter: {e}")
         # Try finding the class
@@ -33,8 +34,9 @@ def main():
 
     print("Starting OMS...")
     # Checking account_id is optional but good for internal init
-    # We can fetch account from adapter config or just start
     oms.start()
+    print("Waiting 3s for WS connection...")
+    time.sleep(3)
     
     print("\n--- 1. Status Check ---")
     status = oms.get_oms_status()
@@ -56,16 +58,16 @@ def main():
         print(f"Updated Internal Balance: {oms.get_balance()}")
     except Exception as e:
         print(f"Balance Check Failed: {e}")
-
+            
     print("\n--- 4. Place Order ---")
     # Symbol: Samsung Electronics (005930)
-    symbol = "005930" 
+    symbol = "001360" 
     
     # Price: We need a reasonable price or string.
     # Assuming "50000" KRW approx.
     # If this is Real/Paper? HantooAdapter usually requires valid grid.
     # We will use a low price to avoid fill if possible, or limit.
-    price = "50000" 
+    price = "1400" 
     qty = 1
     
     order = didius.Order(

@@ -20,6 +20,10 @@ thiserror = "1.0"
 log = "0.4"
 env_logger = "0.10"
 rust_decimal = { version = "1.40.0", features = ["macros", "serde"] }
+aes = "0.8"
+cbc = "0.1"
+block-padding = "0.3"
+base64 = "0.22"
 reqwest = { version = "0.11", default-features = false, features = ["blocking", "json", "rustls-tls"] }
 serde_yaml = "0.9"
 tungstenite = { version = "0.20", features = ["rustls-tls-native-roots"] }
