@@ -1,5 +1,9 @@
 let
-  pkgs = import <nixpkgs> { };
+  pkgs = import <nixpkgs> {
+    overlays = [
+      (import (fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))
+    ];
+  };
   python = import ../nixfiles/python.nix { pkgs=pkgs; };
   pythonEnv = import ../nixfiles/uv.nix { pkgs=pkgs; python=python; projectRoot=(./.); };
 
@@ -17,14 +21,26 @@ let
     buildInputs = [ pkgs.openssl python.pkgs.butterflow python.pkgs.morpho ];
   };
 
+  rustVersion = "1.91.1";
+  myRust = pkgs.rust-bin.stable.${rustVersion}.default.override {
+    extensions = [
+      "rust-src" # for rust-analyzer
+      "rust-analyzer"
+    ];
+  };
+  myRust = pkgs.rust-bin.stable.latest.default.override {
+    extensions = [ "rust-src" "rust-analyzer" ];
+  };
+
 in pkgs.mkShell {
   packages = [
     pythonEnv
     didiusPackage
-    pkgs.cargo # for dev 
-    pkgs.rustc # for dev
-    pkgs.rust-analyzer # for dev
-  ] ++ (with python.pkgs; [
+    myRust
+  ] ++ (with pkgs; [
+    cargo rustc gcc rustfmt clippy rust-analyzer pkg-config
+    # rustc 1.91.1 (ed61e7d7e 2025-11-07) (built from a source tarball)
+  ]) ++ (with python.pkgs; [
     matplotlib                                                                
     pandas                                                                    
     numpy                                                                     
@@ -35,4 +51,5 @@ in pkgs.mkShell {
     #mplfinance
     pyyaml
   ]);
+  RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
 }

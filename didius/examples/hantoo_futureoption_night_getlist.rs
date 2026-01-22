@@ -1,11 +1,11 @@
-use didius::adapter::hantoo_futureoption_night::HantooNightAdapter;
 use anyhow::Result;
+use didius::adapter::hantoo_ngt_futopt::HantooNightAdapter;
 
 fn main() -> Result<()> {
     // 1. Initialize Adapter
     // Using the same config as other Hantoo examples
     let adapter = HantooNightAdapter::new("auth/hantoo.yaml")?;
-    
+
     // 2. Get Night Future List
     println!("--- Fetching Night Future List ---");
     match adapter.get_night_future_list() {
@@ -17,7 +17,7 @@ fn main() -> Result<()> {
                     println!("{:?}", item);
                 }
             }
-        },
+        }
         Err(e) => eprintln!("Error fetching future list: {}", e),
     }
 
@@ -32,7 +32,7 @@ fn main() -> Result<()> {
                     println!("{:?}", item);
                 }
             }
-        },
+        }
         Err(e) => eprintln!("Error fetching option list: {}", e),
     }
 
