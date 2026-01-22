@@ -34,6 +34,11 @@ def main():
 
     print("Starting OMS...")
     # Checking account_id is optional but good for internal init
+    
+    # CRITICAL: Start Gateway Listener to receive messages from Adapter
+    # This sets up the channel and spawns the listener thread in the Engine.
+    oms.start_gateway(adapter)
+    
     oms.start()
     print("Waiting 3s for WS connection...")
     time.sleep(3)
@@ -80,21 +85,27 @@ def main():
     
     print(f"Sending Order: {order}")
     try:
-        order_id = oms.place_order(order)
+        # Check if method is send_order or place_order based on engine.rs
+        # engine.rs has `send_order`. previous code had `place_order`.
+        # We will use `send_order` as it aligns with Rust source.
+        if hasattr(oms, "send_order"):
+             order_id = oms.send_order(order)
+        else:
+             order_id = oms.place_order(order)
         print(f"Order Sent. ID: {order_id}")
     except Exception as e:
         print(f"Place Order Failed: {e}")
         return
 
     print("\n--- 5. Monitoring Order ---")
-    for i in range(5):
+    for i in range(10):
         time.sleep(1)
         orders = oms.get_orders()
         if order_id in orders:
             o = orders[order_id]
             print(f"[{i}] Order State: {o.state}")
-            if o.state == didius.OrderState.NEW:
-                print("Order is Active on Exchange!")
+            if o.state == didius.OrderState.NEW or o.state == didius.OrderState.FILLED:
+                print("Order Active/Filled on Exchange!")
                 break
             elif o.state == didius.OrderState.REJECTED:
                 print(f"Order Rejected: {o.error_message}")
