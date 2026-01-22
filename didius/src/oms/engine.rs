@@ -214,6 +214,12 @@ impl OMSEngine {
                 // Modify Quantity
                 order.quantity = fillable;
             },
+            ExecutionStrategy::CHAIN => {
+                order.state = OrderState::CREATED;
+                let mut orders = self.orders.lock().unwrap();
+                let oid = order.order_id.clone().unwrap_or_default();
+                orders.insert(oid.clone(), order.clone());
+            }
             ExecutionStrategy::STOP_LOSS | ExecutionStrategy::TAKE_PROFIT => {
                 // Register Strategy
                 // Strategy needs to handle Decimal
@@ -413,8 +419,7 @@ impl OMSEngine {
             self.reconcile_orderbook(&symbol)?;
             return Ok(()); // Reconcile updates book
         }
-        
-        // triggered orders logic disabled temporarily
+        // TODO : triggered orders logic
         
         Ok(())
     }

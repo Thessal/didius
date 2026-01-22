@@ -47,6 +47,7 @@ pub enum ExecutionStrategy {
     TWAP,
     STOP_LOSS,
     TAKE_PROFIT,
+    CHAIN,
     NONE,
 }
 

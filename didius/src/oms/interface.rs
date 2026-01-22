@@ -35,7 +35,7 @@ impl Interface {
         let config = LoggerConfig {
             destination,
             flush_interval_seconds: 60,
-            batch_size: 1024,
+            batch_size: 8192,
         };
         let logger = Arc::new(Mutex::new(Logger::new(config)));
         logger.lock().unwrap().start();
