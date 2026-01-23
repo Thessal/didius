@@ -1,11 +1,14 @@
 use crate::oms::order::Order;
 use crate::oms::order_book::OrderBook;
 use anyhow::Result;
+use rust_decimal::Decimal;
 
 #[derive(Debug, Clone)]
 pub enum StrategyAction {
     PlaceOrder(Order),
     CancelOrder(String), // order_id
+    ModifyPrice(String, Option<Decimal>), // order_id, new_price
+    RemoveOrder(String), // order_id
     None,
 }
 
@@ -20,4 +23,14 @@ pub trait Strategy {
     fn on_timer(&mut self) -> Result<StrategyAction> {
         Ok(StrategyAction::None)
     }
+
+    fn is_completed(&self) -> bool {
+        false
+    }
+
+    fn get_origin_order_id(&self) -> Option<String> {
+        None
+    }
+    
+    fn update_order_id(&mut self, _new_id: String) {}
 }

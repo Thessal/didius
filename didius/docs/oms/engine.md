@@ -42,3 +42,23 @@ The Engine expects an `adapter` object from Python that implements:
 - `get_order_book_snapshot(symbol)` -> Returns `OrderBook`
 - `get_account_snapshot(account_id)` -> Returns `AccountState`
 - `place_order(order)` -> Returns `bool`
+
+
+# OMS Engine Internal Logic
+
+## Order Updates: Trade vs Status
+
+The OMS Engine processes two distinct types of updates regarding orders: `on_trade_update` and `on_order_status_update`.
+
+### `on_trade_update`
+This method is triggered by **Execution Reports** (Fills/Partial Fills) from the adapter.
+
+*   **Quantitative Updates**: It handles the math for `filled_quantity`, calculation of `average_fill_price`, and updating the high-level `state` (e.g., to `PARTIALLY_FILLED` or `FILLED`).
+*   **Account Impact**: It directly calls `self.account.on_execution(...)` to update the user's positions and realized PnL.
+*   **Strategy Notification**: It notifies active strategies about the update so they can react (e.g., a Stop Strategy removing itself upon fill).
+
+### `on_order_status_update`
+This method is triggered by **Order State Changes** (Acknowledgements, Cancellations, Rejections) that are *not* necessarily associated with a trade/fill.
+
+*   **Status Updates**: It updates the `OrderState` enum (e.g., `NEW`, `CANCELED`, `REJECTED`) and any associated messages.
+*   **Strategy Notification**: It also notifies active strategies.

@@ -11,13 +11,14 @@ pub struct StopStrategy {
     pub original_side: OrderSide,
     pub original_qty: i64,      // Total Qty
     
-    pub trigger_side: OrderSide, // Logic: BUY means monitor Bid >= Trigger. SELL means monitor Ask <= Trigger.
+    // Trigger logic derived from original_side
+    // BUY: Monitor Bid >= Trigger
+    // SELL: Monitor Ask <= Trigger
     pub trigger_price: Decimal,
     pub trigger_timestamp: f64,
     
     pub stop_limit_price: Option<Decimal>, // New Order Price (or None for Market)
     
-    pub filled_qty: i64,        // Track fills for original order
     pub triggered: bool,
     pub finished: bool,
 }
@@ -28,7 +29,7 @@ impl StopStrategy {
         original_symbol: String,
         original_side: OrderSide,
         original_qty: i64,
-        trigger_side: OrderSide, // TODO: trigger_side = order_side
+        _trigger_side: OrderSide, // Deprecated/Unused param kept for signature compatibility if needed, but we can remove it if callers update
         trigger_price: Decimal, 
         trigger_timestamp: f64, 
         stop_limit_price: Option<Decimal>
@@ -38,11 +39,9 @@ impl StopStrategy {
             original_symbol,
             original_side,
             original_qty,
-            trigger_side,
             trigger_price,
             trigger_timestamp,
             stop_limit_price,
-            filled_qty: 0,
             triggered: false,
             finished: false,
         }
@@ -57,15 +56,15 @@ impl StopStrategy {
          }
          
          if let Some(b) = book {
-              match self.trigger_side {
+              match self.original_side {
                  OrderSide::SELL => {
-                     // Trigger if Ask <= Price (Price dropped to trigger)
+                     // STOP SELL: Trigger if Best Ask <= Trigger Price
                      if let Some((best_ask, _)) = b.get_best_ask() {
                          if best_ask <= self.trigger_price { return true; }
                      }
                  },
                  OrderSide::BUY => {
-                     // Trigger if Bid >= Price (Price rose to trigger)
+                     // STOP BUY: Trigger if Best Bid >= Trigger Price
                      if let Some((best_bid, _)) = b.get_best_bid() {
                          if best_bid >= self.trigger_price { return true; }
                      }
@@ -85,14 +84,14 @@ impl Strategy for StopStrategy {
         
         if self.check_trigger(Some(book)) {
             self.triggered = true;
-            return Ok(StrategyAction::CancelOrder(self.original_order_id.clone()));
+            // Return ModifyPrice action
+            return Ok(StrategyAction::ModifyPrice(self.original_order_id.clone(), self.stop_limit_price));
         }
         
         Ok(StrategyAction::None)
     }
     
     fn on_trade_update(&mut self, _price: f64) -> Result<StrategyAction> {
-        // TODO: last trade price trigger
         Ok(StrategyAction::None)
     }
     
@@ -103,7 +102,7 @@ impl Strategy for StopStrategy {
         
         if self.check_trigger(None) {
             self.triggered = true;
-            return Ok(StrategyAction::CancelOrder(self.original_order_id.clone()));
+            return Ok(StrategyAction::ModifyPrice(self.original_order_id.clone(), self.stop_limit_price));
         }
         
         Ok(StrategyAction::None)
@@ -119,30 +118,29 @@ impl Strategy for StopStrategy {
         // Check for FILLED (Finished naturally)
         if order.state == OrderState::FILLED {
             self.finished = true;
-            return Ok(StrategyAction::None);
+            return Ok(StrategyAction::RemoveOrder(self.original_order_id.clone()));
         }
         
-        if order.state == OrderState::CANCELED && self.triggered {
-            let filled = order.filled_quantity;
-            let remaining = self.original_qty - filled;
-            
-            if remaining <= 0 {
-                return Ok(StrategyAction::None);
-            }
-            
-            let o = Order::new(
-                self.original_symbol.clone(),
-                self.original_side.clone(),
-                OrderType::LIMIT,
-                remaining,
-                self.stop_limit_price.as_ref().map(|d| d.to_string()),
-                Some(ExecutionStrategy::NONE),
-                None, None
-            );
-            
-            return Ok(StrategyAction::PlaceOrder(o));
+        // If canceled externally or rejected?
+        if order.state == OrderState::CANCELED || order.state == OrderState::REJECTED {
+             eprintln!("StopStrategy Warning: Order {} Canceled/Rejected. Removing from OMS.", self.original_order_id);
+             self.finished = true;
+             return Ok(StrategyAction::RemoveOrder(self.original_order_id.clone()));
         }
 
         Ok(StrategyAction::None)
+    }
+
+
+    fn is_completed(&self) -> bool {
+        self.finished
+    }
+
+    fn get_origin_order_id(&self) -> Option<String> {
+        Some(self.original_order_id.clone())
+    }
+    
+    fn update_order_id(&mut self, new_id: String) {
+        self.original_order_id = new_id;
     }
 }

@@ -723,6 +723,78 @@ impl Adapter for HantooNightAdapter {
         Ok(acct)
     }
 
+    fn modify_order(&self, order_id: &str, price: Option<Decimal>, qty: Option<i64>) -> Result<bool> {
+        let token = self.inner.get_token()?;
+        let client = self.inner.client();
+        let config = self.inner.config();
+        
+        let (org_no, order_no) = {
+            let map = self.order_map.lock().unwrap();
+            match map.get(order_id) {
+                Some(i) => (i.org_no.clone(), i.order_no.clone()),
+                None => return Err(anyhow!("Order not found in map")),
+            }
+        };
 
+        let url = format!("{}{}", config.prod, URL_CANCEL); // Same URL as Cancel for Night?
+        
+        // Price/Qty logic
+        let price_str = price.map(|p| p.to_string()).unwrap_or("0".to_string());
+        let qty_str = qty.map(|q| q.to_string()).unwrap_or("0".to_string());
+        let qty_all_ord_yn = if qty.unwrap_or(0) == 0 { "Y" } else { "N" };
+        
+        let ord_dvsn = if price.is_some() { "00" } else { "01" }; // "00" is usually Limit
+
+        // Modify Body for Night Future
+        let body = serde_json::json!({
+            "CANO": config.my_acct_future.as_deref().unwrap_or(""), 
+            "ACNT_PRDT_CD": config.my_prod_future.as_deref().unwrap_or("01"),
+            "KRX_FWDG_ORD_ORGNO": org_no,
+            "ORGN_ODNO": order_no,
+            "ORD_DVSN": ord_dvsn, 
+            "RVSE_CNCL_DVSN_CD": "01", // Modify
+            "ORD_QTY": qty_str,
+            "ORD_UNPR": price_str,
+            "QTY_ALL_ORD_YN": qty_all_ord_yn,
+            "EXCG_ID_DVSN_CD": "KRX" 
+        });
+
+        let resp = client.post(&url)
+            .header("content-type", "application/json")
+            .header("authorization", format!("Bearer {}", token))
+            .header("appkey", &config.my_app)
+            .header("appsecret", &config.my_sec)
+            .header("tr_id", NIGHT_CANCEL_TR_ID) 
+            .header("custtype", "P")
+            .json(&body)
+            .send()?;
+            
+        if resp.status().is_success() {
+             info!("Night Modify Success for {}", order_id);
+             
+             let text = resp.text().unwrap_or_default();
+             if let Ok(data) = serde_json::from_str::<Value>(&text) {
+                 if let Some(output) = data.get("output") {
+                     let new_order_no = output["ODNO"].as_str().unwrap_or("");
+                     let new_org_no = output["KRX_FWDG_ORD_ORGNO"].as_str().unwrap_or("");
+                     if !new_order_no.is_empty() {
+                         let mut map = self.order_map.lock().unwrap();
+                         if let Some(info) = map.get_mut(order_id) {
+                             info.order_no = new_order_no.to_string();
+                             if !new_org_no.is_empty() {
+                                 info.org_no = new_org_no.to_string();
+                             }
+                         }
+                     }
+                 }
+             }
+             
+             Ok(true)
+        } else {
+             let t = resp.text().unwrap_or_default();
+             error!("Night Modify Failed: {}", t);
+             Ok(false)
+        }
+    }
 }
 

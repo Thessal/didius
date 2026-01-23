@@ -4,7 +4,7 @@ use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
-use crate::oms::order::{Order, OrderState, ExecutionStrategy, OrderSide};
+use crate::oms::order::{Order, OrderState, ExecutionStrategy, OrderSide, OrderType};
 use crate::oms::order_book::OrderBook;
 use crate::oms::account::AccountState;
 use crate::adapter::Adapter;
@@ -96,6 +96,10 @@ impl OMSEngine {
     
     pub fn check_strategies(&self) {
         let mut strats = self.active_strategies.lock().unwrap();
+        
+        // Remove completed strategies
+        strats.retain(|s| !s.is_completed());
+        
         let mut actions = Vec::new();
         
         for strat in strats.iter_mut() {
@@ -111,9 +115,50 @@ impl OMSEngine {
              match action {
                   StrategyAction::PlaceOrder(o) => { let _ = self.send_order_internal(o); },
                   StrategyAction::CancelOrder(oid) => { let _ = self.cancel_order_internal(oid); },
+                  StrategyAction::ModifyPrice(oid, price) => { let _ = self.modify_order_internal(oid, price); },
+                  StrategyAction::RemoveOrder(oid) => { let _ = self.remove_order_internal(oid); },
                   StrategyAction::None => {}
              }
         }
+    }
+    
+    pub fn get_active_strategy_order_ids(&self) -> Vec<String> {
+        let strats = self.active_strategies.lock().unwrap();
+        strats.iter().filter_map(|s| s.get_origin_order_id()).collect()
+    }
+    
+    pub fn remove_order_internal(&self, order_id: String) -> anyhow::Result<()> {
+        let mut orders = self.orders.lock().unwrap();
+        orders.remove(&order_id);
+        Ok(())
+    }
+
+    pub fn modify_order_internal(&self, order_id: String, price: Option<Decimal>) -> anyhow::Result<()> {
+        let mut orders = self.orders.lock().unwrap();
+        let (qty, symbol) = if let Some(order) = orders.get(&order_id) {
+             let remaining = order.quantity - order.filled_quantity; 
+             if remaining <= 0 { return Ok(()); }
+             (remaining, order.symbol.clone())
+        } else {
+             return Err(anyhow::anyhow!("Order not found"));
+        };
+        // Update local order state? 
+        if let Some(order) = orders.get_mut(&order_id) {
+            order.price = price;
+            if price.is_none() { order.order_type = OrderType::MARKET; }
+            // If price is Some, keep it as LIMIT (or update to LIMIT if it was MARKET?)
+            // Usually Stop Strategy is Limit -> Market or Limit -> Different Limit.
+            // If price is Some, it is Limit.
+            else { order.order_type = OrderType::LIMIT; }
+        }
+        drop(orders);
+        
+        // Ensure book exists? modify_order doesn't need book.
+        
+        self.adapter.modify_order(&order_id, price, Some(qty))
+            .map_err(|e| anyhow::anyhow!(e.to_string()))?;
+            
+        Ok(())
     }
 
     pub fn stop(&self, _py: Python) -> PyResult<()> {
@@ -166,6 +211,8 @@ impl OMSEngine {
             order.order_id = Some(Uuid::new_v4().to_string());
         }
         
+        let order_id_clone = order.order_id.clone();
+        
         // Strategy Handling
         match order.strategy {
             ExecutionStrategy::STOP => {
@@ -210,6 +257,33 @@ impl OMSEngine {
                 let oid = order.order_id.clone().unwrap_or_default();
                 orders.insert(oid.clone(), order.clone());
             },
+            ExecutionStrategy::LIMIT => {
+                order.state = OrderState::CREATED;
+                
+                // For Limit Strategy, we just need the limit price from the order itself or params?
+                // The order.price IS the limit price usually for a standard limit order.
+                // But if this is a strategy triggered limit order, maybe it's different?
+                // Let's assume order.price is the target price.
+                
+                let limit_price = order.price.unwrap_or(Decimal::ZERO);
+                
+                let strat = crate::strategy::limit::LimitStrategy::new(
+                    order.order_id.clone().unwrap(),
+                    order.symbol.clone(),
+                    order.side.clone(),
+                    order.quantity,
+                    limit_price
+                );
+                
+                {
+                    let mut strats = self.active_strategies.lock().unwrap();
+                    strats.push(Box::new(strat));
+                }
+                
+                let mut orders = self.orders.lock().unwrap();
+                let oid = order.order_id.clone().unwrap_or_default();
+                orders.insert(oid.clone(), order.clone());
+            },
             _ => {}
         }
 
@@ -231,8 +305,14 @@ impl OMSEngine {
                  }
              }
         }
+        
+        if !success {
+             if let Some(oid) = &order_id_clone {
+                 self.on_order_status_update(oid, OrderState::REJECTED, Some("Adapter Placement Failed".into()));
+             }
+        }
 
-        Ok(order.order_id.unwrap_or_default())
+        Ok(order_id_clone.unwrap_or_default())
     }
 
     pub fn cancel_order(&self, _py: Python, order_id: String) -> PyResult<()> {
@@ -293,7 +373,38 @@ impl OMSEngine {
                  let symbol = order.symbol.clone();
                  let side = match order.side { OrderSide::BUY => "BUY", OrderSide::SELL => "SELL" };
                  
-                 acct.on_execution(symbol, side.to_string(), fill_qty, fill_price, Decimal::ZERO); 
+                  acct.on_execution(symbol, side.to_string(), fill_qty, fill_price, Decimal::ZERO); 
+             }
+             
+             // Notify Strategies
+             let order_clone = order.clone();
+             drop(orders); // Drop lock before notifying strategies
+             
+             self.notify_strategies_and_process_actions(&order_clone);
+
+             return;
+        }
+    }
+
+    fn notify_strategies_and_process_actions(&self, order: &Order) {
+        let mut strats = self.active_strategies.lock().unwrap();
+        let mut actions = Vec::new();
+        for strat in strats.iter_mut() {
+             if let Ok(action) = strat.on_order_status_update(order) {
+                 if !matches!(action, StrategyAction::None) {
+                     actions.push(action);
+                 }
+             }
+        }
+        drop(strats);
+        
+        for action in actions {
+            match action {
+                  StrategyAction::PlaceOrder(o) => { let _ = self.send_order_internal(o); },
+                  StrategyAction::CancelOrder(oid) => { let _ = self.cancel_order_internal(oid); },
+                  StrategyAction::ModifyPrice(oid, price) => { let _ = self.modify_order_internal(oid, price); },
+                  StrategyAction::RemoveOrder(oid) => { let _ = self.remove_order_internal(oid); },
+                  StrategyAction::None => {}
              }
         }
     }
@@ -309,29 +420,7 @@ impl OMSEngine {
         drop(orders);
         
         if let Some(order) = order_ref {
-            // Notify Strategies
-            let mut strats = self.active_strategies.lock().unwrap();
-            let mut actions = Vec::new();
-             for strat in strats.iter_mut() {
-                 if let Ok(action) = strat.on_order_status_update(&order) { // Pass &Order
-                     if !matches!(action, StrategyAction::None) {
-                         actions.push(action);
-                     }
-                 }
-             }
-             drop(strats);
-             
-              for action in actions {
-                  match action {
-                      StrategyAction::PlaceOrder(o) => {
-                          let _ = self.send_order_internal(o);
-                      },
-                      StrategyAction::CancelOrder(oid) => {
-                          let _ = self.cancel_order_internal(oid);
-                      },
-                      StrategyAction::None => {}
-                  }
-              }
+            self.notify_strategies_and_process_actions(&order);
         }
     }
 
@@ -397,6 +486,12 @@ impl OMSEngine {
                     },
                     StrategyAction::CancelOrder(oid) => {
                          let _ = self.cancel_order_internal(oid);
+                    },
+                    StrategyAction::ModifyPrice(oid, price) => {
+                         let _ = self.modify_order_internal(oid, price);
+                    },
+                    StrategyAction::RemoveOrder(oid) => {
+                         let _ = self.remove_order_internal(oid);
                     },
                     StrategyAction::None => {}
                 }

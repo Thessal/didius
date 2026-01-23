@@ -4,6 +4,7 @@ use crate::oms::account::{AccountState};
 use crate::adapter::Adapter;
 use anyhow::Result;
 use std::sync::Mutex;
+use rust_decimal::Decimal;
 // use std::collections::HashMap;
 
 pub struct MockAdapter {
@@ -53,5 +54,9 @@ impl Adapter for MockAdapter {
     fn get_account_snapshot(&self, _account_id: &str) -> Result<AccountState> {
         // Return cloned state
         Ok(self.account_state.lock().unwrap().clone())
+    }
+
+    fn modify_order(&self, _order_id: &str, _price: Option<Decimal>, _qty: Option<i64>) -> Result<bool> {
+        Ok(true) //TODO: what if the user want to modify whole remaining orders? Does the API support partial modify?
     }
 }

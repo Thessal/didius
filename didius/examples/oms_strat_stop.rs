@@ -11,14 +11,13 @@ use rust_decimal::Decimal;
 use std::collections::HashMap;
 use std::io::{self, Write};
 use std::str::FromStr;
-use std::sync::mpsc;
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
 use chrono::Local;
 
 fn main() -> Result<()> {
-    println!("Initializing HantooAdapter (Stock)...");
+    println!("Initializing HantooAdapter (Stock) for Stop Strategy Test...");
     // Ensure auth/hantoo.yaml exists or adjust path
     let adapter = Arc::new(HantooAdapter::new("auth/hantoo.yaml")?);
 
@@ -32,11 +31,10 @@ fn main() -> Result<()> {
     logger.lock().unwrap().start();
 
     // Margin req can be 1.0 for cash
-    let engine = OMSEngine::new(adapter.clone(), 1.0, logger.clone());
+    let engine = OMSEngine::new(adapter.clone(), logger.clone());
 
-    let (tx, rx) = mpsc::channel();
+    let (tx, rx) = std::sync::mpsc::channel();
     adapter.set_monitor(tx);
-    adapter.set_debug_mode(true);
     engine.start_gateway_listener(rx).unwrap();
     
     // User Input: Symbol
@@ -61,6 +59,7 @@ fn main() -> Result<()> {
 
     adapter.subscribe_market(&[symbol.clone()])?;
     adapter.connect()?;
+    adapter.set_debug_mode(false);
 
     println!("Started. Spawning status printer...");
 
@@ -69,7 +68,6 @@ fn main() -> Result<()> {
     thread::spawn(move || {
         loop {
             thread::sleep(Duration::from_secs(1));
-            // Dump Status
             let orders = engine_print.get_orders();
             let mut summary = String::new();
             summary.push_str(&format!(
@@ -79,10 +77,8 @@ fn main() -> Result<()> {
             for (id, o) in &orders {
                 let strategy = o.strategy.clone();
                 let strat_name = match strategy {
-                   ExecutionStrategy::CHAIN => "CHAIN",
+                   ExecutionStrategy::STOP => "STOP",
                    ExecutionStrategy::NONE => "NONE",
-                   ExecutionStrategy::FOK => "FOK",
-                   ExecutionStrategy::IOC => "IOC",
                    _ => "OTHER"
                 };
                 
@@ -91,6 +87,7 @@ fn main() -> Result<()> {
                     id, o.side, o.quantity, o.price.map(|p| p.to_string()).unwrap_or("MKT".into()), o.state, o.filled_quantity, strat_name
                 ));
             }
+            // Simple Book Display
             if let Some(book) = engine_print.get_order_book(&symbol_print) {
                 if let Some((bp, bq)) = book.get_best_bid() {
                     summary.push_str(&format!("  Book: Bid {} x {}\n", bp, bq));
@@ -110,8 +107,10 @@ fn main() -> Result<()> {
     });
 
     println!("Interactive Mode:");
-    println!("  [b] Buy Trigger (Buy -1tick, Trigger @ Ask, Chain Buy +5tick)");
-    println!("  [s] Sell Trigger (Sell +1tick, Trigger @ Bid, Chain Sell -5tick)");
+    println!("  [b] Stop Buy (Trigger Buy)");
+    println!("      Places Passive Buy (-1 ticks). Triggers if Bid >= Ask+5 ticks, or 60s passes. Modifies to Aggressive Buy. (+10 tickes)");
+    println!("  [s] Stop Sell (Trigger Sell)");
+    println!("      Places Passive Sell (+1 ticks). Triggers if Ask <= Bid-5 ticks, or 60s passes. Modifies to Aggressive Sell. (-10 ticks)");
     println!("  [q] Quit");
 
     loop {
@@ -133,42 +132,42 @@ fn main() -> Result<()> {
                     .and_then(|b| b.get_best_bid().map(|(p, _)| p))
                     .unwrap_or(Decimal::ZERO);
 
-                if best_ask == Decimal::ZERO || best_bid == Decimal::ZERO {
-                    println!("No market data yet.");
+                // Default if no book
+                if best_ask <= Decimal::ZERO || best_bid <= Decimal::ZERO {
+                    println!("No Order Book available. Cannot place relative order.");
                     continue;
                 }
+                let (ref_bid, ref_ask) = (best_bid.min(best_ask), best_bid.max(best_ask));
 
-                // Chain Timeout: 5s
-                let timeout_timestamp = Local::now().timestamp_millis() as f64 / 1000.0 + 5.0;
-                println!("Timeout set to: {}", timeout_timestamp);
+                // Chain Timeout: 60s (Long enough to see trigger logic or force manual trigger via mock if desired)
+                let timeout_timestamp = Local::now().timestamp_millis() as f64 / 1000.0 + 60.0;
+                
+                let mut params = HashMap::new();
+                params.insert("trigger_timestamp".to_string(), timeout_timestamp.to_string());
 
                 if cmd == "b" {
-                    println!("Sending Chain Buy Order...");
+                    println!("Sending Stop Buy Order...");
+                    // 1. Initial Order: Buy Limit @ (Bid - 10 ticks) -> Passive
+                    // 2. Trigger: Price (BestBid) >= (Ask + 5 ticks) -> Breakout Validation? 
+                    //    Or simpler: Trigger if BestBid >= CurrentBid + 1 tick?
+                    //    Let's trigger if Best Bid >= Current Ask (Breakout).
                     
-                    let mut params = HashMap::new();
-                    // Trigger Logic: Time or Price
-                    params.insert("trigger_timestamp".to_string(), timeout_timestamp.to_string());
-                    // Trigger if Best Ask <= price? (unlikely for buy). 
-                    // StopStrategy BUY: Trigger if Bid >= trigger_price. 
-                    // Let's use Time Trigger mainly.
-                    
-                    // Trigger Price for testing (e.g. if Price drops below X? Stop Loss?)
-                    // Stop Buy (Buy Stop): Trigger if Price >= Trigger. Then Buy.
-                    // Here we are placing a Limit Buy (Passive) and want to switch to Aggressive if not filled.
-                    // This is "Chain". refactored to generic Stop.
-                    // trigger_price can be unused if timestamp is set.
-                    
-                    let aggressive_price = best_ask + (tick_size * Decimal::from(5));
+                    let passive_price = ref_bid - tick_size;
+                    let trigger_price = ref_ask + (tick_size * Decimal::from(5)); // Breakout level
+                    let aggressive_price = ref_ask + (tick_size * Decimal::from(10)); // New Price (Deep Limit)
+
+                    println!("  Initial Buy: {}, Trigger: >= {}, New Price: {}", passive_price, trigger_price, aggressive_price);
+
                     params.insert("chained_price".to_string(), aggressive_price.to_string());
-                    params.insert("trigger_side".to_string(), "BUY".to_string());
-                    params.insert("trigger_price".to_string(), best_ask.to_string());
+                    params.insert("trigger_side".to_string(), "BUY".to_string()); // Ignored by logic but used by Engine parser
+                    params.insert("trigger_price".to_string(), trigger_price.to_string());
 
                     let order = Order::new(
                         symbol.clone(),
                         OrderSide::BUY,
                         OrderType::LIMIT,
                         1, 
-                        Some((best_bid - tick_size).to_string()), // Passive
+                        Some(passive_price.to_string()), 
                         Some(ExecutionStrategy::STOP),
                         Some(params),
                         None
@@ -179,22 +178,26 @@ fn main() -> Result<()> {
                         Err(e) => println!("Error sending order: {}", e),
                     }
                 } else if cmd == "s" {
-                     println!("Sending Chain Sell Order...");
+                     println!("Sending Stop Sell Order...");
+                    // 1. Initial Order: Sell Limit @ (Ask + 10 ticks) -> Passive
+                    // 2. Trigger: Price (BestAsk) <= (Bid - 1 tick) -> Breakdown
                     
-                    let mut params = HashMap::new();
-                    params.insert("trigger_timestamp".to_string(), timeout_timestamp.to_string());
+                    let passive_price = ref_ask + tick_size;
+                    let trigger_price = ref_bid - (tick_size * Decimal::from(5));
+                    let aggressive_price = ref_bid - (tick_size * Decimal::from(10));
+
+                    println!("  Initial Sell: {}, Trigger: <= {}, New Price: {}", passive_price, trigger_price, aggressive_price);
                     
-                    let aggressive_price = best_bid - (tick_size * Decimal::from(5));
                     params.insert("chained_price".to_string(), aggressive_price.to_string());
                     params.insert("trigger_side".to_string(), "SELL".to_string());
-                    params.insert("trigger_price".to_string(), best_bid.to_string());
+                    params.insert("trigger_price".to_string(), trigger_price.to_string());
                     
                     let order = Order::new(
                         symbol.clone(),
                         OrderSide::SELL,
                         OrderType::LIMIT,
                         1, 
-                        Some((best_ask + tick_size).to_string()), 
+                        Some(passive_price.to_string()), 
                         Some(ExecutionStrategy::STOP),
                         Some(params),
                         None
@@ -204,8 +207,6 @@ fn main() -> Result<()> {
                         Err(e) => println!("Error sending order: {}", e),
                     }
                 }
-
-
             }
             "q" => break,
             _ => {}

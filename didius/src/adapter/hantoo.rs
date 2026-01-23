@@ -641,6 +641,12 @@ impl Adapter for HantooAdapter {
         if resp.status().is_success() {
              let text = resp.text().unwrap_or_default();
              let data: Value = serde_json::from_str(&text).map_err(|e| anyhow!("Failed to parse response: {}", e))?;
+
+             if data["rt_cd"].as_str().unwrap_or("") != "0" {
+                 let msg = data["msg1"].as_str().unwrap_or("Unknown error");
+                 error!("Order placement API error: {}", msg);
+                 return Ok(false);
+             }
              
              if let Some(output) = data.get("output") {
                  let org_no = output["KRX_FWDG_ORD_ORGNO"].as_str().unwrap_or("").to_string();
@@ -866,5 +872,86 @@ impl Adapter for HantooAdapter {
             }
         }
         Ok(acct)
+    }
+
+    fn modify_order(&self, order_id: &str, price: Option<Decimal>, qty: Option<i64>) -> Result<bool> {
+        let token = self.get_token()?;
+        let url = format!("{}/uapi/domestic-stock/v1/trading/order-rvsecncl", self.config.prod);
+
+        let (org_no, order_no) = {
+            let map = self.order_map.lock().unwrap();
+            match map.get(order_id) {
+                Some(info) => (info.org_no.clone(), info.order_no.clone()),
+                None => {
+                    return Err(anyhow!("Order ID not found in local map: {}", order_id));
+                }
+            }
+        };
+
+        let is_virtual = self.config.prod.contains("openapivts");
+        let tr_id = if is_virtual { "VTTC0013U" } else { "TTTC0013U" };
+
+        let cano = self.config.my_acct.as_deref().unwrap_or("");
+        let prdt = self.config.my_prod.as_deref().unwrap_or("01");
+
+        let price_str = price.map(|p| p.to_string()).unwrap_or("0".to_string());
+        let qty_str = qty.map(|q| q.to_string()).unwrap_or("0".to_string());
+        
+        let qty_all_ord_yn = if qty.unwrap_or(0) == 0 { "Y" } else { "N" };
+        let ord_dvsn = if price.is_some() { "00" } else { "01" };
+
+        let body = serde_json::json!({
+            "CANO": cano,
+            "ACNT_PRDT_CD": prdt,
+            "KRX_FWDG_ORD_ORGNO": org_no,
+            "ORGN_ODNO": order_no,
+            "ORD_DVSN": ord_dvsn,
+            "RVSE_CNCL_DVSN_CD": "01", // Modify
+            "ORD_QTY": qty_str,
+            "ORD_UNPR": price_str,
+            "QTY_ALL_ORD_YN": qty_all_ord_yn, 
+            "EXCG_ID_DVSN_CD": "KRX",
+            "CNDT_PRIC": ""
+        });
+
+        let resp = self.client.post(&url)
+            .header("content-type", "application/json")
+            .header("authorization", format!("Bearer {}", token))
+            .header("appkey", &self.config.my_app)
+            .header("appsecret", &self.config.my_sec)
+            .header("tr_id", tr_id)
+            .header("custtype", "P")
+            .json(&body)
+            .send()?;
+
+        if resp.status().is_success() {
+             let text = resp.text().unwrap_or_default();
+             let data: Value = serde_json::from_str(&text)?;
+             if data["rt_cd"].as_str().unwrap_or("") == "0" {
+                 info!("Order Modified: {}", order_id);
+                 
+                 if let Some(output) = data.get("output") {
+                     let new_order_no = output["ODNO"].as_str().unwrap_or("");
+                     let new_org_no = output["KRX_FWDG_ORD_ORGNO"].as_str().unwrap_or("");
+                     if !new_order_no.is_empty() && !new_org_no.is_empty() {
+                         let mut map = self.order_map.lock().unwrap();
+                         if let Some(info) = map.get_mut(order_id) {
+                             info.order_no = new_order_no.to_string();
+                             info.org_no = new_org_no.to_string();
+                         }
+                     }
+                 }
+                 
+                 Ok(true)
+             } else {
+                 let msg = data["msg1"].as_str().unwrap_or("Unknown error");
+                 error!("Modify failed API error: {}", msg);
+                 Ok(false)
+             }
+        } else {
+             let text = resp.text().unwrap_or_default();
+             error!("Modify Request failed: {}", text);
+             Ok(false)
+        }
     }
 }

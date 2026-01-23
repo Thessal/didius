@@ -38,6 +38,7 @@ pub trait Adapter: Send + Sync {
     fn cancel_order(&self, order_id: &str) -> Result<bool>;
     fn get_order_book_snapshot(&self, symbol: &str) -> Result<OrderBook>;
     fn get_account_snapshot(&self, account_id: &str) -> Result<AccountState>;
+    fn modify_order(&self, order_id: &str, price: Option<Decimal>, qty: Option<i64>) -> Result<bool>;
 }
 
 pub mod mock;
