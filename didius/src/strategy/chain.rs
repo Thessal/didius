@@ -39,7 +39,11 @@ impl Strategy for ChainStrategy {
             return Ok(StrategyAction::None);
         }
         
-        let time_trig: bool = chrono::Local::now().timestamp_millis() as f64 / 1000.0 >= self.trigger_timestamp; 
+        let time_trig: bool = if self.trigger_timestamp > 0.0 {
+            chrono::Local::now().timestamp_millis() as f64 / 1000.0 >= self.trigger_timestamp 
+        } else {
+            false
+        }; 
         let price_trig = match self.trigger_price_side {
             OrderSide::SELL => book.get_best_ask().map_or(false, |(p,_q)| p <= self.trigger_price),
             OrderSide::BUY => book.get_best_bid().map_or(false, |(p,_q)| p >= self.trigger_price),
