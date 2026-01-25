@@ -128,7 +128,7 @@ class S3Wrapper:
                                     f"Error decoding JSON in file {key}: {e}")
             else:
                 print(f"Skipping {key}")
-                pass 
+                pass
 
         except Exception as e:
             print(f"Error processing file {key}: {e}")
@@ -186,10 +186,12 @@ class S3KlineWrapper(S3Wrapper):
     AWS S3 Wrapper for storing and retrieving Hantoo kline data.
     """
 
-    def __init__(self, bucket: str, prefix: str = "hantoo_stk_kline_1m",
+    def __init__(self, exchange_code: str, bucket: str, prefix: str = "hantoo_stk_kline_1m",
                  auth_config_path: str = "auth/aws_rhetenor.yaml", region: Optional[str] = None):
+        # Exchange code : "J", "NX", "UN"
         super().__init__(bucket, prefix, auth_config_path, region)
         self.loaded_data_map = {}
+        self.exchange_code = exchange_code
 
     def load(self, datetime_from: datetime, datetime_to: datetime):
         """
@@ -203,7 +205,7 @@ class S3KlineWrapper(S3Wrapper):
                 self.loaded_data_map[t] = rec
         print(f"S3KlineWrapper loaded {len(self.loaded_data_map)} records.")
 
-    def reconcile(self, new_data_map: Dict[str, dict], exchange_code: str = "J") -> list[dict]:
+    def reconcile(self, new_data_map: Dict[str, dict]) -> list[dict]:
         """
         Compare new_data_map with loaded_data_map, merge if needed, and upload new records (as received; not merged).
         """
@@ -230,7 +232,7 @@ class S3KlineWrapper(S3Wrapper):
             updates.append(new_record)
         return updates
 
-    def put(self, data: list[dict], exchange_code: str = "J"):
+    def put(self, data: list[dict]):
         """
         Upload kline data to S3, splitting by date.
 
@@ -288,7 +290,7 @@ class S3KlineWrapper(S3Wrapper):
             end_str = fmt_ts(end_ts_obj)
 
             # Format: {StartTime}_{EndTime}_{exchange_code}_{RetrievalTime}.jsonl.zstd
-            filename = f"{start_str}_{end_str}_{exchange_code}_{retrieval_str}.jsonl.zstd"
+            filename = f"{start_str}_{end_str}_{self.exchange_code}_{retrieval_str}.jsonl.zstd"
             key = f"{self.prefix}/{filename}"
 
             # Prepare content
@@ -349,33 +351,30 @@ class S3KlineWrapper(S3Wrapper):
                     if not key.endswith('.jsonl.zstd'):
                         continue
 
-                    try:
-                        fname = os.path.basename(key)
-                        base = fname.replace('.jsonl.zstd', '')
-                        parts = base.split('_')
-                        # format: Start_End_Exchange_Retrieval (4 parts)
+                    fname = os.path.basename(key)
+                    base = fname.replace('.jsonl.zstd', '')
+                    parts = base.split('_')
+                    # format: Start_End_Exchange_Retrieval (4 parts)
 
-                        f_start_str = parts[0]
-                        f_end_str = parts[1]
-                        f_exchange = parts[2]
-                        f_retrieval_str = parts[3]
+                    f_start_str = parts[0]
+                    f_end_str = parts[1]
+                    f_exchange = parts[2]
+                    f_retrieval_str = parts[3]
 
-                        f_start = datetime.strptime(
-                            f_start_str, "%Y%m%d%H%M%S")
-                        f_end = datetime.strptime(f_end_str, "%Y%m%d%H%M%S")
-                        f_retrieval = datetime.strptime(
-                            f_retrieval_str, "%Y%m%d%H%M%S")
+                    f_start = datetime.strptime(
+                        f_start_str, "%Y%m%d%H%M%S")
+                    f_end = datetime.strptime(f_end_str, "%Y%m%d%H%M%S")
+                    f_retrieval = datetime.strptime(
+                        f_retrieval_str, "%Y%m%d%H%M%S")
 
-                        # Check overlap
-                        if f_start <= datetime_to and f_end >= datetime_from:
-                            candidates.append({
-                                'key': key,
-                                'retrieval_time': f_retrieval,
-                                'start': f_start,
-                                'end': f_end
-                            })
-                    except ValueError:
-                        continue
+                    # Check overlap
+                    if f_exchange == self.exchange_code and f_start <= datetime_to and f_end >= datetime_from:
+                        candidates.append({
+                            'key': key,
+                            'retrieval_time': f_retrieval,
+                            'start': f_start,
+                            'end': f_end
+                        })
 
         # Sort candidates by retrieval time (ascending)
         candidates.sort(key=lambda x: x['retrieval_time'])

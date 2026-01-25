@@ -156,24 +156,28 @@ def download_master(market: str = "kospi", date_str: Optional[str] = None,
         print(f"Failed to download or parse {market} master file: {e}")
         raise
 
+
 FIELD_INTERNAL = ["open", "high", "low", "close", "volume", "acc_krw_vol"]
-FIELD_MAPPING = ['stck_oprc','stck_hgpr','stck_lwpr','stck_prpr','cntg_vol','acml_tr_pbmn' ]
-                # 'prdy_vrss': '전일 대비',
-                # 'prdy_vrss_sign': '전일 대비 부호',
-                # 'prdy_ctrt': '전일 대비율',
-                # 'stck_prdy_clpr': '전일대비 종가',
-                # 'acml_vol': '누적 거래량',
-                # 'acml_tr_pbmn': '누적 거래대금',
-                # 'hts_kor_isnm': '한글 종목명',
-                # 'stck_prpr': '주식 현재가',
-                # 'stck_bsop_date': '주식 영업일자',
-                # 'stck_cntg_hour': '주식 체결시간',
-                # 'stck_prpr': '주식 현재가',
-                # 'stck_oprc': '주식 시가',
-                # 'stck_hgpr': '주식 최고가',
-                # 'stck_lwpr': '주식 최저가',
-                # 'cntg_vol': '체결 거래량',
-                # 'acml_tr_pbmn': '누적 거래대금'
+FIELD_MAPPING = ['stck_oprc', 'stck_hgpr', 'stck_lwpr',
+                 'stck_prpr', 'cntg_vol', 'acml_tr_pbmn']
+# 'prdy_vrss': '전일 대비',
+# 'prdy_vrss_sign': '전일 대비 부호',
+# 'prdy_ctrt': '전일 대비율',
+# 'stck_prdy_clpr': '전일대비 종가',
+# 'acml_vol': '누적 거래량',
+# 'acml_tr_pbmn': '누적 거래대금',
+# 'hts_kor_isnm': '한글 종목명',
+# 'stck_prpr': '주식 현재가',
+# 'stck_bsop_date': '주식 영업일자',
+# 'stck_cntg_hour': '주식 체결시간',
+# 'stck_prpr': '주식 현재가',
+# 'stck_oprc': '주식 시가',
+# 'stck_hgpr': '주식 최고가',
+# 'stck_lwpr': '주식 최저가',
+# 'cntg_vol': '체결 거래량',
+# 'acml_tr_pbmn': '누적 거래대금'
+
+
 class HantooClient:
     """
     Client for interacting with Korea Investment Securities (Hantoo) API.
@@ -292,7 +296,7 @@ class HantooClient:
         # The API returns a list in 'output'.
         return data
 
-    def inquire_time_dailychartprice(self, symbol: str, date: str, time_hhmmss: str, period_code: str = "N", include_fake: str = "", market_code: str = "UN", tr_cont: str = "") -> tuple[Dict[str, str], Dict[str, Any]]:
+    def inquire_time_dailychartprice(self, symbol: str, date: str, time_hhmmss: str, period_code: str = "N", include_fake: str = "", exchange_code: str = "UN", tr_cont: str = "") -> tuple[Dict[str, str], Dict[str, Any]]:
         """
         Get minute (kline) data.
         API: /uapi/domestic-stock/v1/quotations/inquire-time-dailychartprice
@@ -306,10 +310,6 @@ class HantooClient:
         tr_id = "FHKST03010230"
 
         headers = self.get_headers(tr_id, tr_cont=tr_cont)
-
-        # Cond market div code: J (Stock), but required parameter.
-        # The example code uses "J".
-
         all_output2 = []
         last_data = {}
         curr_time = time_hhmmss
@@ -317,7 +317,7 @@ class HantooClient:
 
         while True:
             params = {
-                "FID_COND_MRKT_DIV_CODE": market_code,  # J: KRX, NX: NXT, UN: Aggregated
+                "FID_COND_MRKT_DIV_CODE": exchange_code,  # J: KRX, NX: NXT, UN: Aggregated
                 "FID_INPUT_ISCD": symbol,
                 "FID_INPUT_HOUR_1": curr_time,
                 "FID_INPUT_DATE_1": date,
@@ -401,14 +401,14 @@ class HantooClient:
 
         return resp.headers, last_data
 
-    def inquire_time_itemchartprice(self, market_code: str, symbol: str, time_hhmmss: str, include_past: str = "N", etc_code: str = "", tr_cont: str = "") -> tuple[Dict[str, str], Dict[str, Any]]:
+    def inquire_time_itemchartprice(self, exchange_code: str, symbol: str, time_hhmmss: str, include_past: str = "N", etc_code: str = "", tr_cont: str = "") -> tuple[Dict[str, str], Dict[str, Any]]:
         """
         Get today's minute chart price.
         API: /uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice
         TR_ID: FHKST03010200
 
         Args:
-            market_code (str): 'J', 'NX', 'UN' # 'J': KRX, 'NX': NXT, 'UN': Aggregated
+            exchange_code (str): 'J', 'NX', 'UN' # 'J': KRX, 'NX': NXT, 'UN': Aggregated
             symbol (str): Stock code
             time_hhmmss (str): Time to query
             include_past (str): 'Y' or 'N' # Maybe related to pagenation?
@@ -431,7 +431,7 @@ class HantooClient:
 
         while True:
             params = {
-                "FID_COND_MRKT_DIV_CODE": market_code,
+                "FID_COND_MRKT_DIV_CODE": exchange_code,
                 "FID_INPUT_ISCD": symbol,
                 "FID_INPUT_HOUR_1": curr_time,
                 "FID_PW_DATA_INCU_YN": include_past,
@@ -500,7 +500,7 @@ class HantooClient:
 
 class HantooKlineLogger:
     def __init__(self, symbols: List[str],
-                 exchange_code: str = "J",  # default J
+                 exchange_code: str,  # J, NX, UN
                  hantoo_config_path: str = "./auth/hantoo.yaml",
                  hantoo_token_path: str = "./auth/hantoo_token.yaml",
                  aws_config_path: str = "./auth/aws_rhetenor.yaml",
@@ -598,8 +598,7 @@ class HantooKlineLogger:
         results = {}  # Sym -> Data
 
         print(f"Fetching data for {len(self.symbols)} symbols...")
-        
-        total_syms = len(self.symbols)
+
         for idx, sym in enumerate(self.symbols):
             start_t = time.time()
             # print(f"[{idx+1}/{total_syms}] Fetching {sym}...", end='\r')
@@ -646,10 +645,11 @@ class HantooKlineLogger:
                     }
                 # Fields mapping
                 try:
-                    vals = [ str(row.get(x)) for x in FIELD_MAPPING ] 
+                    vals = [str(row.get(x)) for x in FIELD_MAPPING]
                     time_aggregated[t_str]["data"][sym] = vals
                 except:
-                    print("[data.py] fetch_and_update : Error downloading minute data")
+                    print(
+                        "[data.py] fetch_and_update : Error downloading minute data")
 
         # Compare and Update using loaded wrapper state
         updates = self.wrapper.reconcile(
@@ -660,7 +660,7 @@ class HantooKlineLogger:
             if len(self.updates) >= 15:
                 print(f"Uploading {len(self.updates)} records to S3...")
                 self.wrapper.put(
-                    self.updates, exchange_code=self.exchange_code)
+                    self.updates)
                 self.updates = []
         else:
             print("No updates needed.")

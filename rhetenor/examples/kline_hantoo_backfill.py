@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.join(os.getcwd(), 'src'))
 HANTOO_CONFIG = "auth/hantoo.yaml"
 HANTOO_TOKEN = "auth/hantoo_token.yaml"
 AWS_CONFIG = "auth/aws_rhetenor.yaml"
+EXCHG_CODE = "UN"
 
 
 def load_yaml(path):
@@ -81,7 +82,8 @@ def main():
     if not client:
         return
 
-    s3_wrapper = S3KlineWrapper("rhetenor", "hantoo_stk_kline_1m", AWS_CONFIG)
+    s3_wrapper = S3KlineWrapper(
+        bucket="rhetenor", prefix="hantoo_stk_kline_1m", auth_config_path=AWS_CONFIG, exchange_code=EXCHG_CODE)
 
     # 3. Find Last 5 Non-Holiday Days
     print("Identifying last 5 non-holiday days...")
@@ -116,7 +118,7 @@ def main():
     print(f"Target Dates: {[d.strftime('%Y%m%d') for d in target_dates]}")
 
     # 4. Backfill Loop
-    import concurrent.futures
+    print(f"Exchange code: {EXCHG_CODE}")
 
     for d in target_dates:
         d_str = d.strftime("%Y%m%d")
@@ -148,7 +150,7 @@ def main():
                 try:
                     # Request
                     headers, res = client.inquire_time_dailychartprice(
-                        sym, d_str, "235959", period_code="N", market_code="J"
+                        sym, d_str, "235959", period_code="N", exchange_code=EXCHG_CODE
                     )
                     return res.get('output2', [])
                 except Exception as e:
@@ -221,11 +223,11 @@ def main():
         s3_wrapper.load(start_dt, end_dt)
 
         # Reconcile and Upload
-        updates = s3_wrapper.reconcile(daily_kline_buffer, exchange_code="UN")
+        updates = s3_wrapper.reconcile(daily_kline_buffer)
 
         if updates:
             print(f"Uploading {len(updates)} records...")
-            s3_wrapper.put(updates, exchange_code="UN")
+            s3_wrapper.put(updates)
         else:
             print("No updates needed (all duplicates).")
 
