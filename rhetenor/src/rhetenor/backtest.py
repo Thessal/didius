@@ -38,8 +38,8 @@ def normalize_position(position_input, x_logret):
         np.nansum(np.where(position_raw >= 0, position_raw, np.nan),
                   axis=1, keepdims=True)
     ss = position_raw / \
-        np.nansum(np.where(position_raw < 0, position_raw, np.nan),
-                  axis=1, keepdims=True)
+        np.abs(np.nansum(np.where(position_raw < 0, position_raw, np.nan),
+                  axis=1, keepdims=True))
     position_raw = np.where(position_raw >= 0, ls, ss)
     position = np.nan_to_num(position_raw, 0)
     return position_raw, position
