@@ -17,13 +17,13 @@ def initialize_runtime():
     return runtime
 
 
-def compute(runtime, input_code: str):
+def compute(runtime, input_code: str, silent=True):
     tokens = lex(input_code)
     parser = Parser(tokens)
     ast = parser.parse()
     checker = TypeChecker()
     checker.check(ast)
-    builder = Builder()
+    builder = Builder(silent=silent)
     graph = builder.build(ast)
     result = runtime.run(graph)
     return result
