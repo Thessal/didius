@@ -659,7 +659,7 @@ class HantooKlineLogger:
 
         if updates:
             self.updates.extend(updates)
-            if len(self.updates) >= 15:
+            if len(self.updates) >= 0:
                 print(f"Uploading {len(self.updates)} records to S3...")
                 self.wrapper.put(self.updates, retrieval_time=retrieval_time)
                 self.updates = []

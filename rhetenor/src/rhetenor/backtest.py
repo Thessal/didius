@@ -21,7 +21,7 @@ def compute(runtime, input_code: str, silent=True):
     tokens = lex(input_code)
     parser = Parser(tokens)
     ast = parser.parse()
-    checker = TypeChecker()
+    checker = TypeChecker(silent=silent)
     checker.check(ast)
     builder = Builder(silent=silent)
     graph = builder.build(ast)

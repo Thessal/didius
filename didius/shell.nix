@@ -28,9 +28,6 @@ let
       "rust-analyzer"
     ];
   };
-  myRust = pkgs.rust-bin.stable.latest.default.override {
-    extensions = [ "rust-src" "rust-analyzer" ];
-  };
 
 in pkgs.mkShell {
   packages = [
