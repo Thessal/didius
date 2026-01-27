@@ -7,6 +7,7 @@ import json
 import io
 from datetime import datetime
 from typing import Iterator, Dict, Any, Optional
+from botocore.exceptions import ClientError
 
 
 class S3Wrapper:
@@ -145,6 +146,12 @@ class S3Wrapper:
                 print(f"Skipping {key}")
                 return None
 
+        except ClientError as e:
+            if e.response['Error']['Code'] == 'NoSuchKey':
+                print('[aws.py] _download_json : No object found - Returning empty')
+                return None
+            else:
+                raise
         except Exception as e:
             print(f"Error processing file {key}: {e}")
             raise
