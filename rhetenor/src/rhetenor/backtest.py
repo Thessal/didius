@@ -166,15 +166,18 @@ class Backtester:
         x_position = position.data.values
         position_raw = x_position - \
             np.nanmean(x_position, axis=1, keepdims=True)
+        
         # Long/Short balance
         if position_raw.shape[1] > 1:
             ls = position_raw / \
-                np.nansum(np.where(position_raw >= 0, position_raw,
-                          np.nan), axis=1, keepdims=True)
+                np.maximum(np.nansum(np.where(position_raw >= 0, position_raw,
+                        np.nan), axis=1, keepdims=True), 1e-6)
             ss = position_raw / \
-                np.abs(np.nansum(np.where(position_raw < 0,
-                       position_raw, np.nan), axis=1, keepdims=True))
+                np.maximum(np.abs(np.nansum(np.where(position_raw < 0,
+                    position_raw, np.nan), axis=1, keepdims=True)), 1e-6)
             position_raw = np.where(position_raw >= 0, ls, ss)
+
+        # Zero fill
         position_zerofilled = np.nan_to_num(position_raw, 0)
         position_nanfilled = pd.DataFrame(
             position_raw, index=position.data.index, columns=position.columns)
@@ -209,8 +212,7 @@ class CloseBacktester(Backtester):
         returns[mask] = (curr_close[mask] / prev_close[mask]) - 1.0
 
         # drift
-        pnl_holding = np.nansum(old_position * returns)
-
+        # pnl_holding = np.nansum(old_position * returns) # unrealized
         # Value of position before rebalance
         drifted_position = old_position * (1.0 + returns)
 
@@ -229,7 +231,7 @@ class CloseBacktester(Backtester):
         turnover = np.sum(np.abs(trade_amt))
         slippage_cost = np.sum(np.abs(trade_amt * slippage))
         fee_cost = turnover * self.fee
-        ret_before_fee_slippage = pnl_holding - np.nansum(trade_amt)
+        ret_before_fee_slippage = -np.nansum(trade_amt)
         realized_position = drifted_position + trade_amt
 
         return realized_position, ret_before_fee_slippage, fee_cost, slippage_cost, turnover, last_price
