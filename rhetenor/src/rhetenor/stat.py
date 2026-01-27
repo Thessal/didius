@@ -1,12 +1,17 @@
 import numpy as np
 import pandas as pd 
 
-def calculate_stat(df_result:pd.DataFrame, position_raw:pd.DataFrame, position:pd.DataFrame):
-    returns = df_result["ret"]
-    fee = df_result["fee"] # TODO
-    turnover = df_result["turnover"]
+def calculate_stat(df_result:pd.DataFrame, position_raw:pd.DataFrame, position:pd.DataFrame, include_series=True):
+    df_result = df_result.iloc[10:]
+    position_raw = position_raw.iloc[10:]
+    position = position.iloc[10:]
 
+    returns = df_result["ret"]
+    fee = df_result["fee"] 
+    slippage = df_result["slippage"] 
+    turnover = df_result["turnover"]
     cum_pnl = np.cumsum(returns)
+
     tvrs = np.nansum(np.abs(np.diff(position, axis=0)), axis=1)
     stat = {
         "min_coverage": np.nanmin(np.nanmean(np.isfinite(position_raw), axis=1)),
@@ -16,4 +21,9 @@ def calculate_stat(df_result:pd.DataFrame, position_raw:pd.DataFrame, position:p
         "mdd": np.nanmax(np.maximum.accumulate(cum_pnl) - cum_pnl),
         "max_position": np.nanmax(np.abs(position))
     }
+    if include_series:
+        stat["returns_series"] = returns
+        stat["fee_series"] = fee 
+        stat["slippage_series"] = slippage 
+        stat["turnover_series"] = turnover
     return stat

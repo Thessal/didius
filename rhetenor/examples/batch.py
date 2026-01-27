@@ -9,7 +9,7 @@ from rhetenor.backtest import s3_to_df, initialize_runtime, compute, Bars, Posit
 from rhetenor.stat import calculate_stat
 
 SILENT = True
-TIMEOUT= False
+TIMEOUT= True
 DELAY = 1 # Use T data, Position calculated at T+1
 SIM_INTERVAL = timedelta(minutes=10)
 s3_cfgs = {"auth_config_path": "../auth/aws_rhetenor.yaml"}
@@ -46,9 +46,11 @@ if TIMEOUT:
     signal.signal(signal.SIGALRM, handler)
 
 # Calculate alphas and save stats
-valid_jsons = []
-invalid_jsons = []
-for fname, g in generated.items():
+# valid_jsons = []
+# invalid_jsons = []
+# for fname, g in generated.items():
+def f(x):
+    fname, g = x
     try:
         if TIMEOUT:
             signal.alarm(60) # turn off when debugging
@@ -71,7 +73,7 @@ for fname, g in generated.items():
         stat_delay = calculate_stat(df_results_delay, pos_nanfilled_delay.data, pos_actual_delay.data)
         stat_decay = calculate_stat(df_results_decay, pos_nanfilled_decay.data, pos_actual_decay.data)
 
-        valid_jsons.append(fname)
+        # valid_jsons.append(fname)
         signal_id = fname.replace("/", "_").replace(".", "_")
 
         df_output = pd.Series({"path": fname, "stat": stat, "stat_delay": stat_delay, "stat_decay": stat_decay})
@@ -79,15 +81,22 @@ for fname, g in generated.items():
     except Exception as e:
         print(repr(e))
         stat = {"error": repr(e)}
-        invalid_jsons.append(fname)
+        # invalid_jsons.append(fname)
     g["calculation_result"] = stat
     # with open(f"./calculated_KRX/{fname}.json", "wt") as f:
     #     json.dump(g, f)
-    print()
-    print(
-        f"[valid {len(valid_jsons)}, invalid {len(invalid_jsons)} / {len(generated)}]", end="\r")
-    print()
+    # print()
+    # print(
+    #     f"[valid {len(valid_jsons)}, invalid {len(invalid_jsons)} / {len(generated)}]", end="\r")
+    # print()
 
-pd.Series(valid_jsons).to_csv("valid_jsons.csv")
-pd.Series(invalid_jsons).to_csv("invalid_jsons.csv")
+from multiprocessing import Pool
+import tqdm
+pool = Pool(processes=8)
+tasks = [(fname, g) for fname, g in generated.items()]
+for _ in tqdm.tqdm(pool.imap_unordered(f, tasks), total=len(tasks)):
+    pass
+
+# pd.Series(valid_jsons).to_csv("valid_jsons.csv")
+# pd.Series(invalid_jsons).to_csv("invalid_jsons.csv")
 # [valid 3191, invalid 7885 / 11076]

@@ -193,7 +193,7 @@ class CloseBacktester(Backtester):
         super().__init__(data)
         self.fee = fee
 
-    def _execution_assumption(self, old_position: pd.Series, new_position: pd.Series, last_price: pd.Series, bar: Dict[str, pd.Series]) -> Tuple[pd.Series, float, float, float, pd.Series]:
+    def _execution_assumption(self, old_position: pd.Series, new_position: pd.Series, last_price: pd.Series, bar: Dict[str, pd.Series]) -> Tuple[pd.Series, float, float, float, float, pd.Series]:
         # old_position: Position Dollar Values at prev_bar Close
         # new_position: Target Dollar Values at bar Close
 
@@ -218,14 +218,21 @@ class CloseBacktester(Backtester):
         trade_amt = new_position - drifted_position
         trade_amt = np.where((bar["volume"] == 0) |
                              np.isnan(curr_close), 0, trade_amt)
+        
+        # Slippage : If limit order at prev close is not matched, send market order.
+        # This slippage estimation may not work as intended, if weight is negative 
+        slippage_buy = np.where((trade_amt > 0) and (last_price<=bar["low"]), bar["high"]/prev_close - 1, 0)
+        slippage_sell = np.where((trade_amt < 0) and (last_price>=bar["high"]), bar["low"]/prev_close - 1, 0)
+        slippage = slippage_buy + slippage_sell
 
         # Net PnL
         turnover = np.sum(np.abs(trade_amt))
+        slippage_cost = np.sum(np.abs(trade_amt * slippage))
         fee_cost = turnover * self.fee
-        ret = pnl_holding - np.nansum(trade_amt) - fee_cost
+        ret_before_fee_slippage = pnl_holding - np.nansum(trade_amt)
         realized_position = drifted_position + trade_amt
 
-        return realized_position, ret, fee_cost, turnover, last_price
+        return realized_position, ret_before_fee_slippage, fee_cost, slippage_cost, turnover, last_price
 
     def run(self, position: Position):
         self._check_position(position)
@@ -263,11 +270,11 @@ class CloseBacktester(Backtester):
                 # print(intv_bar.left, ts_pos.floor(position.interval))
                 # make sure bars and pos are aligned
                 assert intv_bar.left == ts_pos.floor(position.interval)
-                prev_pos, ret, fee, turnover, last_price = self._execution_assumption(
+                prev_pos, ret, fee, slippage, turnover, last_price = self._execution_assumption(
                     prev_pos, pos, last_price, bar)
                 positions[intv_bar.left] = prev_pos
                 results.append({"ts": intv_bar.left, "ret": ret,
-                               "fee": fee, "turnover": turnover})
+                               "fee": fee, "slippage": slippage, "turnover": turnover})
             except StopIteration:
                 break
         pos_actual = Position(pd.DataFrame(positions).T, interval=pos_nanfilled.interval)
