@@ -1,11 +1,10 @@
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional, Iterator, Tuple
 from butterflow import lex, Parser, TypeChecker, Builder, Runtime
 import numpy as np
 import pandas as pd
-
+import datetime
 
 def initialize_runtime(s3=Optional[Any], add_logret=True):
-    # Initialize runtime
     if s3:
         df = pd.DataFrame({k: pd.DataFrame(v["data"], index=v["fields"]).stack(
         ) for k, v in s3.loaded_data_map.items()}).stack()
@@ -31,7 +30,6 @@ def initialize_runtime(s3=Optional[Any], add_logret=True):
         runtime_data['data("returns")'] = x_logret  # logret
     return Runtime(data=runtime_data)
 
-
 def compute(runtime, input_code: str, silent=True):
     tokens = lex(input_code)
     parser = Parser(tokens)
@@ -44,76 +42,202 @@ def compute(runtime, input_code: str, silent=True):
     return result
 
 
-def normalize_position(position_input, x_logret):
-    # normalize position
-    assert (position_input.shape == x_logret.shape)
-    position_raw = position_input - \
-        np.nanmean(position_input, axis=1, keepdims=True)
-    ls = position_raw / \
-        np.nansum(np.where(position_raw >= 0, position_raw, np.nan),
-                  axis=1, keepdims=True)
-    ss = position_raw / \
-        np.abs(np.nansum(np.where(position_raw < 0, position_raw, np.nan),
-                         axis=1, keepdims=True))
-    position_raw = np.where(position_raw >= 0, ls, ss)
-    position = np.nan_to_num(position_raw, 0)
-    return position_raw, position
+class MarketData:
+    def __init__(self, data: pd.DataFrame):
+        self.data = data
 
+class Quotes(MarketData):
+    ...
+
+class Trades(MarketData):
+    ...
+
+class Bars(MarketData):
+    # Emits (interval, bar) pairs where interval.left is the bar start time
+    def __init__(self, data: pd.DataFrame, interval: datetime.timedelta):
+        self.fields = ["open", "high", "low", "close", "volume"]
+        self.columns = data.columns
+        assert data.index.nlevels == 2
+        assert data.index.get_level_values(0).dtype == "<M8[ns]"
+        assert data.index.get_level_values(1).unique().isin(self.fields).all()
+        self.interval = interval
+        super().__init__(data)
+        self.agg_fn = {
+            "open": lambda x: x[0],
+            "high": lambda x: np.nanmax(x, axis=0),
+            "low": lambda x: np.nanmin(x, axis=0),
+            "close": lambda x: x[-1],
+            "volume": lambda x: np.nansum(x, axis=0)
+        }
+
+    def _agg_row(self, agg:Dict[str, List[np.ndarray]], start_time: pd.Timestamp):
+        end_time = start_time + self.interval
+        interval = pd.Interval(left=start_time, right=end_time, closed='left')
+        assert all((t in interval) for t in agg["ts"]), f"{agg['ts']} not in Interval {interval}"
+        res = {field: self.agg_fn[field](agg[field]) for field in self.fields}
+        return interval, res
+        
+    def __iter__(self) -> Iterator[Tuple[pd.Interval, Dict[str, np.ndarray]]]:
+        last_ts = self.data.index.get_level_values(0)[0]
+        current_interval_start = pd.Timestamp(last_ts).floor(self.interval)
+        default_dict = lambda : {field: [] for field in self.fields + ["ts"]}
+        agg = default_dict()
+
+        for (ts, field), row in self.data.iterrows():
+            if ts < last_ts:
+                raise ValueError(f"Data is not sorted. Timestamp {ts} < {last_ts}")
+            
+            bucket_start = pd.Timestamp(ts).floor(self.interval)            
+            if bucket_start > current_interval_start:
+                # Yield previous bucket
+                yield self._agg_row(agg, current_interval_start)
+                
+                # Reset
+                current_interval_start = bucket_start
+                agg = default_dict()
+            
+            # Update accumulators
+            agg["ts"].append(ts)
+            agg[field].append(row.values)
+        
+        # Yield last bucket
+        yield self._agg_row(agg, current_interval_start)
+
+
+
+class Position:
+    # Emits (ts, position) pairs where ts is position calculatin time.
+    def __init__(self, data: pd.DataFrame, interval: datetime.timedelta):
+        self.data = data
+        self.columns = data.columns
+        self.interval = interval
+
+    def __iter__(self) -> Iterator[Dict[str, np.ndarray]]:
+        last_ts = self.data.index[0]
+        # properly handle start time based on data
+        current_interval_start = None
+
+        for ts, row in self.data.iterrows():
+            if ts < last_ts:
+                raise ValueError(f"Data is not sorted. Timestamp {ts} < {last_ts}")
+            bucket_start = pd.Timestamp(ts).floor(self.interval)
+            
+            if current_interval_start is None or bucket_start > current_interval_start:
+                current_interval_start = bucket_start
+                # ts is calculation time. executed at floor(ts+1)
+                yield ts, row.values
 
 class Backtester:
-    # TODO
-    # transaction fee
-    # bid ask
-    # gaps
-    def __init__(self, trades, quotes, mode="close"):
-        if mode == "close":
-            pass
-        elif mode == "vwap":
-            pass
-        elif mode == "market":
-            pass
+    def __init__(self, data: Any):
+        self.data = self._preprocess_data(data)
+
+    def _preprocess_data(self, data: Any):
+        return data
+
+    def _check_position(self, position: pd.DataFrame):
+        assert hasattr(self.data, "columns") and hasattr(position, "columns")
+        assert all(position.columns == self.data.columns), f"Position columns {position.columns} do not match data columns {self.data.columns}"
+
+    def _preprocess_position(self, position: Position):
+        # Neutralize
+        x_position = position.data.values
+        position_raw = x_position - np.nanmean(x_position, axis=1, keepdims=True)
+        # Long/Short balance
+        if position_raw.shape[1]>1:
+            ls = position_raw / np.nansum(np.where(position_raw >= 0, position_raw, np.nan), axis=1, keepdims=True)
+            ss = position_raw / np.abs(np.nansum(np.where(position_raw < 0, position_raw, np.nan), axis=1, keepdims=True))
+            position_raw = np.where(position_raw >= 0, ls, ss) 
+        position_zerofilled = np.nan_to_num(position_raw, 0) 
+        position_nanfilled = pd.DataFrame(position_raw, index=position.data.index, columns=position.columns)
+        position_zerofilled = pd.DataFrame(position_zerofilled, index=position.data.index, columns=position.columns)
+        # return position_nanfilled (for coverage check), position_zerofilled (for backtesting)
+        return Position(data=position_nanfilled, interval=position.interval), Position(data=position_zerofilled, interval=position.interval)
+
+    def run(self, position: Position):
+        self._check_position(position)
+
+class CloseBacktester(Backtester):
+    def __init__(self, data: Any, fee: float = 0.0):
+        super().__init__(data)
+        self.fee = fee
+
+    def _execution_assumption(self, old_position, new_position, last_price, bar):
+        # old_position: Position Dollar Values at prev_bar Close
+        # new_position: Target Dollar Values at bar Close
+        
+        # 1. Calculate PnL from holding old_position from prev_bar.close to bar.close
+        assert np.isfinite(last_price).all(), "last_price contains nans"
+        prev_close = last_price
+        curr_close = np.where(np.isfinite(bar["close"]), bar["close"], prev_close)
+        
+        # Avoid division by zero
+        returns = np.zeros_like(prev_close)
+        mask = (prev_close != 0) & (~np.isnan(prev_close)) & (~np.isnan(curr_close))
+        returns[mask] = (curr_close[mask] / prev_close[mask]) - 1.0
+        
+        # drift
+        pnl_holding = np.nansum(old_position * returns)
+        
+        # Value of position before rebalance
+        drifted_position = old_position * (1.0 + returns)
+        
+        # 2. Rebalance to new_position
+        trade_amt = new_position - drifted_position
+        trade_amt = np.where((bar["volume"] == 0) | np.isnan(curr_close), 0, trade_amt)
+        
+        # Net PnL
+        turnover = np.sum(np.abs(trade_amt))
+        fee_cost = turnover * self.fee
+        ret = pnl_holding - np.nansum(trade_amt) - fee_cost
+        realized_position = drifted_position + trade_amt
+        
+        return realized_position, ret, fee_cost, turnover, last_price
+
+
+    def run(self, position: Position):
+        super().run(position)
+        assert self.data.interval == position.interval
+
+        _, pos_zerofilled = self._preprocess_position(position)
+        bars = iter(self.data)
+        pos_iter = iter(pos_zerofilled)
+        
+        # Align starting time
+        try:
+            intv_bar, bar = next(bars)
+            ts_pos, pos = next(pos_iter)
+            
+            # Catchup
+            while intv_bar.left < ts_pos:
+                intv_bar, bar = next(bars)
+            
+            while ts_pos < intv_bar.left:
+                ts_pos, pos = next(pos_iter)
+                
+            last_price = bar["close"]
+            prev_pos = pos # np.zeros_like(pos) # ignore enter cost
+            
+        except StopIteration:
+            return []
+
+        # Consume
+        results = []
+        while True:
+            try:
+                intv_bar, bar = next(bars)
+                ts_pos, pos = next(pos_iter)
+                assert intv_bar.left == ts_pos # make sure bars and pos are aligned 
+                prev_pos, ret, fee, turnover, last_price = self._execution_assumption(prev_pos, pos, last_price, bar)
+                results.append({"ts": intv_bar.left, "ret": ret, "fee": fee, "turnover": turnover})
+            except StopIteration:
+                break
+        return results
+
+class MarketBacktester(Backtester):
+    # buy at ask price, sell at bid price
+    def __init__(self, trades, quotes):
         pass
-    # def __init__(self, close_p, open_p, adj_close_p=None, adj_open_p=None, split=None):
-    #     self.close_p = close_p
-    #     self.open_p = open_p
-    #     if adj_close_p == None:
-    #         self.adj_close_p = close_p
-    #     if adj_open_p == None:
-    #         self.adj_open_p = open_p
-    #     if split == None:
-    #         self.split = np.ones_like(self.close_p, dtype=float)
-    #     # if dividend_per_share == None:
-    #     #     dividend_per_share = np.zeros_like(self.close_p, dtype=float)
 
-    #     self.ret_overnight = (self.adj_open_p[2:] / self.adj_close_p[1:-1])
-    #     self.drift_overnight = (
-    #         self.open_p[2:] / self.close_p[1:-1]) * self.split[2:]
-    #     self.ret_intraday = (self.adj_close_p[2:] / self.adj_open_p[2:])
-    #     self.drift_intraday = (self.adj_close_p[2:] / self.adj_open_p[2:])
-
-    # def run(self, position):
-    #     assert position.shape == self.close_p.shape
-
-    #     # Position calculated
-    #     calc_d2 = position[0:-2]
-    #     calc_d1 = position[1:-1]
-    #     pos_after_yesterday_close = calc_d2
-
-    #     # Opening trade
-    #     pos_before_open = pos_after_yesterday_close * self.ret_overnight
-    #     pos_after_open = calc_d1
-    #     tvr_open = pos_after_open - pos_before_open
-    #     ret_overnight = np.nansum(
-    #         pos_before_open - pos_after_yesterday_close, axis=1)
-
-    #     # Closing trade
-    #     pos_before_close = pos_after_open * self.ret_intraday
-    #     pos_after_close = calc_d1
-    #     tvr_close = pos_after_close - pos_before_close
-    #     ret_intraday = np.nansum(pos_before_close - pos_after_open, axis=1)
-
-    #     turnover = np.nanmean(np.abs(tvr_open), axis=1) + \
-    #         np.nanmean(np.abs(tvr_close), axis=1)
-    #     returns = ret_overnight + ret_intraday
-
-    #     return returns, turnover
+class VWAPBacktester(Backtester):
+    def __init__(self, trades, quotes):
+        pass
