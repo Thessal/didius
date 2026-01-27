@@ -221,8 +221,8 @@ class CloseBacktester(Backtester):
         
         # Slippage : If limit order at prev close is not matched, send market order.
         # This slippage estimation may not work as intended, if weight is negative 
-        slippage_buy = np.where((trade_amt > 0) and (last_price<=bar["low"]), bar["high"]/prev_close - 1, 0)
-        slippage_sell = np.where((trade_amt < 0) and (last_price>=bar["high"]), bar["low"]/prev_close - 1, 0)
+        slippage_buy = np.where((trade_amt > 0) & (last_price<=bar["low"]), bar["high"]/prev_close - 1, 0)
+        slippage_sell = np.where((trade_amt < 0) & (last_price>=bar["high"]), bar["low"]/prev_close - 1, 0)
         slippage = slippage_buy + slippage_sell
 
         # Net PnL
