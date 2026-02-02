@@ -81,6 +81,7 @@ pub struct HantooAdapter {
 struct HantooOrderInfo {
     org_no: String,
     order_no: String,
+    exchange: String
 }
 
 impl HantooAdapter {
@@ -623,7 +624,7 @@ impl Adapter for HantooAdapter {
             "ORD_DVSN": ord_dvsn,
             "ORD_QTY": order.quantity.to_string(),
             "ORD_UNPR": price_str,
-            "EXCG_ID_DVSN_CD": "KRX",
+            "EXCG_ID_DVSN_CD": order.exchange, 
             "SLL_TYPE": "", 
             "CNDT_PRIC": ""
         });
@@ -651,12 +652,13 @@ impl Adapter for HantooAdapter {
              if let Some(output) = data.get("output") {
                  let org_no = output["KRX_FWDG_ORD_ORGNO"].as_str().unwrap_or("").to_string();
                  let order_no = output["ODNO"].as_str().unwrap_or("").to_string();
-                 
+                 let exchange = order.exchange.clone();
+
                  if !org_no.is_empty() && !order_no.is_empty() {
-                     info!("Order Placed: OrgNo={}, OrderNo={}", org_no, order_no);
+                     info!("Order Placed: OrgNo={}, OrderNo={}, Exhange={}", org_no, order_no, exchange);
                      
                      if let Some(client_id) = &order.order_id {
-                          let info = HantooOrderInfo { org_no, order_no };
+                          let info = HantooOrderInfo { org_no, order_no, exchange };
                           let mut map = self.order_map.lock().unwrap();
                           map.insert(client_id.clone(), info);
                      }
@@ -675,10 +677,10 @@ impl Adapter for HantooAdapter {
         let token = self.get_token()?;
         let url = format!("{}/uapi/domestic-stock/v1/trading/order-rvsecncl", self.config.prod);
         
-        let (org_no, order_no) = {
+        let (org_no, order_no, exchange) = {
             let map = self.order_map.lock().unwrap();
             match map.get(order_id) {
-                Some(info) => (info.org_no.clone(), info.order_no.clone()),
+                Some(info) => (info.org_no.clone(), info.order_no.clone(), info.exchange.clone()),
                 None => {
                     return Err(anyhow!("Order ID not found in local map: {}", order_id));
                 }
@@ -701,7 +703,7 @@ impl Adapter for HantooAdapter {
             "ORD_QTY": "0", 
             "ORD_UNPR": "0",
             "QTY_ALL_ORD_YN": "Y",
-            "EXCG_ID_DVSN_CD": "KRX"
+            "EXCG_ID_DVSN_CD": exchange
         });
 
         let resp = self.client.post(&url)
@@ -878,10 +880,10 @@ impl Adapter for HantooAdapter {
         let token = self.get_token()?;
         let url = format!("{}/uapi/domestic-stock/v1/trading/order-rvsecncl", self.config.prod);
 
-        let (org_no, order_no) = {
+        let (org_no, order_no, exchange) = {
             let map = self.order_map.lock().unwrap();
             match map.get(order_id) {
-                Some(info) => (info.org_no.clone(), info.order_no.clone()),
+                Some(info) => (info.org_no.clone(), info.order_no.clone(), info.exchange.clone()),
                 None => {
                     return Err(anyhow!("Order ID not found in local map: {}", order_id));
                 }
@@ -910,7 +912,7 @@ impl Adapter for HantooAdapter {
             "ORD_QTY": qty_str,
             "ORD_UNPR": price_str,
             "QTY_ALL_ORD_YN": qty_all_ord_yn, 
-            "EXCG_ID_DVSN_CD": "KRX",
+            "EXCG_ID_DVSN_CD": exchange,
             "CNDT_PRIC": ""
         });
 

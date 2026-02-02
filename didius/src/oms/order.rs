@@ -86,12 +86,14 @@ pub struct Order {
     pub updated_at: f64,
     #[pyo3(get, set)]
     pub error_message: Option<String>,
+    #[pyo3(get, set)]
+    pub exchange: String,
 }
 
 #[pymethods]
 impl Order {
     #[new]
-    #[pyo3(signature = (symbol, side, order_type, quantity, price=None, strategy=None, strategy_params=None, stop_price=None))]
+    #[pyo3(signature = (symbol, side, order_type, quantity, price=None, strategy=None, strategy_params=None, stop_price=None, exchange="SOR".to_string()))]
     #[allow(clippy::too_many_arguments)]
     pub fn new(
         symbol: String,
@@ -102,6 +104,7 @@ impl Order {
         strategy: Option<ExecutionStrategy>,
         strategy_params: Option<HashMap<String, String>>,
         stop_price: Option<String>,
+        exchange: String
     ) -> Self {
         let now = Local::now().timestamp_millis() as f64 / 1000.0;
         
@@ -126,6 +129,7 @@ impl Order {
             created_at: now,
             updated_at: now,
             error_message: None,
+            exchange: exchange
         }
     }
 
