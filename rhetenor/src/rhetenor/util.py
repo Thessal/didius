@@ -114,3 +114,93 @@ def save_prompt_json(system_context, user_prompt, user_prompt_args: Dict):
     }
     with open("prompt.json", "wt") as f:
         json.dump(config, f)
+
+
+def chart(data):
+    # data: pd.DataFrame with columns (open, high, low, close, returns, Position)
+    import pandas as pd
+    import numpy as np
+    import plotly.graph_objects as go
+    from datetime import datetime, timedelta
+    import matplotlib.pyplot as plt 
+
+    import pandas as pd
+    import numpy as np
+    import plotly.graph_objects as go
+
+    # 1. Setup Figure
+    fig = go.Figure()
+
+    # 2. Add Candlestick (Primary Y-Axis)
+    fig.add_trace(go.Candlestick(
+        x=data.index,
+        open=data['open'], high=data['high'],
+        low=data['low'], close=data['close'],
+        name='Market Data',
+        yaxis="y1" # Linked to the first Y-axis
+    ))
+
+    # 3. Add Position State (Secondary Y-Axis)
+    fig.add_trace(go.Scatter(
+        x=data.index,
+        y=data['returns'].fillna(0).cumsum(),
+        mode='lines',
+        name='cum.ret',
+        line=dict(color='rgba(225, 0,0, 0.5)', width=2, shape='hv'),
+        yaxis="y2" # Linked to the second Y-axis
+    ))
+    # 3. Add Position State (Secondary Y-Axis)
+    fig.add_trace(go.Scatter(
+        x=data.index,
+        y=data['Position'],
+        mode='lines',
+        name='Position State',
+        line=dict(color='rgba(65, 105, 225, 0.5)', width=2, shape='hv'),
+        yaxis="y3" # Linked to the second Y-axis
+    ))
+
+
+
+    # 4. Configure Layout for "Twin" Axes
+    # alldays = set(data.index[0]+timedelta(minutes=x) for x in range(int((data.index[-1] - data.index[0]).total_seconds())//60))
+    # missing=sorted(set(alldays)-set(data.index))
+    fig.update_layout(
+        template='plotly_dark',
+        xaxis=dict(
+            rangeslider=dict(visible=False),
+            type="category",
+            # rangebreaks=[dict(values=missing)]
+            ),
+        
+        # Primary Y-axis (Price)
+        yaxis=dict(
+            title="Price (KRW)",
+            side="left"
+        ),
+        
+        # Secondary Y-axis (Position)
+        yaxis2=dict(
+            title="cum.ret",
+            side="right",
+            overlaying="y", # This makes it a "twin" axis
+            anchor="x",
+            showgrid=False     # Hide grid to prevent cluttering the price chart
+        ),
+        
+        # Secondary Y-axis (Position)
+        yaxis3=dict(
+            title="Position State",
+            side="right",
+            overlaying="y", # This makes it a "twin" axis
+            anchor="x",
+            #range=[-1.1, 1.1], # Lock range so -1 and 1 don't touch the edges
+            showgrid=False     # Hide grid to prevent cluttering the price chart
+        ),
+        
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+
+
+    
+
+    fig.show()

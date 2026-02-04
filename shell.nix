@@ -17,7 +17,7 @@ let
           owner = "Thessal";
           repo = "ui";
           rev = "main";
-          sha256 = "sha256-K2njzzuqiPeaB949dACRIJMe3Cs/D0irBD2gzuynwsk=";
+          sha256 = "sha256-Q5G7VSAKar3dcSN03ZFVryQZUkRRfyPcfMs8gvRdTzg=";
         };
   python_butterflow = import ./nixfiles/python.nix { pkgs=pkgs; }; # butterflow and morpho
   # python_butterflow = pkgs.python313

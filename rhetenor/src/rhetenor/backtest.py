@@ -6,11 +6,14 @@ import datetime
 
 
 def s3_to_df(s3):
+    # TODO: let Bar class manage it 
+    if not all(len(k)==12 for k in s3.loaded_data_map.keys()):
+        print("Warning: Timestamp length is not 12 (YYYYMMDDHHMM) : skipped")
     df = pd.DataFrame({k: pd.DataFrame(v["data"], index=v["fields"]).stack(
-    ) for k, v in s3.loaded_data_map.items()}).stack()
+    ) for k, v in s3.loaded_data_map.items() if len(k)==12}).stack()
     df = df.sort_index().unstack(level=1).sort_index(axis=1)
     timestamps = pd.to_datetime(
-        df.index.get_level_values(1), format="%Y%m%d%H%M%S")
+        df.index.get_level_values(1), format="%Y%m%d%H%M")
     fields = df.index.get_level_values(0)
     df.index = pd.MultiIndex.from_arrays(
         [timestamps, fields], names=["timestamp", "field"])
@@ -23,22 +26,41 @@ def s3_to_df(s3):
     assert all([all(x == cols[0]) for x in cols])
     return df.sort_index(), dfs
 
+def overnight_synthetic_bar(s3_dfs):
+    # s3_dfs : {field:DataFrame[time*instrs]}
+    # TODO: let Bar class manage it 
+    volume_aggregation_method = "max"
+    agg = {"open":"first", "high":"max", "low":"min", "close":"last", "volume":volume_aggregation_method, "acc_krw_vol":"last"}
+    result = dict()
+    for field,data in agg.items():
+        data = s3_dfs[field]
+        main_market_filter = data.index.map(lambda x: 900 <= x.hour*100 + x.minute <= 1500)
+        overnight_filter = ~main_market_filter
+        data_overnight = data.loc[overnight_filter]
+        synthetic_bar = data_overnight.groupby((data_overnight.index-pd.Timedelta(hours=15)).date).agg(agg[field])
+        synthetic_bar.index = pd.to_datetime(synthetic_bar.index) + pd.Timedelta(hours=24+9, minutes=-1)
+        data_all = pd.concat([data.loc[main_market_filter], synthetic_bar], axis=0).sort_index()
+        result[field] = data_all
+    assert(all(all(x.index == result["close"].index) for x in result.values()))
+    return result
 
-def initialize_runtime(dfs: Optional[Dict[str, pd.DataFrame]] = None, add_logret=True):
+
+def initialize_runtime(dfs: Optional[Dict[str, pd.DataFrame]] = None, add_logret=False, check_corruption=False):
     if type(dfs) != type(None):
-        runtime_data = {f'data("{k}")': v for k, v in dfs.items()}
+        runtime_data = {f'data("{k}")': v.values for k, v in dfs.items()}
     else:
         runtime_data = {
             f'data("{x}")': np.load(f"data/{x}.npy")
             for x in ["open", "high", "low", "close", "volume"]}
     if add_logret:
+        print("DEPECATED: logret")
         x_close = pd.DataFrame(runtime_data['data("close")']).ffill().values
         x_close_d1 = np.roll(runtime_data['data("close")'], shift=1, axis=0)
         x_close_d1[0] = x_close[0]
         x_logret = np.log(x_close / x_close_d1)
         runtime_data['data("price")'] = x_close
         runtime_data['data("returns")'] = x_logret  # logret
-    return Runtime(data=runtime_data)
+    return Runtime(data=runtime_data, check_corruption=check_corruption)
 
 
 def compute(runtime, input_code: str, silent=True):

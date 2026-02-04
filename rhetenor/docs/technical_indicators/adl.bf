@@ -1,7 +1,7 @@
 range(upper : Signal<Float>, lower : Signal<Float>) : Signal<Float> = {
     # Calcuates range from two boundary. upper - lower
-    epsilon : Signal<Float> = const(value=1e-10)
-    result : Signal<Float> = add(x=subtract(x=upper, y=lower), y=eps)
+    epsilon : Signal<Float> = const(value=0.0000000001)
+    result : Signal<Float> = add(x=subtract(x=upper, y=lower), y=epsilon)
 }
 
 # Money‑Flow Multiplier
@@ -23,3 +23,4 @@ adl(high : Signal<Float>, low : Signal<Float>, close : Signal<Float>, volume : S
     # ADL = cumulative sum of Money‑Flow Volume.
     result = ts_decay_linear(signal=money_flow_volume, period=period)
 }
+
