@@ -1,9 +1,0 @@
-"Mass index is an indicator developed by Donald Dorsey to predict trend reversals.",18,5,5,5,1,2,5,3
-"The mass index assumes reversals are more likely when price range widens, comparing previous highs and lows.",27,5,5,5,1,2,5,3
-"Mass index is calculated by taking EMA of high-low over 9 days, then EMA of that EMA, and summing their ratio over typically 25 days.",43,5,5,5,1,2,5,3
-"Typically the EMA and its double EMA are close, making their ratio about 1 and the sum near 25.",23,4,4,4,1,3,5,3
-"According to Dorsey, a reversal bulge is a probable signal of trend reversal regardless of direction.",19,4,4,4,1,1,5,4
-"A reversal bulge occurs when the 25‑day mass index reaches 27.0 and then falls below 26 (or 26.5).",20,5,5,5,1,2,5,3
-"A 9‑day prime moving average is usually used to decide if the bulge signals a buy or sell.",19,5,5,5,1,2,5,4
-"The formula uses intraday range values, not the true range that adjusts for gaps.",17,5,5,5,1,2,5,3
-"The bulge does not indicate direction.",7,5,5,5,1,2,5,3

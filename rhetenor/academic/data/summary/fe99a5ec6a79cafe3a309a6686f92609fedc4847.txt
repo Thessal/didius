@@ -1,5 +1,0 @@
-"The force index (FI) is an indicator of buying or selling pressure in technical analysis.",22,5,5,5,1,1,5,5
-"High positive FI values indicate a strong uptrend; low values indicate a strong downtrend.",18,5,5,5,1,1,5,5
-"FI is calculated by multiplying price change between closes by volume, giving volume‑scaled momentum.",28,5,5,5,1,1,5,5
-"Force strength depends on larger price changes or larger volume.",17,5,5,5,1,1,5,5
-"Alexander Elder created the FI.",7,5,5,5,1,1,5,5

@@ -1,7 +1,0 @@
-"The ultimate oscillator was created by Larry Williams to address problems of oscillators across timeframes.",32,5,2,4,1,2,5,4
-"The oscillator measures buying or selling pressure based on a day's closing price within its true range.",29,5,2,4,1,2,5,4
-"Buying pressure is calculated as the amount the close exceeds the true low for the day.",23,5,2,4,1,2,5,4
-"True low is the lower of the day's low and the previous close.",16,5,2,4,1,2,5,4
-"True range is the difference between the true high and true low, similar to average true range.",23,5,2,4,1,2,5,4
-"True high is the higher of the day's high and the previous close.",16,5,2,4,1,2,5,4
-"Total buying pressure over 7 days is expressed as a fraction of total true range for the same period.",22,5,2,4,1,2,5,4

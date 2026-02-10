@@ -1,6 +1,0 @@
-"NVI and PVI are commonly linked to Fosback's versions while Dysart, the inventor, is largely forgotten.",16,4,4,2,1,2,5,4
-"It cannot be claimed that one version is superior to the other.",12,5,3,2,1,2,5,4
-"Fosback gave a more objective interpretation, and Dysart's versions help identify primary trends and short-term reversals.",22,4,4,3,1,2,5,4
-"Traders use Fosback's NVI and PVI on individual stocks, but the indicators were designed and tested for major market indexes.",26,5,4,3,1,2,5,4
-"NVI is Dysart's most valuable breadth index, and Fosback considered the Negative Volume Index an excellent primary market trend indicator.",27,4,4,2,1,2,5,4
-"Traders can gain advantages from both innovations.",6,4,4,2,1,2,5,4

@@ -1,6 +1,0 @@
-"Defines the inner product ⟨p,1_S⟩ as the integral of p over set S.",18,5,1,1,1,1,5,5
-"Defines the indicator function 1_{g>0} as 1 when g is positive, otherwise 0.",19,5,1,1,1,1,5,5
-"States that the index ⟨g/||g||_1,1_{g>0}⟩ weights the positive portion of g as a quotient of two integrals.",26,5,1,5,1,1,5,5
-"Claims that a ratio of two averages over domain T equals the ratio of two integrals or sums.",22,5,1,5,1,1,5,5
-"Suggests considering the gradient g (or a weighted variant) of a real function on an ordered set T.",28,3,5,1,1,1,5,4
-"States that for a discrete ordered set T = {1,…,n}, the gradient is the finite difference.",25,5,1,5,1,1,5,5

@@ -1,3 +1,0 @@
-"Moving Median smoothing is identical to the Median Filter and has various applications in image signal processing.",18,5,1,5,1,2,5,3
-"In a moving average regression model, the variable of interest is a weighted moving average of unobserved error terms, with weights as parameters to be estimated.",34,5,5,5,1,2,5,3
-"The two concepts are often confused due to their names but represent distinct methods used in very different contexts.",27,4,3,1,1,2,5,3

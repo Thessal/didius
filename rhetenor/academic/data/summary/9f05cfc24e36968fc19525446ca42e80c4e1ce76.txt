@@ -1,7 +1,0 @@
-"VIX is the ticker symbol and popular name for the CBOE Volatility Index, a measure of the stock market's expected volatility based on S&P 500 options.",26,5,1,5,1,5,5,3
-"It is calculated and disseminated on a real-time basis by the CBOE, and is often referred to as the 'fear index' or 'fear gauge'.",24,5,1,5,1,5,5,3
-"The VIX traces its origin to the financial economics research of Menachem Brenner and Dan Galai.",16,5,1,5,1,5,5,3
-"In a series of papers beginning in 1989, Brenner and Galai proposed the creation of a series of volatility indices, beginning with an index on stock market volatility, and moving to interest rate and foreign exchange rate volatility.",38,5,1,5,1,5,5,3
-"Brenner and Galai proposed that a volatility index, to be named 'Sigma Index', would be updated frequently and used as the underlying asset for futures and options, playing the same role as the market index for options and futures.",39,3,4,3,1,1,5,5
-"In 1992, the CBOE hired consultant Bob Whaley to calculate values for stock market volatility based on this theoretical work.",20,5,1,5,1,5,5,3
-"The VIX index formulation provides a measure of market volatility on which expectations of further stock market volatility in the near future might be based.",25,4,3,4,1,5,5,3

@@ -1,5 +1,0 @@
-"RS equals the ratio of SMA of U to SMA of D.",5,5,1,5,1,2,5,5
-"Cutler's RSI usually differs slightly from Wilder RSI, yet they are similar because SMA and SMMA are similar.",24,4,4,3,1,4,5,4
-"A real function with positive L¹ norm can be normalized by dividing its absolute value by its L¹ norm, yielding a distribution.",35,5,1,5,1,2,5,5
-"A distribution on a set allows evaluation of its measurable subsets.",15,5,1,5,1,2,5,5
-"An indicator function can be paired with a distribution to produce an index in the unit interval.",30,5,1,5,1,2,5,5

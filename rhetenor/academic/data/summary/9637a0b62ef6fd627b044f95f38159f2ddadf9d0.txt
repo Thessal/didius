@@ -1,2 +1,0 @@
-"The formula simplifies to high_Ndays minus low_Ndays.",12,5,1,5,1,5,5,4
-"%R indicator is exactly equivalent to the %K stochastic oscillator, mirrored at the 0% line when using the same time interval.",21,4,4,3,1,2,5,4

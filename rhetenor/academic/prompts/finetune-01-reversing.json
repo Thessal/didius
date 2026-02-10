@@ -1,8 +1,0 @@
-{
-    "_TODO": "maybe we could also sample various modalities",
-    "persona": ["impatient trader", "meticulous data engineer", "junior analyst"],
-    "modalities": ["command", "question", "statement"],
-    "description": "Back-translation: Generates natural language prompts from the 100 gold-standard source codes. Focuses on varied personas to prevent overfitting to a single 'voice'.",
-    "system": "You are an expert in {language_name}. Your task is to reverse-engineer the user request that led to the provided code.\n\nLANGUAGE SPEC:\n{language_spec}",
-    "user": "Analyze the following SOURCE CODE. Generate a `user_prompt` that asks for this specific logic.\n\nConstraint 1: Adopt the persona of a {persona} (e.g., impatient trader, meticulous data engineer, junior analyst).\nConstraint 2: Vary the 'illocutionary force'—some prompts should be direct commands ('Do X'), others should be questions ('How do I X?') or statements of need ('I need to calculate X').\n\nSOURCE CODE:\n{source_code}\n\nResponse format (JSON):\n{\n  \"user_prompt\": \"...\",\n  \"persona_used\": \"...\",\n  \"intent_modality\": \"...\"\n}"
-}

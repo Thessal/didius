@@ -1,5 +1,0 @@
-"M lies on line L, so M = (ℓ,ℓ,ℓ) for some real ℓ.",13,5,2,5,1,5,5,5
-"The line L is orthogonal to the vector from M to P.",14,5,5,5,1,5,5,5
-"The distance between P and M equals the standard deviation of (x1,x2,x3) multiplied by √3.",56,5,3,5,1,5,5,5
-"Observations are rarely more than a few standard deviations away from the mean.",14,4,3,3,1,2,5,4
-"Chebyshev's inequality guarantees that for any distribution with defined standard deviation, at least the listed proportions of data lie within the given number of standard deviations from the mean.",38,5,2,5,1,5,5,5

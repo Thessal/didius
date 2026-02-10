@@ -1,3 +1,0 @@
-"VVIX is calculated using the same methodology as VIX, except the inputs are market prices for VIX options instead of stock market options.",23,5,1,5,1,5,5,5
-"The VIX can be thought of as the velocity of investor fear.",11,3,5,3,1,2,4,4
-"The VVIX measures how much the VIX changes and hence can be thought as the acceleration of investor fear.",19,4,5,4,1,3,5,4

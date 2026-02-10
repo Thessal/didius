@@ -1,5 +1,0 @@
-The factor f equals 1 minus 2 divided by N plus 1, which simplifies to (N‑1)/(N+1).,5,5,1,5,1,1,5,5
-The zero‑lag Triple EMA equals (1‑f)³ times the series p₀ + 3f p₁ + 6f² p₂ + 10f³ p₃ + ….,12,5,1,5,1,1,5,5
-The coefficients correspond to triangular numbers given by n(n+1)/2.,7,5,1,5,1,1,5,5
-Because f < 1, the terms fⁿ diminish more quickly than the triangular coefficients grow.,15,5,3,5,1,1,5,5
-Beyond some order, the remaining terms are negligible in magnitude.,12,5,3,5,1,1,5,5

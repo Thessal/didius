@@ -1,7 +1,0 @@
-"The concept of implied volatility dates to Black and Scholes' 1973 paper introducing the Black‑Scholes model.",45,5,3,4,1,2,5,3
-"Option‑implied volatility can be computed by equating market price to the valuation formula, similar to bond yield calculations.",44,5,3,4,1,2,5,3
-"VIX uses S&P 500 index option prices.",16,5,3,4,1,2,5,3
-"VIX inputs include S&P 500 call and put prices for near‑term (23+ days) and next‑term (≤37 days) options, plus risk‑free rates.",45,5,3,4,1,2,5,3
-"Options with zero bids or strikes outside the range where two consecutive bids are zero are ignored.",25,5,3,4,1,2,5,3
-"The aim is to estimate S&P 500 option implied volatility at an average 30‑day expiration.",20,5,3,4,1,2,5,3
-"It is possible to replicate a variance swap using only vanilla puts and calls (\"static replication\").",25,5,3,4,1,2,5,3

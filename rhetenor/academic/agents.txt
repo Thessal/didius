@@ -1,8 +1,0 @@
-human#3E65D5
-human#C87B0B
-human#D35895
-human#DD7F04
-human#F6C795
-machine#4817CB
-machine#C8EC40
-machine#FFFFFF

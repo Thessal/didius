@@ -1,5 +1,0 @@
-{
-    "description": "Uses the spec to hallucinate NEW code scenarios, expanding the dataset.",
-    "system": "You are a code generator for {language_name}. You will generate valid code based on random semantic combinations from the documentation.\n\nLANGUAGE SPEC:\n{language_spec}\nSTANDARD LIB:\n{rag_stdlib}",
-    "user": "Generate a valid source code snippet that utilizes the following language features: {random_feature_list}.\n1. First, describe the goal in natural language (`thought`).\n2. Then, write the code (`code`).\n\nTIP:\nfunction_name:Signal<Float>(param_name:param_type)={...} (incorrect, error message : 'Expected =, got (')\nfunction_name(param_name:param_type):Signal<Float>={...} (correct)\nTIP:\nTo pass the semantic test, \nYour code have to end with assignment statement to special variable 'result', not a function definition.\nfor example, 'result : Signal<Float> = (your expression)'\nTIP:\nAll arguments in function call have to be keyworded.\n\nResponse format (JSON):\n{\n  \"thought\": \"...\",\n  \"code\": \"...\"\n}"
-}

@@ -1,8 +1,0 @@
-"Average over 7 days equals sum of buying pressure divided by sum of true range for the 7 days.",12,5,1,5,1,5,5,5
-"The same calculation is performed for 14‑day and 28‑day periods, the three ratios are combined in a 4:2:1 proportion and scaled to a 0‑100 percentage.",49,5,1,5,1,5,5,5
-"Ultimate oscillator equals 100 times (4 × avg₇ + 2 × avg₁₄ + avg₂₈) divided by (4 + 2 + 1).",14,5,1,5,1,5,5,5
-"Williams defines a buy signal as bullish divergence where price makes new lows but the oscillator does not.",33,5,3,3,1,5,5,5
-"During the divergence the oscillator falls below 30.",9,5,1,5,1,5,5,5
-"The oscillator then rises above its prior high during the divergence, and the buy trigger is the rise through that high.",27,5,1,5,1,5,5,5
-"The position is closed when the oscillator rises above 70 (overbought) or rises above 50 then falls back through 45.",23,5,1,5,3,5,5,5
-"A sell signal occurs on bearish divergence above 70 and is closed when the oscillator drops below 30 (oversold).",22,5,1,5,3,5,5,5

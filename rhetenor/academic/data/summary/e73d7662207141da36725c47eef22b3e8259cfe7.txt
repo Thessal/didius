@@ -1,8 +1,0 @@
-"Prices tend to make higher highs, and the settlement price usually tends to be in the upper end of that time period's trading range.",24,5,5,4,1,5,5,4
-"When the momentum starts to slow, the settlement prices will start to retreat from the upper boundaries of the range, causing the stochastic indicator to turn down at or before the final price high.",34,5,5,4,1,5,5,4
-"An alert or set-up is present when the %D line is in an extreme area and diverging from the price action.",21,4,5,4,1,4,5,4
-"The actual signal takes place when the faster %K line crosses the %D line.",14,4,5,4,1,4,5,4
-"Divergence-convergence is an indication that the momentum in the market is waning and a reversal may be in the making.",20,4,5,4,1,4,5,4
-"The chart below illustrates an example where a divergence in stochastics, relative to price, forecasts a reversal in the price's direction.",21,4,5,4,1,3,5,3
-"An event known as \"stochastic pop\" occurs when prices break out and keep going.",14,5,5,5,1,5,5,4
-"This is interpreted as a signal to increase the current position, or liquidate if the direction is against the current position.",21,4,5,4,5,3,5,5

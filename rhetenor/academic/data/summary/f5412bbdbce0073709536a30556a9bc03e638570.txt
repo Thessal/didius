@@ -1,9 +1,0 @@
-"The advance–decline line is a stock market technical indicator used by investors to measure the number of individual stocks participating in a market rise or fall.",26,5,2,5,1,2,5,5
-"It can be useful to know how broadly this movement extends into the larger universe of smaller stocks.",49,4,4,4,1,2,5,4
-"Market indexes do not present the whole picture of the trading day and the performance of the market during this day.",28,5,3,5,1,2,5,5
-"Advance/decline numbers give an idea about the individual performance of particular stocks.",27,5,3,5,1,2,5,5
-"The advance–decline line plots the cumulative sum of the daily difference between advancing and declining issues in a stock market index.",39,5,2,5,1,2,5,5
-"It moves up when the index contains more advancing than declining issues, and moves down when there are more declining than advancing issues.",24,5,2,5,1,2,5,5
-"The formula for ADL is: ADline = today's advancing stocks - today's declining stocks + yesterday's AD line value.",19,5,2,5,1,2,5,5
-"The Advance/Decline Line formula could be applied to volume of the advancing and declining stocks.",15,4,4,4,1,2,5,4
-"AD volume line = advanced volume - declined volume + yesterday's AD.",12,5,2,5,1,2,5,5

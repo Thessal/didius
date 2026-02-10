@@ -1,3 +1,0 @@
-"When above zero it is considered to be bullish (positive growth).",11,5,5,5,1,1,5,5
-"When below zero it is considered to be bearish (negative growth).",11,5,5,5,1,1,5,5
-"The Summation index is oversold at −1000 to −1250 or overbought at 1000 to 1250.",15,5,5,5,1,1,5,5

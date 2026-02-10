@@ -1,5 +1,0 @@
-"SMMA(U) divided by SMMA(U+D) evaluates a sequence derived from closing prices over n market periods.",29,5,4,5,1,5,5,5
-"The absolute value of g(t) equals the absolute price change between consecutive closes, i.e., U plus D at time t, multiplied by an exponential SMMA factor.",31,5,4,5,1,5,5,5
-"The denominator ‖g‖1 is the sum of all absolute price changes.",10,5,4,5,1,5,5,5
-"The numerator computes the SMMA of only positive changes U, i.e., g times the indicator for positive changes.",24,5,4,5,1,5,5,5
-"The index therefore weights positive changes U over all changes in the interval.",21,5,4,5,1,5,5,5

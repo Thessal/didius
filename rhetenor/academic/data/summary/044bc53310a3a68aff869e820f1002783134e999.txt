@@ -1,3 +1,0 @@
-"Segment between pivot point and R1 is M+, between R1 and R2 is M++.",16,5,4,5,1,1,5,5
-"Mid-points below pivot point are labeled M− and M−−.",11,5,4,5,1,1,5,5
-"Mid-points numbered 0 to 5 are defined from M0 between S3 and S2 up to M5 between R2 and R3.",24,5,4,5,1,1,5,5

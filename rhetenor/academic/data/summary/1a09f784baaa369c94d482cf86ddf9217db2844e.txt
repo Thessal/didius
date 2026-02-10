@@ -1,9 +1,0 @@
-"Average true range (ATR) is a technical analysis volatility indicator originally developed by J. Welles Wilder, Jr. for commodities.",19,5,5,5,1,4,5,3
-"The indicator does not provide an indication of price trend, simply the degree of price volatility.",16,5,5,5,1,4,5,3
-"The average true range is an N-period smoothed moving average (SMMA) of the true range values.",16,5,5,5,1,4,5,3
-"Wilder recommended a 14-period smoothing.",5,4,4,3,4,4,5,4
-"The range of a day's trading is simply high minus low.",11,5,5,5,1,4,5,3
-"The true range extends it to yesterday's closing price if it was outside of today's range.",16,5,5,5,1,4,5,3
-"The true range is the maximum of (high minus low), the absolute difference between high and previous close, and the absolute difference between low and previous close.",27,5,5,5,1,4,5,3
-"The formula can be simplified to: TR equals the maximum of high and previous close minus the minimum of low and previous close.",23,5,5,5,1,4,5,3
-"ATR at time t is calculated as an exponential moving average of the true range.",15,5,5,5,1,4,5,3
